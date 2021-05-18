@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
@@ -48,10 +48,40 @@ header {
     margin-bottom: 2em;
 }
 
+nav > ul {
+    display: flex;
+    list-style: none;
+    font-size: 0.85em;
+    margin: 0;
+    column-gap: 1em;
+    margin-bottom: 1em;
+}
+
+nav > ul > li {
+    background-color: #865858;
+    padding: 0.3em 0.5em;
+    border-radius: 7px;
+}
+
+nav > ul > li:hover {
+    background-color: #b58282;
+}
+
+nav > ul > li a {
+    color: white;
+    border: none;
+}
+
 main {
     margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
 
 article > div {
