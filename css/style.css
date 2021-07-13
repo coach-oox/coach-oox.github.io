@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "./reset.css";
+
+:root {
+    --main-color: #574b90;
+    --hover-color: #786fa6;
+}
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -19,13 +23,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 h2 {
     font-size: 2em;
     font-weight: 500;
-    margin-top: 1em;
 }
 
 h3 {
@@ -39,9 +42,9 @@ ul {
 }
 
 a {
-    color: #865858;
+    color: var(--main-color);
     text-decoration: none;
-    border-bottom: 1px dotted #865858;
+    border-bottom: 1px dotted var(--main-color);
     padding-bottom: 0.2em;
 }
 
@@ -65,7 +68,7 @@ nav > ul {
 
 nav > ul > li {
     width: 90%;
-    background-color: #865858;
+    background-color: var(--main-color);
     padding: 0.3em 0.5em;
     border-radius: 7px;
 }
@@ -81,7 +84,7 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-    background-color: #b58282;
+    background-color: var(--hover-color);
 }
 
 nav > ul > li a {
@@ -95,12 +98,34 @@ main {
     grid-template-columns: repeat(2, 1fr);
 }
 
+span {
+    font-size: 0.85em;
+}
+
 @media screen and (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > ul > li {
+        width: 100%;
+    }
+
+    nav > ul > li:not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    .lt,
+    .rt {
+        margin: 0;
+    }
 }
 
-article > div {
+section > div {
     margin-bottom: 2em;
 }
