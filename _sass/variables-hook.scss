@@ -1,0 +1,21 @@
+/*
+  Appending custom SCSS variables will override the default ones in `_sass/addon/variables.scsss`
+*/
+
+.sidebar-bottom {
+  column-gap: 10px;
+
+  i {
+    font-size: 1.5em;
+  }
+}
+
+.disqus {
+  padding: 0 2em;
+}
+
+.post-content {
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+}
