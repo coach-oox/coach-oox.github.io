@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>개발자 이도해 기술 블로그</subtitle>
-  <updated>2021-07-29T09:39:45+08:00</updated>
+  <updated>2021-07-29T10:46:17+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -118,7 +118,7 @@ $ brew install --cask iterm2
     <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #12 async · await" />
     <published>2020-04-19T00:00:00+08:00</published>
   
-    <updated>2020-04-19T00:00:00+08:00</updated>
+    <updated>2021-07-29T09:42:33+08:00</updated>
   
     <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/</id>
     <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/" />
@@ -166,7 +166,7 @@ function msg(text) {
     <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #11 Generator" />
     <published>2020-04-19T00:00:00+08:00</published>
   
-    <updated>2020-04-19T00:00:00+08:00</updated>
+    <updated>2021-07-29T09:42:33+08:00</updated>
   
     <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/</id>
     <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/" />
@@ -214,7 +214,7 @@ console.log(genObject.next...
     <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #10 Promise" />
     <published>2020-04-19T00:00:00+08:00</published>
   
-    <updated>2020-04-19T00:00:00+08:00</updated>
+    <updated>2021-07-29T09:42:33+08:00</updated>
   
     <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/</id>
     <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/" />
