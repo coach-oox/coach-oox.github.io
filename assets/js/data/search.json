@@ -1,0 +1,274 @@
+[
+  
+  {
+    "title": "타입스크립트 .eslintrc 파일 Parsing Error 해결 방법",
+    "url": "/posts/2021-06-14-tslint-error/",
+    "categories": "report, error",
+    "tags": "typescript, eslint",
+    "date": "2021-06-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "증상.eslintrc.js 파일에 타입스크립트 (과거 .tslint) 설정을 할 때 발생하는 Parsing Error 또는 .eslintrc.js 파일 에러.parsing error: &quot;parseroptions.project&quot; has been set for @typescript-eslint/parser. the file does not match your project config: .eslintrc.js. the file must be included in at least one of the projects..."
+  },
+  
+  {
+    "title": "iTerm2 세팅 방법",
+    "url": "/posts/2021-01-20-setup-mac-terminal-with-iterm2/",
+    "categories": "wiki, setting",
+    "tags": "mac, terminal, iterm",
+    "date": "2021-01-20 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "iTerm2 설치와 설정가장 먼저 다음의 명령어로 homebrew를 이용해 iTerm2를 설치한다. 최신 버전이 아닌 다른 버전을 설치하고 싶거나, homebrew를 사용하지 않는다면 공식 홈페이지를 참고하자.$ brew install --cask iterm2테마 설치와 적용다음으로는 컬러 테마를 변경하기 위해서 iTerm2 Color Schemes에서 마음에 드는 테마를 골라 .itermcolors 파일을 다운로드 한다. 설치는 다운로드 한 파일을 더블 클릭하면 된다.이제 iTerm2를 실행하고 iTerm2 - Prefere..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #12 async · await",
+    "url": "/posts/2020-04-19-es6-syntax-21-async-await/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다.  async와 await을 비동기 처리에서 절대적으로 사용해야하는 것은 아니다. 콜백의 Depth가 얕은 경우에는 그냥 Promise를 사용하는것이 더 간결한 코드 작성법이 될 때도 있다.(async function func() {  await msg(..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #11 Generator",
+    "url": "/posts/2020-04-19-es6-syntax-20-generator/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Generator는 Generator Function의 리턴 값으로, Iterable Protocol과 Iterator Protocol을 따르는 객체이다. 이때 Generator Function은 함수를 실행하면 내부에 정의된 처리를 함수의 끝까지 한 번에 실행하는 일반 함수와 달리, yield와 next() 등을 사용해 특정 시점에 멈출 수도 있고, 다시 시작될 수도 있으며, 상황에 따라 여러 값을 리턴할 수도 있는 함수이다.function* genFunction() {  yield 100;  yield 200;  yield..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #10 Promise",
+    "url": "/posts/2020-04-19-es6-syntax-19-promise/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "자바스크립트에서는 비동기 처리를 위해 일반적으로 콜백 함수를 사용한다. 하지만 기존의 콜백 패턴이 굉장히 지저분했고 예외 처리가 어려웠기 때문에, 여러 개의 비동기 처리를 한 번에 처리하려면 콜백 지옥이 열리곤 했다.first(function (a) {  second(function (b) {    third(function (c) {      fourth(function (d) {        // codes ...      });    });  });});이러한 문제점을 보완하기 위해서 ES6에서는 Promise라는 개념을..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #8 Module",
+    "url": "/posts/2020-04-19-es6-syntax-18-module/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "대부분의 프로그래밍 언어는 각자의 모듈 기능을 가지고 있다. 예를 들어 C언어의 경우 #include를 사용해 외부의 모듈을 가져온다. 클라이언트 사이드의 자바스크립트의 경우, &amp;lt;script&amp;gt; 태그를 사용해서 외부의 모듈 (스크립트 파일)을 가져올 수 있다. 하지만 이 경우 파일 단위로 독자적인 Scope를 가지는 것이 아니라 하나의 전역 객체를 공유한다는 특징이 있다. 즉, 이렇게 &amp;lt;script&amp;gt; 태그로 모듈을 가져오는 경우 모듈화를 구현할 수는 없다.  서버 사이드 자바스크..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #7 Destructuring Assignment",
+    "url": "/posts/2020-04-19-es6-syntax-17-destructuring/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Destructuring Assignment Syntax는 배열이나 객체를 Destructuring (비구조화)해서 각각의 요소를 개별적인 변수에 할당하는 것을 의미하며, 일반적으로 구조화된 배열이나 객체에서 특정 값만을 꺼내 변수에 할당하거나 리턴하기 위해 사용된다.  추천 글 : Destructuring Assignment - MDNArray Destructuringarr에 들어있는 요소를 각각의 변수에 할당하고자 하는 경우를 가정해보자.var arr = [&quot;John&quot;, &quot;Thomas&quot;,..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #6 Enhanced Object Literals",
+    "url": "/posts/2020-04-19-es6-syntax-16-object-initailizer/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "ES6에서는 향상된 객체의 Literal을 제공한다. 이는 ES5까지의 객체 정의 방식을 개선한 문법을 의미하며, 객체를 정의하거나 객체 내 메소드를 정의하는 등 자주 사용되는 문법들을 좀 더 간결하게 사용할 수 있다.Property ShorthandES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략할 수 있는 축약 표현을 제공한다.const name = &quot;John&quot;;const age = 20;const obj = {  name,  age,};console.log(obj);Metho..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #5 Spread Syntax",
+    "url": "/posts/2020-04-19-es6-syntax-15-spread/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Spread Syntax (...)는 점 뒤에 오는 대상을 개별 요소로 분리한다. 이때 대상은 Iterable 해야 한다.const arr = [1, 2, 3];console.log(...arr, 4, 5);이를 응용해 배열을 파라미터로 함수에 전달하고자 할 때, 모든 요소를 분리해서 순차적으로 전달할 수 있다.function sum(a, b, c) {  return a + b + c;}const arr = [1, 2, 3];console.log(sum(...arr));사용 예시다음 코드는 arr1에 arr2의 각각의 요소를 ..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #4 Default · Rest Parameter",
+    "url": "/posts/2020-04-19-es6-syntax-14-default-rest-parameter/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Default Parameter Value자바스크립트에서는 함수를 호출할 때 요구되는 파라미터의 개수가 부족한 경우에도 에러가 발생하지 않는다. 예를 들어 다음의 경우를 가정해보자.function sum(a, b) {  return a + b;}console.log(sum(10));sum() 함수는 2개의 아규먼트를 사용하게끔 정의되어 있지만, 호출할 때 하나의 파라미터만 전달해도 에러가 발생하지 않는다. 즉, 함수가 파라미터 개수나 아규먼트 개수를 체크하지 않는다. 이렇게 아규먼트가 부족한 경우에 그 값은 undefined이..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #3 Arrow Function",
+    "url": "/posts/2020-04-19-es6-syntax-13-arrow-function/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Arrow Function (이하 화살표 함수)는 ES6에서 도입된, function 키워드를 사용하지 않아도 =&amp;gt; 화살표를 사용함으로써 보다 간단하게 함수를 선언할 수 있는 문법이다. 화살표 함수의 사용법은 매우 간단하지만, 다음과 같은 몇 가지 규칙이 있다.// 1. 아규먼트가 없을 경우 () 괄호 생략 불가() =&amp;gt; {};// 2. 아규먼트가 한 개일 때는 괄호를 생략해도 되지만, 2개 이상이면 괄호를 생략할 수 없음(a, b) =&amp;gt; {};// 3. 함수의 몸체가 Single Line..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #2 Template Literals",
+    "url": "/posts/2020-04-19-es6-syntax-12-template-literal/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "ES5까지, 일반 텍스트와 변수를 하나의 문자열로 사용하려면 다음과 같이 했어야 했다.var a = 1;var b = 2;console.log(&quot;a is &quot; + a + &quot; and b is &quot; + b);알다시피 이런 방식은 귀찮다. 단호하게 귀찮다.const a = 1;const b = 2;console.log(`a is ${a} and b is ${b}`);ES6에서는 새로운 문자열 표기법인 Backtick을 사용할 수 있게 되었는데, 이 문자열로 감싼 내부에는 위 코드와 같이 변수를 직접적..."
+  },
+  
+  {
+    "title": "모던 자바스크립트와 ES6 #1 var · let · const",
+    "url": "/posts/2020-04-19-es6-syntax-11-let-const/",
+    "categories": "javascript, es6-concepts",
+    "tags": "javascript, es6",
+    "date": "2020-04-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "var의 문제점ES5까지의 자바스크립트에서는 변수를 선언할 때 var 키워드를 사용했다. (물론 지금도 사용할 수 있지만 그때는 유일했다.) var 키워드는 특성상 문제를 야기할 가능성이 높았는데, 그 특성에 대한 내용은 다음과 같다.var a = 1;var b = 2;console.log(a); // 1console.log(b); // 2{  var a = 2;  var b = 3;}console.log(a); // 2console.log(b); // 3첫 번째로, 변수 중복 선언이 허용된다. 즉, 실수로 a라는 변수를 두 ..."
+  },
+  
+  {
+    "title": "자바스크립트 레벨업을 위한 주요 개념 #4 Higher Order Function",
+    "url": "/posts/2020-04-18-js-level-up-4-higher-order-function/",
+    "categories": "javascript, js-basics",
+    "tags": "javascript, hof",
+    "date": "2020-04-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Higher Order Function (HOF, 고차 함수)는 함수를 리턴하거나 함수를 파라미터로 전달받는 함수를 의미하며, 넘겨받은 함수를 호출하거나 클로저로 리턴하는 역할을 한다. 이게 가능한 이유는 자바스크립트의 함수가 First Class이기 때문인데, 더 자세한 내용은 MDN의 First Class Function 문서를 참고하자.이러한 고차 함수를 사용하는 이유는 함수형 프로그래밍 지향을 위해서, 데이터가 Mutate 되는 것을 최대한 피하고자 하기 때문이다. 즉, 함수형 프로그래밍은 Pure Function + ..."
+  },
+  
+  {
+    "title": "자바스크립트 레벨업을 위한 주요 개념 #3 this",
+    "url": "/posts/2020-04-18-js-level-up-3-function-this-bind/",
+    "categories": "javascript, js-basics",
+    "tags": "javascript, this",
+    "date": "2020-04-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "자바스크립트에서는 어떤 함수가 호출될 때 전달되는 아규먼트 말고도 arguments라는 객체와 this가 은밀하게 (?) 전달되고 있다. this는 아마도 Java를 배워본적 있는 사람이라면 꽤 낯이 익는 친구일 것이다. 하지만 이때 this는 Java의 this와는 개념적으로 다른데, Java에서는 자기 자신의 Reference를 가르키는 변수로써 사용되지만, 자바스크립트에서는 함수를 호출하는 방식에 따라 this에 바인딩되는 객체가 달라진다.함수 호출 방식에 따른 this 바인딩자바스크립트에서 Lexical Scope는 함..."
+  },
+  
+  {
+    "title": "자바스크립트 레벨업을 위한 주요 개념 #2 Closure",
+    "url": "/posts/2020-04-18-js-level-up-2-closure/",
+    "categories": "javascript, js-basics",
+    "tags": "javascript, closure",
+    "date": "2020-04-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Closure (이하 클로저)는 자바스크립트에 한정되는 개념은 아니고, Functional Programming Language에서 다루는 주요한 특성 중 하나이다. 이 개념은 리턴된 함수가 리턴되기 전에 가진 Scope를 리턴된 다음에도 접근할 수 있는 함수를 의미한다. 즉, 클로저는 자기 자신이 생성될 때의 Lexical Environment를 기억하고 접근할 수 있는 함수라고 정의할 수 있다.function first() {  const greating = &quot;Hello World!&quot;;  const sec..."
+  },
+  
+  {
+    "title": "자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain",
+    "url": "/posts/2020-04-18-js-level-up-1-scope-chain/",
+    "categories": "javascript, js-basics",
+    "tags": "javascript, scope",
+    "date": "2020-04-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 {} 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다.Lexical Scope자바스크립트의 Scope에 대해 좀 더 깊이 이해하기 위해 알아야 할 또 하나의 개념은 Lexical Scope (Static Scope)라는 규칙이다. Lexical Scope는 코드가 작성된 문맥상에서 결정되는 Scope로..."
+  },
+  
+  {
+    "title": "navigator.geolocation 동작하지 않는 경우 해결 방법",
+    "url": "/posts/2020-01-07-error-report-chrome-navigator-geolocation/",
+    "categories": "report, error",
+    "tags": "javascript, chrome, https, localhost, navigator, geolocation",
+    "date": "2020-01-07 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "증상navigator.geolocation.getCurrentPosition() 메소드 동작하지 않는 경우. (정확히는 동작하지 않는 것처럼 보임.) 웹 페이지가 로드되면 위치 정보 사용을 묻는 팝업은 정상적으로 뜨고, 취소를 눌렀을 때 errorCallBack은 동작하지만 successCallBack은 내부 로직은 동작하지 않는 경우.원인 분석우선 errorCallBack 함수는 동작한다는 점에서, 메소드가 아예 동작하지 않는 것은 아니고 위치 정보 사용 허용을 눌렀을 때 successCallBack 함수가 실행은 되지만 위..."
+  }
+  
+]
+

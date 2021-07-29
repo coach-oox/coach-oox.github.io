@@ -1,0 +1,266 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://dohaelee.github.io/</id>
+  <title>Dohae Lee</title>
+  <subtitle>개발자 이도해 기술 블로그</subtitle>
+  <updated>2021-07-29T09:39:45+08:00</updated>
+  <author>
+    <name>Dohae Lee</name>
+    <uri>https://dohaelee.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://dohaelee.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko"
+    href="https://dohaelee.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Dohae Lee </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>타입스크립트 .eslintrc 파일 Parsing Error 해결 방법</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-14-tslint-error/" rel="alternate" type="text/html" title="타입스크립트 .eslintrc 파일 Parsing Error 해결 방법" />
+    <published>2021-06-14T00:00:00+08:00</published>
+  
+    <updated>2021-06-14T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-06-14-tslint-error/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-14-tslint-error/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="report" />
+    
+    <category term="error" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      증상
+
+.eslintrc.js 파일에 타입스크립트 (과거 .tslint) 설정을 할 때 발생하는 Parsing Error 또는 .eslintrc.js 파일 에러.
+
+parsing error: "parseroptions.project" has been set for @typescript-eslint/parser. the file does not match your project config: .eslintrc.js. the file must be included in at least one of the projects provided.
+
+
+module.exports 부분에 위와 같은 에러가 생성된다.
+
+해결 방법
+
+먼저 .eslintrc.js 파일의 parserOptions 항목에 project를 다음과...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>iTerm2 세팅 방법</title>
+    <link href="https://dohaelee.github.io/posts/2021-01-20-setup-mac-terminal-with-iterm2/" rel="alternate" type="text/html" title="iTerm2 세팅 방법" />
+    <published>2021-01-20T00:00:00+08:00</published>
+  
+    <updated>2021-01-20T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-01-20-setup-mac-terminal-with-iterm2/</id>
+    <content src="https://dohaelee.github.io/posts/2021-01-20-setup-mac-terminal-with-iterm2/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="wiki" />
+    
+    <category term="setting" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      iTerm2 설치와 설정
+
+가장 먼저 다음의 명령어로 homebrew를 이용해 iTerm2를 설치한다. 최신 버전이 아닌 다른 버전을 설치하고 싶거나, homebrew를 사용하지 않는다면 공식 홈페이지를 참고하자.
+
+$ brew install --cask iterm2
+
+
+테마 설치와 적용
+
+다음으로는 컬러 테마를 변경하기 위해서 iTerm2 Color Schemes에서 마음에 드는 테마를 골라 .itermcolors 파일을 다운로드 한다. 설치는 다운로드 한 파일을 더블 클릭하면 된다.
+
+이제 iTerm2를 실행하고 iTerm2 - Preferences 메뉴의 Profiles - Colors 탭으로 이동한다. 그런 다음 오른쪽 하단에 있는 Color Presets … 메뉴를 선택해 다운로드 및 설치했던...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>모던 자바스크립트와 ES6 #12 async · await</title>
+    <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #12 async · await" />
+    <published>2020-04-19T00:00:00+08:00</published>
+  
+    <updated>2020-04-19T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/</id>
+    <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="javascript" />
+    
+    <category term="es6-concepts" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다.
+
+
+  async와 await을 비동기 처리에서 절대적으로 사용해야하는 것은 아니다. 콜백의 Depth가 얕은 경우에는 그냥 Promise를 사용하는것이 더 간결한 코드 작성법이 될 때도 있다.
+
+
+(async function func() {
+  await msg("Hello");
+  await msg("World");
+})();
+
+function msg(text) {
+  return new Promise(function (re...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>모던 자바스크립트와 ES6 #11 Generator</title>
+    <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #11 Generator" />
+    <published>2020-04-19T00:00:00+08:00</published>
+  
+    <updated>2020-04-19T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/</id>
+    <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-20-generator/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="javascript" />
+    
+    <category term="es6-concepts" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Generator는 Generator Function의 리턴 값으로, Iterable Protocol과 Iterator Protocol을 따르는 객체이다. 이때 Generator Function은 함수를 실행하면 내부에 정의된 처리를 함수의 끝까지 한 번에 실행하는 일반 함수와 달리, yield와 next() 등을 사용해 특정 시점에 멈출 수도 있고, 다시 시작될 수도 있으며, 상황에 따라 여러 값을 리턴할 수도 있는 함수이다.
+
+function* genFunction() {
+  yield 100;
+  yield 200;
+  yield 300;
+  yield 400;
+  yield 500;
+}
+
+const genObject = genFunction();
+
+console.log(genObject.next...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>모던 자바스크립트와 ES6 #10 Promise</title>
+    <link href="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/" rel="alternate" type="text/html" title="모던 자바스크립트와 ES6 #10 Promise" />
+    <published>2020-04-19T00:00:00+08:00</published>
+  
+    <updated>2020-04-19T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/</id>
+    <content src="https://dohaelee.github.io/posts/2020-04-19-es6-syntax-19-promise/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="javascript" />
+    
+    <category term="es6-concepts" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      자바스크립트에서는 비동기 처리를 위해 일반적으로 콜백 함수를 사용한다. 하지만 기존의 콜백 패턴이 굉장히 지저분했고 예외 처리가 어려웠기 때문에, 여러 개의 비동기 처리를 한 번에 처리하려면 콜백 지옥이 열리곤 했다.
+
+first(function (a) {
+  second(function (b) {
+    third(function (c) {
+      fourth(function (d) {
+        // codes ...
+      });
+    });
+  });
+});
+
+
+이러한 문제점을 보완하기 위해서 ES6에서는 Promise라는 개념을 도입했는데, 이 개념은 기존의 방식의 단점을 보완하고 비동기 처리 시점을 명확하게 표현할 수 있다.
+
+사용법
+
+Promise는 Promise() 생성자 함...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
