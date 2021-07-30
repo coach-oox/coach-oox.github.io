@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Draft",
+    "url": "/posts/2021-07-30-draft/",
+    "categories": "",
+    "tags": "",
+    "date": "2021-07-30 15:24:19 +0800",
+    
+
+
+
+
+
+    "snippet": ""
+  },
+  
+  {
     "title": "타입스크립트 .eslintrc 파일 Parsing Error 해결 방법",
     "url": "/posts/2021-06-14-tslint-error/",
     "categories": "report, error",
@@ -57,7 +72,7 @@
 
 
 
-    "snippet": "GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.  bug: Something isn’t working  documentation: Improvements or additions to documentation  duplicate: This issue or pull request already exists  enhancement: New feature or request  good first issue: Good for newcomers  help wanted: Extra attenti..."
+    "snippet": "GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.            Label      Description                  bug      Something isn’t working              documentation      Improvements or additions to documentation              duplicate      This issue or pull request already exists              enh..."
   },
   
   {

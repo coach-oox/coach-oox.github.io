@@ -149,6 +149,15 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
+      <a href="/lectures/" class="nav-link">
+        <i class="fa-fw fas fa-desktop ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>LECTURES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
@@ -172,6 +181,15 @@
         
 
         <span>ARCHIVES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/keywords/" class="nav-link">
+        <i class="fa-fw fas fa-spell-check ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>KEYWORDS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -350,6 +368,84 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-07-30-draft/">Draft</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        
+
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jul 30, 2021,  3:24 PM +0800"
+  >Jul 30<i class="unloaded">2021-07-30T15:24:19+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="0 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-06-14-tslint-error/">타입스크립트 .eslintrc 파일 Parsing Error 해결 방법</a>
     </h1>
 
@@ -502,7 +598,7 @@ $ git commit -m "Prefix: Message (#issue)"
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="569 words">3 min</span>
+  title="590 words">3 min</span>
 
 
         <!-- page views -->
@@ -616,9 +712,20 @@ main
         GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
 
 
-  bug: Something isn’t working
-  documentation: Improvements or additions to documentation
-  duplicate: This issue or pull request already exis...
+  
+    
+      Label
+      Description
+    
+  
+  
+    
+      bug
+      Something isn’t working
+    
+    
+      documentation
+      Improvements ...
       </p>
     </div>
 
@@ -667,7 +774,7 @@ main
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="387 words">2 min</span>
+  title="375 words">2 min</span>
 
 
         <!-- page views -->
@@ -1096,83 +1203,6 @@ first(function (a) {
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-18-module/">모던 자바스크립트와 ES6 #8 Module</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        대부분의 프로그래밍 언어는 각자의 모듈 기능을 가지고 있다. 예를 들어 C언어의 경우 #include를 사용해 외부의 모듈을 가져온다. 클라이언트 사이드의 자바스크립트의 경우, &lt;script&gt; 태그를 사용해서 외부의 모듈 (스크립트 파일)을 가져올 수 있다. 하지만 이 경우 파일 단위로 독자적인 Scope를 가지는 것이 아니라 하나의 전역 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="854 words">4 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1303,7 +1333,12 @@ first(function (a) {
         
         
         
-        <li><a href="/posts/2020-04-19-es6-syntax-18-module/">모던 자바스크립트와 ES6 #8 Module</a></li>
+        <li><a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a></li>
       
         
         
@@ -1319,11 +1354,6 @@ first(function (a) {
         
         
         <li><a href="/posts/2020-04-19-es6-syntax-21-async-await/">모던 자바스크립트와 ES6 #12 async · await</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-18-js-level-up-1-scope-chain/">자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</a></li>
       
 
       </ul>

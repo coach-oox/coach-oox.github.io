@@ -153,6 +153,15 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
+      <a href="/lectures/" class="nav-link">
+        <i class="fa-fw fas fa-desktop ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>LECTURES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
@@ -176,6 +185,15 @@
         
 
         <span>ARCHIVES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/keywords/" class="nav-link">
+        <i class="fa-fw fas fa-spell-check ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>KEYWORDS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -609,7 +627,12 @@
         
         
         
-        <li><a href="/posts/2020-04-19-es6-syntax-18-module/">모던 자바스크립트와 ES6 #8 Module</a></li>
+        <li><a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a></li>
       
         
         
@@ -625,11 +648,6 @@
         
         
         <li><a href="/posts/2020-04-19-es6-syntax-21-async-await/">모던 자바스크립트와 ES6 #12 async · await</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-18-js-level-up-1-scope-chain/">자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</a></li>
       
 
       </ul>
@@ -1154,6 +1172,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1371,41 +1402,6 @@
       
       
       <div class="card">
-        <a href="/posts/2020-04-19-es6-syntax-18-module/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago small"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>모던 자바스크립트와 ES6 #8 Module</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                대부분의 프로그래밍 언어는 각자의 모듈 기능을 가지고 있다. 예를 들어 C언어의 경우 #include를 사용해 외부의 모듈을 가져온다. 클라이언트 사이드의 자바스크립트의 경우, &lt;script&gt; 태그를 사용해서 외부의 모듈 (스크립트 파일)을 가져올 수 있다. 하지만 이 경우 파일 단위로 독자적인 Scope를 가지는 것이 아니라 하나의 전역 ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/2020-04-19-es6-syntax-19-promise/">
           <div class="card-body">
             <!--
@@ -1472,6 +1468,49 @@ first(function (a) {
 
 
                 Generator는 Generator Function의 리턴 값으로, Iterable Protocol과 Iterator Protocol을 따르는 객체이다. 이때 Generator Function은 함수를 실행하면 내부에 정의된 처리를 함수의 끝까지 한 번에 실행하는 일반 함수와 달리, yield와 next() 등을 사용해 특정 시점에 멈출 수도 있고,...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/2020-04-19-es6-syntax-11-let-const/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago small"
+  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>모던 자바스크립트와 ES6 #1 var · let · const</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                var의 문제점
+
+ES5까지의 자바스크립트에서는 변수를 선언할 때 var 키워드를 사용했다. (물론 지금도 사용할 수 있지만 그때는 유일했다.) var 키워드는 특성상 문제를 야기할 가능성이 높았는데, 그 특성에 대한 내용은 다음과 같다.
+
+var a = 1;
+var b = 2;
+
+console.log(a); // 1
+console.log(b); //...
               </p>
             </div>
           </div>

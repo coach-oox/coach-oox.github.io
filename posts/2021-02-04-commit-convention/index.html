@@ -46,7 +46,7 @@
 <meta property="twitter:title" content="내가 사용하는 Commit · PR 규칙" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"url":"https://dohaelee.github.io/posts/2021-02-04-commit-convention/","headline":"내가 사용하는 Commit · PR 규칙","dateModified":"2021-02-04T00:00:00+08:00","datePublished":"2021-02-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2021-02-04-commit-convention/"},"description":"Commit 규칙","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"https://dohaelee.github.io/posts/2021-02-04-commit-convention/","headline":"내가 사용하는 Commit · PR 규칙","dateModified":"2021-07-30T15:13:39+08:00","datePublished":"2021-02-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2021-02-04-commit-convention/"},"description":"Commit 규칙","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -153,6 +153,15 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
+      <a href="/lectures/" class="nav-link">
+        <i class="fa-fw fas fa-desktop ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>LECTURES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
@@ -176,6 +185,15 @@
         
 
         <span>ARCHIVES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/keywords/" class="nav-link">
+        <i class="fa-fw fas fa-spell-check ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>KEYWORDS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -389,6 +407,28 @@
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jul 30, 2021,  4:13 PM +0900"
+  >Jul 30<i class="unloaded">2021-07-30T15:13:39+08:00</i>
+</span>
+
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -410,7 +450,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="569 words">3 min read</span>
+  title="590 words">3 min read</span>
 
 
           <!-- page views -->
@@ -443,60 +483,56 @@
 
 <h3 id="접두사">접두사</h3>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">feat</code>
-    <ul>
-      <li>기능 추가</li>
-      <li>e.g., <code class="language-plaintext highlighter-rouge">feat: 소셜 로그인 기능 추가 (#13)</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">fix</code>
-    <ul>
-      <li>버그 및 오류 수정</li>
-      <li>e.g., <code class="language-plaintext highlighter-rouge">fix: 이미지 경로 수정 (#24)</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">enhance</code>
-    <ul>
-      <li>기능 및 성능 향상</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">client</code></li>
-  <li><code class="language-plaintext highlighter-rouge">docs</code>
-    <ul>
-      <li>문서 작업</li>
-      <li>e.g., <code class="language-plaintext highlighter-rouge">docs: README.md 수정</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">ci</code>
-    <ul>
-      <li>CI 구성 파일 및 스크립트 변경</li>
-      <li>e.g., Travis, Circle, SauceLabs</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">build</code>
-    <ul>
-      <li>의존성, 프로젝트 버전 등 빌드에 영향을 주는 수정</li>
-      <li>e.g., <code class="language-plaintext highlighter-rouge">npm</code>, <code class="language-plaintext highlighter-rouge">gulp</code>, <code class="language-plaintext highlighter-rouge">webpack</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">chore</code>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">.gitignore</code> 파일 수정</li>
-      <li>패키지 매니저 수정</li>
-      <li>그외 자잘한 수정</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">refac</code>
-    <ul>
-      <li>내부적인 리팩토링</li>
-      <li>코드 정리, 주석 작업</li>
-      <li>변수명 변경 등</li>
-    </ul>
-  </li>
-</ul>
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">feat</code></td>
+      <td>기능 추가<br />e.g., <code class="language-plaintext highlighter-rouge">feat: 소셜 로그인 기능 추가 (#13)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fix</code></td>
+      <td>버그 및 오류 수정<br />e.g., <code class="language-plaintext highlighter-rouge">fix: 이미지 경로 수정 (#24)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">enhace</code></td>
+      <td>기능 및 성능 향상</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">client</code></td>
+      <td>프론트엔드 작업</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">docs</code></td>
+      <td>문서 작업</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ci</code></td>
+      <td>CI 구성 파일 및 스크립트 변경</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">build</code></td>
+      <td>의존성, 프로젝트 버전 등 빌드에 영향을 주는 수정</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">chore</code></td>
+      <td><code class="language-plaintext highlighter-rouge">.gitignore</code>, 패키지 매니저, 그외 자잘한 수정</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">refac</code></td>
+      <td>내부적인 리팩토링, 코드 정리, 주석 작업, 변수명 변경 등</td>
+    </tr>
+  </tbody>
+</table></div>
 
 <h3 id="접두사를-생략하는-경우">접두사를 생략하는 경우</h3>
+
+<p>다음에 해당하는 경우에는 접두사를 생략하고 메시지만 작성한다.</p>
 
 <div lang="console" class="language-console highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="gp">$</span><span class="w"> </span>git commit <span class="nt">-m</span> <span class="s2">"Message (#issue)"</span>
@@ -633,7 +669,12 @@ GitHub, Google 계정으로 로그인할 수 있는 기능 추가.
         
         
         
-        <li><a href="/posts/2020-04-19-es6-syntax-18-module/">모던 자바스크립트와 ES6 #8 Module</a></li>
+        <li><a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a></li>
       
         
         
@@ -649,11 +690,6 @@ GitHub, Google 계정으로 로그인할 수 있는 기능 추가.
         
         
         <li><a href="/posts/2020-04-19-es6-syntax-21-async-await/">모던 자바스크립트와 ES6 #12 async · await</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-18-js-level-up-1-scope-chain/">자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</a></li>
       
 
       </ul>
@@ -1113,6 +1149,19 @@ GitHub, Google 계정으로 로그인할 수 있는 기능 추가.
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1464,9 +1513,20 @@ main
                 GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
 
 
-  bug: Something isn’t working
-  documentation: Improvements or additions to documentation
-  duplicate: This issue or pull request already exis...
+  
+    
+      Label
+      Description
+    
+  
+  
+    
+      bug
+      Something isn’t working
+    
+    
+      documentation
+      Improvements ...
               </p>
             </div>
           </div>
