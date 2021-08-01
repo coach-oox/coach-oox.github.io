@@ -18,3 +18,7 @@ node_modules
 package-lock.json
 .DS_Store
 .vscode
+
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
