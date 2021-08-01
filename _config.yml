@@ -87,10 +87,6 @@ avatar: ./assets/img/favicons/logo.png
 # boolean type, the global switch for ToC in posts.
 toc: false
 
-disqus:
-  comments: true # boolean type, the global switch for posts comments.
-  shortname: "dohaelee" # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
 paginate: 10
 
 # ------------ The following options are not recommended to be modified ------------------
