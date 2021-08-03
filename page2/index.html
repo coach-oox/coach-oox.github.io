@@ -2,12 +2,8 @@
 
 
 
-<html lang="ko" 
-  
-    mode="light"
-  
->
-
+<html lang="ko"   mode="light"
+ >
   <!--
   The Head
 -->
@@ -108,7 +104,6 @@
 
 
   <body data-spy="scroll" data-target="#toc">
-
     <!--
   The Side Bar
 -->
@@ -150,29 +145,11 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/lectures/" class="nav-link">
-        <i class="fa-fw fas fa-desktop ml-xl-3 mr-xl-3 unloaded"></i>
-        
-
-        <span>LECTURES</span>
-      </a>
-    </li> <!-- .nav-item -->
-    
-    <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
 
         <span>CATEGORIES</span>
-      </a>
-    </li> <!-- .nav-item -->
-    
-    <li class="nav-item">
-      <a href="/tags/" class="nav-link">
-        <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i>
-        
-
-        <span>TAGS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -186,11 +163,11 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/translation/" class="nav-link">
-        <i class="fa-fw fas fa-language ml-xl-3 mr-xl-3 unloaded"></i>
+      <a href="/tags/" class="nav-link">
+        <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i>
         
 
-        <span>TRANSLATION</span>
+        <span>TAGS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -265,9 +242,7 @@
   </div> <!-- .sidebar-bottom -->
 
 </div><!-- #sidebar -->
-
-
-    <!--
+ <!--
   The Top Bar
 -->
 
@@ -306,7 +281,6 @@
 
     <div id="main-wrapper">
       <div id="main">
-
         <!--
   Refactor the HTML structure.
 -->
@@ -378,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-17-destructuring/">모던 자바스크립트와 ES6 #7 Destructuring Assignment</a>
+      <a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -389,13 +363,23 @@
 
 
 
-        Destructuring Assignment Syntax는 배열이나 객체를 Destructuring (비구조화)해서 각각의 요소를 개별적인 변수에 할당하는 것을 의미하며, 일반적으로 구조화된 배열이나 객체에서 특정 값만을 꺼내 변수에 할당하거나 리턴하기 위해 사용된다.
+        GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
 
 
-  추천 글 : Destructuring Assignment - MDN
-
-
-Ar...
+  
+    
+      Label
+      Description
+    
+  
+  
+    
+      bug
+      Something isn’t working
+    
+    
+      documentation
+      Improvements ...
       </p>
     </div>
 
@@ -418,8 +402,8 @@ Ar...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Tue, Feb  2, 2021, 12:00 AM +0800"
+  >Feb  2<i class="unloaded">2021-02-02T00:00:00+08:00</i>
 </span>
 
 
@@ -444,7 +428,7 @@ Ar...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="670 words">3 min</span>
+  title="386 words">2 min</span>
 
 
         <!-- page views -->
@@ -461,7 +445,7 @@ Ar...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-16-object-initailizer/">모던 자바스크립트와 ES6 #6 Enhanced Object Literals</a>
+      <a href="/posts/2021-02-01-clean-code/">오랜만에 리마인드 해보는 클린 코드를 위한 기본 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -472,11 +456,19 @@ Ar...
 
 
 
-        ES6에서는 향상된 객체의 Literal을 제공한다. 이는 ES5까지의 객체 정의 방식을 개선한 문법을 의미하며, 객체를 정의하거나 객체 내 메소드를 정의하는 등 자주 사용되는 문법들을 좀 더 간결하게 사용할 수 있다.
+        Clean Code
 
-Property Shorthand
 
-ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략할 수 있는 축약 ...
+  주석을 최소화 할 수 있는 코드
+  코드 작성자가 아닌 사람도 금방 배울 수 있는 코드
+  나중에 다시 읽을 때 ‘읽기 위한 공부’를 위해서 Additianal Cost를 지불하지 않아도 되는 코드
+  미래의 내가 똑같은 코드를 작성해도 (코드의 내용은 달라질 수 있지만) 일정한 포맷을 유지하는 코드
+
+
+Naming
+
+
+  ...
       </p>
     </div>
 
@@ -499,8 +491,8 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Mon, Feb  1, 2021, 12:00 AM +0800"
+  >Feb  1<i class="unloaded">2021-02-01T00:00:00+08:00</i>
 </span>
 
 
@@ -525,7 +517,7 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="406 words">2 min</span>
+  title="311 words">1 min</span>
 
 
         <!-- page views -->
@@ -542,7 +534,7 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-15-spread/">모던 자바스크립트와 ES6 #5 Spread Syntax</a>
+      <a href="/posts/2021-01-23-hosting-services/">2021 프론트엔드 · 백엔드 호스팅 서비스와 CDN 서비스 정리</a>
     </h1>
 
     <div class="post-content">
@@ -553,15 +545,24 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
 
 
 
-        Spread Syntax (...)는 점 뒤에 오는 대상을 개별 요소로 분리한다. 이때 대상은 Iterable 해야 한다.
-
-const arr = [1, 2, 3];
-console.log(...arr, 4, 5);
+        Front-End
 
 
-이를 응용해 배열을 파라미터로 함수에 전달하고자 할 때, 모든 요소를 분리해서 순차적으로 전달할 수 있다.
-
-function sum(a...
+  
+    
+      Service
+      Description
+    
+  
+  
+    
+      GitHub Pages
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $4
+    
+    
+      Glitch
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $8
+ ...
       </p>
     </div>
 
@@ -584,8 +585,8 @@ function sum(a...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Sat, Jan 23, 2021, 12:00 AM +0800"
+  >Jan 23<i class="unloaded">2021-01-23T00:00:00+08:00</i>
 </span>
 
 
@@ -610,7 +611,7 @@ function sum(a...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="266 words">1 min</span>
+  title="343 words">1 min</span>
 
 
         <!-- page views -->
@@ -627,7 +628,7 @@ function sum(a...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-14-default-rest-parameter/">모던 자바스크립트와 ES6 #4 Default · Rest Parameter</a>
+      <a href="/posts/2021-01-20-setup-mac-terminal-with-iterm2/">iTerm2 세팅 방법</a>
     </h1>
 
     <div class="post-content">
@@ -638,18 +639,102 @@ function sum(a...
 
 
 
-        Default Parameter Value
+        iTerm2 설치와 설정
 
-자바스크립트에서는 함수를 호출할 때 요구되는 파라미터의 개수가 부족한 경우에도 에러가 발생하지 않는다. 예를 들어 다음의 경우를 가정해보자.
+가장 먼저 다음의 명령어로 homebrew를 이용해 iTerm2를 설치한다. 최신 버전이 아닌 다른 버전을 설치하고 싶거나, homebrew를 사용하지 않는다면 공식 홈페이지를 참고하자.
 
-function sum(a, b) {
-  return a + b;
+$ brew install --cask iterm2
+
+
+테마 설치와 적용
+
+다음으로는 컬러 테마를 변경하기 위해서 iTerm2 Color...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jan 20, 2021, 12:00 AM +0800"
+  >Jan 20<i class="unloaded">2021-01-20T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1064 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-21-typescript-interface/">타입스크립트 기초 토막 정리 #3 인터페이스</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        자바스크립트에서는 클래스를 인터페이스처럼 활용하기도 했지만, 타입스크립트는 그렇지 않다. 클래스와의 차이점은 이 글을 참고.
+
+interface Person {
+  name: string;
+  age: number;
+  gender: string;
 }
 
-console.log(sum(10));
-
-
-sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
+// 인자가 Person과 같은지 확인
+function greeting(person: Person)...
       </p>
     </div>
 
@@ -672,8 +757,8 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Mon, Dec 21, 2020, 12:00 AM +0800"
+  >Dec 21, 2020<i class="unloaded">2020-12-21T00:00:00+08:00</i>
 </span>
 
 
@@ -698,7 +783,7 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="853 words">4 min</span>
+  title="122 words">1 min</span>
 
 
         <!-- page views -->
@@ -715,7 +800,7 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-13-arrow-function/">모던 자바스크립트와 ES6 #3 Arrow Function</a>
+      <a href="/posts/2020-12-20-typescript-class/">타입스크립트 기초 토막 정리 #2 클래스</a>
     </h1>
 
     <div class="post-content">
@@ -726,12 +811,13 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
 
 
-        Arrow Function (이하 화살표 함수)는 ES6에서 도입된, function 키워드를 사용하지 않아도 =&gt; 화살표를 사용함으로써 보다 간단하게 함수를 선언할 수 있는 문법이다. 화살표 함수의 사용법은 매우 간단하지만, 다음과 같은 몇 가지 규칙이 있다.
+        자바스크립트의 클래스
 
-// 1. 아규먼트가 없을 경우 () 괄호 생략 불가
-() =&gt; {};
+자바스크립트에서는 클래스가 가지고 있는 속성들에 대해 신경 쓸 필요가 별로 없다. 그냥 사용할 클래스 내용을 작성하기만 하면 된다. 자바스크립트에서 인터페이스가 필요할 때 (쓰고 싶을 때)는 클래스를 대신 사용할 수 있다.
 
-//...
+class Rectangle {
+  constructor(height, width) {
+    this....
       </p>
     </div>
 
@@ -754,8 +840,8 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Sun, Dec 20, 2020, 12:00 AM +0800"
+  >Dec 20, 2020<i class="unloaded">2020-12-20T00:00:00+08:00</i>
 </span>
 
 
@@ -780,7 +866,7 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1209 words">6 min</span>
+  title="265 words">1 min</span>
 
 
         <!-- page views -->
@@ -797,7 +883,7 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-12-template-literal/">모던 자바스크립트와 ES6 #2 Template Literals</a>
+      <a href="/posts/2020-12-19-typescript-types/">타입스크립트 기초 토막 정리 #1 타입 지정</a>
     </h1>
 
     <div class="post-content">
@@ -808,20 +894,18 @@ sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
 
 
 
-        ES5까지, 일반 텍스트와 변수를 하나의 문자열로 사용하려면 다음과 같이 했어야 했다.
+        파라미터 타입 지정
 
-var a = 1;
-var b = 2;
+function greeting(name: string, age: number, gender: string) {
+  console.log(`${name}: ${age} years, ${gender}.`);
+}
 
-console.log("a is " + a + " and b is " + b);
+greeting("Jack", "24", "male");
+
+export {};
 
 
-알다시피 이런 방식은 귀찮다. 단호하게 귀찮다.
-
-const a = 1;
-const b = 2;
-
-console.log(`a is ${a}...
+타입스크립트에서는 파라미터의 타입을 위...
       </p>
     </div>
 
@@ -844,8 +928,8 @@ console.log(`a is ${a}...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Sat, Dec 19, 2020, 12:00 AM +0800"
+  >Dec 19, 2020<i class="unloaded">2020-12-19T00:00:00+08:00</i>
 </span>
 
 
@@ -870,7 +954,7 @@ console.log(`a is ${a}...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="241 words">1 min</span>
+  title="214 words">1 min</span>
 
 
         <!-- page views -->
@@ -887,7 +971,7 @@ console.log(`a is ${a}...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-19-es6-syntax-11-let-const/">모던 자바스크립트와 ES6 #1 var · let · const</a>
+      <a href="/posts/2020-12-18-typescript-setting-up/">타입스크립트를 사용하기 위한 기본 세팅 방법</a>
     </h1>
 
     <div class="post-content">
@@ -898,15 +982,19 @@ console.log(`a is ${a}...
 
 
 
-        var의 문제점
+        설치
 
-ES5까지의 자바스크립트에서는 변수를 선언할 때 var 키워드를 사용했다. (물론 지금도 사용할 수 있지만 그때는 유일했다.) var 키워드는 특성상 문제를 야기할 가능성이 높았는데, 그 특성에 대한 내용은 다음과 같다.
+npm install -g typescript
 
-var a = 1;
-var b = 2;
 
-console.log(a); // 1
-console.log(b); //...
+먼저 typescript를 Global로 설치한다. VS Code를 사용한다면, EsLint 확장을 설치한다. (TsLint 확장은 지원이 중단 되었기 때문에 더이상 사용되지 않는다.)
+
+설정
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "...
       </p>
     </div>
 
@@ -929,8 +1017,8 @@ console.log(b); //...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+    title="Fri, Dec 18, 2020, 12:00 AM +0800"
+  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
 </span>
 
 
@@ -955,7 +1043,7 @@ console.log(b); //...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1010 words">5 min</span>
+  title="348 words">1 min</span>
 
 
         <!-- page views -->
@@ -972,7 +1060,7 @@ console.log(b); //...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-18-js-level-up-4-higher-order-function/">자바스크립트 레벨업을 위한 주요 개념 #4 Higher Order Function</a>
+      <a href="/posts/2020-12-11-sessions-cookies/">Cookie · Session 기술의 이해</a>
     </h1>
 
     <div class="post-content">
@@ -983,9 +1071,10 @@ console.log(b); //...
 
 
 
-        Higher Order Function (HOF, 고차 함수)는 함수를 리턴하거나 함수를 파라미터로 전달받는 함수를 의미하며, 넘겨받은 함수를 호출하거나 클로저로 리턴하는 역할을 한다. 이게 가능한 이유는 자바스크립트의 함수가 First Class이기 때문인데, 더 자세한 내용은 MDN의 First Class Function 문서를 참고하자.
+        Cookie와 Session을 사용하는 이유
 
-이러한...
+HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특징을 가지고 있다. 이 특징으로 인해 사용자가 요청할 때 마다 연결과 해제의 과정을 거치기 때문에 연결 상태를 유지하지 않고, 연결을 해지한 후에 상태 정보도 저장하지 않아 서버의 자원을 절약할 수 있다.
+...
       </p>
     </div>
 
@@ -1008,8 +1097,8 @@ console.log(b); //...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Apr 18, 2020, 12:00 AM +0800"
-  >Apr 18, 2020<i class="unloaded">2020-04-18T00:00:00+08:00</i>
+    title="Fri, Dec 11, 2020, 12:00 AM +0800"
+  >Dec 11, 2020<i class="unloaded">2020-12-11T00:00:00+08:00</i>
 </span>
 
 
@@ -1034,7 +1123,7 @@ console.log(b); //...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="450 words">2 min</span>
+  title="1105 words">6 min</span>
 
 
         <!-- page views -->
@@ -1051,7 +1140,7 @@ console.log(b); //...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-18-js-level-up-3-function-this-bind/">자바스크립트 레벨업을 위한 주요 개념 #3 this</a>
+      <a href="/posts/2020-11-14-eslint-prettier/">.prettierrc, .eslintrc 작성법</a>
     </h1>
 
     <div class="post-content">
@@ -1062,7 +1151,19 @@ console.log(b); //...
 
 
 
-        자바스크립트에서는 어떤 함수가 호출될 때 전달되는 아규먼트 말고도 arguments라는 객체와 this가 은밀하게 (?) 전달되고 있다. this는 아마도 Java를 배워본적 있는 사람이라면 꽤 낯이 익는 친구일 것이다. 하지만 이때 this는 Java의 this와는 개념적으로 다른데, Java에서는 자기 자신의 Reference를 가르키는 변수로써 ...
+        Prettier
+
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false
+}
+
+
+.prettierrc 파일을 생성하고 위 코드 예제와 같이 원하는 설정을 작성한다. 설정...
       </p>
     </div>
 
@@ -1085,8 +1186,8 @@ console.log(b); //...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Apr 18, 2020, 12:00 AM +0800"
-  >Apr 18, 2020<i class="unloaded">2020-04-18T00:00:00+08:00</i>
+    title="Sat, Nov 14, 2020, 12:00 AM +0800"
+  >Nov 14, 2020<i class="unloaded">2020-11-14T00:00:00+08:00</i>
 </span>
 
 
@@ -1111,84 +1212,7 @@ console.log(b); //...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1753 words">9 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-18-js-level-up-2-closure/">자바스크립트 레벨업을 위한 주요 개념 #2 Closure</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Closure (이하 클로저)는 자바스크립트에 한정되는 개념은 아니고, Functional Programming Language에서 다루는 주요한 특성 중 하나이다. 이 개념은 리턴된 함수가 리턴되기 전에 가진 Scope를 리턴된 다음에도 접근할 수 있는 함수를 의미한다. 즉, 클로저는 자기 자신이 생성될 때의 Lexical Environment를 기...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Apr 18, 2020, 12:00 AM +0800"
-  >Apr 18, 2020<i class="unloaded">2020-04-18T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1065 words">5 min</span>
+  title="170 words">1 min</span>
 
 
         <!-- page views -->
@@ -1277,10 +1301,92 @@ console.log(b); //...
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+        <li class="page-item disabled">
+          <span class="page-link btn-box-shadow">...</span>
+        </li>
+        
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page8/">8</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>2</span>
-    <span class="text-muted">/ 3</span>
+    <span class="text-muted">/ 8</span>
   </li>
 
   <!-- right arrow -->
@@ -1401,10 +1507,6 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
@@ -1425,29 +1527,11 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -1527,6 +1611,222 @@ console.log(b); //...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1536,39 +1836,20 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1585,23 +1866,10 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1618,7 +1886,10 @@ console.log(b); //...
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -1634,7 +1905,70 @@ console.log(b); //...
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1642,6 +1976,68 @@ console.log(b); //...
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1665,7 +2061,808 @@ console.log(b); //...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1698,31 +2895,31 @@ console.log(b); //...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/git/">git</a>
+      
+        
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/es6/">es6</a>
       
         
-        <a class="post-tag" href="/tags/convention/">convention</a>
+        <a class="post-tag" href="/tags/express/">express</a>
+      
+        
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
+        <a class="post-tag" href="/tags/socket-io/">socket-io</a>
+      
+        
+        <a class="post-tag" href="/tags/websocket/">websocket</a>
       
         
         <a class="post-tag" href="/tags/github/">github</a>
       
         
-        <a class="post-tag" href="/tags/git/">git</a>
-      
-        
-        <a class="post-tag" href="/tags/chrome/">chrome</a>
-      
-        
-        <a class="post-tag" href="/tags/closure/">closure</a>
-      
-        
-        <a class="post-tag" href="/tags/eslint/">eslint</a>
-      
-        
-        <a class="post-tag" href="/tags/geolocation/">geolocation</a>
-      
-        
-        <a class="post-tag" href="/tags/hof/">hof</a>
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -1739,9 +2936,7 @@ console.log(b); //...
 
 
 
-
-
-        <!--
+ <!--
   The Footer
 -->
 
@@ -1773,7 +2968,6 @@ console.log(b); //...
   </div> <!-- div.d-flex -->
 </footer>
 
-
       </div>
 
       <!--
@@ -1781,7 +2975,7 @@ console.log(b); //...
 -->
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
   <div class="col-12 col-sm-11 post-content">
-    <div id="search-hints">
+    <!-- <div id="search-hints">
       <h4 class="text-muted mb-4">Trending Tags</h4>
 
       
@@ -1860,10 +3054,6 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
@@ -1884,29 +3074,11 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -1986,6 +3158,222 @@ console.log(b); //...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1995,39 +3383,20 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2044,23 +3413,10 @@ console.log(b); //...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2077,7 +3433,10 @@ console.log(b); //...
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -2093,7 +3452,70 @@ console.log(b); //...
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2101,6 +3523,68 @@ console.log(b); //...
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2124,7 +3608,808 @@ console.log(b); //...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2152,46 +4437,55 @@ console.log(b); //...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/git/">git</a>
+      
+        
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/es6/">es6</a>
       
         
-        <a class="post-tag" href="/tags/convention/">convention</a>
+        <a class="post-tag" href="/tags/express/">express</a>
+      
+        
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
+        <a class="post-tag" href="/tags/socket-io/">socket io</a>
+      
+        
+        <a class="post-tag" href="/tags/websocket/">websocket</a>
       
         
         <a class="post-tag" href="/tags/github/">github</a>
       
         
-        <a class="post-tag" href="/tags/git/">git</a>
-      
-        
-        <a class="post-tag" href="/tags/chrome/">chrome</a>
-      
-        
-        <a class="post-tag" href="/tags/closure/">closure</a>
-      
-        
-        <a class="post-tag" href="/tags/eslint/">eslint</a>
-      
-        
-        <a class="post-tag" href="/tags/geolocation/">geolocation</a>
-      
-        
-        <a class="post-tag" href="/tags/hof/">hof</a>
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
-    </div>
-    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+    </div> -->
+    <div
+      id="search-results"
+      class="d-flex flex-wrap justify-content-center text-muted mt-3"
+    ></div>
   </div>
 </div>
 
-
-    </div> <!-- #main-wrapper -->
+    </div>
+    <!-- #main-wrapper -->
 
     
 
     <div id="mask"></div>
 
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+    <a
+      id="back-to-top"
+      href="#"
+      aria-label="back-to-top"
+      class="btn btn-lg btn-box-shadow"
+      role="button"
+    >
       <i class="fas fa-angle-up"></i>
     </a>
 
@@ -2232,9 +4526,7 @@ SimpleJekyllSearch({
   }
 });
 </script>
-
-
-    <!--
+ <!--
   JS selector for site.
 -->
 
@@ -2258,9 +4550,20 @@ SimpleJekyllSearch({
 <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script>
 
 
+ <script>
+  document.oncontextmenu = document.body.oncontextmenu = function () {
+    return false;
+  };
 
+  document.oncopy = document.body.oncopy = function () {
+    return false;
+  };
+
+  document.oncut = document.body.oncut = function () {
+    return false;
+  };
+</script>
 
   </body>
-
 </html>
 

@@ -19,15 +19,11 @@ const resource = [
   
     '/about/',
   
-    '/lectures/',
-  
     '/categories/',
-  
-    '/tags/',
   
     '/archives/',
   
-    '/translation/',
+    '/tags/',
   
     '/keywords/',
   

@@ -2,12 +2,8 @@
 
 
 
-<html lang="ko" 
-  
-    mode="light"
-  
->
-
+<html lang="ko"   mode="light"
+ >
   <!--
   The Head
 -->
@@ -33,7 +29,7 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="모던 자바스크립트와 ES6 #12 async · await" />
+<meta property="og:title" content="모던 자바스크립트와 ES6 #11 async · await" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다." />
 <meta property="og:description" content="ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다." />
@@ -43,14 +39,14 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-19T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="모던 자바스크립트와 ES6 #12 async · await" />
+<meta property="twitter:title" content="모던 자바스크립트와 ES6 #11 async · await" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"url":"https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/","headline":"모던 자바스크립트와 ES6 #12 async · await","dateModified":"2020-04-19T00:00:00+08:00","datePublished":"2020-04-19T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/"},"description":"ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/","headline":"모던 자바스크립트와 ES6 #11 async · await","dateModified":"2020-04-19T00:00:00+08:00","datePublished":"2020-04-19T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2020-04-19-es6-syntax-21-async-await/"},"description":"ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>모던 자바스크립트와 ES6 #12 async · await | Dohae Lee
+  <title>모던 자바스크립트와 ES6 #11 async · await | Dohae Lee
   </title>
 
   <!--
@@ -111,7 +107,6 @@
 
 
   <body data-spy="scroll" data-target="#toc">
-
     <!--
   The Side Bar
 -->
@@ -153,29 +148,11 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/lectures/" class="nav-link">
-        <i class="fa-fw fas fa-desktop ml-xl-3 mr-xl-3 unloaded"></i>
-        
-
-        <span>LECTURES</span>
-      </a>
-    </li> <!-- .nav-item -->
-    
-    <li class="nav-item">
       <a href="/categories/" class="nav-link">
         <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
         
 
         <span>CATEGORIES</span>
-      </a>
-    </li> <!-- .nav-item -->
-    
-    <li class="nav-item">
-      <a href="/tags/" class="nav-link">
-        <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i>
-        
-
-        <span>TAGS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -189,11 +166,11 @@
     </li> <!-- .nav-item -->
     
     <li class="nav-item">
-      <a href="/translation/" class="nav-link">
-        <i class="fa-fw fas fa-language ml-xl-3 mr-xl-3 unloaded"></i>
+      <a href="/tags/" class="nav-link">
+        <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i>
         
 
-        <span>TRANSLATION</span>
+        <span>TAGS</span>
       </a>
     </li> <!-- .nav-item -->
     
@@ -268,9 +245,7 @@
   </div> <!-- .sidebar-bottom -->
 
 </div><!-- #sidebar -->
-
-
-    <!--
+ <!--
   The Top Bar
 -->
 
@@ -306,7 +281,7 @@
         
 
           
-            <span>모던 자바스크립트와 ES6 #12 async · await</span>
+            <span>모던 자바스크립트와 ES6 #11 async · await</span>
           
 
         
@@ -338,7 +313,6 @@
 
     <div id="main-wrapper">
       <div id="main">
-
         <!--
   Refactor the HTML structure.
 -->
@@ -382,9 +356,10 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>모던 자바스크립트와 ES6 #12 async · await</h1>
+      <h1 data-toc-skip>모던 자바스크립트와 ES6 #11 async · await</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
+        
         <!-- Published date and author -->
         <div>
           <span class="semi-bold">
@@ -411,6 +386,14 @@
   >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
 </span>
 
+        </div>
+
+        <div>
+          
+          <span>
+            <a href="/categories/javascript">javascript</a>
+          </span>
+          
         </div>
 
         <div>
@@ -536,8 +519,7 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/javascript/'>javascript</a>,
-            <a href='/categories/es6-concept/'>es6-concept</a>
+            <a href='/categories/javascript/'>javascript</a>
         </div>
         
 
@@ -682,10 +664,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -706,29 +684,11 @@
     
     
     
-      
-        
-        
-
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -808,6 +768,222 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -817,39 +993,20 @@
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -866,23 +1023,10 @@
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -899,7 +1043,10 @@
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -915,7 +1062,70 @@
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -923,6 +1133,68 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -946,7 +1218,808 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -979,31 +2052,31 @@
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/git/">git</a>
+      
+        
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/es6/">es6</a>
       
         
-        <a class="post-tag" href="/tags/convention/">convention</a>
+        <a class="post-tag" href="/tags/express/">express</a>
+      
+        
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
+        <a class="post-tag" href="/tags/socket-io/">socket-io</a>
+      
+        
+        <a class="post-tag" href="/tags/websocket/">websocket</a>
       
         
         <a class="post-tag" href="/tags/github/">github</a>
       
         
-        <a class="post-tag" href="/tags/git/">git</a>
-      
-        
-        <a class="post-tag" href="/tags/chrome/">chrome</a>
-      
-        
-        <a class="post-tag" href="/tags/closure/">closure</a>
-      
-        
-        <a class="post-tag" href="/tags/eslint/">eslint</a>
-      
-        
-        <a class="post-tag" href="/tags/geolocation/">geolocation</a>
-      
-        
-        <a class="post-tag" href="/tags/hof/">hof</a>
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -1030,14 +2103,14 @@
   
   <a href="/posts/2020-04-19-es6-syntax-20-generator/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>모던 자바스크립트와 ES6 #11 Generator</p>
+    <p>모던 자바스크립트와 ES6 #10 Generator</p>
   </a>
   
 
   
-  <a href="/posts/2021-01-20-setup-mac-terminal-with-iterm2/" class="btn btn-outline-primary"
+  <a href="/posts/2020-05-01-how-to-work-socket-io/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>iTerm2 세팅 방법</p>
+    <p>Socket.io 동작 이해</p>
   </a>
   
 
@@ -1063,9 +2136,7 @@
 
 </div> <!-- .row -->
 
-
-
-        <!--
+ <!--
   The Footer
 -->
 
@@ -1097,7 +2168,6 @@
   </div> <!-- div.d-flex -->
 </footer>
 
-
       </div>
 
       <!--
@@ -1105,7 +2175,7 @@
 -->
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
   <div class="col-12 col-sm-11 post-content">
-    <div id="search-hints">
+    <!-- <div id="search-hints">
       <h4 class="text-muted mb-4">Trending Tags</h4>
 
       
@@ -1184,10 +2254,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1208,29 +2274,11 @@
     
     
     
-      
-        
-        
-
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -1310,6 +2358,222 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1319,39 +2583,20 @@
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1368,23 +2613,10 @@
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1401,7 +2633,10 @@
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -1417,7 +2652,70 @@
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1425,6 +2723,68 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1448,7 +2808,808 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1476,46 +3637,55 @@
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/git/">git</a>
+      
+        
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/es6/">es6</a>
       
         
-        <a class="post-tag" href="/tags/convention/">convention</a>
+        <a class="post-tag" href="/tags/express/">express</a>
+      
+        
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
+        <a class="post-tag" href="/tags/socket-io/">socket io</a>
+      
+        
+        <a class="post-tag" href="/tags/websocket/">websocket</a>
       
         
         <a class="post-tag" href="/tags/github/">github</a>
       
         
-        <a class="post-tag" href="/tags/git/">git</a>
-      
-        
-        <a class="post-tag" href="/tags/chrome/">chrome</a>
-      
-        
-        <a class="post-tag" href="/tags/closure/">closure</a>
-      
-        
-        <a class="post-tag" href="/tags/eslint/">eslint</a>
-      
-        
-        <a class="post-tag" href="/tags/geolocation/">geolocation</a>
-      
-        
-        <a class="post-tag" href="/tags/hof/">hof</a>
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
-    </div>
-    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+    </div> -->
+    <div
+      id="search-results"
+      class="d-flex flex-wrap justify-content-center text-muted mt-3"
+    ></div>
   </div>
 </div>
 
-
-    </div> <!-- #main-wrapper -->
+    </div>
+    <!-- #main-wrapper -->
 
     
 
     <div id="mask"></div>
 
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+    <a
+      id="back-to-top"
+      href="#"
+      aria-label="back-to-top"
+      class="btn btn-lg btn-box-shadow"
+      role="button"
+    >
       <i class="fas fa-angle-up"></i>
     </a>
 
@@ -1556,9 +3726,7 @@ SimpleJekyllSearch({
   }
 });
 </script>
-
-
-    <!--
+ <!--
   JS selector for site.
 -->
 
@@ -1585,9 +3753,20 @@ SimpleJekyllSearch({
 <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.16.1,npm/bootstrap@4/dist/js/bootstrap.min.js"></script>
 
 
+ <script>
+  document.oncontextmenu = document.body.oncontextmenu = function () {
+    return false;
+  };
 
+  document.oncopy = document.body.oncopy = function () {
+    return false;
+  };
+
+  document.oncut = document.body.oncut = function () {
+    return false;
+  };
+</script>
 
   </body>
-
 </html>
 
