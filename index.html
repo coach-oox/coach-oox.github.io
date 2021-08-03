@@ -955,7 +955,7 @@ Bundle이란?
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-12-heroku/">Express AWS S3를 사용한 파일 업로드 예제</a>
+      <a href="/posts/2021-03-03-heroku-port/">Heroku Port</a>
     </h1>
 
     <div class="post-content">
@@ -966,17 +966,11 @@ Bundle이란?
 
 
 
-        Bucket 생성
-
-AWS S3 Bucket 생성.
-
-IAM User 생성
-
-AWS_ID = 123123;
-AWS_SECRET = 123123;
+        const PORT = process.env.PORT || 4000;
+app.listen(PORT, listenServer);
 
 
-IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 후 .env 파일에 (사실 개발 환경에서는 로컬에 저장하면 되고, Heroku에서만 AWS로 저장하면 되기 때문에 .en...
+Heroku에서는 필요에 따라 자동으로 포트 넘버를 (유동적으로) 설정하기 때문에 환경 변수 설정이 필요하다. process.env.PORT는 Heroku에서만 동작하며, (오로지 Heroku를 위한) Heroku를 사용하...
       </p>
     </div>
 
@@ -999,8 +993,8 @@ IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 �
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Feb 12, 2021, 12:00 AM +0800"
-  >Feb 12<i class="unloaded">2021-02-12T00:00:00+08:00</i>
+    title="Wed, Mar  3, 2021, 12:00 AM +0800"
+  >Mar  3<i class="unloaded">2021-03-03T00:00:00+08:00</i>
 </span>
 
 
@@ -1025,7 +1019,7 @@ IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 �
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="507 words">2 min</span>
+  title="106 words">1 min</span>
 
 
         <!-- page views -->
@@ -1042,7 +1036,7 @@ IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 �
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a>
+      <a href="/posts/2021-03-02-heroku-mongodb/">Heroku Mongodb</a>
     </h1>
 
     <div class="post-content">
@@ -1053,18 +1047,14 @@ IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 �
 
 
 
-        Commit 규칙
+        
+  Heroku 가입
+  Heroku 앱 생성
+  MongoDB Atlas 가입
+  Organization, Project, Cluster 생성
 
-$ git commit -m "Prefix: Message (#issue)"
 
-
-
-  Prefix: Message 형식으로 작성한다.
-  접두사는 모두 소문자로 작성한다.
-  접두사와 콜론 (:)은 띄어쓰지 않는다.
-  콜론과 메시지는 한 칸 띄어쓴다.
-  관련된 이슈 번호는 맨 뒤에 괄호 (())안에 작성한다.
-  메시지와 이슈 ...
+mongodb+srv://leetube:&lt;password&gt;@cluster0.xr2xb.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority...
       </p>
     </div>
 
@@ -1087,8 +1077,8 @@ $ git commit -m "Prefix: Message (#issue)"
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Feb  4, 2021, 12:00 AM +0800"
-  >Feb  4<i class="unloaded">2021-02-04T00:00:00+08:00</i>
+    title="Tue, Mar  2, 2021, 12:00 AM +0800"
+  >Mar  2<i class="unloaded">2021-03-02T00:00:00+08:00</i>
 </span>
 
 
@@ -1113,7 +1103,7 @@ $ git commit -m "Prefix: Message (#issue)"
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="590 words">3 min</span>
+  title="142 words">1 min</span>
 
 
         <!-- page views -->
@@ -1130,7 +1120,7 @@ $ git commit -m "Prefix: Message (#issue)"
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-03-branch-strategy/">내가 사용하는 Git 브랜치 전략 (Branch Strategy)</a>
+      <a href="/posts/2021-03-01-heroku-cli/">Heroku Cli</a>
     </h1>
 
     <div class="post-content">
@@ -1141,13 +1131,18 @@ $ git commit -m "Prefix: Message (#issue)"
 
 
 
-        전략
+        
+  Heroku는 무조건 git history에 있는 것만 볼 수 있음. 따라서 코드가 변경되면 커밋해야 Heroku가 인식할 수 있음.
 
-브랜치 전략은 Git Flow, GitHub Flow 등이 있고, 선택적으로 사용하면 된다. 내 경우 혼자 일한지 오래되었기 때문에 나름의 규칙을 만들어놓고 지켜가며 일하는데, 이 브랜치 전략 역시 규칙 중 하나에 해당한다. (아마도 어쩌다보니 2개가 섞여서 내 입맛에 맞게 된듯)
 
-main
+Install Heroku Cli
 
-배포 가능한 상태만을 병합하는 브랜치. 혼자 개발할...
+brew tap heroku/brew &amp;&amp; brew install heroku
+
+
+Heroku Cli - Download and install
+
+heroku l...
       </p>
     </div>
 
@@ -1170,8 +1165,8 @@ main
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Feb  3, 2021, 12:00 AM +0800"
-  >Feb  3<i class="unloaded">2021-02-03T00:00:00+08:00</i>
+    title="Mon, Mar  1, 2021, 12:00 AM +0800"
+  >Mar  1<i class="unloaded">2021-03-01T00:00:00+08:00</i>
 </span>
 
 
@@ -1196,7 +1191,7 @@ main
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="679 words">3 min</span>
+  title="271 words">1 min</span>
 
 
         <!-- page views -->
@@ -1359,9 +1354,69 @@ main
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page8/">8</a>
+        <a class="page-link btn-box-shadow" href="/page12/">12</a>
       </li>
     
 
@@ -1370,7 +1425,7 @@ main
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>1</span>
-    <span class="text-muted">/ 8</span>
+    <span class="text-muted">/ 12</span>
   </li>
 
   <!-- right arrow -->
@@ -1415,6 +1470,22 @@ main
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1431,6 +1502,160 @@ main
 
 
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1811,70 +2036,6 @@ main
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1884,16 +2045,6 @@ main
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2028,82 +2179,7 @@ main
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2184,10 +2260,7 @@ main
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2199,35 +2272,7 @@ main
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2513,132 +2558,6 @@ main
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2773,6 +2692,122 @@ main
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2879,6 +2914,9 @@ main
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -2891,7 +2929,7 @@ main
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket-io</a>
@@ -2901,9 +2939,6 @@ main
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -3192,107 +3227,6 @@ main
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3362,420 +3296,6 @@ main
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3950,117 +3470,52 @@ main
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4101,6 +3556,434 @@ main
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4320,6 +4203,122 @@ main
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -4421,6 +4420,9 @@ main
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -4433,7 +4435,7 @@ main
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket io</a>
@@ -4443,9 +4445,6 @@ main
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
     </div> -->

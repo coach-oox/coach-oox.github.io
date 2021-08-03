@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-20-vh-vw-vmin-vmax/">뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a>
+      <a href="/posts/2020-05-10-socket-io-user-login-logout/">Socket.io 사용자 로그인과 로그아웃 구현 예제</a>
     </h1>
 
     <div class="post-content">
@@ -363,16 +363,20 @@
 
 
 
-        vh · vw
+        Login
 
-vh (Vertical Height)과 vw (Vertical Width) 단위는 뷰포트 높이 및 너비에 맞게 타겟 요소의 크기를 지정하고자 할 때 사용된다.
+function loadNickname() {
+  const nickname = JSON.parse(localStorage.getItem(LS_NICKNAME));
 
-body {
-  height: 100vh;
+  if (nickname) {
+    loginUser(nickname);
+  } else {
+    setNickname();
+  }
 }
 
 
-vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 1000px일 때 1vh는 10px이 되기 때문에, 1...
+페이지가 로드될 때, loca...
       </p>
     </div>
 
@@ -395,8 +399,8 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Mar 20, 2020, 12:00 AM +0800"
-  >Mar 20, 2020<i class="unloaded">2020-03-20T00:00:00+08:00</i>
+    title="Sun, May 10, 2020, 12:00 AM +0800"
+  >May 10, 2020<i class="unloaded">2020-05-10T00:00:00+08:00</i>
 </span>
 
 
@@ -421,7 +425,7 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="323 words">1 min</span>
+  title="709 words">3 min</span>
 
 
         <!-- page views -->
@@ -438,7 +442,7 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-12-github-remove-file/">GitHub 저장소에서 파일 삭제하는 방법</a>
+      <a href="/posts/2020-05-10-javascript-url-search-params/">자바스크립트 URLSearchParams() 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -449,20 +453,15 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
 
 
-        GitHub에 파일 잘못올린 경우 다음과 같은 흐름으로 작업하여, 이미 원격 저장소에 올라간 파일을 삭제할 수 있다.
+        URL의 쿼리 파라미터들을 읽거나 수정할 때 사용되는 메소드.
 
+const URL = "http://127.0.0.1/search/?keyword=검색어";
 
-  .gitignore 작성
-  원격 저장소에서 파일 삭제
-  원격 저장소에 적용
+const search = location.search;
+console.log(search); // ?keyword=검색어
 
-
-원격 저장소에서 파일 삭제
-
-# 원격 저장소의 index.html 파일 삭제
-git rm --cached index.html
-
-# src/styl...
+// URLSearchParams를 사용해 객체로 변환
+const p...
       </p>
     </div>
 
@@ -485,8 +484,8 @@ git rm --cached index.html
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Mar 12, 2020, 12:00 AM +0800"
-  >Mar 12, 2020<i class="unloaded">2020-03-12T00:00:00+08:00</i>
+    title="Sun, May 10, 2020, 12:00 AM +0800"
+  >May 10, 2020<i class="unloaded">2020-05-10T00:00:00+08:00</i>
 </span>
 
 
@@ -511,7 +510,7 @@ git rm --cached index.html
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="235 words">1 min</span>
+  title="187 words">1 min</span>
 
 
         <!-- page views -->
@@ -528,7 +527,7 @@ git rm --cached index.html
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-11-github-more-than-two-issue/">GitHub 여러 개의 Issue 한 번에 처리 (Close)하는 방법</a>
+      <a href="/posts/2020-05-09-group-socket/">Socket.io 소켓 관련 함수를 하나의 파일로 관리하기</a>
     </h1>
 
     <div class="post-content">
@@ -539,19 +538,16 @@ git rm --cached index.html
 
 
 
-        git checkout -b "issue-11"
+        // src/frontend/login.js
+function login(nickname) {
+  // 서버에 연결되는 시점 =&gt; 소켓이 생성되는 시점
+  const socket = io("/");
+  socket.emit(window.events.setNickname, { nickname });
+  initSocket(socket);
+}
 
 
-이슈 해결을 위한 브랜치를 생성한다.
-
-git add .
-git commit -m "Edit Documents (#12, #14)"
-
-
-해당 브랜치에서 작업 후, add 및 commit 하고, Pull Request를 보내기 위해 Upstream으로 push 한다.
-
-- Close #12
-- Clos...
+//...
       </p>
     </div>
 
@@ -574,8 +570,8 @@ git commit -m "Edit Documents (#12, #14)"
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Mar 11, 2020, 12:00 AM +0800"
-  >Mar 11, 2020<i class="unloaded">2020-03-11T00:00:00+08:00</i>
+    title="Sat, May  9, 2020, 12:00 AM +0800"
+  >May  9, 2020<i class="unloaded">2020-05-09T00:00:00+08:00</i>
 </span>
 
 
@@ -600,7 +596,7 @@ git commit -m "Edit Documents (#12, #14)"
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="134 words">1 min</span>
+  title="298 words">1 min</span>
 
 
         <!-- page views -->
@@ -617,7 +613,7 @@ git commit -m "Edit Documents (#12, #14)"
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-10-github-issue-pull-request/">GitHub Issue 생성과 Pull Request 처리 방법</a>
+      <a href="/posts/2020-05-09-javascript-make-limiting-random-number/">자바스크립트 제한적 범위의 난수 만들기</a>
     </h1>
 
     <div class="post-content">
@@ -628,26 +624,18 @@ git commit -m "Edit Documents (#12, #14)"
 
 
 
-        이슈 생성과 처리의 흐름
+        random() 메소드는 0 이상 1 미만의 구간에서 부동소숫점 의사난수를 생성한다. 이는 다음과 같이 활용할 수 있다.
+
+0 ~ 지정한 값 사이의 난수 생성
+
+function getRandom(max) {
+  return Math.random() * max;
+}
 
 
-  Issue 생성
-  Branch 생성
-  Pull Request
-  Merge (Issue 처리)
+두 값 사이의 난수 생성
 
-
-이슈 생성시 추가할 수 있는 항목
-
-
-  Assignees : 이슈 담당자
-  Labels : 카테고리
-  Milestone : 소속 파트 (예 : Version 1.0.0)
-
-
-Branch 생성
-
-# Branch 생성...
+function getRandomArbitrary(min,...
       </p>
     </div>
 
@@ -670,8 +658,8 @@ Branch 생성
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Mar 10, 2020, 12:00 AM +0800"
-  >Mar 10, 2020<i class="unloaded">2020-03-10T00:00:00+08:00</i>
+    title="Sat, May  9, 2020, 12:00 AM +0800"
+  >May  9, 2020<i class="unloaded">2020-05-09T00:00:00+08:00</i>
 </span>
 
 
@@ -696,7 +684,7 @@ Branch 생성
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="234 words">1 min</span>
+  title="224 words">1 min</span>
 
 
         <!-- page views -->
@@ -713,7 +701,7 @@ Branch 생성
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-08-git-revert-reset-checkout/">Git 상태 및 파일 복원을 위한 reset · revert · checkout 사용법</a>
+      <a href="/posts/2020-05-08-javascript-destructuring-object-advenced/">자바스크립트 객체의 구조 분해 (Destructuring) 활용법</a>
     </h1>
 
     <div class="post-content">
@@ -724,19 +712,22 @@ Branch 생성
 
 
 
-        상태 복원
+        기본 사용법
 
-복원은 현재 파일을 특정한 시점의 파일 상태로 변경하는 작업을 의미한다. 이와 같은 복원을 위해 사용되는 대표적인 명령어들은 다음과 같다.
+const obj = {
+  name: "John",
+  age: 25,
+  gender: "male",
+  memo: {
+    work: "software developer",
+    hobby: "work out",
+  },
+};
+
+const { name, age } = obj;
 
 
-  reset
-  revert
-  checkout
-
-
-reset
-
-reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 때 (이전 상태로 되돌릴 때) 사용되며, 커밋되지 ...
+객체에서 각각을 (필요한 것만) 구조 분해해서 l...
       </p>
     </div>
 
@@ -759,8 +750,8 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Mar  8, 2020, 12:00 AM +0800"
-  >Mar  8, 2020<i class="unloaded">2020-03-08T00:00:00+08:00</i>
+    title="Fri, May  8, 2020, 12:00 AM +0800"
+  >May  8, 2020<i class="unloaded">2020-05-08T00:00:00+08:00</i>
 </span>
 
 
@@ -785,7 +776,7 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="926 words">5 min</span>
+  title="240 words">1 min</span>
 
 
         <!-- page views -->
@@ -802,7 +793,7 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-07-git-cancle-add-commit-push/">Git Add · Commit · Push 취소 방법</a>
+      <a href="/posts/2020-05-07-socket-io-chatting/">Socket.io 실시간 채팅 구현 예제 #2</a>
     </h1>
 
     <div class="post-content">
@@ -813,18 +804,16 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
 
 
-        git add 취소
+        설명은 주석으로 대신함.
 
-git add 명령을 취소한다는 것은, Staging Area에 있는 Tracked 파일을 Untracked (Unstage) 상태로 변경하는 것을 의미한다.
+Frontend
 
-# git add 한 파일 전체 취소
-$ git reset HEAD
+// src/frontend/chat.js
+import { getSocket } from "./socket";
 
-# 특정 파일만 취소
-$ git reset HEAD index.html
-
-
-commit message...
+const chat = document.querySelector(".chat");
+const messages = chat.querySelector("ul");
+const formMessage = ...
       </p>
     </div>
 
@@ -847,8 +836,8 @@ commit message...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Mar  7, 2020, 12:00 AM +0800"
-  >Mar  7, 2020<i class="unloaded">2020-03-07T00:00:00+08:00</i>
+    title="Thu, May  7, 2020, 12:00 AM +0800"
+  >May  7, 2020<i class="unloaded">2020-05-07T00:00:00+08:00</i>
 </span>
 
 
@@ -873,7 +862,7 @@ commit message...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="447 words">2 min</span>
+  title="295 words">1 min</span>
 
 
         <!-- page views -->
@@ -890,7 +879,7 @@ commit message...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-04-git-branch-strategy/">Git Branch 분기와 병합 예제 (--no--ff 사용법)</a>
+      <a href="/posts/2020-05-07-javascript-destructuring-object/">자바스크립트 객체의 구조 분해 (Destructuring)</a>
     </h1>
 
     <div class="post-content">
@@ -901,14 +890,22 @@ commit message...
 
 
 
-        로그인 기능을 개발하는 과정을 가정해보자.
+        객체를 구조 분해 할당할 때는 키를 기준으로 한다.
 
-# -b : 브랜치 생성
-# git checkout -b 생성할-브랜치 베이스-브랜치
-git checkout -b feature/login develop
+const obj = {
+  name: "John",
+  age: 25,
+  gender: "male",
+  memo: {
+    work: "software developer",
+    hobby: "work out",
+  },
+};
+
+const { name, age } = obj;
 
 
-로그인 기능 개발을 위해 develop 브랜치에서 분기하는 feature/login 브랜치를 생성하고, 작업 브랜치를 feature/login 브랜치로...
+2단 중첩...
       </p>
     </div>
 
@@ -931,8 +928,8 @@ git checkout -b feature/login develop
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Mar  4, 2020, 12:00 AM +0800"
-  >Mar  4, 2020<i class="unloaded">2020-03-04T00:00:00+08:00</i>
+    title="Thu, May  7, 2020, 12:00 AM +0800"
+  >May  7, 2020<i class="unloaded">2020-05-07T00:00:00+08:00</i>
 </span>
 
 
@@ -957,7 +954,7 @@ git checkout -b feature/login develop
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="336 words">1 min</span>
+  title="190 words">1 min</span>
 
 
         <!-- page views -->
@@ -974,7 +971,7 @@ git checkout -b feature/login develop
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-03-git-branch-commands/">Git Branch 관련 명령어 정리</a>
+      <a href="/posts/2020-05-06-socket-io-real-time-chat/">Socket.io 실시간 채팅 구현 예제 #1</a>
     </h1>
 
     <div class="post-content">
@@ -985,27 +982,16 @@ git checkout -b feature/login develop
 
 
 
-        브랜치 확인
+        설명은 주석으로 대신함.
 
-# 브랜치 확인
-$ git branch
+Server
 
-# 브랜치 상세 정보까지 확인
-$ git branch -v
-
-
-브랜치 상태 확인
-
-# Merged 상태 브랜치 확인
-$ git branch --merged
-
-# Merged 되지 않은 브랜치 확인
-$ git branch --no-merged
-
-
-브랜치 생성
-
-$ git branch newBranc...
+// 서버 연결시 새로운 소켓 생성
+// 서버는 모든 이벤트에 대해 열려 있음
+ioServer.on("connection", (socket) =&gt; {
+  // newMessage 이벤트에 대해 듣고 있음
+  socket.on("newMessage", ({ message }) =&gt; {
+    // 접속...
       </p>
     </div>
 
@@ -1028,8 +1014,8 @@ $ git branch newBranc...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Mar  3, 2020, 12:00 AM +0800"
-  >Mar  3, 2020<i class="unloaded">2020-03-03T00:00:00+08:00</i>
+    title="Wed, May  6, 2020, 12:00 AM +0800"
+  >May  6, 2020<i class="unloaded">2020-05-06T00:00:00+08:00</i>
 </span>
 
 
@@ -1054,7 +1040,7 @@ $ git branch newBranc...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="138 words">1 min</span>
+  title="324 words">1 min</span>
 
 
         <!-- page views -->
@@ -1071,7 +1057,7 @@ $ git branch newBranc...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-02-git-branch/">Git Branch 기본 이해</a>
+      <a href="/posts/2020-05-06-javascript-destructuring-array/">자바스크립트 배열의 구조 분해 (Destructuring)</a>
     </h1>
 
     <div class="post-content">
@@ -1082,21 +1068,16 @@ $ git branch newBranc...
 
 
 
-        Branch
+        각각 새로운 변수에 구조 분해 할당
+
+const arr = [1, 2, 3];
+const [one, two, three] = arr;
 
 
-  버전 관리 시스템의 기본
-  Origin 코드와 별개로 독립된 개발을 진행하기 위해 사용
+위 코드는 변수 one, two, three를 생성하고 각각 arr 요소를 순서대로 대입한 것과 같다. 동일한 코드를 구조 분해를 사용하지 않고 표현하면 다음과 같다.
 
-
-맨 처음 커밋을 할 때, Git은 master (main)라는 이름을 가진 브랜치를 만들고 자동으로 가장 마지막 커밋을 가리키게 (포인터같이) 한다. 다음과 같은 상황을 가정해보자.
-
-
-  최초 커밋
-  develop이라는 브랜치 생성
-
-
-...
+const arr = [1, 2, 3];
+co...
       </p>
     </div>
 
@@ -1119,8 +1100,8 @@ $ git branch newBranc...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Mar  2, 2020, 12:00 AM +0800"
-  >Mar  2, 2020<i class="unloaded">2020-03-02T00:00:00+08:00</i>
+    title="Wed, May  6, 2020, 12:00 AM +0800"
+  >May  6, 2020<i class="unloaded">2020-05-06T00:00:00+08:00</i>
 </span>
 
 
@@ -1145,7 +1126,7 @@ $ git branch newBranc...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="609 words">3 min</span>
+  title="259 words">1 min</span>
 
 
         <!-- page views -->
@@ -1162,7 +1143,7 @@ $ git branch newBranc...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-01-github-release/">GitHub Release 방법</a>
+      <a href="/posts/2020-05-05-socket-io-controller/">Socket.io 이벤트 컨트롤러 분리하기</a>
     </h1>
 
     <div class="post-content">
@@ -1173,15 +1154,16 @@ $ git branch newBranc...
 
 
 
-        새로운 버전 릴리즈하는 방법
+        Server
 
-릴리즈란 개발 중인 프로젝트가 배포 준비가 되었을 때 (Alpha / Beta / Major) 패키지를 배포하는 것을 의미한다. GitHub에서 릴리즈하기 위해서는 저장소 페이지의 사이드바에서 Create a new release 버튼을 클릭하고, 다음을 참조하여 항목을 채운다.
+const PORT = 4000;
+const app = express();
 
-Tag Version
+const server = app.listen(PORT, listenPort);
+const ioServer = socketIO(server);
 
-
-  v1.0
- ...
+ioServer.on("connection", (socket) =&gt; {
+  // 소켓의 정보가 유실되지 않도록 ...
       </p>
     </div>
 
@@ -1204,8 +1186,8 @@ Tag Version
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Mar  1, 2020, 12:00 AM +0800"
-  >Mar  1, 2020<i class="unloaded">2020-03-01T00:00:00+08:00</i>
+    title="Tue, May  5, 2020, 12:00 AM +0800"
+  >May  5, 2020<i class="unloaded">2020-05-05T00:00:00+08:00</i>
 </span>
 
 
@@ -1230,7 +1212,7 @@ Tag Version
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="204 words">1 min</span>
+  title="282 words">1 min</span>
 
 
         <!-- page views -->
@@ -1401,10 +1383,77 @@ Tag Version
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+        <li class="page-item disabled">
+          <span class="page-link btn-box-shadow">...</span>
+        </li>
+        
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page12/">12</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>7</span>
-    <span class="text-muted">/ 8</span>
+    <span class="text-muted">/ 12</span>
   </li>
 
   <!-- right arrow -->
@@ -1449,6 +1498,22 @@ Tag Version
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1465,6 +1530,160 @@ Tag Version
 
 
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1845,70 +2064,6 @@ Tag Version
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1918,16 +2073,6 @@ Tag Version
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2062,82 +2207,7 @@ Tag Version
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2218,10 +2288,7 @@ Tag Version
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2233,35 +2300,7 @@ Tag Version
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2547,132 +2586,6 @@ Tag Version
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2807,6 +2720,122 @@ Tag Version
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2913,6 +2942,9 @@ Tag Version
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -2925,7 +2957,7 @@ Tag Version
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket-io</a>
@@ -2935,9 +2967,6 @@ Tag Version
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -3226,107 +3255,6 @@ Tag Version
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3396,420 +3324,6 @@ Tag Version
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3984,117 +3498,52 @@ Tag Version
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4135,6 +3584,434 @@ Tag Version
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4354,6 +4231,122 @@ Tag Version
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -4455,6 +4448,9 @@ Tag Version
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -4467,7 +4463,7 @@ Tag Version
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket io</a>
@@ -4477,9 +4473,6 @@ Tag Version
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
     </div> -->

@@ -352,6 +352,264 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-12-18-typescript-setting-up/">타입스크립트를 사용하기 위한 기본 세팅 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        설치
+
+npm install -g typescript
+
+
+먼저 typescript를 Global로 설치한다. VS Code를 사용한다면, EsLint 확장을 설치한다. (TsLint 확장은 지원이 중단 되었기 때문에 더이상 사용되지 않는다.)
+
+설정
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Dec 18, 2020, 12:00 AM +0800"
+  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="348 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-11-sessions-cookies/">Cookie · Session 기술의 이해</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Cookie와 Session을 사용하는 이유
+
+HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특징을 가지고 있다. 이 특징으로 인해 사용자가 요청할 때 마다 연결과 해제의 과정을 거치기 때문에 연결 상태를 유지하지 않고, 연결을 해지한 후에 상태 정보도 저장하지 않아 서버의 자원을 절약할 수 있다.
+...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Dec 11, 2020, 12:00 AM +0800"
+  >Dec 11, 2020<i class="unloaded">2020-12-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1105 words">6 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-11-14-eslint-prettier/">.prettierrc, .eslintrc 작성법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Prettier
+
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false
+}
+
+
+.prettierrc 파일을 생성하고 위 코드 예제와 같이 원하는 설정을 작성한다. 설정...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Nov 14, 2020, 12:00 AM +0800"
+  >Nov 14, 2020<i class="unloaded">2020-11-14T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="170 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-09-07-regexp-startswith-endwith/">특정 단어로 시작하거나 끝나는 문자열을 검사하는 정규식 표현</a>
     </h1>
 
@@ -443,7 +701,7 @@ const string = "Hello World!";
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a>
+      <a href="/posts/2020-07-11-pug-api-view/">Pug Dataset을 사용해서 백엔드와 데이터 공유하기</a>
     </h1>
 
     <div class="post-content">
@@ -454,21 +712,11 @@ const string = "Hello World!";
 
 
 
-        함수 컴포넌트에서 state를 가질 수 있게 해준다. 참고
+        백엔드와 Pug는 서로 데이터를 공유할 수 있다. 하지만 프론트엔드 쪽에서 사용하는 자바스크립트에서는 이러한 정보에 접근할 수가 없는데, 이때 가장 간편하게 정보를 공유하는 방법은 HTML의 data-set을 사용하는 방법이다. (이외 방법 : localStorage 등)
 
-예시
+처리를 담당할 라우터
 
-class App extends React.Component {
-  state = {
-    count: 0,
-  };
-
-  add = () =&gt; {
-    this.setState({ count: this.count + 1 });
-  };
-
-  render() {
-    con...
+import express from "express";...
       </p>
     </div>
 
@@ -491,8 +739,8 @@ class App extends React.Component {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Jun 12, 2020, 12:00 AM +0800"
-  >Jun 12, 2020<i class="unloaded">2020-06-12T00:00:00+08:00</i>
+    title="Sat, Jul 11, 2020, 12:00 AM +0800"
+  >Jul 11, 2020<i class="unloaded">2020-07-11T00:00:00+08:00</i>
 </span>
 
 
@@ -517,7 +765,7 @@ class App extends React.Component {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="145 words">1 min</span>
+  title="241 words">1 min</span>
 
 
         <!-- page views -->
@@ -534,7 +782,7 @@ class App extends React.Component {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-11-react-prop-types/">React 타입 검사를 위한 Prop-Types 사용법</a>
+      <a href="/posts/2020-07-10-pug-make-url-backend/">Pug 긴 URL 줄이기 (Redirection)</a>
     </h1>
 
     <div class="post-content">
@@ -545,14 +793,12 @@ class App extends React.Component {
 
 
 
-        타입 검사가 아주 중요하게 다뤄질 만큼 프로젝트 덩치가 커지면, 그냥 타입스크립트를 쓰는 것도 좋은 대안이다. 하지만, 어쩔 수 없이 자바스크립트로 프로젝트를 진행 해야 할 경우 prop-types를 사용하면 된다.
+        긴 URL의 문제점
 
-npm install prop-types
+a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsafsadf&amp;allow_signup=false&amp;scope=read:user user:email") GitHub
 
 
-전달받은 Props가 의도한 Props인지 체크해주는 역할을 한다.
-
-import Prop...
+위 코드는 GitHub 로그인 기능 구현을 위해 필요한 URL...
       </p>
     </div>
 
@@ -575,8 +821,8 @@ import Prop...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jun 11, 2020, 12:00 AM +0800"
-  >Jun 11, 2020<i class="unloaded">2020-06-11T00:00:00+08:00</i>
+    title="Fri, Jul 10, 2020, 12:00 AM +0800"
+  >Jul 10, 2020<i class="unloaded">2020-07-10T00:00:00+08:00</i>
 </span>
 
 
@@ -601,7 +847,7 @@ import Prop...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="159 words">1 min</span>
+  title="341 words">1 min</span>
 
 
         <!-- page views -->
@@ -618,7 +864,7 @@ import Prop...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-10-react-dynamic-component-generation/">React 배열을 사용한 동적 컴포넌트 생성</a>
+      <a href="/posts/2020-07-09-pug-block-scripts/">Pug 스크립트 사용하는 페이지에서만 로드하기</a>
     </h1>
 
     <div class="post-content">
@@ -629,23 +875,16 @@ import Prop...
 
 
 
-        const family = [
-  {
-    name: "John",
-    age: 24,
-  },
-  {
-    name: "Edward",
-    age: 18,
-  },
-  {
-    name: "Tim",
-    age: 20,
-  },
-];
+        특정 페이지에서만 필요한 자바스크립트 파일은 매 페이지마다 로딩할 필요가 없다. 따라서 block을 이용해 선택적으로 스크립트 파일을 가져올 수 있게끔 하는 것이 좋다.
 
-function renderMembers(member) {
-  return &lt;Greeting ...
+
+  See the Pen 
+  Pug 스크립트 사용하는 페이지에서만 로드하기 by Dohae Lee (@dohaelee)
+  on CodePen.
+
+
+
+공통 레이아웃을 표현하는 l...
       </p>
     </div>
 
@@ -668,8 +907,8 @@ function renderMembers(member) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jun 10, 2020, 12:00 AM +0800"
-  >Jun 10, 2020<i class="unloaded">2020-06-10T00:00:00+08:00</i>
+    title="Thu, Jul  9, 2020, 12:00 AM +0800"
+  >Jul  9, 2020<i class="unloaded">2020-07-09T00:00:00+08:00</i>
 </span>
 
 
@@ -694,7 +933,7 @@ function renderMembers(member) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="67 words">1 min</span>
+  title="196 words">1 min</span>
 
 
         <!-- page views -->
@@ -711,7 +950,7 @@ function renderMembers(member) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-09-react-component-life-cycle/">React 컴포넌트의 라이프 사이클</a>
+      <a href="/posts/2020-07-08-pug-inheritance/">Pug 기초 #8 상속 (Inheritance)</a>
     </h1>
 
     <div class="post-content">
@@ -722,18 +961,16 @@ function renderMembers(member) {
 
 
 
-        Mounting
-
-Mounting은 컴포넌트가 탄생하는 단계이며, 다음과 같은 순서로 새로운 컴포넌트가 생성된다.
+        레이아웃 틀은 같지만, 내용은 변경되어야 할 때. (변경되는 것 없이 똑같은 부분이 중복될 때는 이 글을 참고.)
 
 
-  constructor() : 자바스크립트에서 클래스를 만들 때 생성되는 생성자 함수.
-  static getDerivedStateFromProps()
-  render()
-  componentDidMount()
+  See the Pen 
+  Pug 기초 #8 상속 (Inheritance) by Dohae Lee (@dohaelee)
+  on CodePen.
 
 
-class App ...
+
+만든 레이아웃은 extends 키워드를 사용해 적용하고, 각각의 block (내용...
       </p>
     </div>
 
@@ -756,8 +993,8 @@ class App ...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Jun  9, 2020, 12:00 AM +0800"
-  >Jun  9, 2020<i class="unloaded">2020-06-09T00:00:00+08:00</i>
+    title="Wed, Jul  8, 2020, 12:00 AM +0800"
+  >Jul  8, 2020<i class="unloaded">2020-07-08T00:00:00+08:00</i>
 </span>
 
 
@@ -782,7 +1019,7 @@ class App ...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="348 words">1 min</span>
+  title="127 words">1 min</span>
 
 
         <!-- page views -->
@@ -799,7 +1036,7 @@ class App ...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-08-react-sharing-props-between-routes/">React Routes 사이에 Props를 공유하는 방법</a>
+      <a href="/posts/2020-07-07-pug-iterations/">Pug 기초 #7 배열 반복 출력 예제</a>
     </h1>
 
     <div class="post-content">
@@ -810,17 +1047,14 @@ class App ...
 
 
 
-        import React from "react";
-
-function About(props) {
-  console.log(props);
-  return &lt;h3&gt;About this page: I build it!&lt;/h3&gt;;
-}
-
-export default About;
+        
+  See the Pen 
+   by Dohae Lee (@dohaelee)
+  on CodePen.
 
 
-위 코드 예제는 /about 경로로 이동했을 때 보여지는 Abou...
+
+
       </p>
     </div>
 
@@ -843,8 +1077,8 @@ export default About;
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Jun  8, 2020, 12:00 AM +0800"
-  >Jun  8, 2020<i class="unloaded">2020-06-08T00:00:00+08:00</i>
+    title="Tue, Jul  7, 2020, 12:00 AM +0800"
+  >Jul  7, 2020<i class="unloaded">2020-07-07T00:00:00+08:00</i>
 </span>
 
 
@@ -869,7 +1103,7 @@ export default About;
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="205 words">1 min</span>
+  title="9 words">1 min</span>
 
 
         <!-- page views -->
@@ -886,7 +1120,7 @@ export default About;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-07-hashrouter-browserrouter/">React HashRouter와 BrowserRouter의 차이점</a>
+      <a href="/posts/2020-07-06-pug-mixins/">Pug 기초 #6 재사용 가능한 함수</a>
     </h1>
 
     <div class="post-content">
@@ -897,26 +1131,16 @@ export default About;
 
 
 
-        라우터의 종류
+        Mixin은 재사용을 위한 모듈인데, 함수처럼 인자를 받아 처리할 수 있다.
 
 
-  BrowserRouter
-  HashRouter
-  MemoryRouter
-  NativeRoter
-  StaticRouter
-
-
-HashRouter
-
-# 예 : abc.com/#/home
+  See the Pen 
+   by Dohae Lee (@dohaelee)
+  on CodePen.
 
 
 
-  URL 앞에 해쉬 (#)가 붙는다.
-  검색 엔진이 읽지 못한다.
-  해쉬 히스토리 지원하지 않는다.
-  새로고침해도 에러가 나지 않...
+사용할 때는 해당 파일을 include 한 다음 +widget()와 같이 사용한다. 위 예제는 배열로 표현된 여러 개의 위젯 객체를 가져와 반복문을 통해 각각의 위젯...
       </p>
     </div>
 
@@ -939,8 +1163,8 @@ HashRouter
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Jun  7, 2020, 12:00 AM +0800"
-  >Jun  7, 2020<i class="unloaded">2020-06-07T00:00:00+08:00</i>
+    title="Mon, Jul  6, 2020, 12:00 AM +0800"
+  >Jul  6, 2020<i class="unloaded">2020-07-06T00:00:00+08:00</i>
 </span>
 
 
@@ -965,260 +1189,7 @@ HashRouter
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="256 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-06-react-router-dom/">React Routing 기본 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        npm install react-router-dom
-
-
-import React from "react";
-import { HashRouter, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import About from "./routes/About";...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Jun  6, 2020, 12:00 AM +0800"
-  >Jun  6, 2020<i class="unloaded">2020-06-06T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="199 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-05-styled-componenets-withRouter/">React Styled-Component 현재 경로 메뉴 스타일 강조하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        withRouter
-
-현재 경로는 라우터에서 사용하는 객체인 location 내부에 pathname으로 알 수 있다. 이 location 객체는 라우트가 아닌 컴포넌트에서 사용할 수 없는데, 이를 가능하게 만들기 위해서 withRouter라는 HoC를 사용한다.
-
-현재 경로 메뉴 강조하기
-
-import React from "react";
-import ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Jun  5, 2020, 12:00 AM +0800"
-  >Jun  5, 2020<i class="unloaded">2020-06-05T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="221 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-04-styled-components-createGlobalStyle/">React Styled-Component 글로벌 공통 스타일 지정하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        npm install styled-reset
-
-
-reset 파일 적용을 위해서 styled-reset를 설치한다.
-
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
-
-const globalStyle = createGlobalStyle`
-   ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Thu, Jun  4, 2020, 12:00 AM +0800"
-  >Jun  4, 2020<i class="unloaded">2020-06-04T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="187 words">1 min</span>
+  title="109 words">1 min</span>
 
 
         <!-- page views -->
@@ -1383,9 +1354,69 @@ const globalStyle = createGlobalStyle`
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page8/">8</a>
+        <a class="page-link btn-box-shadow" href="/page12/">12</a>
       </li>
     
 
@@ -1394,7 +1425,7 @@ const globalStyle = createGlobalStyle`
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>3</span>
-    <span class="text-muted">/ 8</span>
+    <span class="text-muted">/ 12</span>
   </li>
 
   <!-- right arrow -->
@@ -1439,6 +1470,22 @@ const globalStyle = createGlobalStyle`
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1455,6 +1502,160 @@ const globalStyle = createGlobalStyle`
 
 
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1835,70 +2036,6 @@ const globalStyle = createGlobalStyle`
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1908,16 +2045,6 @@ const globalStyle = createGlobalStyle`
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2052,82 +2179,7 @@ const globalStyle = createGlobalStyle`
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2208,10 +2260,7 @@ const globalStyle = createGlobalStyle`
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2223,35 +2272,7 @@ const globalStyle = createGlobalStyle`
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2537,132 +2558,6 @@ const globalStyle = createGlobalStyle`
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2797,6 +2692,122 @@ const globalStyle = createGlobalStyle`
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2903,6 +2914,9 @@ const globalStyle = createGlobalStyle`
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -2915,7 +2929,7 @@ const globalStyle = createGlobalStyle`
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket-io</a>
@@ -2925,9 +2939,6 @@ const globalStyle = createGlobalStyle`
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -3216,107 +3227,6 @@ const globalStyle = createGlobalStyle`
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3386,420 +3296,6 @@ const globalStyle = createGlobalStyle`
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3974,117 +3470,52 @@ const globalStyle = createGlobalStyle`
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4125,6 +3556,434 @@ const globalStyle = createGlobalStyle`
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4344,6 +4203,122 @@ const globalStyle = createGlobalStyle`
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -4445,6 +4420,9 @@ const globalStyle = createGlobalStyle`
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -4457,7 +4435,7 @@ const globalStyle = createGlobalStyle`
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket io</a>
@@ -4467,9 +4445,6 @@ const globalStyle = createGlobalStyle`
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
     </div> -->

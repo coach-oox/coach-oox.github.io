@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-06-socket-io-real-time-chat/">Socket.io 실시간 채팅 구현 예제 #1</a>
+      <a href="/posts/2020-06-07-hashrouter-browserrouter/">React HashRouter와 BrowserRouter의 차이점</a>
     </h1>
 
     <div class="post-content">
@@ -363,16 +363,26 @@
 
 
 
-        설명은 주석으로 대신함.
+        라우터의 종류
 
-Server
 
-// 서버 연결시 새로운 소켓 생성
-// 서버는 모든 이벤트에 대해 열려 있음
-ioServer.on("connection", (socket) =&gt; {
-  // newMessage 이벤트에 대해 듣고 있음
-  socket.on("newMessage", ({ message }) =&gt; {
-    // 접속...
+  BrowserRouter
+  HashRouter
+  MemoryRouter
+  NativeRoter
+  StaticRouter
+
+
+HashRouter
+
+# 예 : abc.com/#/home
+
+
+
+  URL 앞에 해쉬 (#)가 붙는다.
+  검색 엔진이 읽지 못한다.
+  해쉬 히스토리 지원하지 않는다.
+  새로고침해도 에러가 나지 않...
       </p>
     </div>
 
@@ -395,8 +405,8 @@ ioServer.on("connection", (socket) =&gt; {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, May  6, 2020, 12:00 AM +0800"
-  >May  6, 2020<i class="unloaded">2020-05-06T00:00:00+08:00</i>
+    title="Sun, Jun  7, 2020, 12:00 AM +0800"
+  >Jun  7, 2020<i class="unloaded">2020-06-07T00:00:00+08:00</i>
 </span>
 
 
@@ -421,7 +431,7 @@ ioServer.on("connection", (socket) =&gt; {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="324 words">1 min</span>
+  title="256 words">1 min</span>
 
 
         <!-- page views -->
@@ -438,7 +448,7 @@ ioServer.on("connection", (socket) =&gt; {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-05-socket-io-controller/">Socket.io 이벤트 컨트롤러 분리하기</a>
+      <a href="/posts/2020-06-06-react-router-dom/">React Routing 기본 이해</a>
     </h1>
 
     <div class="post-content">
@@ -449,16 +459,13 @@ ioServer.on("connection", (socket) =&gt; {
 
 
 
-        Server
+        npm install react-router-dom
 
-const PORT = 4000;
-const app = express();
 
-const server = app.listen(PORT, listenPort);
-const ioServer = socketIO(server);
-
-ioServer.on("connection", (socket) =&gt; {
-  // 소켓의 정보가 유실되지 않도록 ...
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import About from "./routes/About";...
       </p>
     </div>
 
@@ -481,8 +488,8 @@ ioServer.on("connection", (socket) =&gt; {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, May  5, 2020, 12:00 AM +0800"
-  >May  5, 2020<i class="unloaded">2020-05-05T00:00:00+08:00</i>
+    title="Sat, Jun  6, 2020, 12:00 AM +0800"
+  >Jun  6, 2020<i class="unloaded">2020-06-06T00:00:00+08:00</i>
 </span>
 
 
@@ -507,7 +514,7 @@ ioServer.on("connection", (socket) =&gt; {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="282 words">1 min</span>
+  title="199 words">1 min</span>
 
 
         <!-- page views -->
@@ -524,7 +531,7 @@ ioServer.on("connection", (socket) =&gt; {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-04-socket-io-share-object/">Socket.io 이벤트와 객체를 하나의 파일로 관리 · 공유하기</a>
+      <a href="/posts/2020-06-05-styled-componenets-withRouter/">React Styled-Component 현재 경로 메뉴 스타일 강조하기</a>
     </h1>
 
     <div class="post-content">
@@ -535,18 +542,535 @@ ioServer.on("connection", (socket) =&gt; {
 
 
 
-        이벤트를 하나의 객체로 관리하기
+        withRouter
 
-// src/events.js
-const events = {
-  enterUser: "enterUser",
-  logoutUser: "logoutUser",
+현재 경로는 라우터에서 사용하는 객체인 location 내부에 pathname으로 알 수 있다. 이 location 객체는 라우트가 아닌 컴포넌트에서 사용할 수 없는데, 이를 가능하게 만들기 위해서 withRouter라는 HoC를 사용한다.
+
+현재 경로 메뉴 강조하기
+
+import React from "react";
+import ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jun  5, 2020, 12:00 AM +0800"
+  >Jun  5, 2020<i class="unloaded">2020-06-05T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="221 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-04-styled-components-createGlobalStyle/">React Styled-Component 글로벌 공통 스타일 지정하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install styled-reset
+
+
+reset 파일 적용을 위해서 styled-reset를 설치한다.
+
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+
+const globalStyle = createGlobalStyle`
+   ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jun  4, 2020, 12:00 AM +0800"
+  >Jun  4, 2020<i class="unloaded">2020-06-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="187 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-03-react-container-presenter-pattern/">React Container - Presenter 패턴</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        React (이하 리액트)에서 Container - Presenter 패턴이란 데이터 처리 부분과 데이터 출력 (표현) 부분을 분리하여 개발 및 관리하는 디자인 패턴을 의미한다. 리액트 코드가 길어질 수록 컴포넌트 내부가 복잡해지기 때문에 유지보수 하기가 굉장히 번거로워 지는데, 이 디자인 패턴을 사용하면 데이터의 처리 부분과 출력 (표현)을 담당하는...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jun  3, 2020, 12:00 AM +0800"
+  >Jun  3, 2020<i class="unloaded">2020-06-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="581 words">3 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-02-react-class-component-state/">React 클래스 컴포넌트 state 사용하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        클래스 컴포넌트에서는 함수 컴포넌트에는 없는 state를 사용할 수 있다. state는 Object이며, 변경될 (변경할) 값을 다룬다.
+
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
+}
+
+
+state는 클래스 컴포넌트 안에 state = {}; 형식으로 생성할 수 있다.
+
+s...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Jun  2, 2020, 12:00 AM +0800"
+  >Jun  2, 2020<i class="unloaded">2020-06-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="336 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-01-react-class-component/">React 클래스 컴포넌트와 함수 컴포넌트의 차이점</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        함수 컴포넌트
+
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      {members.map((member) =&gt; {
+        return &lt;Greeting name={member.name} age={member.age} /&gt;;
+      })}
+    &lt;/di...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Jun  1, 2020, 12:00 AM +0800"
+  >Jun  1, 2020<i class="unloaded">2020-06-01T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="187 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-29-react-component/">React 컴포넌트 (Component)란?</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        HTML을 반환하는 함수.
+
+function App() {
+  return &lt;div className="App"&gt;Hello&lt;/div&gt;;
+}
+
+export default App;
+
+
+예시
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, May 29, 2020, 12:00 AM +0800"
+  >May 29, 2020<i class="unloaded">2020-05-29T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="269 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-19-javascript-map-weakmap/">자바스크립트 Map · WeakMap 자료구조</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        객체의 단점
+
+
+  Iterable 하지 않다.
+  키를 문자열로만 취급한다.
+  따라서 키 값의 유일성을 완벽히 보장할 수 없다.
+  프로퍼티 개수를 직접 파악할 수 없다.
+
+
+const obj = {
+  name: "John",
+  age: 25,
+  gender: "male",
 };
 
-export default events;
+// 다음과 같이 사용할 수 없음
+// obj.length
 
-
-Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와 같이 events.js 파일을 만들고, ...
+...
       </p>
     </div>
 
@@ -569,8 +1093,8 @@ Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, May  4, 2020, 12:00 AM +0800"
-  >May  4, 2020<i class="unloaded">2020-05-04T00:00:00+08:00</i>
+    title="Tue, May 19, 2020, 12:00 AM +0800"
+  >May 19, 2020<i class="unloaded">2020-05-19T00:00:00+08:00</i>
 </span>
 
 
@@ -595,7 +1119,7 @@ Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="438 words">2 min</span>
+  title="368 words">2 min</span>
 
 
         <!-- page views -->
@@ -612,7 +1136,7 @@ Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-02-socket-io-events/">Socket.io 이벤트를 다루는 방법</a>
+      <a href="/posts/2020-05-18-javascript-set-weakset/">자바스크립트 Set · WeakSet 자료구조</a>
     </h1>
 
     <div class="post-content">
@@ -623,17 +1147,16 @@ Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와
 
 
 
-        이벤트의 동작과 처리
+        const a = new Set();
 
 
-  서버와 클라이언트는 이벤트를 듣고 있음.
-  이벤트 발생시 듣고 있던 서버 / 클라이언트가 반응.
+Set은 배열과 비슷하지만 인덱스가 없고, new 연산자를 사용해 생성한다. (순서는 가지고 있으며, 중복을 허용하지 않는다.) 이때 인자로는 Iterable한 요소 (배열, 문자열 등)가 들어갈 수 있다.
 
+중복을 제거한 배열 만들기
 
-// ioServer는 모든 이벤트를 감시하고 있어야 함
-// connection 이벤트에 대해 듣고 있음
-// 새로운 연결이 생성되면 새로운 소켓이 생성 됨
-ioServer.on("connection", (socket) ...
+const arr = [1, 2, 3, 3, 3, 4, 5];
+
+// re...
       </p>
     </div>
 
@@ -656,8 +1179,8 @@ ioServer.on("connection", (socket) ...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, May  2, 2020, 12:00 AM +0800"
-  >May  2, 2020<i class="unloaded">2020-05-02T00:00:00+08:00</i>
+    title="Mon, May 18, 2020, 12:00 AM +0800"
+  >May 18, 2020<i class="unloaded">2020-05-18T00:00:00+08:00</i>
 </span>
 
 
@@ -682,487 +1205,7 @@ ioServer.on("connection", (socket) ...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="327 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-01-how-to-work-socket-io/">Socket.io 동작 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Socket.io를 사용한다는 것은 Express 서버 위에 Socket.io (WebSocket) 서버를 올린다는 의미이다. 전통적인 (?) 방식에서, 2개의 서버가 같은 포트에서 동작하게 할 수 없지만, WebSocket과 HTTP는 같은 공생이 가능하다.
-
-Express 서버 위에 Socket.io 서버를 올리는 방법
-
-import express...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, May  1, 2020, 12:00 AM +0800"
-  >May  1, 2020<i class="unloaded">2020-05-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="440 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-21-async-await/">모던 자바스크립트와 ES6 #11 async · await</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        ES5까지의 비동기 처리는 에러 처리가 힘들고 콜백 지옥같은 문제가 있어서, ES6에서는 Promise를 도입했다. 하지만 Promise를 사용하더라도 여전히 코드가 길어지는 것은 해결할 수 없었고, 이러한 점들을 보완하기 위해서 ES8에서 asnyc와 await이 도입되었다.
-
-
-  async와 await을 비동기 처리에서 절대적으로 사용해야하는 것...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="500 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-20-generator/">모던 자바스크립트와 ES6 #10 Generator</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Generator는 Generator Function의 리턴 값으로, Iterable Protocol과 Iterator Protocol을 따르는 객체이다. 이때 Generator Function은 함수를 실행하면 내부에 정의된 처리를 함수의 끝까지 한 번에 실행하는 일반 함수와 달리, yield와 next() 등을 사용해 특정 시점에 멈출 수도 있고,...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="278 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-19-promise/">모던 자바스크립트와 ES6 #9 Promise</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        자바스크립트에서는 비동기 처리를 위해 일반적으로 콜백 함수를 사용한다. 하지만 기존의 콜백 패턴이 굉장히 지저분했고 예외 처리가 어려웠기 때문에, 여러 개의 비동기 처리를 한 번에 처리하려면 콜백 지옥이 열리곤 했다.
-
-first(function (a) {
-  second(function (b) {
-    third(function (c) {
-    ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="563 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-18-module/">모던 자바스크립트와 ES6 #8 Module</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        대부분의 프로그래밍 언어는 각자의 모듈 기능을 가지고 있다. 예를 들어 C언어의 경우 #include를 사용해 외부의 모듈을 가져온다. 클라이언트 사이드의 자바스크립트의 경우, &lt;script&gt; 태그를 사용해서 외부의 모듈 (스크립트 파일)을 가져올 수 있다. 하지만 이 경우 파일 단위로 독자적인 Scope를 가지는 것이 아니라 하나의 전역 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="854 words">4 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-19-es6-syntax-17-destructuring/">모던 자바스크립트와 ES6 #7 Destructuring Assignment</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Destructuring Assignment Syntax는 배열이나 객체를 Destructuring (비구조화)해서 각각의 요소를 개별적인 변수에 할당하는 것을 의미하며, 일반적으로 구조화된 배열이나 객체에서 특정 값만을 꺼내 변수에 할당하거나 리턴하기 위해 사용된다.
-
-
-  추천 글 : Destructuring Assignment - MDN
-
-
-Ar...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Apr 19, 2020, 12:00 AM +0800"
-  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="670 words">3 min</span>
+  title="817 words">4 min</span>
 
 
         <!-- page views -->
@@ -1332,9 +1375,69 @@ Ar...
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page8/">8</a>
+        <a class="page-link btn-box-shadow" href="/page12/">12</a>
       </li>
     
 
@@ -1343,7 +1446,7 @@ Ar...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>5</span>
-    <span class="text-muted">/ 8</span>
+    <span class="text-muted">/ 12</span>
   </li>
 
   <!-- right arrow -->
@@ -1388,6 +1491,22 @@ Ar...
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1404,6 +1523,160 @@ Ar...
 
 
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1784,70 +2057,6 @@ Ar...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1857,16 +2066,6 @@ Ar...
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2001,82 +2200,7 @@ Ar...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2157,10 +2281,7 @@ Ar...
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2172,35 +2293,7 @@ Ar...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2486,132 +2579,6 @@ Ar...
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2746,6 +2713,122 @@ Ar...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2852,6 +2935,9 @@ Ar...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -2864,7 +2950,7 @@ Ar...
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket-io</a>
@@ -2874,9 +2960,6 @@ Ar...
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -3165,107 +3248,6 @@ Ar...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3335,420 +3317,6 @@ Ar...
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3923,117 +3491,52 @@ Ar...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4074,6 +3577,434 @@ Ar...
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4293,6 +4224,122 @@ Ar...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -4394,6 +4441,9 @@ Ar...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -4406,7 +4456,7 @@ Ar...
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket io</a>
@@ -4416,9 +4466,6 @@ Ar...
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
     </div> -->

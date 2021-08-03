@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-03-react-container-presenter-pattern/">React Container - Presenter 패턴</a>
+      <a href="/posts/2020-07-05-pug-partials/">Pug 기초 #5 중복되는 HTML 부분 모듈화</a>
     </h1>
 
     <div class="post-content">
@@ -363,7 +363,18 @@
 
 
 
-        React (이하 리액트)에서 Container - Presenter 패턴이란 데이터 처리 부분과 데이터 출력 (표현) 부분을 분리하여 개발 및 관리하는 디자인 패턴을 의미한다. 리액트 코드가 길어질 수록 컴포넌트 내부가 복잡해지기 때문에 유지보수 하기가 굉장히 번거로워 지는데, 이 디자인 패턴을 사용하면 데이터의 처리 부분과 출력 (표현)을 담당하는...
+        다음 코드의 두 개의 Pug 파일 예시는 각각 다른 페이지를 표현하지만, footer 부분은 동일하다.
+
+
+  See the Pen 
+  Pug 기초 #5 중복되는 HTML 부분 모듈화 by Dohae Lee (@dohaelee)
+  on CodePen.
+
+
+
+중복되는 부분 모듈화
+
+먼저 중복되는 부분을 모듈화 할 footer.pug 파일을 생성한다....
       </p>
     </div>
 
@@ -386,8 +397,8 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jun  3, 2020, 12:00 AM +0800"
-  >Jun  3, 2020<i class="unloaded">2020-06-03T00:00:00+08:00</i>
+    title="Sun, Jul  5, 2020, 12:00 AM +0800"
+  >Jul  5, 2020<i class="unloaded">2020-07-05T00:00:00+08:00</i>
 </span>
 
 
@@ -412,7 +423,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="581 words">3 min</span>
+  title="155 words">1 min</span>
 
 
         <!-- page views -->
@@ -429,7 +440,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-02-react-class-component-state/">React 클래스 컴포넌트 state 사용하는 방법</a>
+      <a href="/posts/2020-07-04-pug-conditionals/">Pug 기초 #4 조건문 (Conditionals)</a>
     </h1>
 
     <div class="post-content">
@@ -440,18 +451,14 @@
 
 
 
-        클래스 컴포넌트에서는 함수 컴포넌트에는 없는 state를 사용할 수 있다. state는 Object이며, 변경될 (변경할) 값을 다룬다.
-
-class App extends React.Component {
-  state = {
-    count: 0,
-  };
-}
+        
+  See the Pen 
+   by Dohae Lee (@dohaelee)
+  on CodePen.
 
 
-state는 클래스 컴포넌트 안에 state = {}; 형식으로 생성할 수 있다.
 
-s...
+
       </p>
     </div>
 
@@ -474,8 +481,8 @@ s...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Jun  2, 2020, 12:00 AM +0800"
-  >Jun  2, 2020<i class="unloaded">2020-06-02T00:00:00+08:00</i>
+    title="Sat, Jul  4, 2020, 12:00 AM +0800"
+  >Jul  4, 2020<i class="unloaded">2020-07-04T00:00:00+08:00</i>
 </span>
 
 
@@ -500,7 +507,7 @@ s...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="336 words">1 min</span>
+  title="9 words">1 min</span>
 
 
         <!-- page views -->
@@ -517,7 +524,7 @@ s...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-06-01-react-class-component/">React 클래스 컴포넌트와 함수 컴포넌트의 차이점</a>
+      <a href="/posts/2020-07-03-pug-href/">Pug 기초 #3 상대 경로 다루기</a>
     </h1>
 
     <div class="post-content">
@@ -528,15 +535,14 @@ s...
 
 
 
-        함수 컴포넌트
+        
+  See the Pen 
+  Pug 기초 #3 상대 경로 다루기 by Dohae Lee (@dohaelee)
+  on CodePen.
 
-function App() {
-  return (
-    &lt;div className="App"&gt;
-      {members.map((member) =&gt; {
-        return &lt;Greeting name={member.name} age={member.age} /&gt;;
-      })}
-    &lt;/di...
+
+
+URL 앞에 / 슬래시를 붙이면 현재 위치와 상관없이 루트 위치에서 지정한 경로로 이동한다. 즉, root/videos 경로로 이동하게 된다. / 슬래시를 생략할 경우 현재 위치의 상대 경로로 이동한다. 즉, ...
       </p>
     </div>
 
@@ -559,8 +565,8 @@ function App() {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Jun  1, 2020, 12:00 AM +0800"
-  >Jun  1, 2020<i class="unloaded">2020-06-01T00:00:00+08:00</i>
+    title="Fri, Jul  3, 2020, 12:00 AM +0800"
+  >Jul  3, 2020<i class="unloaded">2020-07-03T00:00:00+08:00</i>
 </span>
 
 
@@ -585,7 +591,7 @@ function App() {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="187 words">1 min</span>
+  title="116 words">1 min</span>
 
 
         <!-- page views -->
@@ -602,7 +608,7 @@ function App() {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-29-react-component/">React 컴포넌트 (Component)란?</a>
+      <a href="/posts/2020-07-02-pug-initializing-element/">Pug 기초 #2 태그에 값을 대입하는 네 가지 방법</a>
     </h1>
 
     <div class="post-content">
@@ -613,20 +619,20 @@ function App() {
 
 
 
-        HTML을 반환하는 함수.
-
-function App() {
-  return &lt;div className="App"&gt;Hello&lt;/div&gt;;
-}
-
-export default App;
+        
+  See the Pen 
+  Pug 기초 #2 태그에 값을 대입하는 네 가지 방법 by Dohae Lee (@dohaelee)
+  on CodePen.
 
 
-예시
 
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./...
+
+  텍스트 대입
+  값 (변수) 대입
+  텍스트와 값 혼용
+  자바스크립트 코드 사용
+
+
       </p>
     </div>
 
@@ -649,8 +655,8 @@ import App from "./...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, May 29, 2020, 12:00 AM +0800"
-  >May 29, 2020<i class="unloaded">2020-05-29T00:00:00+08:00</i>
+    title="Thu, Jul  2, 2020, 12:00 AM +0800"
+  >Jul  2, 2020<i class="unloaded">2020-07-02T00:00:00+08:00</i>
 </span>
 
 
@@ -675,7 +681,7 @@ import App from "./...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="269 words">1 min</span>
+  title="56 words">1 min</span>
 
 
         <!-- page views -->
@@ -692,7 +698,7 @@ import App from "./...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-14-flash-message/">CSS 잠깐 보여지고 사라지는 Flash Message 애니메이션 예제</a>
+      <a href="/posts/2020-07-01-pug-javascript-code/">Pug 기초 #1 자바스크립트 코드 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -703,17 +709,15 @@ import App from "./...
 
 
 
-        사용자가 로그인하거나 로그아웃할 때 사이트 왼쪽 하단에서 잠깐 동안 보여지고 사라지는 플래시 메시지창.
+        
+  See the Pen 
+  Pug 기초 #1 자바스크립트 코드 사용 by Dohae Lee (@dohaelee)
+  on CodePen.
 
-&lt;div class="notification"&gt;hello&lt;/div&gt;
 
 
-.notification {
-  opacity: 0;
-  position: absolute;
-  bottom: 0px;
-  right: 50px;
-  bo...
+#{} 샾 기호와 중괄호 안에 자바스크립 코드를 작성한다.
+
       </p>
     </div>
 
@@ -736,98 +740,8 @@ import App from "./...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, May 14, 2020, 12:00 AM +0800"
-  >May 14, 2020<i class="unloaded">2020-05-14T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="183 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-13-fade-out/">CSS 천천히 사라지는 Fade Out 애니메이션 예제</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        &lt;div class="flash"&gt;&lt;/div&gt;
-
-
-.flash {
-  animation: goAway 0.5s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-@keyframes goAway {
-  from {
-    transform: none;
-    opacity: 1;
-  }
-  to ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, May 13, 2020, 12:00 AM +0800"
-  >May 13, 2020<i class="unloaded">2020-05-13T00:00:00+08:00</i>
+    title="Wed, Jul  1, 2020, 12:00 AM +0800"
+  >Jul  1, 2020<i class="unloaded">2020-07-01T00:00:00+08:00</i>
 </span>
 
 
@@ -869,7 +783,7 @@ import App from "./...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-11-animation/">CSS 애니메이션 기본 사용법</a>
+      <a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a>
     </h1>
 
     <div class="post-content">
@@ -880,18 +794,21 @@ import App from "./...
 
 
 
-        적용 원리
+        함수 컴포넌트에서 state를 가질 수 있게 해준다. 참고
 
+예시
 
-  animation 속성과 하위 속성을 지정
-  애니메이션의 중간 상태를 @keyframes 규칙을 이용하여 기술
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
 
+  add = () =&gt; {
+    this.setState({ count: this.count + 1 });
+  };
 
-@keyframes
-
-애니메이션의 중간 상태 (특정 시점에 Element가 어떻게 보여질지)를 표현하기 위해서는 @keyframes 규칙을 이용해서 2개 이상의 중간 상태를 기술한다.
-
-중간 상태가 전체 애니메이션에서 ...
+  render() {
+    con...
       </p>
     </div>
 
@@ -914,8 +831,8 @@ import App from "./...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, May 11, 2020, 12:00 AM +0800"
-  >May 11, 2020<i class="unloaded">2020-05-11T00:00:00+08:00</i>
+    title="Fri, Jun 12, 2020, 12:00 AM +0800"
+  >Jun 12, 2020<i class="unloaded">2020-06-12T00:00:00+08:00</i>
 </span>
 
 
@@ -940,7 +857,7 @@ import App from "./...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="553 words">3 min</span>
+  title="145 words">1 min</span>
 
 
         <!-- page views -->
@@ -957,7 +874,7 @@ import App from "./...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-10-socket-io-user-login-logout/">Socket.io 사용자 로그인과 로그아웃 구현 예제</a>
+      <a href="/posts/2020-06-11-react-prop-types/">React 타입 검사를 위한 Prop-Types 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -968,20 +885,282 @@ import App from "./...
 
 
 
-        Login
+        타입 검사가 아주 중요하게 다뤄질 만큼 프로젝트 덩치가 커지면, 그냥 타입스크립트를 쓰는 것도 좋은 대안이다. 하지만, 어쩔 수 없이 자바스크립트로 프로젝트를 진행 해야 할 경우 prop-types를 사용하면 된다.
 
-function loadNickname() {
-  const nickname = JSON.parse(localStorage.getItem(LS_NICKNAME));
+npm install prop-types
 
-  if (nickname) {
-    loginUser(nickname);
-  } else {
-    setNickname();
-  }
+
+전달받은 Props가 의도한 Props인지 체크해주는 역할을 한다.
+
+import Prop...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jun 11, 2020, 12:00 AM +0800"
+  >Jun 11, 2020<i class="unloaded">2020-06-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="159 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-10-react-dynamic-component-generation/">React 배열을 사용한 동적 컴포넌트 생성</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        const family = [
+  {
+    name: "John",
+    age: 24,
+  },
+  {
+    name: "Edward",
+    age: 18,
+  },
+  {
+    name: "Tim",
+    age: 20,
+  },
+];
+
+function renderMembers(member) {
+  return &lt;Greeting ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jun 10, 2020, 12:00 AM +0800"
+  >Jun 10, 2020<i class="unloaded">2020-06-10T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="67 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-09-react-component-life-cycle/">React 컴포넌트의 라이프 사이클</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Mounting
+
+Mounting은 컴포넌트가 탄생하는 단계이며, 다음과 같은 순서로 새로운 컴포넌트가 생성된다.
+
+
+  constructor() : 자바스크립트에서 클래스를 만들 때 생성되는 생성자 함수.
+  static getDerivedStateFromProps()
+  render()
+  componentDidMount()
+
+
+class App ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Jun  9, 2020, 12:00 AM +0800"
+  >Jun  9, 2020<i class="unloaded">2020-06-09T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="348 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-08-react-sharing-props-between-routes/">React Routes 사이에 Props를 공유하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        import React from "react";
+
+function About(props) {
+  console.log(props);
+  return &lt;h3&gt;About this page: I build it!&lt;/h3&gt;;
 }
 
+export default About;
 
-페이지가 로드될 때, loca...
+
+위 코드 예제는 /about 경로로 이동했을 때 보여지는 Abou...
       </p>
     </div>
 
@@ -1004,8 +1183,8 @@ function loadNickname() {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, May 10, 2020, 12:00 AM +0800"
-  >May 10, 2020<i class="unloaded">2020-05-10T00:00:00+08:00</i>
+    title="Mon, Jun  8, 2020, 12:00 AM +0800"
+  >Jun  8, 2020<i class="unloaded">2020-06-08T00:00:00+08:00</i>
 </span>
 
 
@@ -1030,179 +1209,7 @@ function loadNickname() {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="709 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-09-group-socket/">Socket.io 소켓 관련 함수를 하나의 파일로 관리하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        // src/frontend/login.js
-function login(nickname) {
-  // 서버에 연결되는 시점 =&gt; 소켓이 생성되는 시점
-  const socket = io("/");
-  socket.emit(window.events.setNickname, { nickname });
-  initSocket(socket);
-}
-
-
-//...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, May  9, 2020, 12:00 AM +0800"
-  >May  9, 2020<i class="unloaded">2020-05-09T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="298 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-07-socket-io-chatting/">Socket.io 실시간 채팅 구현 예제 #2</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        설명은 주석으로 대신함.
-
-Frontend
-
-// src/frontend/chat.js
-import { getSocket } from "./socket";
-
-const chat = document.querySelector(".chat");
-const messages = chat.querySelector("ul");
-const formMessage = ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Thu, May  7, 2020, 12:00 AM +0800"
-  >May  7, 2020<i class="unloaded">2020-05-07T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="295 words">1 min</span>
+  title="205 words">1 min</span>
 
 
         <!-- page views -->
@@ -1372,9 +1379,69 @@ const formMessage = ...
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page8/">8</a>
+        <a class="page-link btn-box-shadow" href="/page12/">12</a>
       </li>
     
 
@@ -1383,7 +1450,7 @@ const formMessage = ...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>4</span>
-    <span class="text-muted">/ 8</span>
+    <span class="text-muted">/ 12</span>
   </li>
 
   <!-- right arrow -->
@@ -1428,6 +1495,22 @@ const formMessage = ...
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1444,6 +1527,160 @@ const formMessage = ...
 
 
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1824,70 +2061,6 @@ const formMessage = ...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1897,16 +2070,6 @@ const formMessage = ...
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2041,82 +2204,7 @@ const formMessage = ...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2197,10 +2285,7 @@ const formMessage = ...
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2212,35 +2297,7 @@ const formMessage = ...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2526,132 +2583,6 @@ const formMessage = ...
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2786,6 +2717,122 @@ const formMessage = ...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2892,6 +2939,9 @@ const formMessage = ...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -2904,7 +2954,7 @@ const formMessage = ...
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket-io</a>
@@ -2914,9 +2964,6 @@ const formMessage = ...
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
       </div>
@@ -3205,107 +3252,6 @@ const formMessage = ...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3375,420 +3321,6 @@ const formMessage = ...
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3963,117 +3495,52 @@ const formMessage = ...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4114,6 +3581,434 @@ const formMessage = ...
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4333,6 +4228,122 @@ const formMessage = ...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -4434,6 +4445,9 @@ const formMessage = ...
         <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
+        <a class="post-tag" href="/tags/node/">node</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -4446,7 +4460,7 @@ const formMessage = ...
         <a class="post-tag" href="/tags/express/">express</a>
       
         
-        <a class="post-tag" href="/tags/node/">node</a>
+        <a class="post-tag" href="/tags/pug/">pug</a>
       
         
         <a class="post-tag" href="/tags/socket-io/">socket io</a>
@@ -4456,9 +4470,6 @@ const formMessage = ...
       
         
         <a class="post-tag" href="/tags/github/">github</a>
-      
-        
-        <a class="post-tag" href="/tags/typescript/">typescript</a>
       
 
     </div> -->

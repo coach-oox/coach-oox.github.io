@@ -106,8 +106,53 @@
   },
   
   {
+    "title": "Heroku Port",
+    "url": "/posts/2021-03-03-heroku-port/",
+    "categories": "",
+    "tags": "",
+    "date": "2021-03-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "const PORT = process.env.PORT || 4000;app.listen(PORT, listenServer);Heroku에서는 필요에 따라 자동으로 포트 넘버를 (유동적으로) 설정하기 때문에 환경 변수 설정이 필요하다. process.env.PORT는 Heroku에서만 동작하며, (오로지 Heroku를 위한) Heroku를 사용하지 않을 때에는 설정한 포트로 열리도록 위 코드와 같이 설정한다."
+  },
+  
+  {
+    "title": "Heroku Mongodb",
+    "url": "/posts/2021-03-02-heroku-mongodb/",
+    "categories": "",
+    "tags": "",
+    "date": "2021-03-02 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  Heroku 가입  Heroku 앱 생성  MongoDB Atlas 가입  Organization, Project, Cluster 생성mongodb+srv://leetube:&amp;lt;password&amp;gt;@cluster0.xr2xb.mongodb.net/myFirstDatabase?retryWrites=true&amp;amp;w=majority먼저 MongoDB의 Connect 탭에서 Connect your application 항목을 선택한다. 제공되는 String 코드를 복사한 뒤, &amp;lt;passw..."
+  },
+  
+  {
+    "title": "Heroku Cli",
+    "url": "/posts/2021-03-01-heroku-cli/",
+    "categories": "",
+    "tags": "",
+    "date": "2021-03-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  Heroku는 무조건 git history에 있는 것만 볼 수 있음. 따라서 코드가 변경되면 커밋해야 Heroku가 인식할 수 있음.Install Heroku Clibrew tap heroku/brew &amp;amp;&amp;amp; brew install herokuHeroku Cli - Download and installheroku login정상적으로 설치되었거나, 이미 Heroku Cli가 설치되어 있는 경우 위와 같이 heroku login 명령어가 정상적으로 동작한다.새로운 Git 저장소 생성cd my-proj..."
+  },
+  
+  {
     "title": "Express AWS S3를 사용한 파일 업로드 예제",
-    "url": "/posts/2021-02-12-heroku/",
+    "url": "/posts/2021-02-12-aws-s3-usage/",
     "categories": "node, express",
     "tags": "node, aws, s3, express",
     "date": "2021-02-12 00:00:00 +0800",
@@ -316,6 +361,171 @@
   },
   
   {
+    "title": "Pug Dataset을 사용해서 백엔드와 데이터 공유하기",
+    "url": "/posts/2020-07-11-pug-api-view/",
+    "categories": "node, pug, express",
+    "tags": "node, pug, express",
+    "date": "2020-07-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "백엔드와 Pug는 서로 데이터를 공유할 수 있다. 하지만 프론트엔드 쪽에서 사용하는 자바스크립트에서는 이러한 정보에 접근할 수가 없는데, 이때 가장 간편하게 정보를 공유하는 방법은 HTML의 data-set을 사용하는 방법이다. (이외 방법 : localStorage 등)처리를 담당할 라우터import express from &quot;express&quot;;import { addComment } from &quot;../controllers/postController&quot;;const apiRouter = express..."
+  },
+  
+  {
+    "title": "Pug 긴 URL 줄이기 (Redirection)",
+    "url": "/posts/2020-07-10-pug-make-url-backend/",
+    "categories": "node, pug, express",
+    "tags": "node, pug, express",
+    "date": "2020-07-10 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "긴 URL의 문제점a(href=&quot;https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsafsadf&amp;amp;allow_signup=false&amp;amp;scope=read:user user:email&quot;) GitHub위 코드는 GitHub 로그인 기능 구현을 위해 필요한 URL 링크를 생성하는 프론트엔드 코드이다. 예와 같이 URL이 길고 복잡하며, 파라미터를 구분하거나 수정하는 것이 어렵다.새로운 경로 생성문제를 해결하기 위해서..."
+  },
+  
+  {
+    "title": "Pug 스크립트 사용하는 페이지에서만 로드하기",
+    "url": "/posts/2020-07-09-pug-block-scripts/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-09 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "특정 페이지에서만 필요한 자바스크립트 파일은 매 페이지마다 로딩할 필요가 없다. 따라서 block을 이용해 선택적으로 스크립트 파일을 가져올 수 있게끔 하는 것이 좋다.  See the Pen   Pug 스크립트 사용하는 페이지에서만 로드하기 by Dohae Lee (@dohaelee)  on CodePen.공통 레이아웃을 표현하는 layout.pug에 block 생성한다. block은 선택적으로 구현할 수 있기 때문에 스크립트가 필요한 위치에서만 스크립트 호출 구문을 추가하면 된다. 그런 다음 특정 스크립트를 사용해야 할 뷰..."
+  },
+  
+  {
+    "title": "Pug 기초 #8 상속 (Inheritance)",
+    "url": "/posts/2020-07-08-pug-inheritance/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-08 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "레이아웃 틀은 같지만, 내용은 변경되어야 할 때. (변경되는 것 없이 똑같은 부분이 중복될 때는 이 글을 참고.)  See the Pen   Pug 기초 #8 상속 (Inheritance) by Dohae Lee (@dohaelee)  on CodePen.만든 레이아웃은 extends 키워드를 사용해 적용하고, 각각의 block (내용이 변경될 부분)을 구현한다. block 파트 구현은 옵션으로, 비워둬도 에러가 생기진 않는다."
+  },
+  
+  {
+    "title": "Pug 기초 #7 배열 반복 출력 예제",
+    "url": "/posts/2020-07-07-pug-iterations/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-07 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  See the Pen    by Dohae Lee (@dohaelee)  on CodePen."
+  },
+  
+  {
+    "title": "Pug 기초 #6 재사용 가능한 함수",
+    "url": "/posts/2020-07-06-pug-mixins/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-06 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Mixin은 재사용을 위한 모듈인데, 함수처럼 인자를 받아 처리할 수 있다.  See the Pen    by Dohae Lee (@dohaelee)  on CodePen.사용할 때는 해당 파일을 include 한 다음 +widget()와 같이 사용한다. 위 예제는 배열로 표현된 여러 개의 위젯 객체를 가져와 반복문을 통해 각각의 위젯에 동일한 템플릿을 적용하고 있다."
+  },
+  
+  {
+    "title": "Pug 기초 #5 중복되는 HTML 부분 모듈화",
+    "url": "/posts/2020-07-05-pug-partials/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-05 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "다음 코드의 두 개의 Pug 파일 예시는 각각 다른 페이지를 표현하지만, footer 부분은 동일하다.  See the Pen   Pug 기초 #5 중복되는 HTML 부분 모듈화 by Dohae Lee (@dohaelee)  on CodePen.중복되는 부분 모듈화먼저 중복되는 부분을 모듈화 할 footer.pug 파일을 생성한다.  See the Pen   Pug 기초 #5 중복되는 HTML 부분 모듈화 1 by Dohae Lee (@dohaelee)  on CodePen.footer.pug 파일에 중복되는 부분을 작성하고,..."
+  },
+  
+  {
+    "title": "Pug 기초 #4 조건문 (Conditionals)",
+    "url": "/posts/2020-07-04-pug-conditionals/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-04 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  See the Pen    by Dohae Lee (@dohaelee)  on CodePen."
+  },
+  
+  {
+    "title": "Pug 기초 #3 상대 경로 다루기",
+    "url": "/posts/2020-07-03-pug-href/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  See the Pen   Pug 기초 #3 상대 경로 다루기 by Dohae Lee (@dohaelee)  on CodePen.URL 앞에 / 슬래시를 붙이면 현재 위치와 상관없이 루트 위치에서 지정한 경로로 이동한다. 즉, root/videos 경로로 이동하게 된다. / 슬래시를 생략할 경우 현재 위치의 상대 경로로 이동한다. 즉, 현재 위치가 root/videos 일때 root/videos/edit 경로로 이동하게 된다."
+  },
+  
+  {
+    "title": "Pug 기초 #2 태그에 값을 대입하는 네 가지 방법",
+    "url": "/posts/2020-07-02-pug-initializing-element/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-02 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  See the Pen   Pug 기초 #2 태그에 값을 대입하는 네 가지 방법 by Dohae Lee (@dohaelee)  on CodePen.  텍스트 대입  값 (변수) 대입  텍스트와 값 혼용  자바스크립트 코드 사용"
+  },
+  
+  {
+    "title": "Pug 기초 #1 자바스크립트 코드 사용법",
+    "url": "/posts/2020-07-01-pug-javascript-code/",
+    "categories": "node, pug",
+    "tags": "node, pug",
+    "date": "2020-07-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  See the Pen   Pug 기초 #1 자바스크립트 코드 사용 by Dohae Lee (@dohaelee)  on CodePen.#{} 샾 기호와 중괄호 안에 자바스크립 코드를 작성한다."
+  },
+  
+  {
     "title": "React Hook이란?",
     "url": "/posts/2020-06-12-what-is-hook/",
     "categories": "react",
@@ -511,6 +721,96 @@
   },
   
   {
+    "title": "자바스크립트 Map · WeakMap 자료구조",
+    "url": "/posts/2020-05-19-javascript-map-weakmap/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "객체의 단점  Iterable 하지 않다.  키를 문자열로만 취급한다.  따라서 키 값의 유일성을 완벽히 보장할 수 없다.  프로퍼티 개수를 직접 파악할 수 없다.const obj = {  name: &quot;John&quot;,  age: 25,  gender: &quot;male&quot;,};// 다음과 같이 사용할 수 없음// obj.length// 프로퍼티 개수를 알아내기 위한 방법Object.keys(obj).length;Object.values(obj).length;Map  객체의 단점을 보완  key와 valu..."
+  },
+  
+  {
+    "title": "자바스크립트 Set · WeakSet 자료구조",
+    "url": "/posts/2020-05-18-javascript-set-weakset/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "const a = new Set();Set은 배열과 비슷하지만 인덱스가 없고, new 연산자를 사용해 생성한다. (순서는 가지고 있으며, 중복을 허용하지 않는다.) 이때 인자로는 Iterable한 요소 (배열, 문자열 등)가 들어갈 수 있다.중복을 제거한 배열 만들기const arr = [1, 2, 3, 3, 3, 4, 5];// reduce를 사용한 중복 제거 예제const newArr = arr.reduce((acc, current) =&amp;gt; {    if (acc.includes(current)) return a..."
+  },
+  
+  {
+    "title": "자바스크립트 setInterval()과 setTimeout()를 사용한 게임 오버 예제",
+    "url": "/posts/2020-05-17-javascript-setInterval-setTimeout/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-17 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "setInterval() 메소드를 사용해서 (일정한) 특정 시간 간격으로 함수 A를 실행하고, setTimeout() 메소드를 사용해서 특정 시간 이후 종료하고 함수 B를 실행하는 예제.function setPlayTime() {  timer.innerText = PLAY_TIME;  // 매초 남은 게임 시간을 업데이트 함  timerId = setInterval(updateTime, 1000);  // 플레이 타임이 종료되면 게임 오버 함수를 실행함  setTimeout(gameOver, PLAY_TIME * 1000);}..."
+  },
+  
+  {
+    "title": "자바스크립트 Promise의 비동기 처리 방식",
+    "url": "/posts/2020-05-16-javascript-promise-fetch-then/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-16 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "예를 들어 다음과 같이 어떤 서버에 요청을 보내 유저 정보를 가져온 다음 필요한 유저 정보만을 사용하는 경우를 가정해보자.function getUser() {  const response = fetch.get(&quot;https://api.com/users&quot;);  const users = fetch.get(`https://api.com/users/${response[3]}`);}이때 위 방식은 동기 방식으로, response를 기다리지 않고 바로 다음 줄이 실행되기 때문에 response[3]에 제대로 된 결과 값이..."
+  },
+  
+  {
+    "title": "자바스크립트 제네레이터 (Generator)의 이해",
+    "url": "/posts/2020-05-15-javascript-generator/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-15 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  중간에 멈췄다가 이어서 실행할 수 있는 함수  function 뒤에 *를 붙여 표현  함수를 멈출 때는 yield 키워드를 사용function* gen() {  console.log(1);  yield 1; // value : 1, done : false;  console.log(2);  yield 2; // value : 2, done : false;  console.log(3);}const result = gen();// result.next();Generator는 함수 실행 결과에 대해 next() 메소드를 호출할 때..."
+  },
+  
+  {
+    "title": "자바스크립트 이터레이터 (Iterator)의 이해",
+    "url": "/posts/2020-05-14-javascript-iterator/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Iterator는 반복을 위해 설계된 특별한 인터페이스를 가진 객체로, 객체 내부에 next() 라는 메소드가 존재하고, 이 메소드를 사용해 반복적으로 value와 done 프로퍼티를 가진 객체를 반환한다.Iterable한 개체 특징  구조 해체 할당 가능  펼쳐 쓸 수 있음 (Spread Syntax)  Array.from() 사용 가능Iterator 사용법const arr = [1, 2, 3];const iter = arr[Symbol.iterator]();iter.next(); // value : 1, done : fal..."
+  },
+  
+  {
     "title": "CSS 잠깐 보여지고 사라지는 Flash Message 애니메이션 예제",
     "url": "/posts/2020-05-14-flash-message/",
     "categories": "css",
@@ -526,6 +826,21 @@
   },
   
   {
+    "title": "자바스크립트 이터러블 (Iterable)의 이해",
+    "url": "/posts/2020-05-13-javascript-iterable/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-13 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "내부 요소들을 공개적으로 탐색 (반복)할 수 있는 데이터 구조를 Iterable 하다고 말하며, Iterable한 데이터 구조는 모두 프로토타입에 Symbol.iterator() 메소드를 가지고 있다.Iterable한 데이터 구조  Array  Map  Set  String예시const obj = {  0: 1,  1: 2,  2: 3,  length: 3,};// Symbol.iterator() 없음console.dir(obj);위에서 obj는 유사 배열 객체로, 배열과 유사하게 동작하지만 Symbol.iterator() 메..."
+  },
+  
+  {
     "title": "CSS 천천히 사라지는 Fade Out 애니메이션 예제",
     "url": "/posts/2020-05-13-fade-out/",
     "categories": "css",
@@ -538,6 +853,36 @@
 
 
     "snippet": "&amp;lt;div class=&quot;flash&quot;&amp;gt;&amp;lt;/div&amp;gt;.flash {  animation: goAway 0.5s ease-in-out forwards;  animation-delay: 2s;}@keyframes goAway {  from {    transform: none;    opacity: 1;  }  to {    transform: tanslateY(-50px);    opacity: 0;  }}"
+  },
+  
+  {
+    "title": "자바스크립트 객체 · 배열 병합하기",
+    "url": "/posts/2020-05-12-javascript-merge-objects/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-12 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "function mergetObjects(obj1, obj2) {  return { ...obj1, ...obj2 };}const obj1 = {  name: &quot;John&quot;,  age: 21,};const obj2 = {  from: &quot;Canada&quot;,};const obj3 = mergetObjects(obj1, obj2);배열의 경우도 사용법은 동일하다."
+  },
+  
+  {
+    "title": "자바스크립트 Promise와 Axios",
+    "url": "/posts/2020-05-11-javascript-promise-axios/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Promise가 등장한 이유func(url, function (response1) {  func1(response1, function (response2) {    func2(response2, function (response3) {      ...    });  });});위 코드 예제는 ES6 이전의 콜백 지옥을 흉내내본 것이다. 순차적으로 해결한다는 느낌보다는 옆으로 깊어지는 느낌; 그래서 이러한 비동기 처리를 순차적으로 해결하기 위한 니즈에 따라 등장한게 Promise였다.function getUsers() {  fe..."
   },
   
   {
@@ -571,6 +916,21 @@
   },
   
   {
+    "title": "자바스크립트 URLSearchParams() 사용법",
+    "url": "/posts/2020-05-10-javascript-url-search-params/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-10 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "URL의 쿼리 파라미터들을 읽거나 수정할 때 사용되는 메소드.const URL = &quot;http://127.0.0.1/search/?keyword=검색어&quot;;const search = location.search;console.log(search); // ?keyword=검색어// URLSearchParams를 사용해 객체로 변환const params = new URLSearchParams(search);console.log(params.get(&quot;keyword&quot;)); // 검색어// 파라미터 값 ..."
+  },
+  
+  {
     "title": "Socket.io 소켓 관련 함수를 하나의 파일로 관리하기",
     "url": "/posts/2020-05-09-group-socket/",
     "categories": "node, socket-io",
@@ -583,6 +943,36 @@
 
 
     "snippet": "// src/frontend/login.jsfunction login(nickname) {  // 서버에 연결되는 시점 =&amp;gt; 소켓이 생성되는 시점  const socket = io(&quot;/&quot;);  socket.emit(window.events.setNickname, { nickname });  initSocket(socket);}// src/frontend/socket.jsimport { enterUser, leaveUser } from &quot;./notifications&quot;;import ..."
+  },
+  
+  {
+    "title": "자바스크립트 제한적 범위의 난수 만들기",
+    "url": "/posts/2020-05-09-javascript-make-limiting-random-number/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-09 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "random() 메소드는 0 이상 1 미만의 구간에서 부동소숫점 의사난수를 생성한다. 이는 다음과 같이 활용할 수 있다.0 ~ 지정한 값 사이의 난수 생성function getRandom(max) {  return Math.random() * max;}두 값 사이의 난수 생성function getRandomArbitrary(min, max) {  return Math.random() * (max - min) + min;}두 값 사이의 정수 난수 생성//최댓값은 제외, 최솟값은 포함function getRandomInt(min,..."
+  },
+  
+  {
+    "title": "자바스크립트 객체의 구조 분해 (Destructuring) 활용법",
+    "url": "/posts/2020-05-08-javascript-destructuring-object-advenced/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-08 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "기본 사용법const obj = {  name: &quot;John&quot;,  age: 25,  gender: &quot;male&quot;,  memo: {    work: &quot;software developer&quot;,    hobby: &quot;work out&quot;,  },};const { name, age } = obj;객체에서 각각을 (필요한 것만) 구조 분해해서 let, const 상관없이 새로운 변수에 할당 할 수 있다.중첩 객체 추출const obj = {  name: &quot;John&qu..."
   },
   
   {
@@ -601,6 +991,21 @@
   },
   
   {
+    "title": "자바스크립트 객체의 구조 분해 (Destructuring)",
+    "url": "/posts/2020-05-07-javascript-destructuring-object/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-07 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "객체를 구조 분해 할당할 때는 키를 기준으로 한다.const obj = {  name: &quot;John&quot;,  age: 25,  gender: &quot;male&quot;,  memo: {    work: &quot;software developer&quot;,    hobby: &quot;work out&quot;,  },};const { name, age } = obj;2단 중첩 구조의 표현const {  memo: { work, hobby },} = obj;만약 이름을 바꾸고 싶다면 다음과 같이 origin:..."
+  },
+  
+  {
     "title": "Socket.io 실시간 채팅 구현 예제 #1",
     "url": "/posts/2020-05-06-socket-io-real-time-chat/",
     "categories": "node, socket-io",
@@ -613,6 +1018,21 @@
 
 
     "snippet": "설명은 주석으로 대신함.Server// 서버 연결시 새로운 소켓 생성// 서버는 모든 이벤트에 대해 열려 있음ioServer.on(&quot;connection&quot;, (socket) =&amp;gt; {  // newMessage 이벤트에 대해 듣고 있음  socket.on(&quot;newMessage&quot;, ({ message }) =&amp;gt; {    // 접속자를 제외한 모든 클라이언트에 messageNotication 이벤트를 발생시킴    socket.broadcast.emit(&quot;messa..."
+  },
+  
+  {
+    "title": "자바스크립트 배열의 구조 분해 (Destructuring)",
+    "url": "/posts/2020-05-06-javascript-destructuring-array/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-06 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "각각 새로운 변수에 구조 분해 할당const arr = [1, 2, 3];const [one, two, three] = arr;위 코드는 변수 one, two, three를 생성하고 각각 arr 요소를 순서대로 대입한 것과 같다. 동일한 코드를 구조 분해를 사용하지 않고 표현하면 다음과 같다.const arr = [1, 2, 3];const one = arr[0];const two = arr[1];const three = arr[2];가져올 요소 이외의 변수를 초기화 할 때const arr = [1, 2, 3];const [o..."
   },
   
   {
@@ -631,6 +1051,21 @@
   },
   
   {
+    "title": "자바스크립트 배열에서 특정 요소만 삭제하기",
+    "url": "/posts/2020-05-05-javascript-delete-element/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-05 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Destructuring 활용const user = {  name: &quot;John&quot;,  age: 21,  from: &quot;Canada&quot;,};function delElement({ name, age }) {  return { name, age };}const newUser = delElement(user);// newUser는 name, age만 가지고 있다.Rest Operator 활용const user = {  name: &quot;John&quot;,  age: 21,  from: &quot;C..."
+  },
+  
+  {
     "title": "Socket.io 이벤트와 객체를 하나의 파일로 관리 · 공유하기",
     "url": "/posts/2020-05-04-socket-io-share-object/",
     "categories": "node, socket-io",
@@ -643,6 +1078,36 @@
 
 
     "snippet": "이벤트를 하나의 객체로 관리하기// src/events.jsconst events = {  enterUser: &quot;enterUser&quot;,  logoutUser: &quot;logoutUser&quot;,};export default events;Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와 같이 events.js 파일을 만들고, 파일 내부에 객체를 만들어 export 한다. 이렇게 하면 이벤트 컨트롤러를 작성하는 부분과 이벤트를 감시하는 부분 모두 이벤트 이름을 하드 코딩 하지않고 객체로 ..."
+  },
+  
+  {
+    "title": "자바스크립트 링크 클릭 발생 시키기",
+    "url": "/posts/2020-05-04-javascript-anchor-fake-click/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-04 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "const a = document.createElement(&quot;a&quot;);a.href = url;a.download = &quot;image.jpg&quot;;document.body.appendChild(a);a.click();어떤 링크로 연결해서 파일을 다운로드 할 수 있게끔 하기 위해서, 해당 URL을 가리키는 a 태그를 만들고, click() 함수를 사용해서 가짜 클릭을 발생시킨다."
+  },
+  
+  {
+    "title": "자바스크립트 마우스 오른쪽 클릭 (Context Menu) 이벤트 처리",
+    "url": "/posts/2020-05-03-javascript-right-click/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "function blockRightClick(event) {  event.preventDefault();}cavas.addEventListener(&quot;contextmenu&quot;, blockRightClick);마우스 우클릭시 나오는 창을 Context Menu라고 부르며, 이벤트 처리를 통해 마우스 우클릭을 방지하거나 임의의 이벤트를 지정할 수 있다."
   },
   
   {
@@ -661,6 +1126,21 @@
   },
   
   {
+    "title": "자바스크립트 다른 파일에 있는 객체 (배열) 사용하기",
+    "url": "/posts/2020-05-02-javascript-export-module/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-02 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "클라이언트 사이드 (브라우저)에서 자바스크립트를 사용할 때, 다른 파일에 있는 객체나 배열을 사용하기 위해서는 스크립트 파일을 module로 등록하고 import, export를 사용해 객체나 배열을 가져와 사용한다.&amp;lt;script type=&quot;module&quot; src=&quot;./src/index.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;./src/movies.js&quot;&amp;gt;&amp;lt;/script&amp;gt..."
+  },
+  
+  {
     "title": "Socket.io 동작 이해",
     "url": "/posts/2020-05-01-how-to-work-socket-io/",
     "categories": "node, socket-io",
@@ -673,6 +1153,126 @@
 
 
     "snippet": "Socket.io를 사용한다는 것은 Express 서버 위에 Socket.io (WebSocket) 서버를 올린다는 의미이다. 전통적인 (?) 방식에서, 2개의 서버가 같은 포트에서 동작하게 할 수 없지만, WebSocket과 HTTP는 같은 공생이 가능하다.Express 서버 위에 Socket.io 서버를 올리는 방법import express from &quot;express&quot;;import socketIO from &quot;socket.io&quot;;const PORT = 4000;const app = expre..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.toLocaleString()",
+    "url": "/posts/2020-05-01-javascript-array-toLocaleString/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-05-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "toLocaleString() 메소드는 요소를 문자열로 변환하고, 지정한 문화권 (나라)의 표기법에 따라 시간, 화폐 등을 고유 문자열로 분리한다. 다음과 같은 상황에서 사용할 수 있다.  1000단위 (화폐) 쉼표 넣기  문화권 시간 표기법에 따른 변환const price = 10000;const message = `￦${price.toLocaleString(&quot;ko-KR&quot;)}`;// message = &quot;￦10,000&quot;"
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.map()",
+    "url": "/posts/2020-04-28-javascript-array-map/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-28 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "map() 메소드는 배열의 각 요소에 주어진 함수를 실행한 결과를 새로운 배열로 리턴한다. 보통 for문을 돌려서 새로운 배열을 만드는 것을 목적으로 사용한다.Array.map(callBack[, thisArg])  callBack : function (currentValue[, index][, originArray])          currentValue : 현재 값      index : 현재 인덱스      originArray : 원본 배열        tihsArg : this에 할당할 대상 (생략시 global 객..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.reduce()",
+    "url": "/posts/2020-04-27-javascript-array-reduce/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-27 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "reduce() 메소드는 배열의 각 요소에 대해 reducer() 함수를 실행하고, 최종 결과를 리턴한다. for문을 돌려서 최종적으로 다른 무엇인가를 만드는 목적으로 사용한다.Array.reduce(callBack[, initValue])  callBack : function (accumulator, currentValue, currentIndex[, originArray])          accumulator : 누적된 계산 값      currentValue : 현재 값      currentIndex : 현재 인덱스 ..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.forEach()",
+    "url": "/posts/2020-04-26-javascript-array-forEach/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-26 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "forEach() 메소드는 배열 요소 각각에 인자로 받은 함수를 실행한다.Array.forEach(callBack[, thisArg])  callBack : function (currentValue[, index][, originarray])          currentValue : 현재 값      index : 현재 인덱스      originArray : 원본 배열        thisArg : this에 할당할 대 (생략시 global 객체)const arr = [1, 2, 3];arr.forEach((value, i..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.find() · findIndex()",
+    "url": "/posts/2020-04-25-javascript-array-find-findIndex/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-25 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "find()const arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];arr.find((char) =&amp;gt; char === &quot;a&quot;); // &quot;a&quot;arr.find((char) =&amp;gt; char === &quot;d&quot;); // undefinedindexOf()와 비슷하지만 인자로 함수를 받는 메소드. 값이 존재하지 않을 때 undefined를 출력한다.findIndex()const arr = [&quot;a&quot;, &q..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.from()",
+    "url": "/posts/2020-04-24-javascript-array-from/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-24 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Array.from() 메소드를 사용하면 유사 배열 객체나 반복 가능한 객체를 얕은 복사해서 새로운 배열 객체를 만든다.const arr = [1, 2, 3, 4, 5];const newArr = Array.from(arr).map((number) =&amp;gt; {  return (number += 1);}); // newArr = [2, 3, 4, 5, 6]"
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.filter()",
+    "url": "/posts/2020-04-23-javascript-array-filter/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-23 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "filter() 메소드는 인자로 주어진 함수의 조건을 통과하는 요소를 모아서 새로운 배열로 리턴한다.const numbers = [2, 4325, 123, 4, 635, 66, 7756, 31, 7];const biggerThan1000 = numbers.filter((number) =&amp;gt; number &amp;gt; 1000);// biggerThan1000 = [4325, 7756]조건을 만족하는 원소만 결과만 추출.let titles = [&quot;untitled&quot;, &quot;hello&quot;,..."
+  },
+  
+  {
+    "title": "자바스크립트 Array.prototype.fill()",
+    "url": "/posts/2020-04-22-javascript-array-fill/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2020-04-22 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "fill() 메소드는 배열의 시작 인덱스부터 끝 인덱스의 이전 (바로 앞) 인덱스까지 특정 값으로 채운다.const arr = [1, 2, 3, 4, 5];arr.fill(10);// arr = [10, 10, 10, 10, 10];인자로 채울 값만 넘겼을 경우, 전체를 지정한 값으로 다 채운다.arr.fill(20, 2, 4);// arr = [10, 10, 20, 20, 10]인자로 시작 값과 끝 값을 지정한 경우에는 시작 인덱스부터 끝 인덱스의 바로 ‘앞’ 인덱스 (2 ~ 3) 까지만 채워진다.arr.fill(30, 2)..."
   },
   
   {
