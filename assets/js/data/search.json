@@ -1291,10 +1291,25 @@
   },
   
   {
+    "title": "Emotion 특징 정리 및 Styled-Components와의 비교",
+    "url": "/posts/2020-06-06-overview-emotion/",
+    "categories": "css-in-js",
+    "tags": "emotion, styled-components, css-in-js",
+    "date": "2020-06-06 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Overviews  Styled-Components, Emotion 둘다 CSS-in-JS  Styled-Components 기능을 모두 제공Styled-Components와의 비교  Styled-Components 용량  @emotion/core 용량  NPM Trends  Benchmark ResultsProps 사용Styled-Components// Create an Input component that&#39;ll render an &amp;lt;input&amp;gt; tag with some stylesconst I..."
+  },
+  
+  {
     "title": "React Styled-Component 현재 경로 메뉴 스타일 강조하기",
     "url": "/posts/2020-06-05-styled-componenets-withRouter/",
-    "categories": "react, styled-component",
-    "tags": "react, javascript, styled-component, css-in-js",
+    "categories": "react, css-in-js",
+    "tags": "react, styled-components, css-in-js",
     "date": "2020-06-05 00:00:00 +0800",
     
 
@@ -1308,8 +1323,8 @@
   {
     "title": "React Styled-Component 글로벌 공통 스타일 지정하기",
     "url": "/posts/2020-06-04-styled-components-createGlobalStyle/",
-    "categories": "react, styled-component",
-    "tags": "react, javascript, styled-component, css-in-js",
+    "categories": "react, css-in-js",
+    "tags": "react, styled-components, css-in-js",
     "date": "2020-06-04 00:00:00 +0800",
     
 
