@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2021-08-08T13:41:56+08:00</updated>
+  <updated>2021-08-10T23:06:51+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -17,100 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>타입스크립트 Less · Default Parameter</title>
-    <link href="https://dohaelee.github.io/posts/2021-06-15-typescript-less-parameter/" rel="alternate" type="text/html" title="타입스크립트 Less · Default Parameter" />
-    <published>2021-06-15T00:00:00+08:00</published>
-  
-    <updated>2021-06-15T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-06-15-typescript-less-parameter/</id>
-    <content src="https://dohaelee.github.io/posts/2021-06-15-typescript-less-parameter/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="typescript" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      선택적 파라미터
-
-function greeting(name, age, gender) {
-  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
-}
-
-greeting(name, age);
-// Hello stranger, you are 24, you are a undefined
-
-
-위 자바스크립트 예시에서, 함수 greeting은 3개의 인자를 사용하도록 선언되어있지만, 호출시 2개의 파라미터만 넘겨도 실행된다.
-
-index.ts:9:1 - error TS2554: Expected 3 arguments, but got 2.
-9 greeting(name, age);
-  index.ts:5:30
-    5 function greeting(n...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>타입스크립트 .eslintrc 파일 Parsing Error 해결 방법</title>
-    <link href="https://dohaelee.github.io/posts/2021-06-14-tslint-error/" rel="alternate" type="text/html" title="타입스크립트 .eslintrc 파일 Parsing Error 해결 방법" />
-    <published>2021-06-14T00:00:00+08:00</published>
-  
-    <updated>2021-06-14T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-06-14-tslint-error/</id>
-    <content src="https://dohaelee.github.io/posts/2021-06-14-tslint-error/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="typescript" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      증상
-
-.eslintrc.js 파일에 타입스크립트 (과거 .tslint) 설정을 할 때 발생하는 Parsing Error 또는 .eslintrc.js 파일 에러.
-
-parsing error: "parseroptions.project" has been set for @typescript-eslint/parser. the file does not match your project config: .eslintrc.js. the file must be included in at least one of the projects provided.
-
-
-module.exports 부분에 위와 같은 에러가 생성된다.
-
-해결 방법
-
-먼저 .eslintrc.js 파일의 parserOptions 항목에 project를 다음과...
-    </summary>
-  
-
-  </entry>
 
   
   <entry>
@@ -262,6 +168,112 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 }
 
 
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Webpack 기본 사용법</title>
+    <link href="https://dohaelee.github.io/posts/2021-04-02-webpack-config/" rel="alternate" type="text/html" title="Webpack 기본 사용법" />
+    <published>2021-04-02T00:00:00+08:00</published>
+  
+    <updated>2021-08-03T12:54:29+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-04-02-webpack-config/</id>
+    <content src="https://dohaelee.github.io/posts/2021-04-02-webpack-config/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="webpack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      설치
+
+npm install webpack webpack-cli -D
+
+
+설정 파일 만들기
+
+const path = require("path");
+
+module.exports = {
+  entry: "./src/client/js/main.js",
+  mode: "development",
+  watch: true, // 자동으로 변화 감시
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "assets", "js"),
+    clean: true, // 결과물을 새로 생성할 때 기존의 폴더를 삭제함
+  },
+};
+
+
+webpack.config.js 파일 생성하고 환경설정 객체를 export한다.
+
+Path 다루기
+
+output:...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Webpack이란?</title>
+    <link href="https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/" rel="alternate" type="text/html" title="Webpack이란?" />
+    <published>2021-04-01T00:00:00+08:00</published>
+  
+    <updated>2021-04-01T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/</id>
+    <content src="https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="webpack" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.
+
+Bundle이란?
+
+
+  소프트웨어 및 일부 하드웨어와 함께 작동하는 데 필요한 모든 것을 포함하는 패키지
+  각각의 모듈들에 대해 의존성 관계를 파악한 하나 또는 여러 개의 그룹
+
+
+Module Bundler란?
+
+대부분의 프로그래밍 언어에서는 코드를 여러 개의 파일로 분할하고, 각각의 파일에 담겨있는 기능들을 사용하기 위해서 애플리케이션에서 import 하는 방식을 사용한다. 하지만 브라우저에서는 이러한 import 방식을 사용할 수 없기 때문에 Module Bundler가 이 기능을 ...
     </summary>
   
 

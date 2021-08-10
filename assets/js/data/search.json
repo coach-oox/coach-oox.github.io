@@ -1,36 +1,6 @@
 [
   
   {
-    "title": "타입스크립트 Less · Default Parameter",
-    "url": "/posts/2021-06-15-typescript-less-parameter/",
-    "categories": "typescript",
-    "tags": "typescript",
-    "date": "2021-06-15 00:00:00 +0800",
-    
-
-
-
-
-
-    "snippet": "선택적 파라미터function greeting(name, age, gender) {  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);}greeting(name, age);// Hello stranger, you are 24, you are a undefined위 자바스크립트 예시에서, 함수 greeting은 3개의 인자를 사용하도록 선언되어있지만, 호출시 2개의 파라미터만 넘겨도 실행된다.index.ts:9:1 - error TS2554: Expected ..."
-  },
-  
-  {
-    "title": "타입스크립트 .eslintrc 파일 Parsing Error 해결 방법",
-    "url": "/posts/2021-06-14-tslint-error/",
-    "categories": "typescript",
-    "tags": "typescript, error, eslint",
-    "date": "2021-06-14 00:00:00 +0800",
-    
-
-
-
-
-
-    "snippet": "증상.eslintrc.js 파일에 타입스크립트 (과거 .tslint) 설정을 할 때 발생하는 Parsing Error 또는 .eslintrc.js 파일 에러.parsing error: &quot;parseroptions.project&quot; has been set for @typescript-eslint/parser. the file does not match your project config: .eslintrc.js. the file must be included in at least one of the projects..."
-  },
-  
-  {
     "title": "Webpack SASS (SCSS) 사용법",
     "url": "/posts/2021-04-05-scss-css-loader/",
     "categories": "webpack",
@@ -253,6 +223,21 @@
 
 
     "snippet": "iTerm2 설치와 설정가장 먼저 다음의 명령어로 homebrew를 이용해 iTerm2를 설치한다. 최신 버전이 아닌 다른 버전을 설치하고 싶거나, homebrew를 사용하지 않는다면 공식 홈페이지를 참고하자.$ brew install --cask iterm2테마 설치와 적용다음으로는 컬러 테마를 변경하기 위해서 iTerm2 Color Schemes에서 마음에 드는 테마를 골라 .itermcolors 파일을 다운로드 한다. 설치는 다운로드 한 파일을 더블 클릭하면 된다.이제 iTerm2를 실행하고 iTerm2 - Prefere..."
+  },
+  
+  {
+    "title": "타입스크립트 Less · Default Parameter",
+    "url": "/posts/2020-12-22-typescript-less-parameter/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2020-12-22 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "선택적 파라미터function greeting(name, age, gender) {  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);}greeting(name, age);// Hello stranger, you are 24, you are a undefined위 자바스크립트 예시에서, 함수 greeting은 3개의 인자를 사용하도록 선언되어있지만, 호출시 2개의 파라미터만 넘겨도 실행된다.index.ts:9:1 - error TS2554: Expected ..."
   },
   
   {
@@ -871,6 +856,21 @@
   },
   
   {
+    "title": "React FontAwesome 라이브러리 사용법",
+    "url": "/posts/2020-08-10-fontawesome-react/",
+    "categories": "react",
+    "tags": "react, fontawesome",
+    "date": "2020-08-10 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "설치FontAwesome 공식 홈페이지에서 제공하는 리액트 문서를 참고해서 필수 라이브러리를 설치한다.npm install --save @fortawesome/fontawesome-svg-corenpm install --save @fortawesome/react-fontawesomenpm install --save @fortawesome/free-solid-svg-iconsfree-solid-svg-icon 외에도 사용할 아이콘 세트가 있다면 다음과 같이 추가 스타일을 설치할 수 있다. 즉, Solid 스타일을 사용한다면 fr..."
+  },
+  
+  {
     "title": "Mongoose 참조를 위한 populate() 사용법",
     "url": "/posts/2020-08-10-mongodb-mongoose-populate/",
     "categories": "node, mongodb",
@@ -1183,6 +1183,21 @@
 
 
     "snippet": "  See the Pen   Pug 기초 #1 자바스크립트 코드 사용 by Dohae Lee (@dohaelee)  on CodePen.#{} 샾 기호와 중괄호 안에 자바스크립 코드를 작성한다."
+  },
+  
+  {
+    "title": "타입스크립트 .eslintrc 파일 Parsing Error 해결 방법",
+    "url": "/posts/2020-06-14-tslint-error/",
+    "categories": "typescript",
+    "tags": "typescript, error, eslint",
+    "date": "2020-06-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "증상.eslintrc.js 파일에 타입스크립트 (과거 .tslint) 설정을 할 때 발생하는 Parsing Error 또는 .eslintrc.js 파일 에러.parsing error: &quot;parseroptions.project&quot; has been set for @typescript-eslint/parser. the file does not match your project config: .eslintrc.js. the file must be included in at least one of the projects..."
   },
   
   {
@@ -2353,6 +2368,36 @@
 
 
     "snippet": "Commit  작업에 이력을 기록해서 저장소로 올리는 것  Staging Area에 있는 Tracked 파일들을 저장소에 저장즉, git add 한 파일은 버전 관리되고 있는 파일 (Tracked)git commit$ git add .$ git commit -m &quot;Message&quot;# Shortcut: git commit -am &quot;Message&quot;git diff# Untracked 파일의 변경사항을 보여줌$ git diff# Tracked (커밋 대기) 파일의 변경사항을 보여줌$ git diff ..."
+  },
+  
+  {
+    "title": "React Emotion 글로벌 공통 스타일 적용하기",
+    "url": "/posts/2020-01-08-react-emotion-global-style/",
+    "categories": "react, css-in-js",
+    "tags": "react, error, emotion, css-in-js",
+    "date": "2020-01-08 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "먼저 글로벌로 적용하려는 스타일을 작성한다.import { css } from &quot;@emotion/react&quot;;const reset = css`  * {    margin: 0;    padding: 0;    box-sizing: border-box;  }`;export default reset;App() 컴포넌트에서 작성한 스타일 파일과 (예시에서는 Reset.tsx) @emotion/react의 Global 컴포넌트를 import한다.import React from &quot;react&quot;;impo..."
+  },
+  
+  {
+    "title": "React Emotion TS2322: Property &#39;css&#39; does not exist 에러 해결 방법",
+    "url": "/posts/2020-01-08-react-emotion-error-ts2322/",
+    "categories": "react, css-in-js",
+    "tags": "react, error, emotion, css-in-js",
+    "date": "2020-01-08 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "증상타입스크립트로 세팅된 리액트에서 @emotion/react를 사용하려고 할 때, css를 사용할 수 없는 경우 (i.g., 정상적으로 import되지 않는 경우) 다음과 같은 에러 메시지가 출력된다.Type &#39;{ children: Element[]; css: SerializedStyles; }&#39; is not assignable to type &#39;DetailedHTMLProps&amp;lt;HTMLAttributes&amp;lt;HTMLElement&amp;gt;, HTMLElement&amp;gt;&#3..."
   },
   
   {
