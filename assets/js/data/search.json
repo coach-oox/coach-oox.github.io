@@ -796,6 +796,21 @@
   },
   
   {
+    "title": "타입스크립트 객체 배열의 타입 (React but target allows only 1 에러 해결 방법)",
+    "url": "/posts/2020-08-14-react-typescript-define-tuple/",
+    "categories": "typescript, react",
+    "tags": "typescript, react, error",
+    "date": "2020-08-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "멘티들이 가장 많이하는 질문 중에 하나.오늘도 같은 질문을 받아서 정리해본다. 🐥Source has X element(s) but target allows only 1.앞쪽 메시지는 다를 수 있지만 위와 거의 흡사한 에러 메시지가 확인되는 경우. 이 에러는 하나의 엘리먼트에 해당하는 타입만을 지정해놓고, 다수의 엘리먼트를 넣으려고 했기 때문에 발생한다. 예를 들어서 다음과 같이 하나의 엘리먼트가 객체로 표현되는 배열을 가정해보자.const list = [  { id, text: &quot;hello&quot; },  { id,..."
+  },
+  
+  {
     "title": "Mongoose 콜백 함수의 이해",
     "url": "/posts/2020-08-14-mongoose-understand-async/",
     "categories": "node, express, mongodb",
@@ -808,6 +823,51 @@
 
 
     "snippet": "import Post from &quot;../models/Post&quot;;export function home(request, response) {  Post.find({}, (error, posts) =&amp;gt; {    console.log(&quot;error: &quot;, error);    console.log(&quot;posts: &quot;, posts);  });  return response.render(&quot;home&quot;, { posts });}위 코드는 Post 스키마를 등록한 다음..."
+  },
+  
+  {
+    "title": "UUID",
+    "url": "/posts/2020-08-14-random-id-uuid/",
+    "categories": "node",
+    "tags": "node, uuid",
+    "date": "2020-08-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "uuid는 네트워크 상에서 고유성이 보장되는 아이디 값을 만들기 위한 표준 규약 UUID를 CommonJS, Node, 브라우저 환경 등에서 사용할 수 있는 라이브러리이다.npm install uuid타입스크립트로 사용하려면 @types/uuid도 설치해준다.npm install @types/uuid다음과 같이 v4 모듈을 import 한다.import { v4 as uuidv4 } from &quot;uuid&quot;;다음과 같이 랜덤 아이디를 생성할 수 있다.const id = uuidv4();"
+  },
+  
+  {
+    "title": "테스트 주도 개발 (TDD)이란?",
+    "url": "/posts/2020-08-13-what-is-tdd/",
+    "categories": "tdd",
+    "tags": "tdd, javascript, jest, mocha, sholud, supertest",
+    "date": "2020-08-13 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "테스트 주도 개발 (Test Driven Development, TDD)이란, 개발시 작은 단위로 테스트 코드를 먼저 작성하고, 해당 테스트를 통과하는 코드를 추가하는 과정을 반복해서 프로그램을 개발하는 소프트웨어 방법론을 말한다.학습의 단계를 넘어, 실무 프로젝트에서 TDD를 적용하는 경우, 아무래도 테스트 코드를 작성하고 → 테스트하고 → 통과하면 코드를 추가하는 등 일련의 과정 때문에 더 많은 시간이 소요되는 것은 사실이다. 하지만 프로젝트의 규모가 크고 복잡할 수록 안정성, 유지보수 등 종합적 (최종적)으로 놓고 봤을 ..."
+  },
+  
+  {
+    "title": "React useReducer 사용시 발생하는 TS2769 에러 해결 방법",
+    "url": "/posts/2020-08-13-react-typescript-usereducer-ts2769-error/",
+    "categories": "react",
+    "tags": "react, typescript, error, hook",
+    "date": "2020-08-13 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "에러 메시지No overload matches this call.Overload 1 of 5, &#39;(reducer: ReducerWithoutAction&amp;lt;any&amp;gt;, initializerArg: any, initializer?: undefined): [any, DispatchWithoutAction]&#39;, gave the following error.Argument of type &#39;(state: State, action: Action) =&amp;gt; void&#39; is not a..."
   },
   
   {
@@ -838,6 +898,21 @@
 
 
     "snippet": "요약  클라이언트가 서버측으로 어떤 정보를 전달 (POST)  서버는 해당 정보를 Mongoose 모델로 작성  작성된 모델을 데이터베이스에 추가클라이언트block content    form(method=&quot;POST&quot;)        input(name=&quot;title&quot;, placeholder=&quot;Title&quot;, type=&quot;text&quot;, required)        input(name=&quot;description&quot;, placeholder=&quot;De..."
+  },
+  
+  {
+    "title": "React Context API와 Hooks 기초 이해",
+    "url": "/posts/2020-08-11-react-context-api-hooks/",
+    "categories": "react",
+    "tags": "react, context, hook",
+    "date": "2020-08-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Context란?기본적으로 리액트에서는 props를 사용해서 부모 컴포넌트에서 자식 컴포넌트로 데이터를 공유할 수 있다. 이때 컴포넌트의 개수가 많고 구성이 복잡할 수록, 아래와 같이 여러 개의 컴포넌트에서 자식 컴포넌트로 props를 복잡하게 전달해야 하고, 실질적으로 그것을 사용하기 위해서보다 전달만을 위해 다루는 일이 많아지게 된다.메인 페이지 컴포넌트 # 헤더에게 props 전달    - 헤더 # 타이틀에게 props 전달        - 타이틀 # 로고에게 props 전달            - 로고 # 전달받은 pr..."
   },
   
   {
@@ -1204,7 +1279,7 @@
     "title": "React Hook이란?",
     "url": "/posts/2020-06-12-what-is-hook/",
     "categories": "react",
-    "tags": "react, javascript",
+    "tags": "react, javascript, hook",
     "date": "2020-06-12 00:00:00 +0800",
     
 
