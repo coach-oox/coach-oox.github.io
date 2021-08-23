@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2021-08-14T10:05:05+08:00</updated>
+  <updated>2021-08-23T22:39:53+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -20,21 +20,21 @@
 
   
   <entry>
-    <title>Webpack SASS (SCSS) 사용법</title>
-    <link href="https://dohaelee.github.io/posts/2021-04-05-scss-css-loader/" rel="alternate" type="text/html" title="Webpack SASS (SCSS) 사용법" />
-    <published>2021-04-05T00:00:00+08:00</published>
+    <title>React props.history.push('/')와 window.location.replace('/') 차이점</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/" rel="alternate" type="text/html" title="React props.history.push('/')와 window.location.replace('/') 차이점" />
+    <published>2021-06-17T00:00:00+08:00</published>
   
-    <updated>2021-04-05T00:00:00+08:00</updated>
+    <updated>2021-06-17T00:00:00+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-04-05-scss-css-loader/</id>
-    <content src="https://dohaelee.github.io/posts/2021-04-05-scss-css-loader/" />
+    <id>https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
     
-    <category term="webpack" />
+    <category term="react" />
     
   
 
@@ -46,29 +46,9 @@
 
 
 
-      설치
+      props.history.push('/')는 새로운 HTTP 요청을 생성하지 않는다. 반면에 window.location.replace()는 새로운 요청을 생성한다. i.g., window.location.replace() 또는 window.location.href을 사용할 경우 완전히 새로고침되고, 클라이언트 측에 상태는 초기화 된다.
 
-npm install sass -D
-npm install sass-loader -D
-npm install css-loader -D
-npm install mini-css-extract-plugin -D
-
-
-각각의 라이브러리가 하는 역할은 다음과 같다.
-
-
-  sass-loader : SCSS 파일을 CSS 파일로 변환
-  css-loader : CSS 파일을 읽음
-  mini-css-extract-plugin : 한 파일로 묶음
-
-
-설정
-
-const miniCssExtractPlugin = require("mini-css-extract-plugin");
-
-// ... 생략 ... //
-
-plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
+리액트에서 사용자를 다른 페이지로 이동시키기 위해서 일반적으로 props.history.push()를 사용한다. 이 history에는 사용자가 여태까지 타고온 경로가 스택처럼 다 쌓여이게 되는데, 여기다 새로운 경로를 push()함으로써 최신 경로를 원하는 위치로 지정하게 된다. history.replace()의 경우, 새로운 history를 생성하는 것이 아니라 현...
     </summary>
   
 
@@ -76,21 +56,21 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
   
   <entry>
-    <title>Webpack 여러 개의 Entry Point 지정하기</title>
-    <link href="https://dohaelee.github.io/posts/2021-04-04-entry-file-name/" rel="alternate" type="text/html" title="Webpack 여러 개의 Entry Point 지정하기" />
-    <published>2021-04-04T00:00:00+08:00</published>
+    <title>React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/" rel="alternate" type="text/html" title="React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법" />
+    <published>2021-06-16T00:00:00+08:00</published>
   
-    <updated>2021-04-04T00:00:00+08:00</updated>
+    <updated>2021-06-16T00:00:00+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-04-04-entry-file-name/</id>
-    <content src="https://dohaelee.github.io/posts/2021-04-04-entry-file-name/" />
+    <id>https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
     
-    <category term="webpack" />
+    <category term="react" />
     
   
 
@@ -102,22 +82,19 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
 
 
-      module.exports = {
-  entry: {
-    // 다수의 엔트리 포인트 지정
-    main: "./src/client/js/main.js",
-    something: "./src/client/js/something.js",
-  },
-  mode: "development",
-  watch: true,
-  output: {
-    // 각각을 이름 [name] (변수)으로 저장
-    filename: "js/[name].js",
-    path: path.resolve(__dirname, "assets"),
-    clean: true,
-  },
-};
+      withRouter란 라우트가 아닌 컴포넌트에서 location, history 등을 props로 전달받기 위해서 사용하는 HoC를 의미한다. 다음 코드 예제와 같이 사용한다.
 
+import React from "react";
+import { withRouter } from "react-router-dom";
+
+const Something = withRouter((props) =&amp;gt; {
+  /* ... */
+});
+
+export default Something();
+
+
+e.g., React Styled-Component 현재 경로 메뉴 스타일 강조하기
 
     </summary>
   
@@ -126,21 +103,21 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
   
   <entry>
-    <title>Webpack Babel-Loader 사용법</title>
-    <link href="https://dohaelee.github.io/posts/2021-04-03-babel-loader/" rel="alternate" type="text/html" title="Webpack Babel-Loader 사용법" />
-    <published>2021-04-03T00:00:00+08:00</published>
+    <title>react-flash-message 에러 (Module not found) 해결 방법</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-15-react-flash-message-error/" rel="alternate" type="text/html" title="react-flash-message 에러 (Module not found) 해결 방법" />
+    <published>2021-06-15T00:00:00+08:00</published>
   
-    <updated>2021-04-03T00:00:00+08:00</updated>
+    <updated>2021-06-15T00:00:00+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-04-03-babel-loader/</id>
-    <content src="https://dohaelee.github.io/posts/2021-04-03-babel-loader/" />
+    <id>https://dohaelee.github.io/posts/2021-06-15-react-flash-message-error/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-15-react-flash-message-error/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
     
-    <category term="webpack" />
+    <category term="react" />
     
   
 
@@ -152,22 +129,60 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
 
 
-      npm install babel-loader -D
+      Module not found: Can't resolve 'react-flash-message'
 
+
+다음 명령어로 해결할 수 있다.
+
+yarn add https://github.com/Looskie/react-flash-message.git
+
+
+가끔가다 쓰는 건데, 사용법이 단순해서 한 번도 문제가 없었다가 갑자기 모듈을 찾을 수 없다고 난리여서 30분을 허비했다. 등잔 밑이 어둡다고 공식 레포 이슈에 벌써 같은 문제를 겪는 사람이 이슈를 발행했고, 코멘트 중에 해결책을 공유해준 사람이 있어서 해결할 수 있었다.
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>React CORS 문제 해결을 위한 Proxy 서버 설정 방법 (Access-Control-Allow-Origin 에러)</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-14-react-cors-proxy-error/" rel="alternate" type="text/html" title="React CORS 문제 해결을 위한 Proxy 서버 설정 방법 (Access-Control-Allow-Origin 에러)" />
+    <published>2021-06-14T00:00:00+08:00</published>
+  
+    <updated>2021-06-14T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-06-14-react-cors-proxy-error/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-14-react-cors-proxy-error/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Access to XMLHttpRequest at 'http://localhost:4000' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+
+package.json에 다음 항목을 추가한다.
 
 {
-    test: /\.js$/,
-    use: {
-        loader: "babel-loader",
-        options: {
-            presets: [
-                ["@babel/preset-env", { targets: "defaults" }],
-            ],
-        },
-    },
+  "proxy": "http://localhost:4000"
 }
 
 
+지정할 URL은 접속하고자 하는 서버의 Base URL이며, 위와 같이 proxy 속성을 지정한 다음에는 요청을...
     </summary>
   
 
@@ -175,21 +190,21 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
   
   <entry>
-    <title>Webpack 기본 사용법</title>
-    <link href="https://dohaelee.github.io/posts/2021-04-02-webpack-config/" rel="alternate" type="text/html" title="Webpack 기본 사용법" />
-    <published>2021-04-02T00:00:00+08:00</published>
+    <title>CRACO를 사용한 Emotion 사용 설정 방법 (@jsx 선언 제거)</title>
+    <link href="https://dohaelee.github.io/posts/2021-06-13-craco-emotion-react/" rel="alternate" type="text/html" title="CRACO를 사용한 Emotion 사용 설정 방법 (@jsx 선언 제거)" />
+    <published>2021-06-13T00:00:00+08:00</published>
   
-    <updated>2021-08-03T12:54:29+08:00</updated>
+    <updated>2021-06-13T00:00:00+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-04-02-webpack-config/</id>
-    <content src="https://dohaelee.github.io/posts/2021-04-02-webpack-config/" />
+    <id>https://dohaelee.github.io/posts/2021-06-13-craco-emotion-react/</id>
+    <content src="https://dohaelee.github.io/posts/2021-06-13-craco-emotion-react/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
     
-    <category term="webpack" />
+    <category term="css-in-js" />
     
   
 
@@ -201,79 +216,18 @@ plugins: [new miniCssExtractPlugin({ filename: "css/styles.css...
 
 
 
-      설치
+      CRA로 세팅한 리액트 프로젝트에서 Emotion (@emotion/react)을 사용하기 위해서는 다음과 같이 매번 @jsx 관련 선언을 명시하는 과정이 필요하다. 이 과정을 생략하기 위해서는 Babel 설정이 필요한데, CRA는 Babel의 사용자 설정을 막아두었기 때문에 eject를 사용해야 이 부분을 설정할 수 있다. (한 번 eject한 프로젝트는 이전 상태로 되돌아 갈 수 없다.)
 
-npm install webpack webpack-cli -D
+Create React App Configuration Override의 약자인 CRACO를 사용하면 eject 하지 않고도 리액트 애플리케이션 설정을 변경할 수 있다.
 
-
-설정 파일 만들기
-
-const path = require("path");
-
-module.exports = {
-  entry: "./src/client/js/main.js",
-  mode: "development",
-  watch: true, // 자동으로 변화 감시
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "assets", "js"),
-    clean: true, // 결과물을 새로 생성할 때 기존의 폴더를 삭제함
-  },
-};
+yarn add @craco/craco
 
 
-webpack.config.js 파일 생성하고 환경설정 객체를 export한다.
+package.json을 다음과 같이 수정한다.
 
-Path 다루기
-
-output:...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Webpack이란?</title>
-    <link href="https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/" rel="alternate" type="text/html" title="Webpack이란?" />
-    <published>2021-04-01T00:00:00+08:00</published>
-  
-    <updated>2021-04-01T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/</id>
-    <content src="https://dohaelee.github.io/posts/2021-04-01-what-is-webpack/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="webpack" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-
-WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.
-
-Bundle이란?
-
-
-  소프트웨어 및 일부 하드웨어와 함께 작동하는 데 필요한 모든 것을 포함하는 패키지
-  각각의 모듈들에 대해 의존성 관계를 파악한 하나 또는 여러 개의 그룹
-
-
-Module Bundler란?
-
-대부분의 프로그래밍 언어에서는 코드를 여러 개의 파일로 분할하고, 각각의 파일에 담겨있는 기능들을 사용하기 위해서 애플리케이션에서 import 하는 방식을 사용한다. 하지만 브라우저에서는 이러한 import 방식을 사용할 수 없기 때문에 Module Bundler가 이 기능을 ...
+{
+  "scripts": {
+    "start...
     </summary>
   
 

@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-18-js-level-up-1-scope-chain/">자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</a>
+      <a href="/posts/2020-05-04-socket-io-share-object/">Socket.io 이벤트와 객체를 하나의 파일로 관리 · 공유하기</a>
     </h1>
 
     <div class="post-content">
@@ -363,11 +363,18 @@
 
 
 
-        변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 {} 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다.
+        이벤트를 하나의 객체로 관리하기
 
-Lexical Scope
+// src/events.js
+const events = {
+  enterUser: "enterUser",
+  logoutUser: "logoutUser",
+};
 
-자바스크립트의 Scope에 대해 좀 더 ...
+export default events;
+
+
+Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와 같이 events.js 파일을 만들고, ...
       </p>
     </div>
 
@@ -390,8 +397,8 @@ Lexical Scope
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Apr 18, 2020, 12:00 AM +0800"
-  >Apr 18, 2020<i class="unloaded">2020-04-18T00:00:00+08:00</i>
+    title="Mon, May  4, 2020, 12:00 AM +0800"
+  >May  4, 2020<i class="unloaded">2020-05-04T00:00:00+08:00</i>
 </span>
 
 
@@ -416,7 +423,7 @@ Lexical Scope
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="820 words">4 min</span>
+  title="438 words">2 min</span>
 
 
         <!-- page views -->
@@ -433,7 +440,7 @@ Lexical Scope
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a>
+      <a href="/posts/2020-05-04-javascript-anchor-fake-click/">자바스크립트 링크 클릭 발생 시키기</a>
     </h1>
 
     <div class="post-content">
@@ -444,16 +451,98 @@ Lexical Scope
 
 
 
-        vh · vw
+        const a = document.createElement("a");
+a.href = url;
+a.download = "image.jpg";
+document.body.appendChild(a);
+a.click();
 
-vh (Vertical Height)과 vw (Vertical Width) 단위는 뷰포트 높이 및 너비에 맞게 타겟 요소의 크기를 지정하고자 할 때 사용된다.
 
-body {
-  height: 100vh;
+어떤 링크로 연결해서 파일을 다운로드 할 수 있게끔 하기 위해서, 해당 URL을 가리키는 a 태그를 만들고, click() 함수를 사용...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, May  4, 2020, 12:00 AM +0800"
+  >May  4, 2020<i class="unloaded">2020-05-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="79 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-03-javascript-right-click/">자바스크립트 마우스 오른쪽 클릭 (Context Menu) 이벤트 처리</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        function blockRightClick(event) {
+  event.preventDefault();
 }
 
+cavas.addEventListener("contextmenu", blockRightClick);
 
-vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 1000px일 때 1vh는 10px이 되기 때문에, 1...
+
+마우스 우클릭시 나오는 창을 Context Menu라고 부르며, 이벤트 처리를 통해 마우스 우클릭을 방지하거나 임의의 이벤트를 지정할 수...
       </p>
     </div>
 
@@ -476,8 +565,8 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Mar 20, 2020, 12:00 AM +0800"
-  >Mar 20, 2020<i class="unloaded">2020-03-20T00:00:00+08:00</i>
+    title="Sun, May  3, 2020, 12:00 AM +0800"
+  >May  3, 2020<i class="unloaded">2020-05-03T00:00:00+08:00</i>
 </span>
 
 
@@ -502,7 +591,7 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="323 words">1 min</span>
+  title="66 words">1 min</span>
 
 
         <!-- page views -->
@@ -519,7 +608,7 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-12-github-remove-file/">GitHub 저장소에서 파일 삭제하는 방법</a>
+      <a href="/posts/2020-05-02-socket-io-events/">Socket.io 이벤트를 다루는 방법</a>
     </h1>
 
     <div class="post-content">
@@ -530,20 +619,17 @@ vh 요소는 높이 값의 1 / 100 단위이다. 즉, 뷰포트 높이 값이 10
 
 
 
-        GitHub에 파일 잘못올린 경우 다음과 같은 흐름으로 작업하여, 이미 원격 저장소에 올라간 파일을 삭제할 수 있다.
+        이벤트의 동작과 처리
 
 
-  .gitignore 작성
-  원격 저장소에서 파일 삭제
-  원격 저장소에 적용
+  서버와 클라이언트는 이벤트를 듣고 있음.
+  이벤트 발생시 듣고 있던 서버 / 클라이언트가 반응.
 
 
-원격 저장소에서 파일 삭제
-
-# 원격 저장소의 index.html 파일 삭제
-git rm --cached index.html
-
-# src/styl...
+// ioServer는 모든 이벤트를 감시하고 있어야 함
+// connection 이벤트에 대해 듣고 있음
+// 새로운 연결이 생성되면 새로운 소켓이 생성 됨
+ioServer.on("connection", (socket) ...
       </p>
     </div>
 
@@ -566,8 +652,8 @@ git rm --cached index.html
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Mar 12, 2020, 12:00 AM +0800"
-  >Mar 12, 2020<i class="unloaded">2020-03-12T00:00:00+08:00</i>
+    title="Sat, May  2, 2020, 12:00 AM +0800"
+  >May  2, 2020<i class="unloaded">2020-05-02T00:00:00+08:00</i>
 </span>
 
 
@@ -592,7 +678,7 @@ git rm --cached index.html
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="235 words">1 min</span>
+  title="327 words">1 min</span>
 
 
         <!-- page views -->
@@ -609,7 +695,7 @@ git rm --cached index.html
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-11-github-more-than-two-issue/">GitHub 여러 개의 Issue 한 번에 처리 (Close)하는 방법</a>
+      <a href="/posts/2020-05-02-javascript-export-module/">자바스크립트 다른 파일에 있는 객체 (배열) 사용하기</a>
     </h1>
 
     <div class="post-content">
@@ -620,19 +706,10 @@ git rm --cached index.html
 
 
 
-        git checkout -b "issue-11"
+        클라이언트 사이드 (브라우저)에서 자바스크립트를 사용할 때, 다른 파일에 있는 객체나 배열을 사용하기 위해서는 스크립트 파일을 module로 등록하고 import, export를 사용해 객체나 배열을 가져와 사용한다.
 
-
-이슈 해결을 위한 브랜치를 생성한다.
-
-git add .
-git commit -m "Edit Documents (#12, #14)"
-
-
-해당 브랜치에서 작업 후, add 및 commit 하고, Pull Request를 보내기 위해 Upstream으로 push 한다.
-
-- Close #12
-- Clos...
+&lt;script type="module" src="./src/index.js"&gt;&lt;/script&gt;
+&lt;scrip...
       </p>
     </div>
 
@@ -655,8 +732,8 @@ git commit -m "Edit Documents (#12, #14)"
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Mar 11, 2020, 12:00 AM +0800"
-  >Mar 11, 2020<i class="unloaded">2020-03-11T00:00:00+08:00</i>
+    title="Sat, May  2, 2020, 12:00 AM +0800"
+  >May  2, 2020<i class="unloaded">2020-05-02T00:00:00+08:00</i>
 </span>
 
 
@@ -681,7 +758,7 @@ git commit -m "Edit Documents (#12, #14)"
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="134 words">1 min</span>
+  title="144 words">1 min</span>
 
 
         <!-- page views -->
@@ -698,7 +775,7 @@ git commit -m "Edit Documents (#12, #14)"
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-10-github-issue-pull-request/">GitHub Issue 생성과 Pull Request 처리 방법</a>
+      <a href="/posts/2020-05-01-how-to-work-socket-io/">Socket.io 동작 이해</a>
     </h1>
 
     <div class="post-content">
@@ -709,26 +786,11 @@ git commit -m "Edit Documents (#12, #14)"
 
 
 
-        이슈 생성과 처리의 흐름
+        Socket.io를 사용한다는 것은 Express 서버 위에 Socket.io (WebSocket) 서버를 올린다는 의미이다. 전통적인 (?) 방식에서, 2개의 서버가 같은 포트에서 동작하게 할 수 없지만, WebSocket과 HTTP는 같은 공생이 가능하다.
 
+Express 서버 위에 Socket.io 서버를 올리는 방법
 
-  Issue 생성
-  Branch 생성
-  Pull Request
-  Merge (Issue 처리)
-
-
-이슈 생성시 추가할 수 있는 항목
-
-
-  Assignees : 이슈 담당자
-  Labels : 카테고리
-  Milestone : 소속 파트 (예 : Version 1.0.0)
-
-
-Branch 생성
-
-# Branch 생성...
+import express...
       </p>
     </div>
 
@@ -751,8 +813,8 @@ Branch 생성
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Mar 10, 2020, 12:00 AM +0800"
-  >Mar 10, 2020<i class="unloaded">2020-03-10T00:00:00+08:00</i>
+    title="Fri, May  1, 2020, 12:00 AM +0800"
+  >May  1, 2020<i class="unloaded">2020-05-01T00:00:00+08:00</i>
 </span>
 
 
@@ -777,7 +839,7 @@ Branch 생성
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="234 words">1 min</span>
+  title="440 words">2 min</span>
 
 
         <!-- page views -->
@@ -794,7 +856,7 @@ Branch 생성
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-08-git-revert-reset-checkout/">Git 상태 및 파일 복원을 위한 reset · revert · checkout 사용법</a>
+      <a href="/posts/2020-05-01-javascript-array-toLocaleString/">자바스크립트 Array.prototype.toLocaleString()</a>
     </h1>
 
     <div class="post-content">
@@ -805,19 +867,15 @@ Branch 생성
 
 
 
-        상태 복원
-
-복원은 현재 파일을 특정한 시점의 파일 상태로 변경하는 작업을 의미한다. 이와 같은 복원을 위해 사용되는 대표적인 명령어들은 다음과 같다.
+        toLocaleString() 메소드는 요소를 문자열로 변환하고, 지정한 문화권 (나라)의 표기법에 따라 시간, 화폐 등을 고유 문자열로 분리한다. 다음과 같은 상황에서 사용할 수 있다.
 
 
-  reset
-  revert
-  checkout
+  1000단위 (화폐) 쉼표 넣기
+  문화권 시간 표기법에 따른 변환
 
 
-reset
-
-reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 때 (이전 상태로 되돌릴 때) 사용되며, 커밋되지 ...
+const price = 10000;
+const message = `￦${price.t...
       </p>
     </div>
 
@@ -840,8 +898,8 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Mar  8, 2020, 12:00 AM +0800"
-  >Mar  8, 2020<i class="unloaded">2020-03-08T00:00:00+08:00</i>
+    title="Fri, May  1, 2020, 12:00 AM +0800"
+  >May  1, 2020<i class="unloaded">2020-05-01T00:00:00+08:00</i>
 </span>
 
 
@@ -866,7 +924,7 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="926 words">5 min</span>
+  title="107 words">1 min</span>
 
 
         <!-- page views -->
@@ -883,7 +941,7 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-07-git-cancle-add-commit-push/">Git Add · Commit · Push 취소 방법</a>
+      <a href="/posts/2020-04-28-javascript-array-map/">자바스크립트 Array.prototype.map()</a>
     </h1>
 
     <div class="post-content">
@@ -894,18 +952,15 @@ reset은 Staged (Tracked) 상태의 파일이나 커밋된 파일을 취소할 �
 
 
 
-        git add 취소
+        map() 메소드는 배열의 각 요소에 주어진 함수를 실행한 결과를 새로운 배열로 리턴한다. 보통 for문을 돌려서 새로운 배열을 만드는 것을 목적으로 사용한다.
 
-git add 명령을 취소한다는 것은, Staging Area에 있는 Tracked 파일을 Untracked (Unstage) 상태로 변경하는 것을 의미한다.
-
-# git add 한 파일 전체 취소
-$ git reset HEAD
-
-# 특정 파일만 취소
-$ git reset HEAD index.html
+Array.map(callBack[, thisArg])
 
 
-commit message...
+
+  callBack : function (currentValue[, index][, originArray])
+    
+      ...
       </p>
     </div>
 
@@ -928,8 +983,8 @@ commit message...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Mar  7, 2020, 12:00 AM +0800"
-  >Mar  7, 2020<i class="unloaded">2020-03-07T00:00:00+08:00</i>
+    title="Tue, Apr 28, 2020, 12:00 AM +0800"
+  >Apr 28, 2020<i class="unloaded">2020-04-28T00:00:00+08:00</i>
 </span>
 
 
@@ -954,7 +1009,7 @@ commit message...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="447 words">2 min</span>
+  title="128 words">1 min</span>
 
 
         <!-- page views -->
@@ -971,7 +1026,7 @@ commit message...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-04-git-branch-strategy/">Git Branch 분기와 병합 예제 (--no--ff 사용법)</a>
+      <a href="/posts/2020-04-27-javascript-array-reduce/">자바스크립트 Array.prototype.reduce()</a>
     </h1>
 
     <div class="post-content">
@@ -982,14 +1037,13 @@ commit message...
 
 
 
-        로그인 기능을 개발하는 과정을 가정해보자.
+        reduce() 메소드는 배열의 각 요소에 대해 reducer() 함수를 실행하고, 최종 결과를 리턴한다. for문을 돌려서 최종적으로 다른 무엇인가를 만드는 목적으로 사용한다.
 
-# -b : 브랜치 생성
-# git checkout -b 생성할-브랜치 베이스-브랜치
-git checkout -b feature/login develop
+Array.reduce(callBack[, initValue])
 
 
-로그인 기능 개발을 위해 develop 브랜치에서 분기하는 feature/login 브랜치를 생성하고, 작업 브랜치를 feature/login 브랜치로...
+
+  callBack : function (accumulator, currentValue, current...
       </p>
     </div>
 
@@ -1012,8 +1066,8 @@ git checkout -b feature/login develop
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Mar  4, 2020, 12:00 AM +0800"
-  >Mar  4, 2020<i class="unloaded">2020-03-04T00:00:00+08:00</i>
+    title="Mon, Apr 27, 2020, 12:00 AM +0800"
+  >Apr 27, 2020<i class="unloaded">2020-04-27T00:00:00+08:00</i>
 </span>
 
 
@@ -1038,7 +1092,7 @@ git checkout -b feature/login develop
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="336 words">1 min</span>
+  title="158 words">1 min</span>
 
 
         <!-- page views -->
@@ -1055,7 +1109,7 @@ git checkout -b feature/login develop
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-03-03-git-branch-commands/">Git Branch 관련 명령어 정리</a>
+      <a href="/posts/2020-04-26-javascript-array-forEach/">자바스크립트 Array.prototype.forEach()</a>
     </h1>
 
     <div class="post-content">
@@ -1066,27 +1120,17 @@ git checkout -b feature/login develop
 
 
 
-        브랜치 확인
+        forEach() 메소드는 배열 요소 각각에 인자로 받은 함수를 실행한다.
 
-# 브랜치 확인
-$ git branch
-
-# 브랜치 상세 정보까지 확인
-$ git branch -v
+Array.forEach(callBack[, thisArg])
 
 
-브랜치 상태 확인
 
-# Merged 상태 브랜치 확인
-$ git branch --merged
-
-# Merged 되지 않은 브랜치 확인
-$ git branch --no-merged
-
-
-브랜치 생성
-
-$ git branch newBranc...
+  callBack : function (currentValue[, index][, originarray])
+    
+      currentValue : 현재 값
+      index : 현재 인덱스
+   ...
       </p>
     </div>
 
@@ -1109,8 +1153,8 @@ $ git branch newBranc...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Mar  3, 2020, 12:00 AM +0800"
-  >Mar  3, 2020<i class="unloaded">2020-03-03T00:00:00+08:00</i>
+    title="Sun, Apr 26, 2020, 12:00 AM +0800"
+  >Apr 26, 2020<i class="unloaded">2020-04-26T00:00:00+08:00</i>
 </span>
 
 
@@ -1135,98 +1179,7 @@ $ git branch newBranc...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="138 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-02-git-branch/">Git Branch 기본 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Branch
-
-
-  버전 관리 시스템의 기본
-  Origin 코드와 별개로 독립된 개발을 진행하기 위해 사용
-
-
-맨 처음 커밋을 할 때, Git은 master (main)라는 이름을 가진 브랜치를 만들고 자동으로 가장 마지막 커밋을 가리키게 (포인터같이) 한다. 다음과 같은 상황을 가정해보자.
-
-
-  최초 커밋
-  develop이라는 브랜치 생성
-
-
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Mar  2, 2020, 12:00 AM +0800"
-  >Mar  2, 2020<i class="unloaded">2020-03-02T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="609 words">3 min</span>
+  title="103 words">1 min</span>
 
 
         <!-- page views -->
@@ -1532,10 +1485,62 @@ $ git branch newBranc...
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+        <li class="page-item disabled">
+          <span class="page-link btn-box-shadow">...</span>
+        </li>
+        
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page20/">20</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>16</span>
-    <span class="text-muted">/ 17</span>
+    <span class="text-muted">/ 20</span>
   </li>
 
   <!-- right arrow -->
@@ -1588,27 +1593,27 @@ $ git branch newBranc...
         
         
         
+        <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-03-03-heroku-port/">Heroku code=H10 desc='App crashed' 에러 해결 방법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-19-es6-syntax-13-arrow-function/">모던 자바스크립트와 ES6 #3 Arrow Function</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
       
 
       </ul>
@@ -1822,220 +1827,6 @@ $ git branch newBranc...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2090,120 +1881,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2633,71 +2310,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2842,10 +2454,6 @@ $ git branch newBranc...
     
     
     
-      
-        
-        
-
   
     
     
@@ -2931,192 +2539,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3451,10 +2873,1137 @@ $ git branch newBranc...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3583,6 +4132,12 @@ $ git branch newBranc...
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -3590,12 +4145,6 @@ $ git branch newBranc...
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
       </div>
@@ -3860,220 +4409,6 @@ $ git branch newBranc...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4128,120 +4463,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -4671,71 +4892,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -4880,10 +5036,6 @@ $ git branch newBranc...
     
     
     
-      
-        
-        
-
   
     
     
@@ -4969,192 +5121,6 @@ $ git branch newBranc...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5489,10 +5455,1137 @@ $ git branch newBranc...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5616,6 +6709,12 @@ $ git branch newBranc...
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -5623,12 +6722,6 @@ $ git branch newBranc...
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
     </div> -->

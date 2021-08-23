@@ -1,6 +1,396 @@
 [
   
   {
+    "title": "React props.history.push(&#39;/&#39;)와 window.location.replace(&#39;/&#39;) 차이점",
+    "url": "/posts/2021-06-17-react-props-history-push-window-location-replace/",
+    "categories": "react",
+    "tags": "react, router",
+    "date": "2021-06-17 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "props.history.push(&#39;/&#39;)는 새로운 HTTP 요청을 생성하지 않는다. 반면에 window.location.replace()는 새로운 요청을 생성한다. i.g., window.location.replace() 또는 window.location.href을 사용할 경우 완전히 새로고침되고, 클라이언트 측에 상태는 초기화 된다.리액트에서 사용자를 다른 페이지로 이동시키기 위해서 일반적으로 props.history.push()를 사용한다. 이 history에는 사용자가 여태까지 타고온 경로가 스택처럼 다 ..."
+  },
+  
+  {
+    "title": "React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법",
+    "url": "/posts/2021-06-16-react-props-withrouter/",
+    "categories": "react",
+    "tags": "react, withrouter, react-router-dom",
+    "date": "2021-06-16 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "withRouter란 라우트가 아닌 컴포넌트에서 location, history 등을 props로 전달받기 위해서 사용하는 HoC를 의미한다. 다음 코드 예제와 같이 사용한다.import React from &quot;react&quot;;import { withRouter } from &quot;react-router-dom&quot;;const Something = withRouter((props) =&amp;gt; {  /* ... */});export default Something();e.g., React Styled..."
+  },
+  
+  {
+    "title": "react-flash-message 에러 (Module not found) 해결 방법",
+    "url": "/posts/2021-06-15-react-flash-message-error/",
+    "categories": "react",
+    "tags": "react, error, react-flash-message",
+    "date": "2021-06-15 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Module not found: Can&#39;t resolve &#39;react-flash-message&#39;다음 명령어로 해결할 수 있다.yarn add https://github.com/Looskie/react-flash-message.git가끔가다 쓰는 건데, 사용법이 단순해서 한 번도 문제가 없었다가 갑자기 모듈을 찾을 수 없다고 난리여서 30분을 허비했다. 등잔 밑이 어둡다고 공식 레포 이슈에 벌써 같은 문제를 겪는 사람이 이슈를 발행했고, 코멘트 중에 해결책을 공유해준 사람이 있어서 해결할 수 있었다."
+  },
+  
+  {
+    "title": "React CORS 문제 해결을 위한 Proxy 서버 설정 방법 (Access-Control-Allow-Origin 에러)",
+    "url": "/posts/2021-06-14-react-cors-proxy-error/",
+    "categories": "react",
+    "tags": "react, cors, proxy, error",
+    "date": "2021-06-14 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Access to XMLHttpRequest at &#39;http://localhost:4000&#39; from origin &#39;http://localhost:3000&#39; has been blocked by CORS policy: Response to preflight request doesn&#39;t pass access control check: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.packag..."
+  },
+  
+  {
+    "title": "CRACO를 사용한 Emotion 사용 설정 방법 (@jsx 선언 제거)",
+    "url": "/posts/2021-06-13-craco-emotion-react/",
+    "categories": "css-in-js",
+    "tags": "css-in-js, emotion, craco, react",
+    "date": "2021-06-13 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "CRA로 세팅한 리액트 프로젝트에서 Emotion (@emotion/react)을 사용하기 위해서는 다음과 같이 매번 @jsx 관련 선언을 명시하는 과정이 필요하다. 이 과정을 생략하기 위해서는 Babel 설정이 필요한데, CRA는 Babel의 사용자 설정을 막아두었기 때문에 eject를 사용해야 이 부분을 설정할 수 있다. (한 번 eject한 프로젝트는 이전 상태로 되돌아 갈 수 없다.)Create React App Configuration Override의 약자인 CRACO를 사용하면 eject 하지 않고도 리액트 애플리..."
+  },
+  
+  {
+    "title": "Session 인증 방식과 JWT 인증 방식의 비교",
+    "url": "/posts/2021-06-12-express-way-auth-user/",
+    "categories": "web",
+    "tags": "authentication, session, cookie, jwt",
+    "date": "2021-06-12 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "  참고 : Cookie · Session 기술의 이해Session 인증 방식HTTP 웹 서버는 Stateless 프로토콜을 사용하기 때문에, 사용자의 인가 사실을 유지할 수 없고, 매번 다른 페이지로 이동하거나 새로고침을 할 때 다시 인가 됨을 증명해야만 한다. 이때 사용할 수 있는 방법 중 하나가 이 Session (이하 세션) 기반 인증 방식이며, 사용자가 웹 서버에 접속해 있는 상태를 하나의 세션으로 구분한다.세션과 함께 사용되는 웹 기술 중 Cookie (이하 쿠키)는 상태 정보를 유지하기 위해 사이트 단위를 기준으로..."
+  },
+  
+  {
+    "title": "Mongoose Schema.pre 함수 사용시 this 바인딩 문제",
+    "url": "/posts/2021-06-11-mongoose-schema-pre-arrow-function-this-error/",
+    "categories": "node, express, mongodb",
+    "tags": "node, express, mongodb, mongoose",
+    "date": "2021-06-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "다음과 같이 화살표 함수를 사용할 경우, this가 상위 스코프를 가리키기 때문에 의도한대로 ‘객체 자체’에 바인딩이 안되는 문제가 발생한다.userSchema.pre(&quot;save&quot;, () =&amp;gt; {  /* ... */});따라서 다음과 같이 function 키워드를 사용해 함수를 만들어야 한다.userSchema.pre(&quot;save&quot;, function () {  /* ... */});또는function hashingPassword() {  /* ... */}userSchema.pre..."
+  },
+  
+  {
+    "title": "Yarn Workspace 기본 사용법",
+    "url": "/posts/2021-06-11-yarn-worksapce/",
+    "categories": "development",
+    "tags": "development, yarn, workspce",
+    "date": "2021-06-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "sudo npm install -g yarn # yarn 없는 경우 설치project라는 폴더 안에 client (리액트 등)와 server (Express 등)라는 폴더가 있다고 가정할 때, project 위치에서 다음 명령어로 package.json 파일을 생성한다.yarn init -yproject 루트 위치에 생성된 package.json 파일에 다음 내용을 추가한다.{  &quot;private&quot;: true,  &quot;workspcaes&quot;: [&quot;client&quot;, &quot;serv..."
+  },
+  
+  {
+    "title": "GraphQL를 위한 Apollo Client 기본 사용법",
+    "url": "/posts/2021-06-09-graphql-apollo-client/",
+    "categories": "apollo, graphql",
+    "tags": "apollo, graphql",
+    "date": "2021-06-09 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Apollo 세팅리액트 환경에서 GraphQL을 사용하기 위해서 Apollo를 사용할 수 있다. 다음 명령어를 사용해 리액트 프로젝트를 구성하고 필요한 패키지를 설치한다.npx create-react-app projectcd projectnpm install @apollo/client graphql선택적으로 Apollo Client Devtools를 사용할 수도 있다.ApolloClient 작성요청을 보낼 때 마다 특정 URL을 작성해야 하는 REST API와 다르게, GraphQL에 요청을 보내기 위해서 (Apollo Cli..."
+  },
+  
+  {
+    "title": "GraphQL Query · Mutation 차이점",
+    "url": "/posts/2021-06-05-graphql-query-mutation/",
+    "categories": "graphql",
+    "tags": "graphql",
+    "date": "2021-06-05 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "QueryQuery는 객체에 대한 특정 필드를 요청하는 행위를 말한다. i.g., SELECT문에 사용되는 것이며, REST API에서 GET 요청을 보내는 것과 같다.const hello = {  title: &quot;hello movie&quot;,  genres: [&quot;action&quot;, &quot;drama&quot;],};const resolvers = {  Query: {    post: () =&amp;gt; hello,  },};Resolver가 위와 같을 때, hello의 title은 다음과 같이..."
+  },
+  
+  {
+    "title": "GraphQL 서버 기본 사용법 (graphql-yoga 사용)",
+    "url": "/posts/2021-06-04-graphql-server/",
+    "categories": "graphql",
+    "tags": "graphql, backend",
+    "date": "2021-06-04 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "graphql-yoga를 사용하면 리액트 프로젝트를 생성할 때와 같이 간단하게 GraphQL 프로젝트를 시작할 수 있다.npm init -ynpm install graphql-yoga이때 편리한 서버 테스트를 위해서 선택적으로 nodemon을 적용하거나, Node 환경에서 ES6+ 문법을 사용하기 위해서 Babel을 적용할 수 있다.// sudo npm install -g nodemonnpm install @babel/core @babel/node @babel/preset-env -Dpackage.json에 실행을 위한 스크립..."
+  },
+  
+  {
+    "title": "React Redux 기본 사용법",
+    "url": "/posts/2021-06-03-react-js-reudx/",
+    "categories": "redux, react",
+    "tags": "redux, react, javascript",
+    "date": "2021-06-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "리액트에서 리덕스를 사용하기 위해서 다음과 같은 라이브러리를 설치한다.npm install redux react-reduxcreateStore()와 reducer()를 작성한다.export const ACTIONS = {  ADD: &quot;ADD&quot;,  DELETE: &quot;DELETE&quot;,};function reducer(todos = [], { type, text, id }) {  switch (type) {    case ACTIONS.ADD:      return [{ id: uuid(), text..."
+  },
+  
+  {
+    "title": "GraphQL이란? REST API와의 비교",
+    "url": "/posts/2021-06-03-graphql-rest-api/",
+    "categories": "graphql",
+    "tags": "graphql, rest",
+    "date": "2021-06-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "GraphQLGraphQL은 쿼리 언어이자 애플리케이션 프로그래밍 인터페이스(API)를 위한 서버측 런타임으로, 클라이언트에게 요청한 만큼의 데이터를 제공하는 역할을 하며, REST API를 대체할 수 있다. i.g., 클라이언트는 GraphQL과 대화하고, GraphQL은 다른 API와 대화할 수 있다.REST API vs. GraphQL백엔드에 구축된 REST API를 사용하는 (데이터를 REST API에 요청하는) 경우, 필요하지 않은 정보들까지 받아야 하는 Over Fetching 문제나, 데이터가 나눠져 있어서 여러 ..."
+  },
+  
+  {
+    "title": "Node Redux 기본 사용법",
+    "url": "/posts/2021-06-02-node-js-reudx/",
+    "categories": "redux, node",
+    "tags": "redux, node, javascript",
+    "date": "2021-06-02 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "기본 사용법리덕스는 데이터 (state 값, 애플리케이션에서 변하는 값)를 한 곳에서 관리하기 위해 사용한다.npm install reduxcreateStore()데이터를 관리하기 위한 저장소는 보통 Store라 부르며, createStore() 함수를 사용해 생성한다. 이렇게 생성된 store는 dispatch(), subscribe(), getState(), replaceReducer() 함수를 가진다.import { createStore } from &quot;redux&quot;;const store = createSt..."
+  },
+  
+  {
+    "title": "React Context API + Hooks와 Redux 사용법 비교",
+    "url": "/posts/2021-06-01-react-redux-context-hooks/",
+    "categories": "redux, react",
+    "tags": "react, hook, context, redux",
+    "date": "2021-06-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Context API + HooksContext API는 상태 값을 공유하기 위해 사용하고, Hooks는 함수형 컴포넌트에서 상태 값을 사용하기 위해 사용한다. 이 두 가지 기능을 사용해서 상태를 관리하는 간단한 카운터 예제는 다음과 같다.store 생성import React, { createContext } from &quot;react&quot;;const Context = createContext(&quot;&quot;);export default context;공유할 값을 제공function App() {  const ..."
+  },
+  
+  {
+    "title": "타입스크립트 세 가지 타입 가드 방법",
+    "url": "/posts/2021-05-24-typescript-type-guard/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2021-05-24 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "typeof를 사용한 타입 가드function printMessage(message: string | number) {  if (typeof message === &quot;string&quot;) {    console.log(message.length);  }  /* ... */}in을 사용한 타입 가드interface A {  name: string;  /* ... */}interface B {  email: string;  /* ... */}function printMessage(message: A | B) {  if ..."
+  },
+  
+  {
+    "title": "타입스크립트 타입 단언의 이해",
+    "url": "/posts/2021-05-23-typescript-type-assertion/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2021-05-23 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "다음과 같이 DOM API를 조작하고자 할 때, header에 추론된 타입은 HTMLDivElement | null이기 때문에 라인 2에서 에러가 발생한다.const header = document.querySelector(&quot;div&quot;);header.innerText = &quot;Hello&quot;;이 경우 다음과 같이 header가 HTMLDivElement 타입이라는 것을 단언함으로써 문제를 해결할 수 있다.const header = document.querySelector(&quot;div&quot;)..."
+  },
+  
+  {
+    "title": "타입스크립트를 사용하기 위한 WebPack + ESLint 설정 방법",
+    "url": "/posts/2021-05-21-typescript-settup-webpack-ts-loader/",
+    "categories": "webpack, typescript, eslint",
+    "tags": "typescript, webpack, eslint, prettier",
+    "date": "2021-05-21 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "우선 다음과 같이 프로젝트를 세팅하고 필요한 의존성을 설치한다.npm init -ynpm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser -Dnpm install typescript ts-loader webpack webpack-cli webpack-dev-server -Dpackage.jsonscript 항목을 적절히 추가한다.{  &quot;script&quot;: {    &quot;build&quot;: &quot;webpack --mo..."
+  },
+  
+  {
+    "title": "타입스크립트 세 가지 제네릭 타입 제한 방법",
+    "url": "/posts/2021-05-21-typescript-limited-generic-type/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2021-05-21 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "조건부 타입 설정interface A {  /* ... */}interface B {  /* ... */}function a&amp;lt;T extends A ? A : B&amp;gt;(message: T): void {}특정 메소드를 가진 타입만 허용다음 함수는 length 메소드를 가지고 있는 타입만을 허용한다.function a&amp;lt;T extends { length: number }&amp;gt;(message: T): void {}특정 객체의 키 값만을 허용다음 함수에서 허용하는 타입은 obj의 키 값인 &#..."
+  },
+  
+  {
+    "title": "webpack-dev-server 사용시 발생할 수 있는 config-yargs 에러 해결 방법",
+    "url": "/posts/2021-05-20-webpack-cli-config-yargs-error/",
+    "categories": "webpack",
+    "tags": "webpack, error",
+    "date": "2021-05-20 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Error: Cannot find module &#39;webpack-cli/bin/config-yargs&#39;멘티가 혼자 고쳐보려고 했는데, 검색해보니 사용하는 webpack, webpack-cli 버전과 webpack-dev-server의 버전이 충돌해 생기는 에러라고 webpack의 버전을 바꾸라는 말뿐이어서 이래저래 해봐도 안된다고 울면서 가져왔다 ㅋㅋㅋㅋㅋㅋㅋ 뭐 예전에는 버전이 안맞아서 에러가 생겼을 수도 있긴한데… 하여튼 WebPack이 버전 5로 올라가면서 명령어가 webpack-dev-server가 아니라 ..."
+  },
+  
+  {
+    "title": "타입스크립트 유니온 타입과 인터섹션 타입",
+    "url": "/posts/2021-05-19-typescript-union-intersection-type/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2021-05-19 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "유니온 타입 (Union Type)유니온 타입은 | 연산자를 사용해서 여러 개의 타입 중 하나에 해당하는 타입을 의미한다.const print = (message: string | number): void =&amp;gt; console.log(message);위 코드 예제에서 message는 string 타입이거나 number 타입일 수 있다.인터페이스에 유니온 타입 적용interface A {  name: string;  email: string;}interface B {  name: string;  phone: numbe..."
+  },
+  
+  {
+    "title": "타입스크립트 타입 별칭과 인터페이스의 차이점",
+    "url": "/posts/2021-05-18-typesctip-type-ailas-interface/",
+    "categories": "typescript",
+    "tags": "typescript",
+    "date": "2021-05-18 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "타입 별칭 (Type Ailas)타입 별칭은 임의의 타입 또는 인터페이스를 참조할 수 있는 타입 변수를 의미하며, type이라는 키워드를 사용해 다음과 같이 생성할 수 있다.type User = {  id: number;  name: string;  email: string;  password: string;};let user: User;타입 별칭은 제네릭, 함수 등에도 사용할 수 있다. (i.g., 타입을 사용하는 곳에는 모두 타입 별칭을 대신 사용할 수 있다.)인터페이스 (Interface)인터페이스는 interface 키..."
+  },
+  
+  {
+    "title": "VS Code ESLint 동작하지 않는 (반응이 없는) 경우 해결 방법",
+    "url": "/posts/2021-05-06-eslint-working-directory-setting/",
+    "categories": "eslint",
+    "tags": "eslint, vscode",
+    "date": "2021-05-06 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "VS Code에서 ESLint 확장도 설치되어 있고, 프로젝트에 .eslintrc 파일도 작성되어 있으며, npm install 실행시 별다른 에러도 발생하지 않지만, 결과적으로 ESLint가 동작하지 않는 경우. (e.g., 타입을 생략해도 밑줄이 뜨지 않는 경우.)ESLint의 설정 오류나 .eslintrc 파일 작성에 문제가 있을 수도 있지만, 일반적으로 아무런 오류도 발생하지 않으면서 동작을 하지 않는 경우는 대게 eslint 버전 호환 문제이다. 프로젝트에서 사용하는 eslint의 버전을 다운그레이드 하거나, sett..."
+  },
+  
+  {
+    "title": "tsconfig.json 설정 파일 작성 방법",
+    "url": "/posts/2021-05-03-tsconfig-options/",
+    "categories": "development, typescript",
+    "tags": "development, typescript, tsconfig",
+    "date": "2021-05-03 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "TSConfig Referencefiles프로그램에 포함할 파일의 허용 목록 (Allowlist)을 정의하며, 파일을 찾을 수 없을 경우 에러가 발생한다. 일반적으로 포함할 파일의 개수가 적을 때 사용된다.{  &quot;files&quot;: [&quot;home.ts&quot;, &quot;about.ts&quot;, &quot;contact.ts&quot;]}include프로그램에 포함할 파일 이름 또는 하위 폴더를 포함하는 경로를 지정할 때 사용하며, 포함할 파일의 개수가 많거나, 여기 저기 흩어져 있을 경우에 사용된다..."
+  },
+  
+  {
+    "title": "React ESLint react-hooks/rules-of-hooks 에러 해결 방법",
+    "url": "/posts/2021-05-02-react-hooks-rules-of-hooks-error/",
+    "categories": "eslint, react",
+    "tags": "react, eslint, hook, error",
+    "date": "2021-05-02 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "ESLint에서 react-hooks (airbnb-hooks 등)를 사용할 때 발생할 수 있는 에러로, 자바스크립트의 일반 함수에서 Hook을 호출하지 말라는 에러이다. 이 에러를 해결하기 위해서는 다음 두 가지 방식으로 Hook을 호출해야 한다.  React 함수형 컴포넌트에서 호출  Custom Hook에서 호출.eslintrc 파일에서 다음 항목으로 설정할 수 있다.&quot;rules&quot;: {    &quot;react-hooks/rules-of-hooks&quot;: &quot;error&quot;}Hook을..."
+  },
+  
+  {
+    "title": "ESLint no-case-declarations 에러 해결 방법",
+    "url": "/posts/2021-05-01-eslint-no-case-declarations/",
+    "categories": "eslint",
+    "tags": "eslint, error",
+    "date": "2021-05-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "ESLint (no-case-declarations)Disallow lexical declarations in case/default clauses (no-case-declarations)위와 같은 no-case-declarations 에러는 다음과 같이 case문 내에서 변수나 상수 또는 함수 등이 제한된 스코프가 없이 선언되는 것을 허용하지 않는다는 것을 알리는 에러이다.switch (foo) {  case 1:    let x = 1;    break;  case 2:    const y = 2;    break;  ca..."
+  },
+  
+  {
     "title": "Webpack SASS (SCSS) 사용법",
     "url": "/posts/2021-04-05-scss-css-loader/",
     "categories": "webpack",
@@ -57,7 +447,7 @@
 
 
 
-    "snippet": "설치npm install webpack webpack-cli -D설정 파일 만들기const path = require(&quot;path&quot;);module.exports = {  entry: &quot;./src/client/js/main.js&quot;,  mode: &quot;development&quot;,  watch: true, // 자동으로 변화 감시  output: {    filename: &quot;main.js&quot;,    path: path.resolve(__dirname, &quot;asset..."
+    "snippet": "설치npm install webpack webpack-cli -D속성  entry  output  module  pluginentryentry 속성에는 웹팩이 모듈 번들링을 하기 위한 진입점이자 변환하고자 하는 자바스크립트 파일의 경로를 작성한다.module.exports = {  entry: &quot;src/index.js&quot;,};위 코드 예시와 같은 entry 속성을 정의하면 src 폴더에 위치한 index.js 파일을 진입점으로 빌드하게 된다.module.exports = {  entry: {    home: &..."
   },
   
   {
@@ -72,7 +462,7 @@
 
 
 
-    "snippet": "WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.Bundle이란?  소프트웨어 및 일부 하드웨어와 함께 작동하는 데 필요한 모든 것을 포함하는 패키지  각각의 모듈들에 대해 의존성 관계를 파악한 하나 또는 여러 개의 그룹Module Bundler란?대부분의 프로그래밍 언어에서는 코드를 여러 개의 파일로 분할하고, 각각의 파일에 담겨있는 기능들을 사용하기 위해서 애플리케..."
+    "snippet": "WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.Module이란?  애플리케이션을 구성하는 자원들  HTML, CSS, 자바스크립트 파일들 등Bundle이란?  소프트웨어 및 일부 하드웨어와 함께 작동하는 데 필요한 모든 것을 포함하는 패키지  각각의 모듈들에 대해 의존성 관계를 파악한 하나 또는 여러 개의 그룹Module Bundler란?대부분의 프로그래밍 언어에서는..."
   },
   
   {
@@ -438,8 +828,8 @@
   {
     "title": ".prettierrc, .eslintrc 작성법",
     "url": "/posts/2020-11-14-eslint-prettier/",
-    "categories": "development",
-    "tags": "linter, prettier, eslint",
+    "categories": "eslint, development",
+    "tags": "prettier, eslint",
     "date": "2020-11-14 00:00:00 +0800",
     
 
@@ -766,6 +1156,21 @@
   },
   
   {
+    "title": "SPA · MPA · PWA · CSR · SSR에 대한 이해",
+    "url": "/posts/2020-08-17-ssr-csr-react-next/",
+    "categories": "development, web",
+    "tags": "development, web, csr, ssr, spa, mpa, pwa",
+    "date": "2020-08-17 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "SPA vs. MPASPA는 Single Page Application, MPA는 Multiple Page Application의 약자로, 애플리케이션이 몇 개의 페이지로 구성되었는지로 구분하는 용어이다. 이 둘의 주요 특징은 다음과 같다.SPA 개요SPA는 한 개의 페이지로 구성된 애플리케이션을 의미하며, 애플리케이션을 구동하는데 필요한 모든 정적 리소스들을 페이지 최초 로드시 한 번에 다운로드하고, 새로운 페이지에 대한 요청이 생겼을 때 → 페이지를 갱신하는 데 필요한 데이터만 전달 받아 화면을 갱신한다. 이와 같은 특징에..."
+  },
+  
+  {
     "title": "Mongoose 기본 제공 미들웨어 사용법",
     "url": "/posts/2020-08-16-mongoose-usage-middleware/",
     "categories": "node, express, mongodb",
@@ -793,6 +1198,21 @@
 
 
     "snippet": "Static이란 Model.create(), Model.save()와 같이 접근하여 사용할 수 있는 사용자 정의 함수를 말한다. (참고 : Methods and Statics) 모델의 객체 인스턴스가 살아있을 때만 호출 할 수 있는 Method와는 달리, 객체를 생성하지 않아도 바로 컬렉션에 있는 데이터에 접근할 수 있기 때문에 데이터 조회와 관련된 API를 만들 때 사용된다.userSchema.statics.findUser = async function (id: string) {  return this.findOne({ id..."
+  },
+  
+  {
+    "title": "Oh-My-Zsh 사용자 이름 삭제 + 현재 디렉토리만 표시하기",
+    "url": "/posts/2020-08-15-oh-my-zsh-settup/",
+    "categories": "development",
+    "tags": "mac, terminal, iterm, setting",
+    "date": "2020-08-15 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "현재 디렉토리만 표시하기~/.oh-my-zsh/themes 디렉토리에서 사용하는 테마 파일을 연다.cd ~/.oh-my-zsh/themesvim agnoster.zsh-theme다음과 같은 부분을 찾는다.# Dir: current working directoryprompt_dir() {  prompt_segment blue $CURRENT_FG &#39;%~&#39;}아래와 같이 &#39;%~&#39; 부분을 수정한다.# Dir: current working directoryprompt_dir() {  prompt_segmen..."
   },
   
   {
@@ -826,7 +1246,7 @@
   },
   
   {
-    "title": "UUID",
+    "title": "Node 랜덤한 아이디 값 생성을 위한 UUID 라이브러리 사용법",
     "url": "/posts/2020-08-14-random-id-uuid/",
     "categories": "node",
     "tags": "node, uuid",
@@ -1263,7 +1683,7 @@
   {
     "title": "타입스크립트 .eslintrc 파일 Parsing Error 해결 방법",
     "url": "/posts/2020-06-14-tslint-error/",
-    "categories": "typescript",
+    "categories": "eslint, typescript",
     "tags": "typescript, error, eslint",
     "date": "2020-06-14 00:00:00 +0800",
     

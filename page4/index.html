@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-11-01-express-connect-mongo/">Express 세션 정보 유지를 위한 Connect-Mongo 사용법</a>
+      <a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a>
     </h1>
 
     <div class="post-content">
@@ -363,7 +363,21 @@
 
 
 
-        Express 환경에서 세션을 사용하기 위해서는 express-session 라이브러리를 사용한다. 이때 세션 데이터는 쿠키 자체에 저장되지 않고, 세션 아이디만 저장되며, 세션 데이터는 서버 측에 저장된다. 즉, 서버를 재시작하면 (nodemon 사용시 파일을 저장할 때마다) 세션 데이터는 초기화되는 문제가 발생하는 데, 이때 서버 재시작과 상관없이...
+        
+
+WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.
+
+Module이란?
+
+
+  애플리케이션을 구성하는 자원들
+  HTML, CSS, 자바스크립트 파일들 등
+
+
+Bundle이란?
+
+
+  소프트...
       </p>
     </div>
 
@@ -386,8 +400,8 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Nov  1, 2020, 12:00 AM +0800"
-  >Nov  1, 2020<i class="unloaded">2020-11-01T00:00:00+08:00</i>
+    title="Thu, Apr  1, 2021, 12:00 AM +0800"
+  >Apr  1<i class="unloaded">2021-04-01T00:00:00+08:00</i>
 </span>
 
 
@@ -412,7 +426,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="475 words">2 min</span>
+  title="923 words">5 min</span>
 
 
         <!-- page views -->
@@ -429,7 +443,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-10-03-express-request-response-locals/">Express 미들웨어에서 App의 지역 변수 (response.locals) 공유하기</a>
+      <a href="/posts/2021-03-03-heroku-port/">Heroku code=H10 desc='App crashed' 에러 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -440,12 +454,11 @@
 
 
 
-        App (또는 서버)에서 사용하는 값을 HTML / Pug (View)에서 사용하고 싶거나, 서버에서 클라이언트 세션에 저장한 데이터를 HTML / Pug (View) 에서 접근하기 위해서는 해당 정보를 미들웨어에서 Hooking 해서 공유할 수 있게끔 해줘야 한다.
+        const PORT = process.env.PORT || 4000;
+app.listen(PORT, listenServer);
 
-app.use(localMiddlewares);
 
-
-export function l...
+Heroku에서는 필요에 따라 자동으로 포트 넘버를 (유동적으로) 설정하기 때문에 환경 변수 설정이 필요하다. process.env.PORT는 Heroku에서만 동작하며, (오로지 Heroku를 위한) Heroku를 사용하...
       </p>
     </div>
 
@@ -468,8 +481,8 @@ export function l...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Oct  3, 2020, 12:00 AM +0800"
-  >Oct  3, 2020<i class="unloaded">2020-10-03T00:00:00+08:00</i>
+    title="Wed, Mar  3, 2021, 12:00 AM +0800"
+  >Mar  3<i class="unloaded">2021-03-03T00:00:00+08:00</i>
 </span>
 
 
@@ -494,7 +507,7 @@ export function l...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="193 words">1 min</span>
+  title="106 words">1 min</span>
 
 
         <!-- page views -->
@@ -511,7 +524,7 @@ export function l...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-10-02-express-protector-middleware/">Express 특정 경로 접근을 제한하는 미들웨어 만들기</a>
+      <a href="/posts/2021-03-02-heroku-mongodb/">Heroku MongoDB 환경 변수 등록하기</a>
     </h1>
 
     <div class="post-content">
@@ -522,10 +535,18 @@ export function l...
 
 
 
-        특정 경로에 대해, 로그인한 유저와 로그인하지 않은 유저에 대해 다른 처리 (페이지 제공, 경로 제공 등)를 하고 싶을 때는 미들웨어를 사용해 로그인한 유저만 접근 가능하거나, 로그인하지 않은 유저만 접근 가능하도록 접근을 제한할 수 있다.
+        선행 조건
 
-export function loggedInOnly(request, response, next) {
-  if ...
+
+  Heroku 가입
+  Heroku 앱 생성
+  MongoDB Atlas 가입
+  Organization, Project, Cluster 생성
+
+
+MongoDB
+
+mongodb+srv://leetube:&lt;password&gt;@cluster0.xr2xb.mongodb.net/myFirstDatabase?retryWrites=tru...
       </p>
     </div>
 
@@ -548,8 +569,8 @@ export function loggedInOnly(request, response, next) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Oct  2, 2020, 12:00 AM +0800"
-  >Oct  2, 2020<i class="unloaded">2020-10-02T00:00:00+08:00</i>
+    title="Tue, Mar  2, 2021, 12:00 AM +0800"
+  >Mar  2<i class="unloaded">2021-03-02T00:00:00+08:00</i>
 </span>
 
 
@@ -574,7 +595,7 @@ export function loggedInOnly(request, response, next) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="335 words">1 min</span>
+  title="153 words">1 min</span>
 
 
         <!-- page views -->
@@ -591,7 +612,7 @@ export function loggedInOnly(request, response, next) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-10-01-express-middleware/">Express 미들웨어 (Middleware) 사용법</a>
+      <a href="/posts/2021-03-01-heroku-cli/">Heroku 기본 사용법 (Heroku CLI)</a>
     </h1>
 
     <div class="post-content">
@@ -602,17 +623,19 @@ export function loggedInOnly(request, response, next) {
 
 
 
-        전체 경로에 적용되는 미들웨어
+        Heroku CLI 설치
 
-// middlewares
-app.use(logger);
-app.use(express.urlencoded({ extended: true }));
-app.use(localMiddlewares);
+brew tap heroku/brew &amp;&amp; brew install heroku
 
-// routers
-app.use("/", globalRouter);
-app.use("/users", userRouter);
-...
+
+Heroku CLI - Download and install
+
+heroku login
+
+
+정상적으로 설치되었거나, 이미 Heroku CLI가 설치되어 있는 경우 위와 같이 heroku login 명령어가 정상적으로 동작한다.
+
+새...
       </p>
     </div>
 
@@ -635,8 +658,8 @@ app.use("/users", userRouter);
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Oct  1, 2020, 12:00 AM +0800"
-  >Oct  1, 2020<i class="unloaded">2020-10-01T00:00:00+08:00</i>
+    title="Mon, Mar  1, 2021, 12:00 AM +0800"
+  >Mar  1<i class="unloaded">2021-03-01T00:00:00+08:00</i>
 </span>
 
 
@@ -661,7 +684,7 @@ app.use("/users", userRouter);
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="108 words">1 min</span>
+  title="270 words">1 min</span>
 
 
         <!-- page views -->
@@ -678,7 +701,7 @@ app.use("/users", userRouter);
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-22-express-request-body-text-json/">클라이언트에서 Express 서버로 텍스트 · JSON 데이터 전송하기</a>
+      <a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a>
     </h1>
 
     <div class="post-content">
@@ -689,15 +712,17 @@ app.use("/users", userRouter);
 
 
 
-        Request.body 만들어 서버로 보내기
+        Bucket 생성
 
-fetch(`/api/posts/${id}/comment`, {
-  method: "POST",
-  body: { text },
-});
+AWS S3 Bucket 생성.
+
+IAM User 생성
+
+AWS_ID = 123123;
+AWS_SECRET = 123123;
 
 
-서버 측으로 POST 요청을 보낼 때, 반드시 form을 통해서 Sumbit 하지 않아도, 위와 같이 fetch를 사용해 POST 요청을 보낼 수 있으며, body 프...
+IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 후 .env 파일에 (사실 개발 환경에서는 로컬에 저장하면 되고, Heroku에서만 AWS로 저장하면 되기 때문에 .en...
       </p>
     </div>
 
@@ -720,8 +745,8 @@ fetch(`/api/posts/${id}/comment`, {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Sep 22, 2020, 12:00 AM +0800"
-  >Sep 22, 2020<i class="unloaded">2020-09-22T00:00:00+08:00</i>
+    title="Fri, Feb 12, 2021, 12:00 AM +0800"
+  >Feb 12<i class="unloaded">2021-02-12T00:00:00+08:00</i>
 </span>
 
 
@@ -746,7 +771,7 @@ fetch(`/api/posts/${id}/comment`, {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="319 words">1 min</span>
+  title="507 words">2 min</span>
 
 
         <!-- page views -->
@@ -763,7 +788,7 @@ fetch(`/api/posts/${id}/comment`, {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-21-express-response-status-json/">Express 클라이언트에 상태 코드와 함께 객체 전달하기</a>
+      <a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -774,20 +799,18 @@ fetch(`/api/posts/${id}/comment`, {
 
 
 
-        Backend
+        Commit 규칙
 
-app.use(express.json());
-
-
-return response.status(201).json({ title: something, name: somethings });
+$ git commit -m "Prefix: Message (#issue)"
 
 
-json() 메소드를 사용해서 객체를 전달한다.
 
-Frontend
-
-if (response.status === 201) {
-  const { title,...
+  Prefix: Message 형식으로 작성한다.
+  접두사는 모두 소문자로 작성한다.
+  접두사와 콜론 (:)은 띄어쓰지 않는다.
+  콜론과 메시지는 한 칸 띄어쓴다.
+  관련된 이슈 번호는 맨 뒤에 괄호 (())안에 작성한다.
+  메시지와 이슈 ...
       </p>
     </div>
 
@@ -810,8 +833,8 @@ if (response.status === 201) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Sep 21, 2020, 12:00 AM +0800"
-  >Sep 21, 2020<i class="unloaded">2020-09-21T00:00:00+08:00</i>
+    title="Thu, Feb  4, 2021, 12:00 AM +0800"
+  >Feb  4<i class="unloaded">2021-02-04T00:00:00+08:00</i>
 </span>
 
 
@@ -836,7 +859,7 @@ if (response.status === 201) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="52 words">1 min</span>
+  title="590 words">3 min</span>
 
 
         <!-- page views -->
@@ -853,7 +876,7 @@ if (response.status === 201) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-20-express-route-url-string-pattern/">Express 문자열 패턴과 정규식 표현을 사용한 Route 경로 표현</a>
+      <a href="/posts/2021-02-03-branch-strategy/">내가 사용하는 Git 브랜치 전략 (Branch Strategy)</a>
     </h1>
 
     <div class="post-content">
@@ -864,17 +887,13 @@ if (response.status === 201) {
 
 
 
-        라우트 경로를 문자열을 기반으로 하는 경우, 문자열 패턴 또는 정규식 문자를 사용해 조합할 수 있다. (- (하이픈)과 . (점)은 그냥 문자 그대로 해석됨)
+        전략
 
-app.get("/", home);
-app.get("/about", about);
+브랜치 전략은 Git Flow, GitHub Flow 등이 있고, 선택적으로 사용하면 된다. 내 경우 혼자 일한지 오래되었기 때문에 나름의 규칙을 만들어놓고 지켜가며 일하는데, 이 브랜치 전략 역시 규칙 중 하나에 해당한다. (아마도 어쩌다보니 2개가 섞여서 내 입맛에 맞게 된듯)
 
+main
 
-위 라우트 경로는 정확히 입력된 대로 /, /about를 의미한다.
-
-? (물음표)
-
-app.get("/a...
+배포 가능한 상태만을 병합하는 브랜치. 혼자 개발할...
       </p>
     </div>
 
@@ -897,8 +916,8 @@ app.get("/a...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Sep 20, 2020, 12:00 AM +0800"
-  >Sep 20, 2020<i class="unloaded">2020-09-20T00:00:00+08:00</i>
+    title="Wed, Feb  3, 2021, 12:00 AM +0800"
+  >Feb  3<i class="unloaded">2021-02-03T00:00:00+08:00</i>
 </span>
 
 
@@ -923,7 +942,7 @@ app.get("/a...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="414 words">2 min</span>
+  title="679 words">3 min</span>
 
 
         <!-- page views -->
@@ -940,7 +959,7 @@ app.get("/a...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-19-express-send-status-codes/">Express 클라이언트에 상태 코드 (Status Code) 전송하기</a>
+      <a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -951,15 +970,23 @@ app.get("/a...
 
 
 
-        if (password !== confirmPassword) {
-  return response.status(400).render("createAccount", {
-    pageTitle,
-    errorMessage: "Password confirmation does not match.",
-  });
-}
+        GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
 
 
-서버에서 클라이언트 측에 respons...
+  
+    
+      Label
+      Description
+    
+  
+  
+    
+      bug
+      Something isn’t working
+    
+    
+      documentation
+      Improvements ...
       </p>
     </div>
 
@@ -982,8 +1009,8 @@ app.get("/a...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Sep 19, 2020, 12:00 AM +0800"
-  >Sep 19, 2020<i class="unloaded">2020-09-19T00:00:00+08:00</i>
+    title="Tue, Feb  2, 2021, 12:00 AM +0800"
+  >Feb  2<i class="unloaded">2021-02-02T00:00:00+08:00</i>
 </span>
 
 
@@ -1008,7 +1035,7 @@ app.get("/a...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="248 words">1 min</span>
+  title="386 words">2 min</span>
 
 
         <!-- page views -->
@@ -1025,7 +1052,7 @@ app.get("/a...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-18-express-routing/">Express 라우팅 (Routing) 방법 총정리</a>
+      <a href="/posts/2021-02-01-clean-code/">오랜만에 리마인드 해보는 클린 코드를 위한 기본 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -1036,10 +1063,19 @@ app.get("/a...
 
 
 
-        app.get("/", (request, response) =&gt; response.send("Hello I'm Home!"));
+        Clean Code
 
 
-GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요청에 대한 라우트를 생성할 때는 post() 메소드를 사용하며, 첫 번째 인자는 라우트 경로를, 두 번째 인자는 미들웨어 (생략 가능) 또는 해...
+  주석을 최소화 할 수 있는 코드
+  코드 작성자가 아닌 사람도 금방 배울 수 있는 코드
+  나중에 다시 읽을 때 ‘읽기 위한 공부’를 위해서 Additianal Cost를 지불하지 않아도 되는 코드
+  미래의 내가 똑같은 코드를 작성해도 (코드의 내용은 달라질 수 있지만) 일정한 포맷을 유지하는 코드
+
+
+Naming
+
+
+  ...
       </p>
     </div>
 
@@ -1062,8 +1098,8 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Sep 18, 2020, 12:00 AM +0800"
-  >Sep 18, 2020<i class="unloaded">2020-09-18T00:00:00+08:00</i>
+    title="Mon, Feb  1, 2021, 12:00 AM +0800"
+  >Feb  1<i class="unloaded">2021-02-01T00:00:00+08:00</i>
 </span>
 
 
@@ -1088,7 +1124,7 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="422 words">2 min</span>
+  title="311 words">1 min</span>
 
 
         <!-- page views -->
@@ -1105,7 +1141,7 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-17-express-url-params/">Express URL에 변수 사용하기</a>
+      <a href="/posts/2021-01-23-hosting-services/">2021 프론트엔드 · 백엔드 호스팅 서비스와 CDN 서비스 정리</a>
     </h1>
 
     <div class="post-content">
@@ -1116,23 +1152,24 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
 
 
-        http://abc.com/user/1
-http://abc.com/user/2
+        Front-End
 
 
-위와 같이 변수를 사용해야 할 때.
-
-/user/:id
-
-
-해당 부분을 콜론 + 변수명으로 표현한다.
-
-app.get("/user/:id", (request, response) =&gt; {
-  console.log(request.params.id);
-});
-
-
-해당 파...
+  
+    
+      Service
+      Description
+    
+  
+  
+    
+      GitHub Pages
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $4
+    
+    
+      Glitch
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $8
+ ...
       </p>
     </div>
 
@@ -1155,8 +1192,8 @@ app.get("/user/:id", (request, response) =&gt; {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Sep 17, 2020, 12:00 AM +0800"
-  >Sep 17, 2020<i class="unloaded">2020-09-17T00:00:00+08:00</i>
+    title="Sat, Jan 23, 2021, 12:00 AM +0800"
+  >Jan 23<i class="unloaded">2021-01-23T00:00:00+08:00</i>
 </span>
 
 
@@ -1181,7 +1218,7 @@ app.get("/user/:id", (request, response) =&gt; {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="88 words">1 min</span>
+  title="343 words">1 min</span>
 
 
         <!-- page views -->
@@ -1486,9 +1523,54 @@ app.get("/user/:id", (request, response) =&gt; {
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page17/">17</a>
+        <a class="page-link btn-box-shadow" href="/page20/">20</a>
       </li>
     
 
@@ -1497,7 +1579,7 @@ app.get("/user/:id", (request, response) =&gt; {
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>4</span>
-    <span class="text-muted">/ 17</span>
+    <span class="text-muted">/ 20</span>
   </li>
 
   <!-- right arrow -->
@@ -1550,27 +1632,27 @@ app.get("/user/:id", (request, response) =&gt; {
         
         
         
+        <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-03-03-heroku-port/">Heroku code=H10 desc='App crashed' 에러 해결 방법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-19-es6-syntax-13-arrow-function/">모던 자바스크립트와 ES6 #3 Arrow Function</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
       
 
       </ul>
@@ -1784,220 +1866,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2052,120 +1920,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2595,71 +2349,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2804,10 +2493,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-      
-        
-        
-
   
     
     
@@ -2893,192 +2578,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3413,10 +2912,1137 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3545,6 +4171,12 @@ app.get("/user/:id", (request, response) =&gt; {
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -3552,12 +4184,6 @@ app.get("/user/:id", (request, response) =&gt; {
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
       </div>
@@ -3822,220 +4448,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4090,120 +4502,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -4633,71 +4931,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -4842,10 +5075,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-      
-        
-        
-
   
     
     
@@ -4931,192 +5160,6 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5451,10 +5494,1137 @@ app.get("/user/:id", (request, response) =&gt; {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5578,6 +6748,12 @@ app.get("/user/:id", (request, response) =&gt; {
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -5585,12 +6761,6 @@ app.get("/user/:id", (request, response) =&gt; {
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
     </div> -->

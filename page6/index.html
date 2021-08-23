@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-17-pagination/">Mongoose 페이징 (Paginate) 방법</a>
+      <a href="/posts/2020-12-05-nodemon-ignore/">nodemon.json 파일 작성법 (프론트엔드 파일 예외 처리)</a>
     </h1>
 
     <div class="post-content">
@@ -363,13 +363,12 @@
 
 
 
-        전체 데이터 개수
-
-const posts = await Post.find({}).populate("owner");
-const totalCount = posts.length;
-
-
-라인 1과 같이 데이터베이스 검색 결과를 가져올 때, 결과를 담은 posts는 배열이 된다. (예외 처리 필요) 따라서 전체 게시글의 개수를 posts.length로 구할 수 ...
+        // package.json
+"scripts": {
+    // "dev": "nodemon --exec babel-node src/init.js"
+    // 그냥 노드몬을 실행하도록 변경 -&gt; nodemon.json 파일에 작성한 대로 실행됨
+    "dev": "nodemon",
+    "assets": "webpack --config we...
       </p>
     </div>
 
@@ -392,8 +391,8 @@ const totalCount = posts.length;
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug 17, 2020, 12:00 AM +0800"
-  >Aug 17, 2020<i class="unloaded">2020-08-17T00:00:00+08:00</i>
+    title="Sat, Dec  5, 2020, 12:00 AM +0800"
+  >Dec  5, 2020<i class="unloaded">2020-12-05T00:00:00+08:00</i>
 </span>
 
 
@@ -418,7 +417,7 @@ const totalCount = posts.length;
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="464 words">2 min</span>
+  title="135 words">1 min</span>
 
 
         <!-- page views -->
@@ -435,7 +434,7 @@ const totalCount = posts.length;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-16-mongoose-usage-middleware/">Mongoose 기본 제공 미들웨어 사용법</a>
+      <a href="/posts/2020-12-04-node-multer/">Node Multer를 사용해서 백엔드로 파일 전송하기</a>
     </h1>
 
     <div class="post-content">
@@ -446,16 +445,14 @@ const totalCount = posts.length;
 
 
 
-        Mongoose는 4가지 종류의 미들웨어를 제공한다. (참고 : Mongoose Middleware)
+        클라이언트측에서 전송하는 데이터
+
+사용자 (클라이언트)가 앱 (서버)에 전송하는 정보는 크게 텍스트와 파일로 구분할 수 있다. 텍스트는 request.body를 통해 전달되며, express.urlencoded({ extended: true }를 사용해 파싱한다.
+
+npm install multer
 
 
-  document middleware
-  model middleware
-  aggregate middleware
-  query middleware
-
-
-미들웨어는 스키마를 구현하고 모델을 내보내는 파일에서 정의하고, 사용되기 전에 Hooking 된...
+하지만 Express는 사용자가 업로드한 파일을 ...
       </p>
     </div>
 
@@ -478,8 +475,8 @@ const totalCount = posts.length;
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Aug 16, 2020, 12:00 AM +0800"
-  >Aug 16, 2020<i class="unloaded">2020-08-16T00:00:00+08:00</i>
+    title="Fri, Dec  4, 2020, 12:00 AM +0800"
+  >Dec  4, 2020<i class="unloaded">2020-12-04T00:00:00+08:00</i>
 </span>
 
 
@@ -504,7 +501,7 @@ const totalCount = posts.length;
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="564 words">3 min</span>
+  title="945 words">5 min</span>
 
 
         <!-- page views -->
@@ -521,7 +518,7 @@ const totalCount = posts.length;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-15-mongoose-static/">Mongoose Static 메소드 생성 및 사용법</a>
+      <a href="/posts/2020-12-03-node-morgan/">Node Morgan (HTTP Request Logger Middleware)</a>
     </h1>
 
     <div class="post-content">
@@ -532,7 +529,15 @@ const totalCount = posts.length;
 
 
 
-        Static이란 Model.create(), Model.save()와 같이 접근하여 사용할 수 있는 사용자 정의 함수를 말한다. (참고 : Methods and Statics) 모델의 객체 인스턴스가 살아있을 때만 호출 할 수 있는 Method와는 달리, 객체를 생성하지 않아도 바로 컬렉션에 있는 데이터에 접근할 수 있기 때문에 데이터 조회와 관련된 ...
+        Node용 HTTP 요청에 대한 로거 미들웨어.
+
+npm install morgan
+
+
+import morgan from "morgan";
+app.use(morgan("dev"));
+
+
       </p>
     </div>
 
@@ -555,8 +560,8 @@ const totalCount = posts.length;
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Aug 15, 2020, 12:00 AM +0800"
-  >Aug 15, 2020<i class="unloaded">2020-08-15T00:00:00+08:00</i>
+    title="Thu, Dec  3, 2020, 12:00 AM +0800"
+  >Dec  3, 2020<i class="unloaded">2020-12-03T00:00:00+08:00</i>
 </span>
 
 
@@ -581,7 +586,7 @@ const totalCount = posts.length;
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="172 words">1 min</span>
+  title="26 words">1 min</span>
 
 
         <!-- page views -->
@@ -598,7 +603,7 @@ const totalCount = posts.length;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-14-react-typescript-define-tuple/">타입스크립트 객체 배열의 타입 (React but target allows only 1 에러 해결 방법)</a>
+      <a href="/posts/2020-12-02-babel-nodemon/">Node Babel + Nodemon 적용 방법</a>
     </h1>
 
     <div class="post-content">
@@ -609,13 +614,18 @@ const totalCount = posts.length;
 
 
 
-        멘티들이 가장 많이하는 질문 중에 하나.
-오늘도 같은 질문을 받아서 정리해본다. 🐥
+        Babel
 
-Source has X element(s) but target allows only 1.
+Next-Gen 자바스크립트를 보편적인 (브라우저에서 안정적으로 실행할 수 있는) 자바스크립트로 변환하는 역할.
+
+{
+  "presets": ["@babel/preset-env"]
+}
 
 
-앞쪽 메시지는 다를 수 있지만 위와 거의 흡사한 에러 메시지가 확인되는 경우. 이 에러는 하나의 엘리먼트에 해당하는 타입만을 지정해놓고, 다수의 엘리먼트를 넣으려고 했기 때문...
+babel.config.json 파일을 생성한다.
+
+npm install @babel/core @babel/register @babel/preset-en...
       </p>
     </div>
 
@@ -638,8 +648,8 @@ Source has X element(s) but target allows only 1.
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
+    title="Wed, Dec  2, 2020, 12:00 AM +0800"
+  >Dec  2, 2020<i class="unloaded">2020-12-02T00:00:00+08:00</i>
 </span>
 
 
@@ -664,7 +674,7 @@ Source has X element(s) but target allows only 1.
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="283 words">1 min</span>
+  title="128 words">1 min</span>
 
 
         <!-- page views -->
@@ -681,7 +691,7 @@ Source has X element(s) but target allows only 1.
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-14-mongoose-understand-async/">Mongoose 콜백 함수의 이해</a>
+      <a href="/posts/2020-12-01-node-fs/">Node 파일 시스템 (FS) 모듈을 사용해서 파일 핸들링하는 방법</a>
     </h1>
 
     <div class="post-content">
@@ -692,15 +702,17 @@ Source has X element(s) but target allows only 1.
 
 
 
-        import Post from "../models/Post";
+        
+  Node.js v16.6.1 documentation
 
-export function home(request, response) {
-  Post.find({}, (error, posts) =&gt; {
-    console.log("error: ", error);
-    console.log("posts: ", posts);
-  });
 
-  r...
+파일 읽기
+
+function read(request, response) {
+  const { file } = request;
+
+  fs.readFile(file.path, "utf8", (error, data) =&gt; {
+    return response.render("read", {...
       </p>
     </div>
 
@@ -723,8 +735,8 @@ export function home(request, response) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
+    title="Tue, Dec  1, 2020, 12:00 AM +0800"
+  >Dec  1, 2020<i class="unloaded">2020-12-01T00:00:00+08:00</i>
 </span>
 
 
@@ -749,7 +761,7 @@ export function home(request, response) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="420 words">2 min</span>
+  title="77 words">1 min</span>
 
 
         <!-- page views -->
@@ -766,7 +778,7 @@ export function home(request, response) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-14-random-id-uuid/">UUID</a>
+      <a href="/posts/2020-11-14-eslint-prettier/">.prettierrc, .eslintrc 작성법</a>
     </h1>
 
     <div class="post-content">
@@ -777,17 +789,19 @@ export function home(request, response) {
 
 
 
-        uuid는 네트워크 상에서 고유성이 보장되는 아이디 값을 만들기 위한 표준 규약 UUID를 CommonJS, Node, 브라우저 환경 등에서 사용할 수 있는 라이브러리이다.
+        Prettier
 
-npm install uuid
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false
+}
 
 
-타입스크립트로 사용하려면 @types/uuid도 설치해준다.
-
-npm install @types/uuid
-
-
-다음과 같이 v4 모듈을 impor...
+.prettierrc 파일을 생성하고 위 코드 예제와 같이 원하는 설정을 작성한다. 설정...
       </p>
     </div>
 
@@ -810,8 +824,8 @@ npm install @types/uuid
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
+    title="Sat, Nov 14, 2020, 12:00 AM +0800"
+  >Nov 14, 2020<i class="unloaded">2020-11-14T00:00:00+08:00</i>
 </span>
 
 
@@ -836,7 +850,7 @@ npm install @types/uuid
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="131 words">1 min</span>
+  title="170 words">1 min</span>
 
 
         <!-- page views -->
@@ -853,7 +867,7 @@ npm install @types/uuid
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-13-what-is-tdd/">테스트 주도 개발 (TDD)이란?</a>
+      <a href="/posts/2020-11-01-express-connect-mongo/">Express 세션 정보 유지를 위한 Connect-Mongo 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -864,9 +878,7 @@ npm install @types/uuid
 
 
 
-        테스트 주도 개발 (Test Driven Development, TDD)이란, 개발시 작은 단위로 테스트 코드를 먼저 작성하고, 해당 테스트를 통과하는 코드를 추가하는 과정을 반복해서 프로그램을 개발하는 소프트웨어 방법론을 말한다.
-
-학습의 단계를 넘어, 실무 프로젝트에서 TDD를 적용하는 경우, 아무래도 테스트 코드를 작성하고 → 테스트하고 → 통과...
+        Express 환경에서 세션을 사용하기 위해서는 express-session 라이브러리를 사용한다. 이때 세션 데이터는 쿠키 자체에 저장되지 않고, 세션 아이디만 저장되며, 세션 데이터는 서버 측에 저장된다. 즉, 서버를 재시작하면 (nodemon 사용시 파일을 저장할 때마다) 세션 데이터는 초기화되는 문제가 발생하는 데, 이때 서버 재시작과 상관없이...
       </p>
     </div>
 
@@ -889,8 +901,8 @@ npm install @types/uuid
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Aug 13, 2020, 12:00 AM +0800"
-  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
+    title="Sun, Nov  1, 2020, 12:00 AM +0800"
+  >Nov  1, 2020<i class="unloaded">2020-11-01T00:00:00+08:00</i>
 </span>
 
 
@@ -915,7 +927,7 @@ npm install @types/uuid
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="337 words">1 min</span>
+  title="475 words">2 min</span>
 
 
         <!-- page views -->
@@ -932,7 +944,7 @@ npm install @types/uuid
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-13-react-typescript-usereducer-ts2769-error/">React useReducer 사용시 발생하는 TS2769 에러 해결 방법</a>
+      <a href="/posts/2020-10-03-express-request-response-locals/">Express 미들웨어에서 App의 지역 변수 (response.locals) 공유하기</a>
     </h1>
 
     <div class="post-content">
@@ -943,11 +955,12 @@ npm install @types/uuid
 
 
 
-        에러 메시지
+        App (또는 서버)에서 사용하는 값을 HTML / Pug (View)에서 사용하고 싶거나, 서버에서 클라이언트 세션에 저장한 데이터를 HTML / Pug (View) 에서 접근하기 위해서는 해당 정보를 미들웨어에서 Hooking 해서 공유할 수 있게끔 해줘야 한다.
 
-No overload matches this call.
+app.use(localMiddlewares);
 
-Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any, initializer?: undefined): [any, DispatchWithoutAction]', gave the following...
+
+export function l...
       </p>
     </div>
 
@@ -970,8 +983,8 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Aug 13, 2020, 12:00 AM +0800"
-  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
+    title="Sat, Oct  3, 2020, 12:00 AM +0800"
+  >Oct  3, 2020<i class="unloaded">2020-10-03T00:00:00+08:00</i>
 </span>
 
 
@@ -996,7 +1009,7 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="204 words">1 min</span>
+  title="193 words">1 min</span>
 
 
         <!-- page views -->
@@ -1013,7 +1026,7 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-13-mongoose-update-data/">Mongoose 기존의 데이터를 가져와서 업데이트하기</a>
+      <a href="/posts/2020-10-02-express-protector-middleware/">Express 특정 경로 접근을 제한하는 미들웨어 만들기</a>
     </h1>
 
     <div class="post-content">
@@ -1024,13 +1037,10 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
 
 
-        export async function postEdit(request, response) {
-  const { id } = request.params;
-  const post = await Post.exists({ _id: id });
-  const { title, description } = request.body;
+        특정 경로에 대해, 로그인한 유저와 로그인하지 않은 유저에 대해 다른 처리 (페이지 제공, 경로 제공 등)를 하고 싶을 때는 미들웨어를 사용해 로그인한 유저만 접근 가능하거나, 로그인하지 않은 유저만 접근 가능하도록 접근을 제한할 수 있다.
 
-  if (!post) {
-  ...
+export function loggedInOnly(request, response, next) {
+  if ...
       </p>
     </div>
 
@@ -1053,8 +1063,8 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Aug 13, 2020, 12:00 AM +0800"
-  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
+    title="Fri, Oct  2, 2020, 12:00 AM +0800"
+  >Oct  2, 2020<i class="unloaded">2020-10-02T00:00:00+08:00</i>
 </span>
 
 
@@ -1079,7 +1089,7 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="260 words">1 min</span>
+  title="335 words">1 min</span>
 
 
         <!-- page views -->
@@ -1096,7 +1106,7 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-12-create-model-save/">Mongoose 클라이언트가 전달한 정보를 데이터베이스에 저장하기</a>
+      <a href="/posts/2020-10-01-express-middleware/">Express 미들웨어 (Middleware) 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -1107,19 +1117,17 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 
 
 
-        요약
+        전체 경로에 적용되는 미들웨어
 
+// middlewares
+app.use(logger);
+app.use(express.urlencoded({ extended: true }));
+app.use(localMiddlewares);
 
-  클라이언트가 서버측으로 어떤 정보를 전달 (POST)
-  서버는 해당 정보를 Mongoose 모델로 작성
-  작성된 모델을 데이터베이스에 추가
-
-
-클라이언트
-
-block content
-    form(method="POST")
-        input(name="title", placeholder="Title", type="text", r...
+// routers
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+...
       </p>
     </div>
 
@@ -1142,8 +1150,8 @@ block content
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Aug 12, 2020, 12:00 AM +0800"
-  >Aug 12, 2020<i class="unloaded">2020-08-12T00:00:00+08:00</i>
+    title="Thu, Oct  1, 2020, 12:00 AM +0800"
+  >Oct  1, 2020<i class="unloaded">2020-10-01T00:00:00+08:00</i>
 </span>
 
 
@@ -1168,7 +1176,7 @@ block content
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="237 words">1 min</span>
+  title="108 words">1 min</span>
 
 
         <!-- page views -->
@@ -1473,9 +1481,54 @@ block content
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page17/">17</a>
+        <a class="page-link btn-box-shadow" href="/page20/">20</a>
       </li>
     
 
@@ -1484,7 +1537,7 @@ block content
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>6</span>
-    <span class="text-muted">/ 17</span>
+    <span class="text-muted">/ 20</span>
   </li>
 
   <!-- right arrow -->
@@ -1537,27 +1590,27 @@ block content
         
         
         
+        <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-03-03-heroku-port/">Heroku code=H10 desc='App crashed' 에러 해결 방법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-04-19-es6-syntax-13-arrow-function/">모던 자바스크립트와 ES6 #3 Arrow Function</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
       
 
       </ul>
@@ -1771,220 +1824,6 @@ block content
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2039,120 +1878,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -2582,71 +2307,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2791,10 +2451,6 @@ block content
     
     
     
-      
-        
-        
-
   
     
     
@@ -2880,192 +2536,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3400,10 +2870,1137 @@ block content
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3532,6 +4129,12 @@ block content
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -3539,12 +4142,6 @@ block content
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
       </div>
@@ -3809,220 +4406,6 @@ block content
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4077,120 +4460,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -4620,71 +4889,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -4829,10 +5033,6 @@ block content
     
     
     
-      
-        
-        
-
   
     
     
@@ -4918,192 +5118,6 @@ block content
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5438,10 +5452,1137 @@ block content
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5565,6 +6706,12 @@ block content
         <a class="post-tag" href="/tags/mongodb/">mongodb</a>
       
         
+        <a class="post-tag" href="/tags/typescript/">typescript</a>
+      
+        
+        <a class="post-tag" href="/tags/error/">error</a>
+      
+        
         <a class="post-tag" href="/tags/git/">git</a>
       
         
@@ -5572,12 +6719,6 @@ block content
       
         
         <a class="post-tag" href="/tags/es6/">es6</a>
-      
-        
-        <a class="post-tag" href="/tags/mongoose/">mongoose</a>
-      
-        
-        <a class="post-tag" href="/tags/error/">error</a>
       
 
     </div> -->
