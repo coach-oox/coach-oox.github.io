@@ -1,6 +1,51 @@
 [
   
   {
+    "title": "CSS 특정 비율을 가지는 이미지 만들기 (aspect-ratio · object-fit)",
+    "url": "/posts/2021-06-25-css-aspect-ratio-object-fit/",
+    "categories": "css",
+    "tags": "css",
+    "date": "2021-06-25 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "사용하는 기술  aspect-ratio  object-fit사용 예시예전처럼 비율에 따라서 padding을 잡아주고 어쩌고 이딴거 없음. 쏘 이지.&amp;lt;div class=&quot;container&quot;&amp;gt;  &amp;lt;img src=&quot;./img.jpg&quot; /&amp;gt;&amp;lt;/div&amp;gt;.container {  width: 300px;  aspect-ratio: 1 / 1;}img {  width: 100%;  height: auto;  object-fit: c..."
+  },
+  
+  {
+    "title": "내가 사용하는 React 애플리케이션 파일 구조",
+    "url": "/posts/2021-06-22-react-application-file-structure/",
+    "categories": "react, development",
+    "tags": "react, convention",
+    "date": "2021-06-22 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "일반적으로 선호되는 리액트 애플리케이션의 파일 구조는 파일 유형에 따라 분류하는 것이다. 파일 유형에 따라 분류한다는 것은, 비슷한 파일끼리 묶는 것을 의미한다. 이 방법은 자주 함께 사용되는 파일들을 함께 보관하는 Colocation (코로케이션) 원칙에 의해 컴포턴트는 컴포넌트끼리, 또 그 내부에서 구분되는 라우트나 컴포넌트의 묶음으로 분류될 수 있다.사실 파일 구조를 어떻게 잡느냐는 혼자 작업하는지, 협업하는지, 프리랜서인지, 직장을 다니는지 등에 따라 (일반적으로 회사에는 어느 정도 정해진 규정이 있기 때문에 이런 부분..."
+  },
+  
+  {
+    "title": "절대 주소와 상대 주소의 이해 (슬래시의 차이)",
+    "url": "/posts/2021-06-21-web-absoulte-relative-path/",
+    "categories": "web",
+    "tags": "web, path, express, react",
+    "date": "2021-06-21 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "path 형식 (상대 주소)의 경우 현재 파일 위치를 기준으로 경로를 지정한다.function Something() {    return (        &amp;lt;div&amp;gt;            &amp;lt;img src=&#39;img/sample.png&#39;&amp;gt;        &amp;lt;/div&amp;gt;    )}위와 같은 앞에 슬래시가 없는 img/sample.png 경로를 가정해보자. 이 경우 현재 디렉토리를 (클라이언트라면 클라이언트를) 기준으로 서브 디렉토리인 img 안에 있는 ..."
+  },
+  
+  {
     "title": "React props.history.push(&#39;/&#39;)와 window.location.replace(&#39;/&#39;) 차이점",
     "url": "/posts/2021-06-17-react-props-history-push-window-location-replace/",
     "categories": "react",
