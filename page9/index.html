@@ -352,6 +352,89 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-08-17-pagination/">Mongoose 페이징 (Paginate) 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        전체 데이터 개수
+
+const posts = await Post.find({}).populate("owner");
+const totalCount = posts.length;
+
+
+라인 1과 같이 데이터베이스 검색 결과를 가져올 때, 결과를 담은 posts는 배열이 된다. (예외 처리 필요) 따라서 전체 게시글의 개수를 posts.length로 구할 수 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Aug 17, 2020, 12:00 AM +0800"
+  >Aug 17, 2020<i class="unloaded">2020-08-17T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="464 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-08-17-ssr-csr-react-next/">SPA · MPA · PWA · CSR · SSR에 대한 이해</a>
     </h1>
 
@@ -1086,89 +1169,6 @@ Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="204 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-13-mongoose-update-data/">Mongoose 기존의 데이터를 가져와서 업데이트하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        export async function postEdit(request, response) {
-  const { id } = request.params;
-  const post = await Post.exists({ _id: id });
-  const { title, description } = request.body;
-
-  if (!post) {
-  ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Thu, Aug 13, 2020, 12:00 AM +0800"
-  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="260 words">1 min</span>
 
 
         <!-- page views -->

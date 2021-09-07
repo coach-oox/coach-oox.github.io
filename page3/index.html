@@ -352,6 +352,89 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-05-23-typescript-type-assertion/">타입스크립트 타입 단언의 이해</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        다음과 같이 DOM API를 조작하고자 할 때, header에 추론된 타입은 HTMLDivElement | null이기 때문에 라인 2에서 에러가 발생한다.
+
+const header = document.querySelector("div");
+header.innerText = "Hello";
+
+
+이 경우 다음과 같이 header가 HTMLDivEleme...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, May 23, 2021, 12:00 AM +0800"
+  >May 23<i class="unloaded">2021-05-23T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="99 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-05-21-typescript-settup-webpack-ts-loader/">타입스크립트를 사용하기 위한 WebPack + ESLint 설정 방법</a>
     </h1>
 
@@ -1100,95 +1183,6 @@ Disallow lexical declarations in case/default clauses (no-case-declarations)
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="196 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-04-05-scss-css-loader/">Webpack SASS (SCSS) 사용법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        설치
-
-npm install sass -D
-npm install sass-loader -D
-npm install css-loader -D
-npm install mini-css-extract-plugin -D
-
-
-각각의 라이브러리가 하는 역할은 다음과 같다.
-
-
-  sass-loader : SCSS 파일을 CSS 파일로 변환
-  css-loader : ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Apr  5, 2021, 12:00 AM +0800"
-  >Apr  5<i class="unloaded">2021-04-05T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="205 words">1 min</span>
 
 
         <!-- page views -->

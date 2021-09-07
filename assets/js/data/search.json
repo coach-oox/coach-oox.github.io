@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)",
+    "url": "/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/",
+    "categories": "react",
+    "tags": "craco, webpack, react",
+    "date": "2021-07-01 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "CRA 프로젝트먼저 CRA로 세팅한 경우에는 비교적 간단하게 해결할 수 있다. 자바스크립트 환경이라면 jsconfig.json 파일을, 타입스크립트 환경이라면 tsconfig.json 파일을 만들고 다음 코드를 추가한다.{  &quot;compilerOptions&quot;: {    &quot;baseUrl&quot;: &quot;src&quot;  },  &quot;includes&quot;: [&quot;src&quot;]}CRACO를 사용한 별칭 사용법만약 절대 경로가 아니라 별칭 (Alias)을 사용하고 싶다면 Web..."
+  },
+  
+  {
     "title": "CSS 특정 비율을 가지는 이미지 만들기 (aspect-ratio · object-fit)",
     "url": "/posts/2021-06-25-css-aspect-ratio-object-fit/",
     "categories": "css",

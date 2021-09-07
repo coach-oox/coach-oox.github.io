@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2021-09-01T21:39:27+08:00</updated>
+  <updated>2021-09-07T22:12:59+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -17,6 +17,54 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)</title>
+    <link href="https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/" rel="alternate" type="text/html" title="React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)" />
+    <published>2021-07-01T00:00:00+08:00</published>
+  
+    <updated>2021-07-01T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/</id>
+    <content src="https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      CRA 프로젝트
+
+먼저 CRA로 세팅한 경우에는 비교적 간단하게 해결할 수 있다. 자바스크립트 환경이라면 jsconfig.json 파일을, 타입스크립트 환경이라면 tsconfig.json 파일을 만들고 다음 코드를 추가한다.
+
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "includes": ["src"]
+}
+
+
+CRACO를 사용한 별칭 사용법
+
+만약 절대 경로가 아니라 별칭 (Alias)을 사용하고 싶다면 WebPack 설정을 커스터마이징 하면 되는데, eject 하거나 (별로 추천하지 않음) 다음 라이브러리를 설치해 WebPack 설정을 오버라이드하면 된다. 이때 craco를 선호하지 않는다면 customize-cra, react-app-rewire...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -198,53 +246,6 @@ function Something() {
       props.history.push('/')는 새로운 HTTP 요청을 생성하지 않는다. 반면에 window.location.replace()는 새로운 요청을 생성한다. i.g., window.location.replace() 또는 window.location.href을 사용할 경우 완전히 새로고침되고, 클라이언트 측에 상태는 초기화 된다.
 
 리액트에서 사용자를 다른 페이지로 이동시키기 위해서 일반적으로 props.history.push()를 사용한다. 이 history에는 사용자가 여태까지 타고온 경로가 스택처럼 다 쌓여이게 되는데, 여기다 새로운 경로를 push()함으로써 최신 경로를 원하는 위치로 지정하게 된다. history.replace()의 경우, 새로운 history를 생성하는 것이 아니라 현...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법</title>
-    <link href="https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/" rel="alternate" type="text/html" title="React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법" />
-    <published>2021-06-16T00:00:00+08:00</published>
-  
-    <updated>2021-06-16T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/</id>
-    <content src="https://dohaelee.github.io/posts/2021-06-16-react-props-withrouter/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="react" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      withRouter란 라우트가 아닌 컴포넌트에서 location, history 등을 props로 전달받기 위해서 사용하는 HoC를 의미한다. 다음 코드 예제와 같이 사용한다.
-
-import React from "react";
-import { withRouter } from "react-router-dom";
-
-const Something = withRouter((props) =&amp;gt; {
-  /* ... */
-});
-
-export default Something();
-
-
-e.g., React Styled-Component 현재 경로 메뉴 스타일 강조하기
-
     </summary>
   
 

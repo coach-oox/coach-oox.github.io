@@ -352,6 +352,96 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-05-29-react-component/">React 컴포넌트 (Component)란?</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        HTML을 반환하는 함수.
+
+function App() {
+  return &lt;div className="App"&gt;Hello&lt;/div&gt;;
+}
+
+export default App;
+
+
+예시
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, May 29, 2020, 12:00 AM +0800"
+  >May 29, 2020<i class="unloaded">2020-05-29T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="269 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-05-19-javascript-map-weakmap/">자바스크립트 Map · WeakMap 자료구조</a>
     </h1>
 
@@ -1122,99 +1212,6 @@ const obj = {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="46 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-12-javascript-merge-objects/">자바스크립트 객체 · 배열 병합하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        function mergetObjects(obj1, obj2) {
-  return { ...obj1, ...obj2 };
-}
-
-const obj1 = {
-  name: "John",
-  age: 21,
-};
-
-const obj2 = {
-  from: "Canada",
-};
-
-const obj3 = mergetObjects(obj1, obj2);
-
-
-배...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, May 12, 2020, 12:00 AM +0800"
-  >May 12, 2020<i class="unloaded">2020-05-12T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="60 words">1 min</span>
 
 
         <!-- page views -->

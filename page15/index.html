@@ -352,6 +352,99 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-05-12-javascript-merge-objects/">자바스크립트 객체 · 배열 병합하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        function mergetObjects(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+const obj1 = {
+  name: "John",
+  age: 21,
+};
+
+const obj2 = {
+  from: "Canada",
+};
+
+const obj3 = mergetObjects(obj1, obj2);
+
+
+배...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, May 12, 2020, 12:00 AM +0800"
+  >May 12, 2020<i class="unloaded">2020-05-12T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="60 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-05-11-javascript-promise-axios/">자바스크립트 Promise와 Axios</a>
     </h1>
 
@@ -1131,92 +1224,6 @@ const { name, age } = obj;
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="190 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-06-socket-io-real-time-chat/">Socket.io 실시간 채팅 구현 예제 #1</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        설명은 주석으로 대신함.
-
-Server
-
-// 서버 연결시 새로운 소켓 생성
-// 서버는 모든 이벤트에 대해 열려 있음
-ioServer.on("connection", (socket) =&gt; {
-  // newMessage 이벤트에 대해 듣고 있음
-  socket.on("newMessage", ({ message }) =&gt; {
-    // 접속...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, May  6, 2020, 12:00 AM +0800"
-  >May  6, 2020<i class="unloaded">2020-05-06T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="324 words">1 min</span>
 
 
         <!-- page views -->

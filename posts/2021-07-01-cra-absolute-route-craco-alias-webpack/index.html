@@ -29,23 +29,24 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Dohae Lee" />
+<meta property="og:title" content="React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="“개발자 이도해 기술 블로그”" />
-<meta property="og:description" content="“개발자 이도해 기술 블로그”" />
-<link rel="canonical" href="https://dohaelee.github.io/page20/" />
-<meta property="og:url" content="https://dohaelee.github.io/page20/" />
+<meta name="description" content="CRA 프로젝트" />
+<meta property="og:description" content="CRA 프로젝트" />
+<link rel="canonical" href="https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/" />
+<meta property="og:url" content="https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/" />
 <meta property="og:site_name" content="Dohae Lee" />
-<link rel="prev" href="https://dohaelee.github.io/page19" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-01T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dohae Lee" />
+<meta property="twitter:title" content="React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"url":"https://dohaelee.github.io/page20/","headline":"Dohae Lee","description":"“개발자 이도해 기술 블로그”","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/","headline":"React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)","dateModified":"2021-07-01T00:00:00+08:00","datePublished":"2021-07-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/"},"description":"CRA 프로젝트","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Dohae Lee
+  <title>React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack) | Dohae Lee
   </title>
 
   <!--
@@ -93,6 +94,9 @@
 
 
 
+  <!-- Manific Popup -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+
 
 
   <!-- JavaScript -->
@@ -126,7 +130,7 @@
   <ul class="w-100">
 
     <!-- home -->
-    <li class="nav-item active">
+    <li class="nav-item">
       <a href="/" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>HOME</span>
@@ -252,8 +256,37 @@
     
 
     
-      <!-- index page -->
-      <span>Home</span>
+
+      
+
+        
+          <span>
+            <a href="/">
+              Home
+            </a>
+          </span>
+
+        
+
+      
+
+        
+
+          
+
+        
+
+      
+
+        
+
+          
+            <span>React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)</span>
+          
+
+        
+
+      
 
     
 
@@ -262,7 +295,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      Dohae Lee
+      Post
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -318,80 +351,22 @@
 <!-- return -->
 
 <div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
-    
-      
 
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
 
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
+      <h1 data-toc-skip>React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)</h1>
 
-<!-- Get pinned posts -->
-
-
-
-
-
-
-
-<!-- Get default posts -->
-
-
-
-
-
-
-
-
-
-
-<div id="post-list">
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-03-git-branch-commands/">Git Branch 관련 명령어 정리</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
+      <div class="post-meta text-muted d-flex flex-column">
         
-
-
-
-
-
-        브랜치 확인
-
-# 브랜치 확인
-$ git branch
-
-# 브랜치 상세 정보까지 확인
-$ git branch -v
-
-
-브랜치 상태 확인
-
-# Merged 상태 브랜치 확인
-$ git branch --merged
-
-# Merged 되지 않은 브랜치 확인
-$ git branch --no-merged
-
-
-브랜치 생성
-
-$ git branch newBranc...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
+        <!-- Published date and author -->
+        <div>
+          <span class="semi-bold">
+            Dohae Lee
+          </span>
+          
+          <!--
   Date format snippet
   See: /assets/js/_utils/timeage.js
 -->
@@ -401,18 +376,32 @@ $ git branch newBranc...
 
 
 
+  on
+
 <span class="timeago "
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Mar  3, 2020, 12:00 AM +0800"
-  >Mar  3, 2020<i class="unloaded">2020-03-03T00:00:00+08:00</i>
+    title="Thu, Jul  1, 2021, 12:00 AM +0800"
+  >Jul  1<i class="unloaded">2021-07-01T00:00:00+08:00</i>
 </span>
 
+        </div>
 
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
+        <div>
+          
+          <span>
+            <a href="/categories/react">react</a>
+          </span>
+          
+        </div>
+
+        <div>
+          <!-- lastmod -->
+          
+
+          <!-- read time -->
+          <!--
   Calculate the post's reading time, and display the word count in tooltip
  -->
 
@@ -431,988 +420,205 @@ $ git branch newBranc...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="138 words">1 min</span>
+  title="547 words">3 min read</span>
 
 
-        <!-- page views -->
+          <!-- page views -->
+          
+
+        </div>
+
+      </div> <!-- .post-meta -->
+
+      <div class="post-content">
+
         
+
+        <h2 id="cra-프로젝트">CRA 프로젝트</h2>
+
+<p>먼저 CRA로 세팅한 경우에는 비교적 간단하게 해결할 수 있다. 자바스크립트 환경이라면 <code class="language-plaintext highlighter-rouge">jsconfig.json</code> 파일을, 타입스크립트 환경이라면 <code class="language-plaintext highlighter-rouge">tsconfig.json</code> 파일을 만들고 다음 코드를 추가한다.</p>
+
+<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"includes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="craco를-사용한-별칭-사용법">CRACO를 사용한 별칭 사용법</h3>
+
+<p>만약 절대 경로가 아니라 별칭 (Alias)을 사용하고 싶다면 WebPack 설정을 커스터마이징 하면 되는데, <code class="language-plaintext highlighter-rouge">eject</code> 하거나 (별로 추천하지 않음) 다음 라이브러리를 설치해 WebPack 설정을 오버라이드하면 된다. 이때 <code class="language-plaintext highlighter-rouge">craco</code>를 선호하지 않는다면 <a href="https://github.com/arackaf/customize-cra">customize-cra</a>, <a href="https://www.npmjs.com/package/react-app-rewired">react-app-rewired</a>, <a href="https://www.npmjs.com/package/react-app-rewire-alias">react-app-rewire-alias</a>를 고려해 볼 수도 있다. <a href="https://www.npmtrends.com/craco-alias-vs-react-app-rewire-alias">NPM Trends</a>를 기준으로 보자면, 수치상 거의 비슷하기 때문에 뭘 쓰던 상관은 없을 것 같은데, 내 경우 <code class="language-plaintext highlighter-rouge">craco</code> 라인이 좀 더 사용하는 데 익숙하고 가벼워서 선호한다.</p>
+
+<div lang="bash" class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>yarn add @craco/craco craco-alias <span class="nt">--dev</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">craco.config.js</code> 파일을 만들고 다음 항목을 추가한다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">CracoAlias</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">craco-alias</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">plugin</span><span class="p">:</span> <span class="nx">CracoAlias</span><span class="p">,</span>
+      <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">source</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jsconfig</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">jsConfigPath</span><span class="p">:</span> <span class="dl">"</span><span class="s2">jsconfig.paths.json</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>다음으로 <code class="language-plaintext highlighter-rouge">jsconfig.json</code> 파일을 만들어 다음 항목을 추가한다.</p>
+
+<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/*"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"@components/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/components/*"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p>이렇게 하면 <code class="language-plaintext highlighter-rouge">../../components/buttons/Submit</code>과 같이 써야 했던 경로를 좀 더 직관적으로 <code class="language-plaintext highlighter-rouge">@components/buttons/Submit</code>과 같이 사용할 수 있다.</p>
+
+<h2 id="cra-프로젝트가-아닌-경우">CRA 프로젝트가 아닌 경우</h2>
+
+<p>WebPack을 사용한다는 가정 하에, <code class="language-plaintext highlighter-rouge">webpack.config.js</code> 파일에 다음과 같은 항목을 추가한다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">alias</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">@</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@apis</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">reolsve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/apis</span><span class="dl">"</span><span class="p">),</span>
+      <span class="dl">"</span><span class="s2">@components</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/components</span><span class="dl">"</span><span class="p">),</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>에디터에서 경로 추적 기능을 사용하기 위해서 <code class="language-plaintext highlighter-rouge">jsconfig.json</code> 또는 <code class="language-plaintext highlighter-rouge">tsconfig.json</code> 파일에 다음과 같은 항목을 추가한다. (<code class="language-plaintext highlighter-rouge">alias</code>가 어디를 가리키는지를 명시한다.)</p>
+
+<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./src/*"</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></div></div>
+
+
       </div>
 
-      
+      <div class="post-tail-wrapper text-muted pb-5">
 
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-02-git-branch/">Git Branch 기본 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
+        <!-- categories -->
         
 
-
-
-
-
-        Branch
-
-
-  버전 관리 시스템의 기본
-  Origin 코드와 별개로 독립된 개발을 진행하기 위해 사용
-
-
-맨 처음 커밋을 할 때, Git은 master (main)라는 이름을 가진 브랜치를 만들고 자동으로 가장 마지막 커밋을 가리키게 (포인터같이) 한다. 다음과 같은 상황을 가정해보자.
-
-
-  최초 커밋
-  develop이라는 브랜치 생성
-
-
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Mar  2, 2020, 12:00 AM +0800"
-  >Mar  2, 2020<i class="unloaded">2020-03-02T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="609 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-01-github-release/">GitHub Release 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
+        <div class="post-meta mb-3">
+          <i class="far fa-folder-open fa-fw mr-1"></i>
+          
+            <a href='/categories/react/'>react</a>
+        </div>
         
 
-
-
-
-
-        새로운 버전 릴리즈하는 방법
-
-릴리즈란 개발 중인 프로젝트가 배포 준비가 되었을 때 (Alpha / Beta / Major) 패키지를 배포하는 것을 의미한다. GitHub에서 릴리즈하기 위해서는 저장소 페이지의 사이드바에서 Create a new release 버튼을 클릭하고, 다음을 참조하여 항목을 채운다.
-
-Tag Version
-
-
-  v1.0
- ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Mar  1, 2020, 12:00 AM +0800"
-  >Mar  1, 2020<i class="unloaded">2020-03-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="204 words">1 min</span>
-
-
-        <!-- page views -->
+        <!-- tags -->
         
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-01-git-flow/">Git 버전 관리의 Flow 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
+          
+          <a href="/tags/craco/"
+            class="post-tag no-text-decoration" >craco</a>
+          
+          <a href="/tags/webpack/"
+            class="post-tag no-text-decoration" >webpack</a>
+          
+          <a href="/tags/react/"
+            class="post-tag no-text-decoration" >react</a>
+          
+          </div>
         
 
+        <!-- <div class="post-tail-bottom
+          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+          <div class="license-wrapper">
+          
+            
+            This post is licensed under 
+            <a href="https://creativecommons.org/licenses/by/4.0/">
+              CC BY 4.0
+            </a>
+             by the author.
+          
+          </div> -->
 
+        </div><!-- .post-tail-bottom -->
 
+      </div><!-- div.post-tail -->
 
+    </div> <!-- .post -->
 
-        Git 작업 흐름
 
-Git은 파일을 세 가지 상태로 관리한다.
+  </div> <!-- #post-wrapper -->
 
-
-
-
-  Commited
-  Modified
-  Staged
-
-
-Commited란 데이터 (파일)가 로컬 저장소에 저장된 상태를 의미하고, Modified는 파일을 수정했지만 아직 Staging Area에 추가하지 않은 상태를 의미하며, Staged는 수정한 파일을 Staging Area...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Mar  1, 2020, 12:00 AM +0800"
-  >Mar  1, 2020<i class="unloaded">2020-03-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="205 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-03-01-git-commit/">Git Commit 기본 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Commit
-
-
-  작업에 이력을 기록해서 저장소로 올리는 것
-  Staging Area에 있는 Tracked 파일들을 저장소에 저장
-
-
-즉, git add 한 파일은 버전 관리되고 있는 파일 (Tracked)
-
-git commit
-
-$ git add .
-$ git commit -m "Message"
-# Shortcut: git commit -am "...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Mar  1, 2020, 12:00 AM +0800"
-  >Mar  1, 2020<i class="unloaded">2020-03-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="139 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-01-08-react-emotion-global-style/">React Emotion 글로벌 공통 스타일 적용하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        먼저 글로벌로 적용하려는 스타일을 작성한다.
-
-import { css } from "@emotion/react";
-
-const reset = css`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
-
-export default reset;
-
-
-App() 컴포넌트에서 작성한...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jan  8, 2020, 12:00 AM +0800"
-  >Jan  8, 2020<i class="unloaded">2020-01-08T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="198 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-01-08-react-emotion-error-ts2322/">React Emotion TS2322: Property 'css' does not exist 에러 해결 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        증상
-
-타입스크립트로 세팅된 리액트에서 @emotion/react를 사용하려고 할 때, css를 사용할 수 없는 경우 (i.g., 정상적으로 import되지 않는 경우) 다음과 같은 에러 메시지가 출력된다.
-
-Type '{ children: Element[]; css: SerializedStyles; }' is not assignable to type...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jan  8, 2020, 12:00 AM +0800"
-  >Jan  8, 2020<i class="unloaded">2020-01-08T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="117 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-01-07-error-report-chrome-navigator-geolocation/">navigator.geolocation 동작하지 않는 경우 해결 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        증상
-
-navigator.geolocation.getCurrentPosition() 메소드 동작하지 않는 경우. (정확히는 동작하지 않는 것처럼 보임.) 웹 페이지가 로드되면 위치 정보 사용을 묻는 팝업은 정상적으로 뜨고, 취소를 눌렀을 때 errorCallBack은 동작하지만 successCallBack은 내부 로직은 동작하지 않는 경우.
-
-원인 분...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jan  7, 2020, 12:00 AM +0800"
-  >Jan  7, 2020<i class="unloaded">2020-01-07T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="388 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-</div> <!-- #post-list -->
-
-
-  <!--
-  The paginator for post list on HomgPage.
--->
-
-<ul class="pagination align-items-center mt-4 mb-0 pl-lg-2">
-  <!-- left arrow -->
-  
-
-  <li class="page-item ">
-    <a class="page-link btn-box-shadow" href="/page19" aria-label="previous-page">
-      <i class="fas fa-angle-left"></i>
-    </a>
-  </li>
-
-  <!-- page numbers -->
-  
   
 
   
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- show number -->
-      <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/">1</a>
-      </li>
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-        <li class="page-item disabled">
-          <span class="page-link btn-box-shadow">...</span>
-        </li>
-        
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- hide number -->
-      
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- show number -->
-      <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page18/">18</a>
-      </li>
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- show number -->
-      <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page19/">19</a>
-      </li>
-    
-
-  
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- show number -->
-      <li class="page-item  active">
-        <a class="page-link btn-box-shadow" href="/page20/">20</a>
-      </li>
-    
-
-  
-
-  <!-- mobile pagination -->
-  <li class="page-index align-middle">
-    <span>20</span>
-    <span class="text-muted">/ 20</span>
-  </li>
-
-  <!-- right arrow -->
-  
-
-  <li class="page-item disabled">
-    <a class="page-link btn-box-shadow" href="#" aria-label="next-page">
-      <i class="fas fa-angle-right"></i>
-    </a>
-  </li>
-
-</ul> <!-- .pagination -->
-
-
-
-    
-    </div> <!-- #page -->
-  </div><!-- .col-12 -->
 
   <!--
   The Pannel on right side (Desktop views)
@@ -4026,9 +3232,52 @@ navigator.geolocation.getCurrentPosition() 메소드 동작하지 않는 경우.
 </div> <!-- #panel-wrapper -->
 
 
+</div> <!-- .row -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/2021-06-25-css-aspect-ratio-object-fit/" class="btn btn-outline-primary"
+    prompt="Older">
+    <p>CSS 특정 비율을 가지는 이미지 만들기 (aspect-ratio · object-fit)</p>
+  </a>
+  
+
+  
+  <span class="btn btn-outline-primary disabled"
+    prompt="Newer">
+    <p>-</p>
+  </span>
+  
+
 </div>
 
 
+    <div class="disqus">
+      <script
+  src="https://utteranc.es/client.js"
+  repo="dohaelee/blog-comments"
+  issue-term="url"
+  label="comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </div>
+
+    </div> <!-- #post-extend-wrapper -->
+
+  </div> <!-- .col-* -->
+
+</div> <!-- .row -->
 
  <!--
   The Footer
@@ -6681,11 +5930,14 @@ SimpleJekyllSearch({
 
 
 
+  <!-- image lazy-loading & popup -->
+  <script src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script>
 
 
 
 
-<script defer src="/assets/js/dist/home.min.js"></script>
+
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 

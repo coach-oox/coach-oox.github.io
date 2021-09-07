@@ -352,6 +352,92 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-07-06-pug-mixins/">Pug 기초 #6 재사용 가능한 함수</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Mixin은 재사용을 위한 모듈인데, 함수처럼 인자를 받아 처리할 수 있다.
+
+
+  See the Pen 
+   by Dohae Lee (@dohaelee)
+  on CodePen.
+
+
+
+사용할 때는 해당 파일을 include 한 다음 +widget()와 같이 사용한다. 위 예제는 배열로 표현된 여러 개의 위젯 객체를 가져와 반복문을 통해 각각의 위젯...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Jul  6, 2020, 12:00 AM +0800"
+  >Jul  6, 2020<i class="unloaded">2020-07-06T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="109 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-07-05-pug-partials/">Pug 기초 #5 중복되는 HTML 부분 모듈화</a>
     </h1>
 
@@ -1116,94 +1202,6 @@ function renderMembers(member) {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="67 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-09-react-component-life-cycle/">React 컴포넌트의 라이프 사이클</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Mounting
-
-Mounting은 컴포넌트가 탄생하는 단계이며, 다음과 같은 순서로 새로운 컴포넌트가 생성된다.
-
-
-  constructor() : 자바스크립트에서 클래스를 만들 때 생성되는 생성자 함수.
-  static getDerivedStateFromProps()
-  render()
-  componentDidMount()
-
-
-class App ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jun  9, 2020, 12:00 AM +0800"
-  >Jun  9, 2020<i class="unloaded">2020-06-09T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="348 words">1 min</span>
 
 
         <!-- page views -->

@@ -352,6 +352,93 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-09-16-express-session-login-logout/">Express 세션을 사용한 로그인 기능 구현</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        로그인 처리 예시
+
+
+  로그인 = 사용자를 인가하는 것을 의미한다.
+  인가됨을 어떻게 유지할 것인가? = 세션을 사용한다.
+
+
+export async function postLogin(request, response) {
+  // ... 생략 ...
+  // 데이터베이스에 해당 사용자가 있고, 패스워드가 일치할 경우 로그인 처리
+  // 세션에 인...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Sep 16, 2020, 12:00 AM +0800"
+  >Sep 16, 2020<i class="unloaded">2020-09-16T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="255 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-09-15-express-update-session/">Express 클라이언트의 세션 정보를 업데이트하는 방법</a>
     </h1>
 
@@ -1114,89 +1201,6 @@ const string = "Hello World!";
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="280 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-17-pagination/">Mongoose 페이징 (Paginate) 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        전체 데이터 개수
-
-const posts = await Post.find({}).populate("owner");
-const totalCount = posts.length;
-
-
-라인 1과 같이 데이터베이스 검색 결과를 가져올 때, 결과를 담은 posts는 배열이 된다. (예외 처리 필요) 따라서 전체 게시글의 개수를 posts.length로 구할 수 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Aug 17, 2020, 12:00 AM +0800"
-  >Aug 17, 2020<i class="unloaded">2020-08-17T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="464 words">2 min</span>
 
 
         <!-- page views -->

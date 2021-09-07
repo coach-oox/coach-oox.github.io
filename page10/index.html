@@ -352,6 +352,89 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-08-13-mongoose-update-data/">Mongoose 기존의 데이터를 가져와서 업데이트하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        export async function postEdit(request, response) {
+  const { id } = request.params;
+  const post = await Post.exists({ _id: id });
+  const { title, description } = request.body;
+
+  if (!post) {
+  ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Aug 13, 2020, 12:00 AM +0800"
+  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="260 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-08-12-create-model-save/">Mongoose 클라이언트가 전달한 정보를 데이터베이스에 저장하기</a>
     </h1>
 
@@ -1083,88 +1166,6 @@ const postSchema = new mongoose.Schema({
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="156 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-03-mongodb-error-e1100-duplicate-key-error/">MongoDB E11000 duplicate key 에러 해결 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        증상
-
-UnhandledPromiseRejectionWarning: MongoError: E11000 duplicate key error collection: project.users index: usernname_1 dup key: { usernname: null }
-
-
-Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Aug  3, 2020, 12:00 AM +0800"
-  >Aug  3, 2020<i class="unloaded">2020-08-03T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="124 words">1 min</span>
 
 
         <!-- page views -->

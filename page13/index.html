@@ -352,6 +352,94 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-06-09-react-component-life-cycle/">React 컴포넌트의 라이프 사이클</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Mounting
+
+Mounting은 컴포넌트가 탄생하는 단계이며, 다음과 같은 순서로 새로운 컴포넌트가 생성된다.
+
+
+  constructor() : 자바스크립트에서 클래스를 만들 때 생성되는 생성자 함수.
+  static getDerivedStateFromProps()
+  render()
+  componentDidMount()
+
+
+class App ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Jun  9, 2020, 12:00 AM +0800"
+  >Jun  9, 2020<i class="unloaded">2020-06-09T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="348 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-06-08-react-sharing-props-between-routes/">React Routes 사이에 Props를 공유하는 방법</a>
     </h1>
 
@@ -1116,96 +1204,6 @@ function App() {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="187 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-29-react-component/">React 컴포넌트 (Component)란?</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        HTML을 반환하는 함수.
-
-function App() {
-  return &lt;div className="App"&gt;Hello&lt;/div&gt;;
-}
-
-export default App;
-
-
-예시
-
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, May 29, 2020, 12:00 AM +0800"
-  >May 29, 2020<i class="unloaded">2020-05-29T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="269 words">1 min</span>
 
 
         <!-- page views -->

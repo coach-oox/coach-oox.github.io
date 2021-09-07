@@ -352,6 +352,92 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-06-11-mongoose-schema-pre-arrow-function-this-error/">Mongoose Schema.pre 함수 사용시 this 바인딩 문제</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        다음과 같이 화살표 함수를 사용할 경우, this가 상위 스코프를 가리키기 때문에 의도한대로 ‘객체 자체’에 바인딩이 안되는 문제가 발생한다.
+
+userSchema.pre("save", () =&gt; {
+  /* ... */
+});
+
+
+따라서 다음과 같이 function 키워드를 사용해 함수를 만들어야 한다.
+
+userSchema.pre("save"...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jun 11, 2021, 12:00 AM +0800"
+  >Jun 11<i class="unloaded">2021-06-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="278 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-06-11-yarn-worksapce/">Yarn Workspace 기본 사용법</a>
     </h1>
 
@@ -1113,89 +1199,6 @@ interface A {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="184 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-05-23-typescript-type-assertion/">타입스크립트 타입 단언의 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        다음과 같이 DOM API를 조작하고자 할 때, header에 추론된 타입은 HTMLDivElement | null이기 때문에 라인 2에서 에러가 발생한다.
-
-const header = document.querySelector("div");
-header.innerText = "Hello";
-
-
-이 경우 다음과 같이 header가 HTMLDivEleme...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, May 23, 2021, 12:00 AM +0800"
-  >May 23<i class="unloaded">2021-05-23T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="99 words">1 min</span>
 
 
         <!-- page views -->
