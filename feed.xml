@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2021-09-07T22:12:59+08:00</updated>
+  <updated>2021-09-08T22:05:18+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -17,6 +17,94 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>React 부모 컴포넌트 값을 자식 컴포넌트에서 업데이트 해야 하는 경우</title>
+    <link href="https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/" rel="alternate" type="text/html" title="React 부모 컴포넌트 값을 자식 컴포넌트에서 업데이트 해야 하는 경우" />
+    <published>2021-07-03T00:00:00+08:00</published>
+  
+    <updated>2021-07-03T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/</id>
+    <content src="https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  부모 컴포넌트는 서버를 통해 최신 데이터베이스 정보를 패치 받는다.
+  해당 정보는 useState()를 사용해 부모 컴포넌트에서 관리한다. (정보가 업데이트되면 다시 그려질 수 있도록)
+  부모 컴포넌트는 해당 정보를 각각 하나씩 표현하기 위해 반복적으로 자식 컴포넌트를 생성하고, 자식 컴포넌트로 해당 정보를 보낸다.
+  이때 또 다른 자식 컴포넌트에서 해당 정보를 업데이트해야 할 경우. 정보가 업데이트 되었음을 자식 컴포넌트에서 부모 컴포넌트에 알릴 수 있어야 한다.
+
+
+이런 경우를 글로 설명하면 장황하지만, 생각보다 꽤 흔하게 마주할 수 있는 상황이다. 좀 더 쉬운 가정을 위해 간단한 예제에 위 상황을 대입해보자. 다음 예제에서 Parent 컴포넌트는 서버에서 최신 정보를 패치 받고, 그 정...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법</title>
+    <link href="https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/" rel="alternate" type="text/html" title="Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법" />
+    <published>2021-07-02T00:00:00+08:00</published>
+  
+    <updated>2021-07-02T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/</id>
+    <content src="https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="node" />
+    
+    <category term="express" />
+    
+    <category term="mongodb" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      newComment.populate("owner");
+
+
+이런 모습의 구문을 질문으로 받는 경우, 열에 아홉은 populate()가 (일반적으로 find() 등을 실행할 때 뒤에 붙이는 경우와는 달리) 실행되지 않았기 때문에 발생하는 문제이다. 근데 최근 이와 관련된 수업을 원격으로 진행하는데, 어떤 사람은 된다 그러고 어떤 사람은 안된다 그래서 굉장히 애를 먹었던 경험이 있다. 진도를 나가야해서 답변을 미루고 수업이 끝난 뒤 찾아보니 버전 차이에서 생기는 문제였다.
+
+Mongoose 버전 6 이전
+
+Mongoose 버전을 v6.0.5 이하 버전으로 사용하는 경우, execPopulate()를 사용해서 populate()를 실행시켜 주면 해결 된다. 예를 들면 다음과 같다.
+
+let newComment...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -160,92 +248,6 @@ img {
       일반적으로 선호되는 리액트 애플리케이션의 파일 구조는 파일 유형에 따라 분류하는 것이다. 파일 유형에 따라 분류한다는 것은, 비슷한 파일끼리 묶는 것을 의미한다. 이 방법은 자주 함께 사용되는 파일들을 함께 보관하는 Colocation (코로케이션) 원칙에 의해 컴포턴트는 컴포넌트끼리, 또 그 내부에서 구분되는 라우트나 컴포넌트의 묶음으로 분류될 수 있다.
 
 사실 파일 구조를 어떻게 잡느냐는 혼자 작업하는지, 협업하는지, 프리랜서인지, 직장을 다니는지 등에 따라 (일반적으로 회사에는 어느 정도 정해진 규정이 있기 때문에 이런 부분을 걱정할 필요는 없다.) 다르고, 정해진 정답은 없다. 하지만 이 부분이 의외로 꽤 많이 받는 질문 중 하나라서, 생각난김에 내가 보편적인 상황에서 사용하는 파일 구조를 소개...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>절대 주소와 상대 주소의 이해 (슬래시의 차이)</title>
-    <link href="https://dohaelee.github.io/posts/2021-06-21-web-absoulte-relative-path/" rel="alternate" type="text/html" title="절대 주소와 상대 주소의 이해 (슬래시의 차이)" />
-    <published>2021-06-21T00:00:00+08:00</published>
-  
-    <updated>2021-06-21T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-06-21-web-absoulte-relative-path/</id>
-    <content src="https://dohaelee.github.io/posts/2021-06-21-web-absoulte-relative-path/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="web" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      path 형식 (상대 주소)의 경우 현재 파일 위치를 기준으로 경로를 지정한다.
-
-function Something() {
-    return (
-        &amp;lt;div&amp;gt;
-            &amp;lt;img src='img/sample.png'&amp;gt;
-        &amp;lt;/div&amp;gt;
-    )
-}
-
-
-위와 같은 앞에 슬래시가 없는 img/sample.png 경로를 가정해보자. 이 경우 현재 디렉토리를 (클라이언트라면 클라이언트를) 기준으로 서브 디렉토리인 img 안에 있는 sample.png 파일을 가져온다.
-
-function Something() {
-    return (
-        &amp;lt;div&amp;gt;
-            &amp;lt;img src='/img/sample.png'&amp;g...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React props.history.push('/')와 window.location.replace('/') 차이점</title>
-    <link href="https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/" rel="alternate" type="text/html" title="React props.history.push('/')와 window.location.replace('/') 차이점" />
-    <published>2021-06-17T00:00:00+08:00</published>
-  
-    <updated>2021-06-17T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/</id>
-    <content src="https://dohaelee.github.io/posts/2021-06-17-react-props-history-push-window-location-replace/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="react" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      props.history.push('/')는 새로운 HTTP 요청을 생성하지 않는다. 반면에 window.location.replace()는 새로운 요청을 생성한다. i.g., window.location.replace() 또는 window.location.href을 사용할 경우 완전히 새로고침되고, 클라이언트 측에 상태는 초기화 된다.
-
-리액트에서 사용자를 다른 페이지로 이동시키기 위해서 일반적으로 props.history.push()를 사용한다. 이 history에는 사용자가 여태까지 타고온 경로가 스택처럼 다 쌓여이게 되는데, 여기다 새로운 경로를 push()함으로써 최신 경로를 원하는 위치로 지정하게 된다. history.replace()의 경우, 새로운 history를 생성하는 것이 아니라 현...
     </summary>
   
 

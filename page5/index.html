@@ -352,6 +352,181 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Bucket 생성
+
+AWS S3 Bucket 생성.
+
+IAM User 생성
+
+AWS_ID = 123123;
+AWS_SECRET = 123123;
+
+
+IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 후 .env 파일에 (사실 개발 환경에서는 로컬에 저장하면 되고, Heroku에서만 AWS로 저장하면 되기 때문에 .en...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Feb 12, 2021, 12:00 AM +0800"
+  >Feb 12<i class="unloaded">2021-02-12T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="507 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Commit 규칙
+
+$ git commit -m "Prefix: Message (#issue)"
+
+
+
+  Prefix: Message 형식으로 작성한다.
+  접두사는 모두 소문자로 작성한다.
+  접두사와 콜론 (:)은 띄어쓰지 않는다.
+  콜론과 메시지는 한 칸 띄어쓴다.
+  관련된 이슈 번호는 맨 뒤에 괄호 (())안에 작성한다.
+  메시지와 이슈 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Feb  4, 2021, 12:00 AM +0800"
+  >Feb  4<i class="unloaded">2021-02-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="590 words">3 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-02-03-branch-strategy/">내가 사용하는 Git 브랜치 전략 (Branch Strategy)</a>
     </h1>
 
@@ -1037,183 +1212,6 @@ class Rectangle {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="265 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-19-typescript-types/">타입스크립트 기초 토막 정리 #1 타입 지정</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        파라미터 타입 지정
-
-function greeting(name: string, age: number, gender: string) {
-  console.log(`${name}: ${age} years, ${gender}.`);
-}
-
-greeting("Jack", "24", "male");
-
-export {};
-
-
-타입스크립트에서는 파라미터의 타입을 위...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Dec 19, 2020, 12:00 AM +0800"
-  >Dec 19, 2020<i class="unloaded">2020-12-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="214 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-18-typescript-setting-up/">타입스크립트를 사용하기 위한 기본 세팅 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        설치
-
-npm install -g typescript
-
-
-먼저 typescript를 Global로 설치한다. VS Code를 사용한다면, EsLint 확장을 설치한다. (TsLint 확장은 지원이 중단 되었기 때문에 더이상 사용되지 않는다.)
-
-설정
-
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Dec 18, 2020, 12:00 AM +0800"
-  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="348 words">1 min</span>
 
 
         <!-- page views -->

@@ -352,6 +352,179 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-06-02-react-class-component-state/">React 클래스 컴포넌트 state 사용하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        클래스 컴포넌트에서는 함수 컴포넌트에는 없는 state를 사용할 수 있다. state는 Object이며, 변경될 (변경할) 값을 다룬다.
+
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
+}
+
+
+state는 클래스 컴포넌트 안에 state = {}; 형식으로 생성할 수 있다.
+
+s...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Jun  2, 2020, 12:00 AM +0800"
+  >Jun  2, 2020<i class="unloaded">2020-06-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="336 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-01-react-class-component/">React 클래스 컴포넌트와 함수 컴포넌트의 차이점</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        함수 컴포넌트
+
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      {members.map((member) =&gt; {
+        return &lt;Greeting name={member.name} age={member.age} /&gt;;
+      })}
+    &lt;/di...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Jun  1, 2020, 12:00 AM +0800"
+  >Jun  1, 2020<i class="unloaded">2020-06-01T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="187 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-05-29-react-component/">React 컴포넌트 (Component)란?</a>
     </h1>
 
@@ -1030,188 +1203,6 @@ Iterable한 개체 특징
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="183 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-13-javascript-iterable/">자바스크립트 이터러블 (Iterable)의 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        내부 요소들을 공개적으로 탐색 (반복)할 수 있는 데이터 구조를 Iterable 하다고 말하며, Iterable한 데이터 구조는 모두 프로토타입에 Symbol.iterator() 메소드를 가지고 있다.
-
-Iterable한 데이터 구조
-
-
-  Array
-  Map
-  Set
-  String
-
-
-예시
-
-const obj = {
-  0: 1,
-  1: 2,...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, May 13, 2020, 12:00 AM +0800"
-  >May 13, 2020<i class="unloaded">2020-05-13T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="148 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-13-fade-out/">CSS 천천히 사라지는 Fade Out 애니메이션 예제</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        &lt;div class="flash"&gt;&lt;/div&gt;
-
-
-.flash {
-  animation: goAway 0.5s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-@keyframes goAway {
-  from {
-    transform: none;
-    opacity: 1;
-  }
-  to ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, May 13, 2020, 12:00 AM +0800"
-  >May 13, 2020<i class="unloaded">2020-05-13T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="46 words">1 min</span>
 
 
         <!-- page views -->

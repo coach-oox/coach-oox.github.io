@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/</loc>
+    </url>
+    
+    <url>
+        <loc>https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/</loc>
+    </url>
+    
+    <url>
         <loc>https://dohaelee.github.io/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/</loc>
     </url>
     

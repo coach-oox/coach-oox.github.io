@@ -352,6 +352,183 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-06-11-react-prop-types/">React 타입 검사를 위한 Prop-Types 사용법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        타입 검사가 아주 중요하게 다뤄질 만큼 프로젝트 덩치가 커지면, 그냥 타입스크립트를 쓰는 것도 좋은 대안이다. 하지만, 어쩔 수 없이 자바스크립트로 프로젝트를 진행 해야 할 경우 prop-types를 사용하면 된다.
+
+npm install prop-types
+
+
+전달받은 Props가 의도한 Props인지 체크해주는 역할을 한다.
+
+import Prop...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jun 11, 2020, 12:00 AM +0800"
+  >Jun 11, 2020<i class="unloaded">2020-06-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="159 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-06-10-react-dynamic-component-generation/">React 배열을 사용한 동적 컴포넌트 생성</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        const family = [
+  {
+    name: "John",
+    age: 24,
+  },
+  {
+    name: "Edward",
+    age: 18,
+  },
+  {
+    name: "Tim",
+    age: 20,
+  },
+];
+
+function renderMembers(member) {
+  return &lt;Greeting ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jun 10, 2020, 12:00 AM +0800"
+  >Jun 10, 2020<i class="unloaded">2020-06-10T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="67 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-06-09-react-component-life-cycle/">React 컴포넌트의 라이프 사이클</a>
     </h1>
 
@@ -1031,179 +1208,6 @@ const globalStyle = createGlobalStyle`
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="581 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-02-react-class-component-state/">React 클래스 컴포넌트 state 사용하는 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        클래스 컴포넌트에서는 함수 컴포넌트에는 없는 state를 사용할 수 있다. state는 Object이며, 변경될 (변경할) 값을 다룬다.
-
-class App extends React.Component {
-  state = {
-    count: 0,
-  };
-}
-
-
-state는 클래스 컴포넌트 안에 state = {}; 형식으로 생성할 수 있다.
-
-s...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jun  2, 2020, 12:00 AM +0800"
-  >Jun  2, 2020<i class="unloaded">2020-06-02T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="336 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-01-react-class-component/">React 클래스 컴포넌트와 함수 컴포넌트의 차이점</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        함수 컴포넌트
-
-function App() {
-  return (
-    &lt;div className="App"&gt;
-      {members.map((member) =&gt; {
-        return &lt;Greeting name={member.name} age={member.age} /&gt;;
-      })}
-    &lt;/di...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Jun  1, 2020, 12:00 AM +0800"
-  >Jun  1, 2020<i class="unloaded">2020-06-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="187 words">1 min</span>
 
 
         <!-- page views -->

@@ -352,6 +352,183 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-12-19-typescript-types/">타입스크립트 기초 토막 정리 #1 타입 지정</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        파라미터 타입 지정
+
+function greeting(name: string, age: number, gender: string) {
+  console.log(`${name}: ${age} years, ${gender}.`);
+}
+
+greeting("Jack", "24", "male");
+
+export {};
+
+
+타입스크립트에서는 파라미터의 타입을 위...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Dec 19, 2020, 12:00 AM +0800"
+  >Dec 19, 2020<i class="unloaded">2020-12-19T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="214 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-18-typescript-setting-up/">타입스크립트를 사용하기 위한 기본 세팅 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        설치
+
+npm install -g typescript
+
+
+먼저 typescript를 Global로 설치한다. VS Code를 사용한다면, EsLint 확장을 설치한다. (TsLint 확장은 지원이 중단 되었기 때문에 더이상 사용되지 않는다.)
+
+설정
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Dec 18, 2020, 12:00 AM +0800"
+  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="348 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-12-18-webpack-steps-deploy/">Babel-CLI · Webpack을 사용해 Frontend · Backend 빌드하기</a>
     </h1>
 
@@ -1014,182 +1191,6 @@ npm install @babel/core @babel/register @babel/preset-en...
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="128 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-01-node-fs/">Node 파일 시스템 (FS) 모듈을 사용해서 파일 핸들링하는 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        
-  Node.js v16.6.1 documentation
-
-
-파일 읽기
-
-function read(request, response) {
-  const { file } = request;
-
-  fs.readFile(file.path, "utf8", (error, data) =&gt; {
-    return response.render("read", {...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Dec  1, 2020, 12:00 AM +0800"
-  >Dec  1, 2020<i class="unloaded">2020-12-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="77 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-11-14-eslint-prettier/">.prettierrc, .eslintrc 작성법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Prettier
-
-{
-  "arrowParens": "always",
-  "bracketSpacing": true,
-  "endOfLine": "auto",
-  "printWidth": 80,
-  "tabWidth": 4,
-  "useTabs": false
-}
-
-
-.prettierrc 파일을 생성하고 위 코드 예제와 같이 원하는 설정을 작성한다. 설정...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Nov 14, 2020, 12:00 AM +0800"
-  >Nov 14, 2020<i class="unloaded">2020-11-14T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="170 words">1 min</span>
 
 
         <!-- page views -->
