@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://dohaelee.github.io/posts/2021-09-10-lecture-css-layout-for-beginners/</loc>
+    </url>
+    
+    <url>
+        <loc>https://dohaelee.github.io/posts/2021-08-22-lecture-html-css-for-beginners/</loc>
+    </url>
+    
+    <url>
         <loc>https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/</loc>
     </url>
     
@@ -150,6 +158,10 @@
     </url>
     
     <url>
+        <loc>https://dohaelee.github.io/posts/2021-03-25-book-publish-css3-for-beginners/</loc>
+    </url>
+    
+    <url>
         <loc>https://dohaelee.github.io/posts/2021-03-03-heroku-port/</loc>
     </url>
     
@@ -179,6 +191,10 @@
     
     <url>
         <loc>https://dohaelee.github.io/posts/2021-02-01-clean-code/</loc>
+    </url>
+    
+    <url>
+        <loc>https://dohaelee.github.io/posts/2021-01-27-book-publish-html5-for-beginners/</loc>
     </url>
     
     <url>
@@ -239,6 +255,10 @@
     
     <url>
         <loc>https://dohaelee.github.io/posts/2020-12-02-babel-nodemon/</loc>
+    </url>
+    
+    <url>
+        <loc>https://dohaelee.github.io/posts/2020-12-01-book-publish-digital-nomad/</loc>
     </url>
     
     <url>
@@ -1382,6 +1402,22 @@
     
     
     <url>
+        <loc>https://dohaelee.github.io/tags/notice/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://dohaelee.github.io/tags/ebook/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
         <loc>https://dohaelee.github.io/tags/babel/</loc>
     </url>
     
@@ -1455,6 +1491,14 @@
     
     <url>
         <loc>https://dohaelee.github.io/tags/hosting/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://dohaelee.github.io/tags/html/</loc>
     </url>
     
     
@@ -1662,6 +1706,14 @@
     
     
     <url>
+        <loc>https://dohaelee.github.io/tags/lecture/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
         <loc>https://dohaelee.github.io/categories/javascript/</loc>
     </url>
     
@@ -1791,6 +1843,14 @@
     
     <url>
         <loc>https://dohaelee.github.io/categories/web/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://dohaelee.github.io/categories/notice/</loc>
     </url>
     
     
@@ -1983,6 +2043,14 @@
     
     <url>
         <loc>https://dohaelee.github.io/page20/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://dohaelee.github.io/page21/</loc>
     </url>
     
     
