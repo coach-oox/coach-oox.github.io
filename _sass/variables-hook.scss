@@ -1,0 +1,142 @@
+/*
+  Appending custom SCSS variables will override the default ones in `_sass/addon/variables.scsss`
+*/
+
+.sidebar-bottom {
+  column-gap: 10px;
+}
+
+.disqus {
+  margin-bottom: 3rem;
+}
+
+.post-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: bold;
+  }
+
+  h2 {
+    border-bottom: 5px solid #34495e;
+    padding: 0.5em 0;
+    margin: 1.5em 0;
+  }
+
+  h3 {
+    border-bottom: 2px solid #2980b9;
+    padding: 0.5em 0;
+    margin: 1.5em 0;
+
+    &::before {
+      content: "﹡ ";
+      color: #2980b9;
+    }
+  }
+
+  h4 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 0;
+
+    &::before {
+      content: "e.g., ";
+      color: #c0392b;
+    }
+  }
+
+  ul,
+  ol {
+    line-height: inherit;
+  }
+
+  img {
+    text-align: left;
+  }
+}
+
+.post-preview {
+  h1 {
+    a {
+      color: inherit;
+    }
+  }
+}
+
+#search-results a {
+  color: inherit;
+}
+
+@media all and (max-width: 670px) {
+  .post-content {
+    h2 {
+      font-size: 1.4em;
+    }
+
+    h3,
+    h4 {
+      font-size: 1.2em;
+    }
+
+    ul,
+    ol {
+      line-height: 1.6;
+    }
+  }
+
+  #archives ul li div a {
+    font-size: 90%;
+  }
+}
+
+#panel-wrapper {
+  display: none;
+}
+
+.intro {
+  margin: 2em 0;
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 15px;
+
+  .buttons {
+    margin-top: 1em;
+  }
+}
+
+.keywords table {
+  font-size: 90%;
+}
+
+.category-group {
+  .category-title {
+    background-color: #f5f5f5;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 3px 0 var(--tag-shadow);
+    border-radius: 7px;
+    line-height: 1.6;
+
+    a {
+      border: none;
+    }
+
+    i {
+      color: rgb(154, 151, 151);
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 80%;
+      color: rgb(97, 97, 97);
+      margin-left: 10px;
+    }
+  }
+}
+
+iframe {
+  margin-bottom: 1em;
+  border-radius: 7px;
+}

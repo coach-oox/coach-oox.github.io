@@ -1,5 +1,10 @@
+---
+permalink: /robots.txt
+# The robots rules
+---
+
 User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://dohaelee.github.io/sitemap.xml
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
