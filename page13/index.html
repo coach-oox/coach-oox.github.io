@@ -352,6 +352,94 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-07-05-pug-partials/">Pug 기초 #5 중복되는 HTML 부분 모듈화</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        다음 코드의 두 개의 Pug 파일 예시는 각각 다른 페이지를 표현하지만, footer 부분은 동일하다.
+
+
+  See the Pen 
+  Pug 기초 #5 중복되는 HTML 부분 모듈화 by Dohae Lee (@dohaelee)
+  on CodePen.
+
+
+
+중복되는 부분 모듈화
+
+먼저 중복되는 부분을 모듈화 할 footer.pug 파일을 생성한다....
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, Jul  5, 2020, 12:00 AM +0800"
+  >Jul  5, 2020<i class="unloaded">2020-07-05T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="155 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-07-04-pug-conditionals/">Pug 기초 #4 조건문 (Conditionals)</a>
     </h1>
 
@@ -1116,93 +1204,6 @@ class App ...
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="348 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-06-08-react-sharing-props-between-routes/">React Routes 사이에 Props를 공유하는 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        import React from "react";
-
-function About(props) {
-  console.log(props);
-  return &lt;h3&gt;About this page: I build it!&lt;/h3&gt;;
-}
-
-export default About;
-
-
-위 코드 예제는 /about 경로로 이동했을 때 보여지는 Abou...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Jun  8, 2020, 12:00 AM +0800"
-  >Jun  8, 2020<i class="unloaded">2020-06-08T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="205 words">1 min</span>
 
 
         <!-- page views -->
@@ -4342,7 +4343,7 @@ export default About;
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://www.youtube.com/channel/UCRf6ut93gIImnmdebqdPI9A">Dohae Lee</a>.
         All rights reserved.
       </p>

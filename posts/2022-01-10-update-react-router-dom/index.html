@@ -29,24 +29,24 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain" />
+<meta property="og:title" content="react-router-dom 버전 6 이상 변경점 요약 정리" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 {} 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다." />
-<meta property="og:description" content="변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 {} 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다." />
-<link rel="canonical" href="https://dohaelee.github.io/posts/2020-04-18-js-level-up-1-scope-chain/" />
-<meta property="og:url" content="https://dohaelee.github.io/posts/2020-04-18-js-level-up-1-scope-chain/" />
+<meta name="description" content="react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)" />
+<meta property="og:description" content="react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)" />
+<link rel="canonical" href="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" />
+<meta property="og:url" content="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" />
 <meta property="og:site_name" content="Dohae Lee" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-04-18T00:00:00+08:00" />
+<meta property="article:published_time" content="2022-01-10T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain" />
+<meta property="twitter:title" content="react-router-dom 버전 6 이상 변경점 요약 정리" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2020-04-18-js-level-up-1-scope-chain/"},"url":"https://dohaelee.github.io/posts/2020-04-18-js-level-up-1-scope-chain/","description":"변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 {} 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다.","headline":"자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain","dateModified":"2020-04-18T00:00:00+08:00","datePublished":"2020-04-18T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/"},"url":"https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/","description":"react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)","headline":"react-router-dom 버전 6 이상 변경점 요약 정리","dateModified":"2022-01-10T00:00:00+08:00","datePublished":"2022-01-10T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain | Dohae Lee
+  <title>react-router-dom 버전 6 이상 변경점 요약 정리 | Dohae Lee
   </title>
 
   <!--
@@ -281,7 +281,7 @@
         
 
           
-            <span>자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</span>
+            <span>react-router-dom 버전 6 이상 변경점 요약 정리</span>
           
 
         
@@ -356,7 +356,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>자바스크립트 레벨업을 위한 주요 개념 #1 Scope와 Scope Chain</h1>
+      <h1 data-toc-skip>react-router-dom 버전 6 이상 변경점 요약 정리</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         
@@ -382,8 +382,8 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Apr 18, 2020, 12:00 AM +0800"
-  >Apr 18, 2020<i class="unloaded">2020-04-18T00:00:00+08:00</i>
+    title="Mon, Jan 10, 2022, 12:00 AM +0800"
+  >Jan 10<i class="unloaded">2022-01-10T00:00:00+08:00</i>
 </span>
 
         </div>
@@ -391,7 +391,7 @@
         <div>
           
           <span>
-            <a href="/categories/javascript">javascript</a>
+            <a href="/categories/react">react</a>
           </span>
           
         </div>
@@ -420,7 +420,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="820 words">4 min read</span>
+  title="425 words">2 min read</span>
 
 
           <!-- page views -->
@@ -434,73 +434,29 @@
 
         
 
-        <p>변수나 함수는 각각의 유효한 Scope를 가지고 있다. Block Level Scope란 하나의 블록 <code class="language-plaintext highlighter-rouge">{}</code> 내부에서 선언된 변수는 해당 블록 내부에서만 유효하다는 규칙이며, Function Level Scope의 경우 함수 내부에서 선언된 변수는 함수 내부에서만 유효하다는 규칙이다.</p>
+        <p><code class="language-plaintext highlighter-rouge">react-router-dom</code>이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : <a href="https://reactrouter.com/docs/en/v6/getting-started/overview">React Router Overview</a>)</p>
 
-<h2 id="lexical-scope">Lexical Scope</h2>
+<h2 id="routes">Routes</h2>
 
-<p>자바스크립트의 Scope에 대해 좀 더 깊이 이해하기 위해 알아야 할 또 하나의 개념은 Lexical Scope (Static Scope)라는 규칙이다. Lexical Scope는 코드가 작성된 문맥상에서 결정되는 Scope로, 함수를 호출할 때가 아니라 선언할 때의 문맥에 따라 결정되는 규칙이다.</p>
+<p>버전 6부터 <code class="language-plaintext highlighter-rouge">Switch</code>는 더이상 사용되지 않는다. 오피셜에 따라, <code class="language-plaintext highlighter-rouge">Switch</code>는 <code class="language-plaintext highlighter-rouge">Routes</code>라는 친구로 대체 되었다.</p>
 
-<div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<h3 id="exact">exact</h3>
 
-<span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
-<span class="p">}</span>
+<p>버전 6부터 <code class="language-plaintext highlighter-rouge">Routes</code>가 알아서 최적의 경로를 배정 해주기 때문에, 기존에 <code class="language-plaintext highlighter-rouge">Route</code>에 사용했던 <code class="language-plaintext highlighter-rouge">exact</code> 속성을 더이상 사용하지 않게 되었다.</p>
 
-<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-  <span class="nx">a</span><span class="p">();</span>
-<span class="p">}</span>
+<h3>*</h3>
 
-<span class="nx">b</span><span class="p">();</span>
-</pre></td></tr></tbody></table></code></div></div>
+<p>다수의 라우팅을 매칭하고 싶은 경우, 다음 코드 예제와 같이 URL 뒤에 <code class="language-plaintext highlighter-rouge">*</code>를 사용한다.</p>
 
-<p>위 코드에서 콘솔에 실행되는 결과는 얼마일까? 당연히 <code class="language-plaintext highlighter-rouge">b()</code>에서 <code class="language-plaintext highlighter-rouge">count</code>의 값을 증가 시켰기 때문에 1이라는 값이 출력될 것이다.</p>
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/user/*</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">User</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></pre></td></tr></tbody></table></code></div></div>
 
-<div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<h3 id="element">element</h3>
 
-<span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
-<span class="p">}</span>
+<p>다음 코드 예제와 같이 <code class="language-plaintext highlighter-rouge">component</code> 대신에 <code class="language-plaintext highlighter-rouge">element</code>의 Props로 컴포넌트를 전달한다.</p>
 
-<span class="kd">function</span> <span class="nx">b</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="nx">a</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="nx">b</span><span class="p">();</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>그렇다면 이 경우는 어떤 결과가 출력될까? 예상했겠지만 이때의 출력은 0이 될 것이다. 함수의 Scope는 선언되는 시점에 결정되는데, 자신의 범위에서 가장 가까운 곳의 변수를 참조하게 된다. 따라서 위 코드에서 <code class="language-plaintext highlighter-rouge">a()</code>는 좀 더 가까운 범위내에 있는 전역 변수 <code class="language-plaintext highlighter-rouge">count</code>를 참조하게 되며, 이러한 어휘적 유효 범위를 Lexical Scope라 한다.</p>
-
-<h2 id="scope-chain">Scope Chain</h2>
-
-<p>위에서 Lexical Scope를 설명하기 위해 예시로 작성했던 코드는, <code class="language-plaintext highlighter-rouge">a()</code>에서 가장 가까운 범위내 있는 변수를 전역 변수인 <code class="language-plaintext highlighter-rouge">count</code>라 했는데, 이것은 어떤 기준에서 결정되는 것일까? 이는 함수 내부에서는 외부로 접근할 수 있지만 외부에서는 내부로 접근할 수 없다는 규칙 때문인데, 이 규칙에 의해서 모든 함수 내부에서는 전역 객체에 접근할 수 있다.</p>
-
-<div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -516,25 +472,51 @@
 14
 15
 16
-</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span><span class="p">,</span> <span class="nx">Routes</span><span class="p">,</span> <span class="nx">Route</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
 
-<span class="kd">function</span> <span class="nx">first</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`first function's a is </span><span class="p">${</span><span class="nx">a</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-
-  <span class="kd">function</span> <span class="nx">second</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`second function's a is </span><span class="p">${</span><span class="nx">a</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`second function's b is </span><span class="p">${</span><span class="nx">b</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="nx">second</span><span class="p">();</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`first function's b is </span><span class="p">${</span><span class="nx">b</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">first</span><span class="p">();</span>
+<span class="k">return</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">BrowserRouter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">index</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Home</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">teams</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Teams</span> <span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">:teamId</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Team</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">new</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">NewTeamForm</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">index</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">LeagueStandings</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/BrowserRouter&gt;</span><span class="err">,
+</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>위 코드 예시에서, <code class="language-plaintext highlighter-rouge">second()</code> 함수는 <code class="language-plaintext highlighter-rouge">a</code>를 찾기 위해서 가장 먼저 자기 자신의 Scope를 점검한 뒤, 없으면 한 스텝 올라가서 점검한 다음 (<code class="language-plaintext highlighter-rouge">first()</code>에도 없기 때문에) 또 한 스텝 올라가서 점검해서 전역 변수 <code class="language-plaintext highlighter-rouge">a</code>를 찾아 출력한다. <code class="language-plaintext highlighter-rouge">first()</code>의 경우, 자신의 Scope에서 <code class="language-plaintext highlighter-rouge">b</code>를 찾을 수 없기 때문에 한 스텝 위로 올라가서 (전역 Scope에서) 점검하지만 <code class="language-plaintext highlighter-rouge">b</code>를 찾을 수 없기 때문에 <code class="language-plaintext highlighter-rouge">b is not defined</code> 에러가 발생한다. 이렇게 자신의 Scope부터 점점 위로 타고 올라가면서 점검해서 (Scope를 넓히면서) 참조 관계를 점검하는 방식을 Scope Chain이라 한다.</p>
+<h2 id="usenavigate">useNavigate</h2>
+
+<p>기존의 <code class="language-plaintext highlighter-rouge">useHistory()</code>는 <code class="language-plaintext highlighter-rouge">useNavigate()</code>로 변경되었으며, 다음 코드 예제와 같이 <code class="language-plaintext highlighter-rouge">history.push()</code>와 <code class="language-plaintext highlighter-rouge">history.replace()</code>를 <code class="language-plaintext highlighter-rouge">navigate()</code> 하나로 대체할 수 있다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="replace">Replace</h3>
+
+<p><code class="language-plaintext highlighter-rouge">history.replace()</code> 기능을 사용할 때는 <code class="language-plaintext highlighter-rouge">navigate(to, {replace: true})</code> 형태로 사용한다.</p>
+
+<h3 id="state">State</h3>
+
+<p><code class="language-plaintext highlighter-rouge">state</code>를 사용할 때는 <code class="language-plaintext highlighter-rouge">navigate(to, {state})</code> 형태로 사용한다.</p>
+
+<h3 id="index">Index</h3>
+
+<p><code class="language-plaintext highlighter-rouge">useHistory()</code>에서 각각 <code class="language-plaintext highlighter-rouge">go()</code>, <code class="language-plaintext highlighter-rouge">goBack</code>, <code class="language-plaintext highlighter-rouge">goForward</code>로 구분되었던 기능들은 <code class="language-plaintext highlighter-rouge">navigate()</code> 하나로 대체 되었으며, 호출시 인덱스 값을 전달해 해당 기능을 동일하게 수행할 수 있다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Go back</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Go forward</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 
       </div>
@@ -547,7 +529,7 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/javascript/'>javascript</a>
+            <a href='/categories/react/'>react</a>
         </div>
         
 
@@ -556,11 +538,11 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/javascript/"
-            class="post-tag no-text-decoration" >javascript</a>
+          <a href="/tags/react/"
+            class="post-tag no-text-decoration" >react</a>
           
-          <a href="/tags/scope/"
-            class="post-tag no-text-decoration" >scope</a>
+          <a href="/tags/router/"
+            class="post-tag no-text-decoration" >router</a>
           
           </div>
         
@@ -3335,17 +3317,17 @@
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/2020-03-20-vh-vw-vmin-vmax/" class="btn btn-outline-primary"
+  <a href="/posts/2021-10-07-book-publish-javascript-for-beginners/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</p>
+    <p>[출판 소식] 자바스크립트 ES6+ 독학백서</p>
   </a>
   
 
   
-  <a href="/posts/2020-04-18-js-level-up-2-closure/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>자바스크립트 레벨업을 위한 주요 개념 #2 Closure</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>

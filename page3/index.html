@@ -352,6 +352,91 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-06-04-graphql-server/">GraphQL 서버 기본 사용법 (graphql-yoga 사용)</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        graphql-yoga를 사용하면 리액트 프로젝트를 생성할 때와 같이 간단하게 GraphQL 프로젝트를 시작할 수 있다.
+
+npm init -y
+npm install graphql-yoga
+
+
+이때 편리한 서버 테스트를 위해서 선택적으로 nodemon을 적용하거나, Node 환경에서 ES6+ 문법을 사용하기 위해서 Babel을 적용할 수 있다.
+
+//...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jun  4, 2021, 12:00 AM +0800"
+  >Jun  4, 2021<i class="unloaded">2021-06-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1242 words">6 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-06-03-react-js-reudx/">React Redux 기본 사용법</a>
     </h1>
 
@@ -399,7 +484,7 @@ function reducer(todos = [],...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Thu, Jun  3, 2021, 12:00 AM +0800"
-  >Jun  3<i class="unloaded">2021-06-03T00:00:00+08:00</i>
+  >Jun  3, 2021<i class="unloaded">2021-06-03T00:00:00+08:00</i>
 </span>
 
 
@@ -482,7 +567,7 @@ REST API vs. GraphQL
     data-toggle="tooltip"
     data-placement="bottom"
     title="Thu, Jun  3, 2021, 12:00 AM +0800"
-  >Jun  3<i class="unloaded">2021-06-03T00:00:00+08:00</i>
+  >Jun  3, 2021<i class="unloaded">2021-06-03T00:00:00+08:00</i>
 </span>
 
 
@@ -568,7 +653,7 @@ createStore()
     data-toggle="tooltip"
     data-placement="bottom"
     title="Wed, Jun  2, 2021, 12:00 AM +0800"
-  >Jun  2<i class="unloaded">2021-06-02T00:00:00+08:00</i>
+  >Jun  2, 2021<i class="unloaded">2021-06-02T00:00:00+08:00</i>
 </span>
 
 
@@ -653,7 +738,7 @@ co...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Tue, Jun  1, 2021, 12:00 AM +0800"
-  >Jun  1<i class="unloaded">2021-06-01T00:00:00+08:00</i>
+  >Jun  1, 2021<i class="unloaded">2021-06-01T00:00:00+08:00</i>
 </span>
 
 
@@ -744,7 +829,7 @@ interface A {
     data-toggle="tooltip"
     data-placement="bottom"
     title="Mon, May 24, 2021, 12:00 AM +0800"
-  >May 24<i class="unloaded">2021-05-24T00:00:00+08:00</i>
+  >May 24, 2021<i class="unloaded">2021-05-24T00:00:00+08:00</i>
 </span>
 
 
@@ -827,7 +912,7 @@ header.innerText = "Hello";
     data-toggle="tooltip"
     data-placement="bottom"
     title="Sun, May 23, 2021, 12:00 AM +0800"
-  >May 23<i class="unloaded">2021-05-23T00:00:00+08:00</i>
+  >May 23, 2021<i class="unloaded">2021-05-23T00:00:00+08:00</i>
 </span>
 
 
@@ -910,7 +995,7 @@ npm install typescript ts-loader webpack webpack-cli webpack-dev-...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Fri, May 21, 2021, 12:00 AM +0800"
-  >May 21<i class="unloaded">2021-05-21T00:00:00+08:00</i>
+  >May 21, 2021<i class="unloaded">2021-05-21T00:00:00+08:00</i>
 </span>
 
 
@@ -1004,7 +1089,7 @@ function a...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Fri, May 21, 2021, 12:00 AM +0800"
-  >May 21<i class="unloaded">2021-05-21T00:00:00+08:00</i>
+  >May 21, 2021<i class="unloaded">2021-05-21T00:00:00+08:00</i>
 </span>
 
 
@@ -1084,7 +1169,7 @@ function a...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Thu, May 20, 2021, 12:00 AM +0800"
-  >May 20<i class="unloaded">2021-05-20T00:00:00+08:00</i>
+  >May 20, 2021<i class="unloaded">2021-05-20T00:00:00+08:00</i>
 </span>
 
 
@@ -1110,90 +1195,6 @@ function a...
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="244 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-05-19-typescript-union-intersection-type/">타입스크립트 유니온 타입과 인터섹션 타입</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        유니온 타입 (Union Type)
-
-유니온 타입은 | 연산자를 사용해서 여러 개의 타입 중 하나에 해당하는 타입을 의미한다.
-
-const print = (message: string | number): void =&gt; console.log(message);
-
-
-위 코드 예제에서 message는 string 타입이거나 number 타입일 수 있다....
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, May 19, 2021, 12:00 AM +0800"
-  >May 19<i class="unloaded">2021-05-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="284 words">1 min</span>
 
 
         <!-- page views -->
@@ -4328,7 +4329,7 @@ const print = (message: string | number): void =&gt; console.log(message);
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://www.youtube.com/channel/UCRf6ut93gIImnmdebqdPI9A">Dohae Lee</a>.
         All rights reserved.
       </p>

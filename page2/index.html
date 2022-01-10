@@ -352,6 +352,85 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-06-17-react-props-history-push-window-location-replace/">React props.history.push('/')와 window.location.replace('/') 차이점</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        props.history.push('/')는 새로운 HTTP 요청을 생성하지 않는다. 반면에 window.location.replace()는 새로운 요청을 생성한다. i.g., window.location.replace() 또는 window.location.href을 사용할 경우 완전히 새로고침되고, 클라이언트 측에 상태는 초기화 된다.
+
+리액트에서 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jun 17, 2021, 12:00 AM +0800"
+  >Jun 17, 2021<i class="unloaded">2021-06-17T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="234 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-06-16-react-props-withrouter/">React 컴포넌트에서 location, history 등을 사용하기 위한 withRouter 사용법</a>
     </h1>
 
@@ -392,7 +471,7 @@ const Something = with...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Wed, Jun 16, 2021, 12:00 AM +0800"
-  >Jun 16<i class="unloaded">2021-06-16T00:00:00+08:00</i>
+  >Jun 16, 2021<i class="unloaded">2021-06-16T00:00:00+08:00</i>
 </span>
 
 
@@ -477,7 +556,7 @@ yarn add https://github.com/Looskie/react-flash-message.git
     data-toggle="tooltip"
     data-placement="bottom"
     title="Tue, Jun 15, 2021, 12:00 AM +0800"
-  >Jun 15<i class="unloaded">2021-06-15T00:00:00+08:00</i>
+  >Jun 15, 2021<i class="unloaded">2021-06-15T00:00:00+08:00</i>
 </span>
 
 
@@ -554,7 +633,7 @@ yarn add https://github.com/Looskie/react-flash-message.git
     data-toggle="tooltip"
     data-placement="bottom"
     title="Mon, Jun 14, 2021, 12:00 AM +0800"
-  >Jun 14<i class="unloaded">2021-06-14T00:00:00+08:00</i>
+  >Jun 14, 2021<i class="unloaded">2021-06-14T00:00:00+08:00</i>
 </span>
 
 
@@ -631,7 +710,7 @@ yarn add https://github.com/Looskie/react-flash-message.git
     data-toggle="tooltip"
     data-placement="bottom"
     title="Sun, Jun 13, 2021, 12:00 AM +0800"
-  >Jun 13<i class="unloaded">2021-06-13T00:00:00+08:00</i>
+  >Jun 13, 2021<i class="unloaded">2021-06-13T00:00:00+08:00</i>
 </span>
 
 
@@ -714,7 +793,7 @@ HTTP 웹 서버는 Stateless 프로토콜을 사용하기 때문에, 사용자�
     data-toggle="tooltip"
     data-placement="bottom"
     title="Sat, Jun 12, 2021, 12:00 AM +0800"
-  >Jun 12<i class="unloaded">2021-06-12T00:00:00+08:00</i>
+  >Jun 12, 2021<i class="unloaded">2021-06-12T00:00:00+08:00</i>
 </span>
 
 
@@ -800,7 +879,7 @@ userSchema.pre("save"...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Fri, Jun 11, 2021, 12:00 AM +0800"
-  >Jun 11<i class="unloaded">2021-06-11T00:00:00+08:00</i>
+  >Jun 11, 2021<i class="unloaded">2021-06-11T00:00:00+08:00</i>
 </span>
 
 
@@ -885,7 +964,7 @@ project 루트 위치에 생성된 package...
     data-toggle="tooltip"
     data-placement="bottom"
     title="Fri, Jun 11, 2021, 12:00 AM +0800"
-  >Jun 11<i class="unloaded">2021-06-11T00:00:00+08:00</i>
+  >Jun 11, 2021<i class="unloaded">2021-06-11T00:00:00+08:00</i>
 </span>
 
 
@@ -971,7 +1050,7 @@ npm install @apollo/client graphql
     data-toggle="tooltip"
     data-placement="bottom"
     title="Wed, Jun  9, 2021, 12:00 AM +0800"
-  >Jun  9<i class="unloaded">2021-06-09T00:00:00+08:00</i>
+  >Jun  9, 2021<i class="unloaded">2021-06-09T00:00:00+08:00</i>
 </span>
 
 
@@ -1058,7 +1137,7 @@ const resolvers = {
     data-toggle="tooltip"
     data-placement="bottom"
     title="Sat, Jun  5, 2021, 12:00 AM +0800"
-  >Jun  5<i class="unloaded">2021-06-05T00:00:00+08:00</i>
+  >Jun  5, 2021<i class="unloaded">2021-06-05T00:00:00+08:00</i>
 </span>
 
 
@@ -1084,91 +1163,6 @@ const resolvers = {
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="335 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-06-04-graphql-server/">GraphQL 서버 기본 사용법 (graphql-yoga 사용)</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        graphql-yoga를 사용하면 리액트 프로젝트를 생성할 때와 같이 간단하게 GraphQL 프로젝트를 시작할 수 있다.
-
-npm init -y
-npm install graphql-yoga
-
-
-이때 편리한 서버 테스트를 위해서 선택적으로 nodemon을 적용하거나, Node 환경에서 ES6+ 문법을 사용하기 위해서 Babel을 적용할 수 있다.
-
-//...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Jun  4, 2021, 12:00 AM +0800"
-  >Jun  4<i class="unloaded">2021-06-04T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1242 words">6 min</span>
 
 
         <!-- page views -->
@@ -4301,7 +4295,7 @@ npm install graphql-yoga
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://www.youtube.com/channel/UCRf6ut93gIImnmdebqdPI9A">Dohae Lee</a>.
         All rights reserved.
       </p>

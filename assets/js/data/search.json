@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "react-router-dom 버전 6 이상 변경점 요약 정리",
+    "url": "/posts/2022-01-10-update-react-router-dom/",
+    "categories": "react",
+    "tags": "react, router",
+    "date": "2022-01-10 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)Routes버전 6부터 Switch는 더이상 사용되지 않는다. 오피셜에 따라, Switch는 Routes라는 친구로 대체 되었다.exact버전 6부터 Routes가 알아서 최적의 경로를 배정 해주기 때문에, 기존에 Route에 사용했던 exact 속성을 더이상 사용하지 않게 되었다.*다수의 라우팅을 매칭하고 싶은 경우, 다음 코드 예제와 같이 UR..."
+  },
+  
+  {
     "title": "[출판 소식] 자바스크립트 ES6+ 독학백서",
     "url": "/posts/2021-10-07-book-publish-javascript-for-beginners/",
     "categories": "notice",

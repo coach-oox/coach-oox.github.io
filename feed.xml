@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2021-12-21T14:20:56+08:00</updated>
+  <updated>2022-01-10T16:13:02+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -13,10 +13,63 @@
   <link rel="alternate" type="text/html" hreflang="ko"
     href="https://dohaelee.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
-  <rights> © 2021 Dohae Lee </rights>
+  <rights> © 2022 Dohae Lee </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>react-router-dom 버전 6 이상 변경점 요약 정리</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" rel="alternate" type="text/html" title="react-router-dom 버전 6 이상 변경점 요약 정리" />
+    <published>2022-01-10T00:00:00+08:00</published>
+  
+    <updated>2022-01-10T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)
+
+Routes
+
+버전 6부터 Switch는 더이상 사용되지 않는다. 오피셜에 따라, Switch는 Routes라는 친구로 대체 되었다.
+
+exact
+
+버전 6부터 Routes가 알아서 최적의 경로를 배정 해주기 때문에, 기존에 Route에 사용했던 exact 속성을 더이상 사용하지 않게 되었다.
+
+*
+
+다수의 라우팅을 매칭하고 싶은 경우, 다음 코드 예제와 같이 URL 뒤에 *를 사용한다.
+
+&amp;lt;Route path="/user/*" element={&amp;lt;User /&amp;gt;} /&amp;gt;
+
+
+element
+
+다음 코드 ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -173,53 +226,6 @@
 
 
 이런 경우를 글로 설명하면 장황하지만, 생각보다 꽤 흔하게 마주할 수 있는 상황이다. 좀 더 쉬운 가정을 위해 간단한 예제에 위 상황을 대입해보자. 다음 예제에서 Parent 컴포넌트는 서버에서 최신 정보를 패치 받고, 그 정...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법</title>
-    <link href="https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/" rel="alternate" type="text/html" title="Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법" />
-    <published>2021-07-02T00:00:00+08:00</published>
-  
-    <updated>2021-07-02T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/</id>
-    <content src="https://dohaelee.github.io/posts/2021-07-02-mongoose-populate-after-create-and-save/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="node" />
-    
-    <category term="express" />
-    
-    <category term="mongodb" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      newComment.populate("owner");
-
-
-이런 모습의 구문을 질문으로 받는 경우, 열에 아홉은 populate()가 (일반적으로 find() 등을 실행할 때 뒤에 붙이는 경우와는 달리) 실행되지 않았기 때문에 발생하는 문제이다. 근데 최근 이와 관련된 수업을 원격으로 진행하는데, 어떤 사람은 된다 그러고 어떤 사람은 안된다 그래서 굉장히 애를 먹었던 경험이 있다. 진도를 나가야해서 답변을 미루고 수업이 끝난 뒤 찾아보니 버전 차이에서 생기는 문제였다.
-
-Mongoose 버전 6 이전
-
-Mongoose 버전을 v6.0.5 이하 버전으로 사용하는 경우, execPopulate()를 사용해서 populate()를 실행시켜 주면 해결 된다. 예를 들면 다음과 같다.
-
-let newComment...
     </summary>
   
 

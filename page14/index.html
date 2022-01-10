@@ -352,6 +352,93 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-06-08-react-sharing-props-between-routes/">React Routes 사이에 Props를 공유하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        import React from "react";
+
+function About(props) {
+  console.log(props);
+  return &lt;h3&gt;About this page: I build it!&lt;/h3&gt;;
+}
+
+export default About;
+
+
+위 코드 예제는 /about 경로로 이동했을 때 보여지는 Abou...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Jun  8, 2020, 12:00 AM +0800"
+  >Jun  8, 2020<i class="unloaded">2020-06-08T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="205 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-06-07-hashrouter-browserrouter/">React HashRouter와 BrowserRouter의 차이점</a>
     </h1>
 
@@ -1119,101 +1206,6 @@ import App from "./...
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="269 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-19-javascript-map-weakmap/">자바스크립트 Map · WeakMap 자료구조</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        객체의 단점
-
-
-  Iterable 하지 않다.
-  키를 문자열로만 취급한다.
-  따라서 키 값의 유일성을 완벽히 보장할 수 없다.
-  프로퍼티 개수를 직접 파악할 수 없다.
-
-
-const obj = {
-  name: "John",
-  age: 25,
-  gender: "male",
-};
-
-// 다음과 같이 사용할 수 없음
-// obj.length
-
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, May 19, 2020, 12:00 AM +0800"
-  >May 19, 2020<i class="unloaded">2020-05-19T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="368 words">2 min</span>
 
 
         <!-- page views -->
@@ -4353,7 +4345,7 @@ const obj = {
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://www.youtube.com/channel/UCRf6ut93gIImnmdebqdPI9A">Dohae Lee</a>.
         All rights reserved.
       </p>
