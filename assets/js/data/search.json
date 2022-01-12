@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "VSCode 다크 테마 간단 비교",
+    "url": "/posts/2022-01-12-vscode-extensions-themes/",
+    "categories": "development",
+    "tags": "development, vscode, extension, theme",
+    "date": "2022-01-12 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "가끔 편집기 테마가 질릴 때면 이것 저것 설치하고 지우기를 반복하지만, 시간이 지나면 자꾸 까먹고선 또 깔고 지우는 내 자신을 위해 쓰는 심심풀이 글. 참고로 나는 모든 디바이스를 다크 모드로 놓고 쓰고, 그렇지 않을 때도 (다크 모드라는게 없었을 때도) 무조건 편집기 테마는 어두운 테마를 고집하는 사람이기 때문에 라이트 테마 평가는 제외했다.GitHub Theme - Dark Dimmed (7 /10)  Name: GitHub Theme  Publisher: GitHub  VS Marketplace LinkGitHub 테마들..."
+  },
+  
+  {
     "title": "react-router-dom 버전 6 이상 변경점 요약 정리",
     "url": "/posts/2022-01-10-update-react-router-dom/",
     "categories": "react",

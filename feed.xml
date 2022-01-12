@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2022-01-10T16:13:02+08:00</updated>
+  <updated>2022-01-12T15:15:51+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -17,6 +17,50 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>VSCode 다크 테마 간단 비교</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/" rel="alternate" type="text/html" title="VSCode 다크 테마 간단 비교" />
+    <published>2022-01-12T00:00:00+08:00</published>
+  
+    <updated>2022-01-12T00:00:00+08:00</updated>
+  
+    <id>https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/" />
+    <author>
+      <name>Dohae Lee</name>
+    </author>
+
+  
+    
+    <category term="development" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      가끔 편집기 테마가 질릴 때면 이것 저것 설치하고 지우기를 반복하지만, 시간이 지나면 자꾸 까먹고선 또 깔고 지우는 내 자신을 위해 쓰는 심심풀이 글. 참고로 나는 모든 디바이스를 다크 모드로 놓고 쓰고, 그렇지 않을 때도 (다크 모드라는게 없었을 때도) 무조건 편집기 테마는 어두운 테마를 고집하는 사람이기 때문에 라이트 테마 평가는 제외했다.
+
+GitHub Theme - Dark Dimmed (7 /10)
+
+
+  Name: GitHub Theme
+  Publisher: GitHub
+  VS Marketplace Link
+
+
+GitHub 테마들 중 가장 마음에 드는 테마. 대비가 약해서 눈이 아프지 않고, 전반적으로 키워드 구분에 용이한 (Dark 테마에서는 useState와 타입 지정 부분이 같은 컬...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -185,47 +229,6 @@ element
   인프런 개발자 이도해
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React 부모 컴포넌트 값을 자식 컴포넌트에서 업데이트 해야 하는 경우</title>
-    <link href="https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/" rel="alternate" type="text/html" title="React 부모 컴포넌트 값을 자식 컴포넌트에서 업데이트 해야 하는 경우" />
-    <published>2021-07-03T00:00:00+08:00</published>
-  
-    <updated>2021-07-03T00:00:00+08:00</updated>
-  
-    <id>https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/</id>
-    <content src="https://dohaelee.github.io/posts/2021-07-03-react-update-datas-send-props-child-to-parent/" />
-    <author>
-      <name>Dohae Lee</name>
-    </author>
-
-  
-    
-    <category term="react" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-  부모 컴포넌트는 서버를 통해 최신 데이터베이스 정보를 패치 받는다.
-  해당 정보는 useState()를 사용해 부모 컴포넌트에서 관리한다. (정보가 업데이트되면 다시 그려질 수 있도록)
-  부모 컴포넌트는 해당 정보를 각각 하나씩 표현하기 위해 반복적으로 자식 컴포넌트를 생성하고, 자식 컴포넌트로 해당 정보를 보낸다.
-  이때 또 다른 자식 컴포넌트에서 해당 정보를 업데이트해야 할 경우. 정보가 업데이트 되었음을 자식 컴포넌트에서 부모 컴포넌트에 알릴 수 있어야 한다.
-
-
-이런 경우를 글로 설명하면 장황하지만, 생각보다 꽤 흔하게 마주할 수 있는 상황이다. 좀 더 쉬운 가정을 위해 간단한 예제에 위 상황을 대입해보자. 다음 예제에서 Parent 컴포넌트는 서버에서 최신 정보를 패치 받고, 그 정...
     </summary>
   
 
