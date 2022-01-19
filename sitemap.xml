@@ -2,27 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>https://dohaelee.github.io/posts/2022-01-19-object/</loc>
-    </url>
-    
-    <url>
-        <loc>https://dohaelee.github.io/posts/2022-01-19-react-memo/</loc>
-    </url>
-    
-    <url>
-        <loc>https://dohaelee.github.io/posts/2022-01-19-react-beautiful-dnd/</loc>
-    </url>
-    
-    <url>
         <loc>https://dohaelee.github.io/posts/2022-01-19-apexchart/</loc>
     </url>
     
     <url>
-        <loc>https://dohaelee.github.io/posts/2022-01-19-react-hook-form/</loc>
-    </url>
-    
-    <url>
-        <loc>https://dohaelee.github.io/posts/2022-01-19-developer-vscode-shortcut-tips/</loc>
+        <loc>https://dohaelee.github.io/posts/2022-01-19-object-interface-type-tip/</loc>
     </url>
     
     <url>
@@ -58,6 +42,10 @@
     </url>
     
     <url>
+        <loc>https://dohaelee.github.io/posts/2021-11-16-react-beautiful-dnd/</loc>
+    </url>
+    
+    <url>
         <loc>https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/</loc>
     </url>
     
@@ -74,6 +62,10 @@
     </url>
     
     <url>
+        <loc>https://dohaelee.github.io/posts/2021-10-11-javascript-recursive-object-keys/</loc>
+    </url>
+    
+    <url>
         <loc>https://dohaelee.github.io/posts/2021-10-07-book-publish-javascript-for-beginners/</loc>
     </url>
     
@@ -83,6 +75,10 @@
     
     <url>
         <loc>https://dohaelee.github.io/posts/2021-08-22-lecture-html-css-for-beginners/</loc>
+    </url>
+    
+    <url>
+        <loc>https://dohaelee.github.io/posts/2021-08-12-react-memo/</loc>
     </url>
     
     <url>
@@ -1811,6 +1807,14 @@
     
     <url>
         <loc>https://dohaelee.github.io/tags/form/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://dohaelee.github.io/tags/react-beautiful-dnd/</loc>
     </url>
     
     

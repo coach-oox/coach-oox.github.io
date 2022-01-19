@@ -31,8 +31,8 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="React Hook From 사용법 #2 에러 핸들링 응용" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다." />
-<meta property="og:description" content="에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다." />
+<meta name="description" content="본문은 React Hook From 사용법 #1 기초 활용과 이어지는 글이다." />
+<meta property="og:description" content="본문은 React Hook From 사용법 #1 기초 활용과 이어지는 글이다." />
 <link rel="canonical" href="https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/" />
 <meta property="og:url" content="https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/" />
 <meta property="og:site_name" content="Dohae Lee" />
@@ -42,7 +42,7 @@
 <meta property="twitter:title" content="React Hook From 사용법 #2 에러 핸들링 응용" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/"},"url":"https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/","description":"에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다.","headline":"React Hook From 사용법 #2 에러 핸들링 응용","dateModified":"2021-11-08T00:00:00+08:00","datePublished":"2021-11-08T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/"},"url":"https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/","description":"본문은 React Hook From 사용법 #1 기초 활용과 이어지는 글이다.","headline":"React Hook From 사용법 #2 에러 핸들링 응용","dateModified":"2021-11-08T00:00:00+08:00","datePublished":"2021-11-08T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -420,7 +420,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="680 words">3 min read</span>
+  title="947 words">5 min read</span>
 
 
           <!-- page views -->
@@ -434,9 +434,97 @@
 
         
 
-        <p>에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다.</p>
+        <p>본문은 <a href="https://dohaelee.github.io/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a>과 이어지는 글이다.</p>
 
-<h2 id="validate">validate</h2>
+<h2 id="에러-메시지-추가">에러 메시지 추가</h2>
+
+<p><code class="language-plaintext highlighter-rouge">formState.errors</code> 객체를 통해 살펴보면, 에러가 발생할 때 해당 객체에 <code class="language-plaintext highlighter-rouge">message</code>라는 항목이 있는 것을 확인할 수 있는데, 이를 옵션을 추가하는 방식으로 간단하게 지정할 수 있다. 예를들어 <code class="language-plaintext highlighter-rouge">required</code> 필드는 <code class="language-plaintext highlighter-rouge">true</code> 또는 <code class="language-plaintext highlighter-rouge">false</code> 값을 가지지만, 여기에 텍스트를 작성하면 <code class="language-plaintext highlighter-rouge">required</code>를 만족하지 못했을 경우 (에러 발생시) 출력되는 에러 메시지가 된다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="k">return</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">handleSubmit</span><span class="p">(</span><span class="nx">onSubmit</span><span class="p">,</span> <span class="nx">onError</span><span class="p">)}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="p">{...</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">nickname</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+          <span class="na">required</span><span class="p">:</span> <span class="dl">"</span><span class="s2">❌ Nickname is required.</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">minLength</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+          <span class="na">maxLength</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">})}</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span>
+        <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Nickname</span><span class="dl">"</span>
+      <span class="o">/&gt;</span>
+
+      <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Save</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">minLength</code>와 같이 값과 메시지가 함께 전달되어야 하는 경우, 다음과 같이 객체 형태로 에러 메시지를 전달할 수 있다.</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="k">return</span> <span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">handleSubmit</span><span class="p">(</span><span class="nx">onSubmit</span><span class="p">,</span> <span class="nx">onError</span><span class="p">)}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">input</span>
+        <span class="p">{...</span><span class="nx">register</span><span class="p">(</span><span class="dl">"</span><span class="s2">nickname</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+          <span class="na">required</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="na">minLength</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">value</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">minLength Error!</span><span class="dl">"</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="na">maxLength</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="p">})}</span>
+        <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span>
+        <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">Nickname</span><span class="dl">"</span>
+      <span class="o">/&gt;</span>
+
+      <span class="o">&lt;</span><span class="nx">button</span><span class="o">&gt;</span><span class="nx">Save</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/form</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="사용자-정의-에러-핸들링">사용자 정의 에러 핸들링</h2>
+
+<p>에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있다.</p>
+
+<h3 id="validate">validate</h3>
 
 <p>다음 코드 예제는 <code class="language-plaintext highlighter-rouge">register()</code>에 <code class="language-plaintext highlighter-rouge">validate</code> 옵션을 통해 에러를 핸들링 하고 있다. <code class="language-plaintext highlighter-rouge">validate</code>는 함수를 가지는데, 이 함수는 현재 값을 의미하는 <code class="language-plaintext highlighter-rouge">value</code>를 인자로 가진다. 즉, 이 함수 내부에서 현재 값에 대한 어떤 조건을 검사하고 <code class="language-plaintext highlighter-rouge">true</code> 또는 <code class="language-plaintext highlighter-rouge">false</code>를 리턴해 에러를 발생 시킬 수 있다. (<code class="language-plaintext highlighter-rouge">true</code>를 리턴하면 유효성 검사 통과, <code class="language-plaintext highlighter-rouge">false</code>를 리턴하면 에러 발생)</p>
 
@@ -464,7 +552,7 @@
 
 <p>이때 문자열을 리턴하면 에러 메시지로 전달할 수 있어, 위 코드 예제와 같이 참인 조건을 만족하지 못할 경우 <code class="language-plaintext highlighter-rouge">false</code>가 아닌 에러 메시지를 바로 전달할 수도 있다.</p>
 
-<h2 id="seterror">setError</h2>
+<h3 id="seterror">setError</h3>
 
 <p>다음 코드 예제는 <code class="language-plaintext highlighter-rouge">useForm()</code>이 제공하는 <code class="language-plaintext highlighter-rouge">setError()</code> 함수를 사용해서, 폼을 제출할 때 특정 조건에 따라 에러를 발생 시키고 있다. <code class="language-plaintext highlighter-rouge">setError()</code>의 첫 번째 인자로는 등록된 이름을 넘기고, 두 번째 인자를 통해서는 에러 메시지를 전달할 수 있다.</p>
 
@@ -484,7 +572,7 @@
 <span class="p">};</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="에러-발생-위치로-포커스-이동">에러 발생 위치로 포커스 이동</h3>
+<h4 id="에러-발생-위치로-포커스-이동">에러 발생 위치로 포커스 이동</h4>
 
 <p>이때 <code class="language-plaintext highlighter-rouge">shouldFocus</code> 옵션을 사용하면, 에러가 발생한 위젯으로 포커스를 옮길 수도 있다.</p>
 
@@ -508,7 +596,7 @@
 <span class="p">};</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="전체-에러-메시지-핸들링">전체 에러 메시지 핸들링</h3>
+<h4 id="전체-에러-메시지-핸들링">전체 에러 메시지 핸들링</h4>
 
 <p>특정 위젯에 종속 되지 않는 글로벌 에러를 핸들링하기 위해서는 위젯에 종속되지 않는 새로운 이름으로 에러를 발생시키고, 해당 에러 메시지를 원하는 위치에 배치하면 된다.</p>
 
@@ -622,12 +710,12 @@
         
         
         
-        <li><a href="/posts/2020-12-04-node-multer/">Node Multer를 사용해서 백엔드로 파일 전송하기</a></li>
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
       
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2020-12-04-node-multer/">Node Multer를 사용해서 백엔드로 파일 전송하기</a></li>
       
         
         
@@ -1778,285 +1866,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2066,6 +1875,295 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
@@ -3460,9 +3558,9 @@
   
 
   
-  <a href="/posts/2021-11-29-styled-components-usage/" class="btn btn-outline-primary"
+  <a href="/posts/2021-11-16-react-beautiful-dnd/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>styled-components 기본 사용법 요약 정리</p>
+    <p>react-beautiful-dnd 기본 사용법 총정리</p>
   </a>
   
 
@@ -4658,285 +4756,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4946,6 +4765,295 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     

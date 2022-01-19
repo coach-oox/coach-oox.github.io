@@ -1,51 +1,6 @@
 [
   
   {
-    "title": "객체를 순회하는 방법",
-    "url": "/posts/2022-01-19-object/",
-    "categories": "",
-    "tags": "",
-    "date": "2022-01-19 11:53:18 +0800",
-    
-
-
-
-
-
-    "snippet": "객체를 순회하는 방법다음과 같은 객체를 가정할 때, 내부 배열을 각각 순회하고자 하는 경우.const obj = {  a: [1, 2, 3],  b: [4, 5, 6],  c: [7, 8, 9],};먼저 객체의 키 값만 뽑아내기 위해서는 Object.keys()를 사용한다. 이때 결과 값은 키 값 (string)을 배열로 나타낸 것인데, 이를 사용해서 obj[key] 형태로 각각의 프로퍼티에 접근할 수 있게 된다. 이를 코드로 요약하자면 다음과 같다.Object.keys(obj); // [&#39;a&#39;, &#39;b&#..."
-  },
-  
-  {
-    "title": "React.memo",
-    "url": "/posts/2022-01-19-react-memo/",
-    "categories": "",
-    "tags": "",
-    "date": "2022-01-19 11:52:48 +0800",
-    
-
-
-
-
-
-    "snippet": "불필요한 Re-Render를 방지하고, 성능을 최적화 하기 위해 사용한다."
-  },
-  
-  {
-    "title": "react-beautiful-dnd",
-    "url": "/posts/2022-01-19-react-beautiful-dnd/",
-    "categories": "",
-    "tags": "",
-    "date": "2022-01-19 11:52:14 +0800",
-    
-
-
-
-
-
-    "snippet": "react-beautiful-dnd는 React에서 Drag &amp;amp; Drop UI를 보다 쉽게 만들 수 있게 도와주는 라이브러로, 비슷한 라이브러리인 react-dnd나 react-draggable에 비해 비교적 단순한 UI 제작에 적합한 친구다. 인기도는 NPM Trends를 기준으로 react-dnd와 비슷한 수준이며, 개인적으로 자유도는 react-dnd가 높고, 단순한 UI에 모던한 느낌 (애니메이션 기본 적용)을 주고 싶다면 react-beautiful-dnd가 훨씬 난이도는 낮은 것 같다. 만들고자하는 U..."
-  },
-  
-  {
     "title": "Apexcharts",
     "url": "/posts/2022-01-19-apexchart/",
     "categories": "",
@@ -61,23 +16,8 @@
   },
   
   {
-    "title": "React Hook Form",
-    "url": "/posts/2022-01-19-react-hook-form/",
-    "categories": "react",
-    "tags": "react, react-hook-form, form, hook",
-    "date": "2022-01-19 11:51:17 +0800",
-    
-
-
-
-
-
-    "snippet": "React Hook Form은 React에서 form을 보다 쉽게 다루기 위한 라이브러리이다. form을 핸들링 하기 위해 작성해야 하는 코드 중에는 일반적으로 중복되는 노가다가 많은데, React Hook Form을 사용한다면 이러한 단점을 보완할 수 있다.React Hook Form와 비슷한 라이브러리로는 Formik이라는 친구도 있다. NPM Trends를 기준으로 보자면 거의 비슷한 수준의 인지도를 가지고 있는데, 어느 것을 써도 비슷한 효과를 얻을 수 있으나, 내 경우 React Hook Form이 더 젊고, 업데이트..."
-  },
-  
-  {
     "title": "초보 개발자를 위한 VSCode 단축키 기초 활용 TIP 3가지",
-    "url": "/posts/2022-01-19-developer-vscode-shortcut-tips/",
+    "url": "/posts/2022-01-19-object-interface-type-tip/",
     "categories": "development",
     "tags": "development, vscode",
     "date": "2022-01-19 11:44:24 +0800",
@@ -211,6 +151,21 @@
   },
   
   {
+    "title": "react-beautiful-dnd 기본 사용법 총정리",
+    "url": "/posts/2021-11-16-react-beautiful-dnd/",
+    "categories": "react",
+    "tags": "react, react-beautiful-dnd",
+    "date": "2021-11-16 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "react-beautiful-dnd는 React에서 Drag &amp;amp; Drop UI를 보다 쉽게 만들 수 있게 도와주는 라이브러로, 비슷한 라이브러리인 react-dnd나 react-draggable에 비해 비교적 단순한 UI 제작에 적합한 친구다.인기도는 NPM Trends를 기준으로 react-dnd와 비슷한 수준이며, 개인적으로 자유도는 react-dnd가 높고, 단순한 UI에 모던한 느낌 (애니메이션 기본 적용)을 주고 싶다면 react-beautiful-dnd가 훨씬 난이도는 낮은 것 같다. 만들고자하는 UI..."
+  },
+  
+  {
     "title": "React Hook From 사용법 #2 에러 핸들링 응용",
     "url": "/posts/2021-11-08-react-hook-form-usage-2/",
     "categories": "react",
@@ -222,7 +177,7 @@
 
 
 
-    "snippet": "에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다.validate다음 코드 예제는 register()에 validate 옵션을 통해 에러를 핸들링 하고 있다. validate는 함수를 가지는데, 이 함수는 현재 값..."
+    "snippet": "본문은 React Hook From 사용법 #1 기초 활용과 이어지는 글이다.에러 메시지 추가formState.errors 객체를 통해 살펴보면, 에러가 발생할 때 해당 객체에 message라는 항목이 있는 것을 확인할 수 있는데, 이를 옵션을 추가하는 방식으로 간단하게 지정할 수 있다. 예를들어 required 필드는 true 또는 false 값을 가지지만, 여기에 텍스트를 작성하면 required를 만족하지 못했을 경우 (에러 발생시) 출력되는 에러 메시지가 된다.return (  &amp;lt;div&amp;gt;    ..."
   },
   
   {
@@ -271,6 +226,21 @@
   },
   
   {
+    "title": "자바스크립트 객체를 순회하는 방법 (Object.keys 활용법)",
+    "url": "/posts/2021-10-11-javascript-recursive-object-keys/",
+    "categories": "javascript",
+    "tags": "javascript",
+    "date": "2021-10-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "다음과 같은 객체를 가정할 때, 내부 배열을 각각 순회하고자 하는 경우.const obj = {  a: [1, 2, 3],  b: [4, 5, 6],  c: [7, 8, 9],};먼저 객체의 키 값만 뽑아내기 위해서는 Object.keys()를 사용한다. 이때 결과 값은 키 값 (string)을 배열로 나타낸 것인데, 이를 사용해서 obj[key] 형태로 각각의 프로퍼티에 접근할 수 있게 된다. 이를 코드로 요약하자면 다음과 같다.Object.keys(obj); // [&#39;a&#39;, &#39;b&#39;, &#39;c..."
+  },
+  
+  {
     "title": "[출판 소식] 자바스크립트 ES6+ 독학백서",
     "url": "/posts/2021-10-07-book-publish-javascript-for-beginners/",
     "categories": "notice",
@@ -313,6 +283,21 @@
 
 
     "snippet": "2021년 상반기 출간된 책 ≪HTML5 독학백서≫와 ≪CSS3 독학백서≫의 무료 강의인 HTML5 &amp;amp; CSS3 기초 문법 올인원 강의의 제작이 완료되어 소식 알립니다. 해당 강의는 전 범위 무료로 공개됩니다. (하단 링크 중 하나를 선택하셔서 들으시면 됩니다.) 감사합니다.  유튜브 개발자 이도해  인프런 개발자 이도해"
+  },
+  
+  {
+    "title": "React.memo에 대한 이해와 사용 방법",
+    "url": "/posts/2021-08-12-react-memo/",
+    "categories": "react",
+    "tags": "react",
+    "date": "2021-08-12 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "React.memo()는 불필요한 Re-Render를 방지하고, 애플리케이션의 성능을 최적화 해야 할 때 사용할 수 있는 HOC (고차 컴포넌트)다.언제 써야 할까?React.memo()를 사용하면 불필요한 Re-Render를 막아준다고 해서 모든 컴포넌트에 React.memo()를 쓰는 것은 옳지 않다. 오피셜 가이드에서도 React.memo()를 오직 성능 최적화만을 위해서 쓰라고 권고하고 있다.정리하자면, Re-Render 되지 않아도 되는 부분이 계속해서 (useState() 등으로 인해 서로 영향을 받아서) Re-Re..."
   },
   
   {
