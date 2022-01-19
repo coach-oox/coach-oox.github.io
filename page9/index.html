@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-19-express-send-status-codes/">Express 클라이언트에 상태 코드 (Status Code) 전송하기</a>
+      <a href="/posts/2020-12-05-nodemon-ignore/">nodemon.json 파일 작성법 (프론트엔드 파일 예외 처리)</a>
     </h1>
 
     <div class="post-content">
@@ -363,15 +363,269 @@
 
 
 
-        if (password !== confirmPassword) {
-  return response.status(400).render("createAccount", {
-    pageTitle,
-    errorMessage: "Password confirmation does not match.",
-  });
+        // package.json
+"scripts": {
+    // "dev": "nodemon --exec babel-node src/init.js"
+    // 그냥 노드몬을 실행하도록 변경 -&gt; nodemon.json 파일에 작성한 대로 실행됨
+    "dev": "nodemon",
+    "assets": "webpack --config we...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Dec  5, 2020, 12:00 AM +0800"
+  >Dec  5, 2020<i class="unloaded">2020-12-05T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="135 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-04-node-multer/">Node Multer를 사용해서 백엔드로 파일 전송하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        클라이언트측에서 전송하는 데이터
+
+사용자 (클라이언트)가 앱 (서버)에 전송하는 정보는 크게 텍스트와 파일로 구분할 수 있다. 텍스트는 request.body를 통해 전달되며, express.urlencoded({ extended: true }를 사용해 파싱한다.
+
+npm install multer
+
+
+하지만 Express는 사용자가 업로드한 파일을 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Dec  4, 2020, 12:00 AM +0800"
+  >Dec  4, 2020<i class="unloaded">2020-12-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="756 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-03-node-morgan/">Node Morgan (HTTP Request Logger Middleware)</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Node용 HTTP 요청에 대한 로거 미들웨어.
+
+npm install morgan
+
+
+import morgan from "morgan";
+app.use(morgan("dev"));
+
+
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Dec  3, 2020, 12:00 AM +0800"
+  >Dec  3, 2020<i class="unloaded">2020-12-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="26 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-12-02-babel-nodemon/">Node Babel + Nodemon 적용 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Babel
+
+Next-Gen 자바스크립트를 보편적인 (브라우저에서 안정적으로 실행할 수 있는) 자바스크립트로 변환하는 역할.
+
+{
+  "presets": ["@babel/preset-env"]
 }
 
 
-서버에서 클라이언트 측에 respons...
+babel.config.json 파일을 생성한다.
+
+npm install @babel/core @babel/register @babel/preset-en...
       </p>
     </div>
 
@@ -394,8 +648,8 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Sep 19, 2020, 12:00 AM +0800"
-  >Sep 19, 2020<i class="unloaded">2020-09-19T00:00:00+08:00</i>
+    title="Wed, Dec  2, 2020, 12:00 AM +0800"
+  >Dec  2, 2020<i class="unloaded">2020-12-02T00:00:00+08:00</i>
 </span>
 
 
@@ -420,7 +674,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="248 words">1 min</span>
+  title="128 words">1 min</span>
 
 
         <!-- page views -->
@@ -437,7 +691,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-18-express-routing/">Express 라우팅 (Routing) 방법 총정리</a>
+      <a href="/posts/2020-12-01-book-publish-digital-nomad/">[출판 소식] 디지털 노마드를 꿈꾸는 당신이 알아야 하는 모든 것</a>
     </h1>
 
     <div class="post-content">
@@ -448,10 +702,10 @@
 
 
 
-        app.get("/", (request, response) =&gt; response.send("Hello I'm Home!"));
+        
 
+제가 쓴 책 ≪디지털 노마드를 꿈꾸는 당신이 알아야 하는 모든 것≫이 출판되어 소식 알립니다. 교보문고, 알라딘, 예스24, 밀리의서재, 구글플레이 등 다양한 유통사를 통해 구입하실 수 있으며, 현재는 eBook만 출간되어 판매 중 입니다. 많은 관심 부탁드립니다. 감사합니다.
 
-GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요청에 대한 라우트를 생성할 때는 post() 메소드를 사용하며, 첫 번째 인자는 라우트 경로를, 두 번째 인자는 미들웨어 (생략 가능) 또는 해...
       </p>
     </div>
 
@@ -474,8 +728,8 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Sep 18, 2020, 12:00 AM +0800"
-  >Sep 18, 2020<i class="unloaded">2020-09-18T00:00:00+08:00</i>
+    title="Tue, Dec  1, 2020, 12:00 AM +0800"
+  >Dec  1, 2020<i class="unloaded">2020-12-01T00:00:00+08:00</i>
 </span>
 
 
@@ -500,7 +754,7 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="422 words">2 min</span>
+  title="114 words">1 min</span>
 
 
         <!-- page views -->
@@ -517,7 +771,7 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-17-express-url-params/">Express URL에 변수 사용하기</a>
+      <a href="/posts/2020-12-01-node-fs/">Node 파일 시스템 (FS) 모듈을 사용해서 파일 핸들링하는 방법</a>
     </h1>
 
     <div class="post-content">
@@ -528,23 +782,17 @@ GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요�
 
 
 
-        http://abc.com/user/1
-http://abc.com/user/2
+        
+  Node.js v16.6.1 documentation
 
 
-위와 같이 변수를 사용해야 할 때.
+파일 읽기
 
-/user/:id
+function read(request, response) {
+  const { file } = request;
 
-
-해당 부분을 콜론 + 변수명으로 표현한다.
-
-app.get("/user/:id", (request, response) =&gt; {
-  console.log(request.params.id);
-});
-
-
-해당 파...
+  fs.readFile(file.path, "utf8", (error, data) =&gt; {
+    return response.render("read", {...
       </p>
     </div>
 
@@ -567,8 +815,8 @@ app.get("/user/:id", (request, response) =&gt; {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Sep 17, 2020, 12:00 AM +0800"
-  >Sep 17, 2020<i class="unloaded">2020-09-17T00:00:00+08:00</i>
+    title="Tue, Dec  1, 2020, 12:00 AM +0800"
+  >Dec  1, 2020<i class="unloaded">2020-12-01T00:00:00+08:00</i>
 </span>
 
 
@@ -593,7 +841,7 @@ app.get("/user/:id", (request, response) =&gt; {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="88 words">1 min</span>
+  title="77 words">1 min</span>
 
 
         <!-- page views -->
@@ -610,7 +858,7 @@ app.get("/user/:id", (request, response) =&gt; {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-16-express-session-login-logout/">Express 세션을 사용한 로그인 기능 구현</a>
+      <a href="/posts/2020-11-14-eslint-prettier/">.prettierrc, .eslintrc 작성법</a>
     </h1>
 
     <div class="post-content">
@@ -621,187 +869,19 @@ app.get("/user/:id", (request, response) =&gt; {
 
 
 
-        로그인 처리 예시
-
-
-  로그인 = 사용자를 인가하는 것을 의미한다.
-  인가됨을 어떻게 유지할 것인가? = 세션을 사용한다.
-
-
-export async function postLogin(request, response) {
-  // ... 생략 ...
-  // 데이터베이스에 해당 사용자가 있고, 패스워드가 일치할 경우 로그인 처리
-  // 세션에 인...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Sep 16, 2020, 12:00 AM +0800"
-  >Sep 16, 2020<i class="unloaded">2020-09-16T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="255 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-15-express-update-session/">Express 클라이언트의 세션 정보를 업데이트하는 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        세션의 정보를 업데이트하는 것이 필요한 이유를 이해하기 위해서, 다음과 같은 상황을 가정해보자.
-
-
-  로그인 정보가 세션에 저장되어있다. 세션에 정보를 저장하는 시점은 사용자가 로그인에 성공한 시점이다.
-  이때 사용자는 정보 변경 페이지에서 로그인 정보를 수정하고자 한다. 이때 데이터베이스에 저장된 사용자의 정보는 세션에 저장된 로그인 정보 (_i...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Sep 15, 2020, 12:00 AM +0800"
-  >Sep 15, 2020<i class="unloaded">2020-09-15T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="733 words">4 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-14-express-request-session/">Express 세션에 정보를 추가하고 사용하는 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        선행 조건
-
-Express 세션 관리를 위한 Express-Session 사용법
-
-세션에 정보 추가하는 방법
-
-// add information to session
-request.session.loggedIn = true;
-request.session.user = user;
+        Prettier
+
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false
 }
 
 
-request.session.key = value 형식으로 세션에 정보...
+.prettierrc 파일을 생성하고 위 코드 예제와 같이 원하는 설정을 작성한다. 설정...
       </p>
     </div>
 
@@ -824,8 +904,8 @@ request.session.key = value 형식으로 세션에 정보...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Sep 14, 2020, 12:00 AM +0800"
-  >Sep 14, 2020<i class="unloaded">2020-09-14T00:00:00+08:00</i>
+    title="Sat, Nov 14, 2020, 12:00 AM +0800"
+  >Nov 14, 2020<i class="unloaded">2020-11-14T00:00:00+08:00</i>
 </span>
 
 
@@ -850,7 +930,7 @@ request.session.key = value 형식으로 세션에 정보...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="162 words">1 min</span>
+  title="170 words">1 min</span>
 
 
         <!-- page views -->
@@ -867,7 +947,7 @@ request.session.key = value 형식으로 세션에 정보...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-13-express-session/">Express 세션 관리를 위한 Express-Session 사용법</a>
+      <a href="/posts/2020-11-01-express-connect-mongo/">Express 세션 정보 유지를 위한 Connect-Mongo 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -878,18 +958,7 @@ request.session.key = value 형식으로 세션에 정보...
 
 
 
-        npm install express-session
-
-
-Express에서 세션을 관리하기 위한 미들웨어.
-
-import session from "express-session";
-
-// 반드시 라우터 위쪽에 위치하게끔 작성
-// session({ secret, resave, saveUninitialized })
-app.use(
-  session({
-   ...
+        Express 환경에서 세션을 사용하기 위해서는 express-session 라이브러리를 사용한다. 이때 세션 데이터는 쿠키 자체에 저장되지 않고, 세션 아이디만 저장되며, 세션 데이터는 서버 측에 저장된다. 즉, 서버를 재시작하면 (nodemon 사용시 파일을 저장할 때마다) 세션 데이터는 초기화되는 문제가 발생하는 데, 이때 서버 재시작과 상관없이...
       </p>
     </div>
 
@@ -912,8 +981,8 @@ app.use(
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Sep 13, 2020, 12:00 AM +0800"
-  >Sep 13, 2020<i class="unloaded">2020-09-13T00:00:00+08:00</i>
+    title="Sun, Nov  1, 2020, 12:00 AM +0800"
+  >Nov  1, 2020<i class="unloaded">2020-11-01T00:00:00+08:00</i>
 </span>
 
 
@@ -938,7 +1007,7 @@ app.use(
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="428 words">2 min</span>
+  title="475 words">2 min</span>
 
 
         <!-- page views -->
@@ -955,7 +1024,7 @@ app.use(
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-12-express-flash/">Express-Flash를 사용해 플래시 메시지 띄우기</a>
+      <a href="/posts/2020-10-03-express-request-response-locals/">Express 미들웨어에서 App의 지역 변수 (response.locals) 공유하기</a>
     </h1>
 
     <div class="post-content">
@@ -966,16 +1035,12 @@ app.use(
 
 
 
-        npm install express-flash
+        App (또는 서버)에서 사용하는 값을 HTML / Pug (View)에서 사용하고 싶거나, 서버에서 클라이언트 세션에 저장한 데이터를 HTML / Pug (View) 에서 접근하기 위해서는 해당 정보를 미들웨어에서 Hooking 해서 공유할 수 있게끔 해줘야 한다.
+
+app.use(localMiddlewares);
 
 
-휘발성 메시지 (플래시 메시지)를 관리할 수 있는 미들웨어.
-
-
-  Flash is an extension of connect-flash with the ability to define a flash message and render it without redirecting the request.
-
-
-...
+export function l...
       </p>
     </div>
 
@@ -998,8 +1063,8 @@ app.use(
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Sep 12, 2020, 12:00 AM +0800"
-  >Sep 12, 2020<i class="unloaded">2020-09-12T00:00:00+08:00</i>
+    title="Sat, Oct  3, 2020, 12:00 AM +0800"
+  >Oct  3, 2020<i class="unloaded">2020-10-03T00:00:00+08:00</i>
 </span>
 
 
@@ -1024,7 +1089,7 @@ app.use(
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="165 words">1 min</span>
+  title="193 words">1 min</span>
 
 
         <!-- page views -->
@@ -1041,7 +1106,7 @@ app.use(
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-11-express-params-body-query/">Express Request 객체의 이해 및 사용법</a>
+      <a href="/posts/2020-10-02-express-protector-middleware/">Express 특정 경로 접근을 제한하는 미들웨어 만들기</a>
     </h1>
 
     <div class="post-content">
@@ -1052,17 +1117,10 @@ app.use(
 
 
 
-        request 객체는 HTTP Request로, parameters, body, query string, HTTP header 등의 Property를 가진다. (Node의 request 객체보다 향상된 버전)
+        특정 경로에 대해, 로그인한 유저와 로그인하지 않은 유저에 대해 다른 처리 (페이지 제공, 경로 제공 등)를 하고 싶을 때는 미들웨어를 사용해 로그인한 유저만 접근 가능하거나, 로그인하지 않은 유저만 접근 가능하도록 접근을 제한할 수 있다.
 
-
-  request.params
-  request.body
-  request.query
-
-
-request.params
-
-function pos...
+export function loggedInOnly(request, response, next) {
+  if ...
       </p>
     </div>
 
@@ -1085,8 +1143,8 @@ function pos...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Sep 11, 2020, 12:00 AM +0800"
-  >Sep 11, 2020<i class="unloaded">2020-09-11T00:00:00+08:00</i>
+    title="Fri, Oct  2, 2020, 12:00 AM +0800"
+  >Oct  2, 2020<i class="unloaded">2020-10-02T00:00:00+08:00</i>
 </span>
 
 
@@ -1111,92 +1169,7 @@ function pos...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="334 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-11-express-dotenv/">Node DotEnv를 사용해서 환경 변수 사용하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        npm install dotenv
-
-
-Express 환경에서 API 주소, API KEY, DB URL 등의 환경 변수를 process.env.변수명으로 접근해 사용하기 위해서 dotenv 라이브러리를 사용한다. (참고 : Node.js - process.env)
-
-사용법 예시
-
-COOKIE_SECRET=adsfasdfasdfasdf
-MONGODB_U...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Sep 11, 2020, 12:00 AM +0800"
-  >Sep 11, 2020<i class="unloaded">2020-09-11T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="284 words">1 min</span>
+  title="335 words">1 min</span>
 
 
         <!-- page views -->
@@ -1576,9 +1549,24 @@ MONGODB_U...
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page22/">22</a>
+        <a class="page-link btn-box-shadow" href="/page23/">23</a>
       </li>
     
 
@@ -1587,7 +1575,7 @@ MONGODB_U...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>9</span>
-    <span class="text-muted">/ 22</span>
+    <span class="text-muted">/ 23</span>
   </li>
 
   <!-- right arrow -->
@@ -1645,6 +1633,11 @@ MONGODB_U...
         
         
         
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
       
         
@@ -1656,11 +1649,6 @@ MONGODB_U...
         
         
         <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
 
       </ul>
@@ -2786,6 +2774,300 @@ MONGODB_U...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2805,275 +3087,6 @@ MONGODB_U...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5598,6 +5611,300 @@ MONGODB_U...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5617,275 +5924,6 @@ MONGODB_U...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     

@@ -4,7 +4,7 @@
   <id>https://dohaelee.github.io/</id>
   <title>Dohae Lee</title>
   <subtitle>"개발자 이도해 기술 블로그"</subtitle>
-  <updated>2022-01-14T22:04:21+08:00</updated>
+  <updated>2022-01-19T11:54:57+08:00</updated>
   <author>
     <name>Dohae Lee</name>
     <uri>https://dohaelee.github.io/</uri>
@@ -20,21 +20,19 @@
 
   
   <entry>
-    <title>VSCode 다크 테마 간단 비교</title>
-    <link href="https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/" rel="alternate" type="text/html" title="VSCode 다크 테마 간단 비교" />
-    <published>2022-01-12T00:00:00+08:00</published>
+    <title>객체를 순회하는 방법</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-19-object/" rel="alternate" type="text/html" title="객체를 순회하는 방법" />
+    <published>2022-01-19T11:53:18+08:00</published>
   
-    <updated>2022-01-12T00:00:00+08:00</updated>
+    <updated>2022-01-19T11:53:18+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/</id>
-    <content src="https://dohaelee.github.io/posts/2022-01-12-vscode-extensions-themes/" />
+    <id>https://dohaelee.github.io/posts/2022-01-19-object/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-19-object/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
-    
-    <category term="development" />
     
   
 
@@ -46,17 +44,24 @@
 
 
 
-      가끔 편집기 테마가 질릴 때면 이것 저것 설치하고 지우기를 반복하지만, 시간이 지나면 자꾸 까먹고선 또 깔고 지우는 내 자신을 위해 쓰는 심심풀이 글. 참고로 나는 모든 디바이스를 다크 모드로 놓고 쓰고, 그렇지 않을 때도 (다크 모드라는게 없었을 때도) 무조건 편집기 테마는 어두운 테마를 고집하는 사람이기 때문에 라이트 테마 평가는 제외했다.
+      객체를 순회하는 방법
 
-GitHub Theme - Dark Dimmed (7 /10)
+다음과 같은 객체를 가정할 때, 내부 배열을 각각 순회하고자 하는 경우.
+
+const obj = {
+  a: [1, 2, 3],
+  b: [4, 5, 6],
+  c: [7, 8, 9],
+};
 
 
-  Name: GitHub Theme
-  Publisher: GitHub
-  VS Marketplace Link
+먼저 객체의 키 값만 뽑아내기 위해서는 Object.keys()를 사용한다. 이때 결과 값은 키 값 (string)을 배열로 나타낸 것인데, 이를 사용해서 obj[key] 형태로 각각의 프로퍼티에 접근할 수 있게 된다. 이를 코드로 요약하자면 다음과 같다.
+
+Object.keys(obj); // ['a', 'b', 'c']
+Object.keys(obj).map((key) =&amp;gt; obj[key]); // [Array(3), Array(3), Array(3)]
 
 
-GitHub 테마들 중 가장 마음에 드는 테마. 대비가 약해서 눈이 아프지 않고, 전반적으로 키워드 구분에 용이한 (Dark 테마에서는 useState와 타입 지정 부분이 같은 컬...
+타입스크립트에서 객체 타...
     </summary>
   
 
@@ -64,21 +69,19 @@ GitHub 테마들 중 가장 마음에 드는 테마. 대비가 약해서 눈이 
 
   
   <entry>
-    <title>react-router-dom 버전 6 이상 변경점 요약 정리</title>
-    <link href="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" rel="alternate" type="text/html" title="react-router-dom 버전 6 이상 변경점 요약 정리" />
-    <published>2022-01-10T00:00:00+08:00</published>
+    <title>React.memo</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-19-react-memo/" rel="alternate" type="text/html" title="React.memo" />
+    <published>2022-01-19T11:52:48+08:00</published>
   
-    <updated>2022-01-10T00:00:00+08:00</updated>
+    <updated>2022-01-19T11:52:48+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/</id>
-    <content src="https://dohaelee.github.io/posts/2022-01-10-update-react-router-dom/" />
+    <id>https://dohaelee.github.io/posts/2022-01-19-react-memo/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-19-react-memo/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
-    
-    <category term="react" />
     
   
 
@@ -90,26 +93,8 @@ GitHub 테마들 중 가장 마음에 드는 테마. 대비가 약해서 눈이 
 
 
 
-      react-router-dom이 버전 5에서 6으로 업데이트 되면서 몇 가지 메이저 변경점이 생겼으며, 요약하면 다음과 같다. (추천 문서 : React Router Overview)
+      불필요한 Re-Render를 방지하고, 성능을 최적화 하기 위해 사용한다.
 
-Routes
-
-버전 6부터 Switch는 더이상 사용되지 않는다. 오피셜에 따라, Switch는 Routes라는 친구로 대체 되었다.
-
-exact
-
-버전 6부터 Routes가 알아서 최적의 경로를 배정 해주기 때문에, 기존에 Route에 사용했던 exact 속성을 더이상 사용하지 않게 되었다.
-
-*
-
-다수의 라우팅을 매칭하고 싶은 경우, 다음 코드 예제와 같이 URL 뒤에 *를 사용한다.
-
-&amp;lt;Route path="/user/*" element={&amp;lt;User /&amp;gt;} /&amp;gt;
-
-
-element
-
-다음 코드 ...
     </summary>
   
 
@@ -117,21 +102,19 @@ element
 
   
   <entry>
-    <title>React-Query 입문자를 위한 기본 사용법</title>
-    <link href="https://dohaelee.github.io/posts/2021-12-19-react-query/" rel="alternate" type="text/html" title="React-Query 입문자를 위한 기본 사용법" />
-    <published>2021-12-19T00:00:00+08:00</published>
+    <title>react-beautiful-dnd</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-19-react-beautiful-dnd/" rel="alternate" type="text/html" title="react-beautiful-dnd" />
+    <published>2022-01-19T11:52:14+08:00</published>
   
-    <updated>2021-12-19T00:00:00+08:00</updated>
+    <updated>2022-01-19T11:52:14+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-12-19-react-query/</id>
-    <content src="https://dohaelee.github.io/posts/2021-12-19-react-query/" />
+    <id>https://dohaelee.github.io/posts/2022-01-19-react-beautiful-dnd/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-19-react-beautiful-dnd/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
-    
-    <category term="react" />
     
   
 
@@ -143,26 +126,15 @@ element
 
 
 
-      React-Query 영업 글.
+      react-beautiful-dnd는 React에서 Drag &amp;amp; Drop UI를 보다 쉽게 만들 수 있게 도와주는 라이브러로, 비슷한 라이브러리인 react-dnd나 react-draggable에 비해 비교적 단순한 UI 제작에 적합한 친구다. 인기도는 NPM Trends를 기준으로 react-dnd와 비슷한 수준이며, 개인적으로 자유도는 react-dnd가 높고, 단순한 UI에 모던한 느낌 (애니메이션 기본 적용)을 주고 싶다면 react-beautiful-dnd가 훨씬 난이도는 낮은 것 같다. 만들고자하는 UI에 따라 결정하면 될 듯.
 
-React-Query는 React에서 서버 사이드 상태를 편리하게 Fetching, Caching, Synchronizing, Updating 할 수 있도록 도와주는 라이브러리이다.
-
-기본 사용법
-
-React-Query가 좋은 이유 첫 번째는 단연코 사용하기 쉽다는 것이다.
-
-const queryClient = new QueryClient();
-
-function App() {
-  return (
-    &amp;lt;QueryClientProvider client={queryClient}&amp;gt;
-      &amp;lt;Todos /&amp;gt;
-    &amp;lt;/QueryClientProvider&amp;gt;
-  );
-}
+DragDropContext
 
 
-먼저 QueryClient()를 사용해서 Query Client를 생...
+  
+
+
+가장 먼저 DND를 구성할 애플리케이션 (DND를 구성할 영역)을 DragDropContext 컴포넌트로 감싼다. ...
     </summary>
   
 
@@ -170,21 +142,19 @@ function App() {
 
   
   <entry>
-    <title>React Hook From 사용법 #2 에러 핸들링 응용</title>
-    <link href="https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/" rel="alternate" type="text/html" title="React Hook From 사용법 #2 에러 핸들링 응용" />
-    <published>2021-11-08T00:00:00+08:00</published>
+    <title>Apexcharts</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-19-apexchart/" rel="alternate" type="text/html" title="Apexcharts" />
+    <published>2022-01-19T11:51:27+08:00</published>
   
-    <updated>2021-11-08T00:00:00+08:00</updated>
+    <updated>2022-01-19T11:51:27+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/</id>
-    <content src="https://dohaelee.github.io/posts/2021-11-08-react-hook-form-usage-2/" />
+    <id>https://dohaelee.github.io/posts/2022-01-19-apexchart/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-19-apexchart/" />
     <author>
       <name>Dohae Lee</name>
     </author>
 
   
-    
-    <category term="react" />
     
   
 
@@ -196,11 +166,14 @@ function App() {
 
 
 
-      에러를 (유효성 검사) 옵션 형태로 지정하는 것은 편리하나, 실무에서는 이 기능만으로 원하는 에러를 모두 핸들링 하기에는 부족한 감이 없잖아 있다. 예를들어서 사용자가 제출한 데이터가 데이터베이스에 이미 있는 데이터라던지. 이런 경우에는 사용자가 별도로 에러를 핸들링 할 수도 있으며, 본문의 내용은 사용자 정의 에러를 핸들링하는 몇 가지 간단한 예시를 정리한 것이다.
+      Apexcharts.js
 
-validate
 
-다음 코드 예제는 register()에 validate 옵션을 통해 에러를 핸들링 하고 있다. validate는 함수를 가지는데, 이 함수는 현재 값을 의미하는 value를 인자로 가진다. 즉, 이 함수 내부에서 현재 값에 대한 어떤 조건을 검사하고 true 또는 false를 리턴해 에러를 발생 시킬 수 있다. (tru...
+  Apexcharts
+  React Charts 문서
+  다양한 옵션을 통해 커스터마이징 할 수 있다. 예를들어 theme 옵션을 지정하면 모드 (다크 or 라이트)나 팔레트를 지정할 수 있고,
+
+
     </summary>
   
 
@@ -208,14 +181,14 @@ validate
 
   
   <entry>
-    <title>React Hook From 사용법 #1 기초 활용</title>
-    <link href="https://dohaelee.github.io/posts/2021-11-07-react-hook-form-usage-1/" rel="alternate" type="text/html" title="React Hook From 사용법 #1 기초 활용" />
-    <published>2021-11-07T00:00:00+08:00</published>
+    <title>React Hook Form</title>
+    <link href="https://dohaelee.github.io/posts/2022-01-19-react-hook-form/" rel="alternate" type="text/html" title="React Hook Form" />
+    <published>2022-01-19T11:51:17+08:00</published>
   
-    <updated>2021-11-07T00:00:00+08:00</updated>
+    <updated>2022-01-19T11:51:17+08:00</updated>
   
-    <id>https://dohaelee.github.io/posts/2021-11-07-react-hook-form-usage-1/</id>
-    <content src="https://dohaelee.github.io/posts/2021-11-07-react-hook-form-usage-1/" />
+    <id>https://dohaelee.github.io/posts/2022-01-19-react-hook-form/</id>
+    <content src="https://dohaelee.github.io/posts/2022-01-19-react-hook-form/" />
     <author>
       <name>Dohae Lee</name>
     </author>

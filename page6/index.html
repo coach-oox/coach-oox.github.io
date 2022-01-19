@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a>
+      <a href="/posts/2021-05-06-eslint-working-directory-setting/">VS Code ESLint 동작하지 않는 (반응이 없는) 경우 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -363,18 +363,9 @@
 
 
 
-        Commit 규칙
+        VS Code에서 ESLint 확장도 설치되어 있고, 프로젝트에 .eslintrc 파일도 작성되어 있으며, npm install 실행시 별다른 에러도 발생하지 않지만, 결과적으로 ESLint가 동작하지 않는 경우. (e.g., 타입을 생략해도 밑줄이 뜨지 않는 경우.)
 
-$ git commit -m "Prefix: Message (#issue)"
-
-
-
-  Prefix: Message 형식으로 작성한다.
-  접두사는 모두 소문자로 작성한다.
-  접두사와 콜론 (:)은 띄어쓰지 않는다.
-  콜론과 메시지는 한 칸 띄어쓴다.
-  관련된 이슈 번호는 맨 뒤에 괄호 (())안에 작성한다.
-  메시지와 이슈 ...
+ESLint의 설정 오류나 .eslintrc 파일 작성에 문제가 있을 수도 있지만...
       </p>
     </div>
 
@@ -397,8 +388,8 @@ $ git commit -m "Prefix: Message (#issue)"
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Feb  4, 2021, 12:00 AM +0800"
-  >Feb  4, 2021<i class="unloaded">2021-02-04T00:00:00+08:00</i>
+    title="Thu, May  6, 2021, 12:00 AM +0800"
+  >May  6, 2021<i class="unloaded">2021-05-06T00:00:00+08:00</i>
 </span>
 
 
@@ -423,7 +414,7 @@ $ git commit -m "Prefix: Message (#issue)"
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="590 words">3 min</span>
+  title="264 words">1 min</span>
 
 
         <!-- page views -->
@@ -440,7 +431,7 @@ $ git commit -m "Prefix: Message (#issue)"
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-03-branch-strategy/">내가 사용하는 Git 브랜치 전략 (Branch Strategy)</a>
+      <a href="/posts/2021-05-03-tsconfig-options/">tsconfig.json 설정 파일 작성 방법</a>
     </h1>
 
     <div class="post-content">
@@ -451,13 +442,20 @@ $ git commit -m "Prefix: Message (#issue)"
 
 
 
-        전략
+        TSConfig Reference
 
-브랜치 전략은 Git Flow, GitHub Flow 등이 있고, 선택적으로 사용하면 된다. 내 경우 혼자 일한지 오래되었기 때문에 나름의 규칙을 만들어놓고 지켜가며 일하는데, 이 브랜치 전략 역시 규칙 중 하나에 해당한다. (아마도 어쩌다보니 2개가 섞여서 내 입맛에 맞게 된듯)
+files
 
-main
+프로그램에 포함할 파일의 허용 목록 (Allowlist)을 정의하며, 파일을 찾을 수 없을 경우 에러가 발생한다. 일반적으로 포함할 파일의 개수가 적을 때 사용된다.
 
-배포 가능한 상태만을 병합하는 브랜치. 혼자 개발할...
+{
+  "files": ["home.ts", "about.ts", "contact.ts"]
+}
+
+
+include
+
+프로그램에 포함할 파일...
       </p>
     </div>
 
@@ -480,8 +478,8 @@ main
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Feb  3, 2021, 12:00 AM +0800"
-  >Feb  3, 2021<i class="unloaded">2021-02-03T00:00:00+08:00</i>
+    title="Mon, May  3, 2021, 12:00 AM +0800"
+  >May  3, 2021<i class="unloaded">2021-05-03T00:00:00+08:00</i>
 </span>
 
 
@@ -506,7 +504,7 @@ main
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="679 words">3 min</span>
+  title="838 words">4 min</span>
 
 
         <!-- page views -->
@@ -523,7 +521,7 @@ main
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a>
+      <a href="/posts/2021-05-02-react-hooks-rules-of-hooks-error/">React ESLint react-hooks/rules-of-hooks 에러 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -534,23 +532,14 @@ main
 
 
 
-        GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
+        ESLint에서 react-hooks (airbnb-hooks 등)를 사용할 때 발생할 수 있는 에러로, 자바스크립트의 일반 함수에서 Hook을 호출하지 말라는 에러이다. 이 에러를 해결하기 위해서는 다음 두 가지 방식으로 Hook을 호출해야 한다.
 
 
-  
-    
-      Label
-      Description
-    
-  
-  
-    
-      bug
-      Something isn’t working
-    
-    
-      documentation
-      Improvements ...
+  React 함수형 컴포넌트에서 호출
+  Custom Hook에서 호출
+
+
+.eslintrc 파일...
       </p>
     </div>
 
@@ -573,8 +562,8 @@ main
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Feb  2, 2021, 12:00 AM +0800"
-  >Feb  2, 2021<i class="unloaded">2021-02-02T00:00:00+08:00</i>
+    title="Sun, May  2, 2021, 12:00 AM +0800"
+  >May  2, 2021<i class="unloaded">2021-05-02T00:00:00+08:00</i>
 </span>
 
 
@@ -599,7 +588,7 @@ main
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="386 words">2 min</span>
+  title="213 words">1 min</span>
 
 
         <!-- page views -->
@@ -616,7 +605,7 @@ main
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-02-01-clean-code/">오랜만에 리마인드 해보는 클린 코드를 위한 기본 규칙</a>
+      <a href="/posts/2021-05-01-eslint-no-case-declarations/">ESLint no-case-declarations 에러 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -627,19 +616,12 @@ main
 
 
 
-        Clean Code
+        ESLint (no-case-declarations)
+
+Disallow lexical declarations in case/default clauses (no-case-declarations)
 
 
-  주석을 최소화 할 수 있는 코드
-  코드 작성자가 아닌 사람도 금방 배울 수 있는 코드
-  나중에 다시 읽을 때 ‘읽기 위한 공부’를 위해서 Additianal Cost를 지불하지 않아도 되는 코드
-  미래의 내가 똑같은 코드를 작성해도 (코드의 내용은 달라질 수 있지만) 일정한 포맷을 유지하는 코드
-
-
-Naming
-
-
-  ...
+위와 같은 no-case-declarations 에러는 다음과 같이 case문 내에서 변수나 상수 또는 함수 등이 제한된 스코프가 없이 선언되는 것을 허용하...
       </p>
     </div>
 
@@ -662,8 +644,8 @@ Naming
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Feb  1, 2021, 12:00 AM +0800"
-  >Feb  1, 2021<i class="unloaded">2021-02-01T00:00:00+08:00</i>
+    title="Sat, May  1, 2021, 12:00 AM +0800"
+  >May  1, 2021<i class="unloaded">2021-05-01T00:00:00+08:00</i>
 </span>
 
 
@@ -688,7 +670,7 @@ Naming
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="311 words">1 min</span>
+  title="196 words">1 min</span>
 
 
         <!-- page views -->
@@ -705,7 +687,364 @@ Naming
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-01-27-book-publish-html5-for-beginners/">[출판 소식] HTML5 독학백서</a>
+      <a href="/posts/2021-04-05-scss-css-loader/">Webpack SASS (SCSS) 사용법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        설치
+
+npm install sass -D
+npm install sass-loader -D
+npm install css-loader -D
+npm install mini-css-extract-plugin -D
+
+
+각각의 라이브러리가 하는 역할은 다음과 같다.
+
+
+  sass-loader : SCSS 파일을 CSS 파일로 변환
+  css-loader : ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Apr  5, 2021, 12:00 AM +0800"
+  >Apr  5, 2021<i class="unloaded">2021-04-05T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="205 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-04-04-entry-file-name/">Webpack 여러 개의 Entry Point 지정하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        module.exports = {
+  entry: {
+    // 다수의 엔트리 포인트 지정
+    main: "./src/client/js/main.js",
+    something: "./src/client/js/something.js",
+  },
+  mode: "development",
+  watch: true,
+  output: {
+    //...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, Apr  4, 2021, 12:00 AM +0800"
+  >Apr  4, 2021<i class="unloaded">2021-04-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="67 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-04-03-babel-loader/">Webpack Babel-Loader 사용법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install babel-loader -D
+
+
+{
+    test: /\.js$/,
+    use: {
+        loader: "babel-loader",
+        options: {
+            presets: [
+                ["@babel/preset-env", { targets: "defaults" }...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Apr  3, 2021, 12:00 AM +0800"
+  >Apr  3, 2021<i class="unloaded">2021-04-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="36 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        설치
+
+npm install webpack webpack-cli -D
+
+
+속성
+
+
+  entry
+  output
+  module
+  plugin
+
+
+entry
+
+entry 속성에는 웹팩이 모듈 번들링을 하기 위한 진입점이자 변환하고자 하는 자바스크립트 파일의 경로를 작성한다.
+
+module.exports = {
+  entry: "src/index.js...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Apr  2, 2021, 12:00 AM +0800"
+  >Apr  2, 2021<i class="unloaded">2021-04-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1101 words">6 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a>
     </h1>
 
     <div class="post-content">
@@ -718,11 +1057,104 @@ Naming
 
         
 
-제가 쓴 책 ≪HTML5 독학백서≫이 출판되어 소식 알립니다. 교보문고, 알라딘, 예스24, 밀리의서재, 구글플레이 등 다양한 유통사를 통해 구입하실 수 있으며, 현재는 eBook만 출간되어 판매 중 입니다. 많은 관심 부탁드립니다. 감사합니다.
+WebPack은 자바스크립트 애플리케이션의 정적 모듈 번들러 (Static Module Bundler)로, 규모가 있는 시스템에 존재할 수 있는 많은 자바스크립트 파일들을 하나의 파일로 관리하기 위해 사용된다.
+
+Module이란?
+
+
+  애플리케이션을 구성하는 자원들
+  HTML, CSS, 자바스크립트 파일들 등
+
+
+Bundle이란?
+
+
+  소프트...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Apr  1, 2021, 12:00 AM +0800"
+  >Apr  1, 2021<i class="unloaded">2021-04-01T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="923 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-03-25-book-publish-css3-for-beginners/">[출판 소식] CSS3 독학백서</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        
+
+제가 쓴 책 ≪CSS3 독학백서≫이 출판되어 소식 알립니다. 교보문고, 알라딘, 예스24, 밀리의서재, 구글플레이 등 다양한 유통사를 통해 구입하실 수 있으며, 현재는 eBook만 출간되어 판매 중 입니다. 많은 관심 부탁드립니다. 감사합니다.
 
 
   HTML &amp; CSS 무료 강의 바로가기
-  CSS Flex &amp; Grid 강의 바로...
+  CSS Flex &amp; Grid 강의 바로가기
+
+
       </p>
     </div>
 
@@ -745,8 +1177,8 @@ Naming
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jan 27, 2021, 12:00 AM +0800"
-  >Jan 27, 2021<i class="unloaded">2021-01-27T00:00:00+08:00</i>
+    title="Thu, Mar 25, 2021, 12:00 AM +0800"
+  >Mar 25, 2021<i class="unloaded">2021-03-25T00:00:00+08:00</i>
 </span>
 
 
@@ -772,442 +1204,6 @@ Naming
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
   title="118 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-01-23-hosting-services/">2021 프론트엔드 · 백엔드 호스팅 서비스와 CDN 서비스 정리</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Front-End
-
-
-  
-    
-      Service
-      Description
-    
-  
-  
-    
-      GitHub Pages
-      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $4
-    
-    
-      Glitch
-      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $8
- ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Jan 23, 2021, 12:00 AM +0800"
-  >Jan 23, 2021<i class="unloaded">2021-01-23T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="343 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-01-20-setup-mac-terminal-with-iterm2/">iTerm2 세팅 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        iTerm2 설치와 설정
-
-가장 먼저 다음의 명령어로 homebrew를 이용해 iTerm2를 설치한다. 최신 버전이 아닌 다른 버전을 설치하고 싶거나, homebrew를 사용하지 않는다면 공식 홈페이지를 참고하자.
-
-$ brew install --cask iterm2
-
-
-테마 설치와 적용
-
-다음으로는 컬러 테마를 변경하기 위해서 iTerm2 Color...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jan 20, 2021, 12:00 AM +0800"
-  >Jan 20, 2021<i class="unloaded">2021-01-20T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1064 words">5 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-22-typescript-less-parameter/">타입스크립트 Less · Default Parameter</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        선택적 파라미터
-
-function greeting(name, age, gender) {
-  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
-}
-
-greeting(name, age);
-// Hello stranger, you are 24, you are a undefined
-
-
-위 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Dec 22, 2020, 12:00 AM +0800"
-  >Dec 22, 2020<i class="unloaded">2020-12-22T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="345 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-21-typescript-interface/">타입스크립트 기초 토막 정리 #3 인터페이스</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        자바스크립트에서는 클래스를 인터페이스처럼 활용하기도 했지만, 타입스크립트는 그렇지 않다. 클래스와의 차이점은 이 글을 참고.
-
-interface Person {
-  name: string;
-  age: number;
-  gender: string;
-}
-
-// 인자가 Person과 같은지 확인
-function greeting(person: Person)...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Dec 21, 2020, 12:00 AM +0800"
-  >Dec 21, 2020<i class="unloaded">2020-12-21T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="122 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-12-20-typescript-class/">타입스크립트 기초 토막 정리 #2 클래스</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        자바스크립트의 클래스
-
-자바스크립트에서는 클래스가 가지고 있는 속성들에 대해 신경 쓸 필요가 별로 없다. 그냥 사용할 클래스 내용을 작성하기만 하면 된다. 자바스크립트에서 인터페이스가 필요할 때 (쓰고 싶을 때)는 클래스를 대신 사용할 수 있다.
-
-class Rectangle {
-  constructor(height, width) {
-    this....
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Dec 20, 2020, 12:00 AM +0800"
-  >Dec 20, 2020<i class="unloaded">2020-12-20T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="265 words">1 min</span>
 
 
         <!-- page views -->
@@ -1587,9 +1583,24 @@ class Rectangle {
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page22/">22</a>
+        <a class="page-link btn-box-shadow" href="/page23/">23</a>
       </li>
     
 
@@ -1598,7 +1609,7 @@ class Rectangle {
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>6</span>
-    <span class="text-muted">/ 22</span>
+    <span class="text-muted">/ 23</span>
   </li>
 
   <!-- right arrow -->
@@ -1656,6 +1667,11 @@ class Rectangle {
         
         
         
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
       
         
@@ -1667,11 +1683,6 @@ class Rectangle {
         
         
         <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
 
       </ul>
@@ -2797,6 +2808,300 @@ class Rectangle {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2816,275 +3121,6 @@ class Rectangle {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5609,6 +5645,300 @@ class Rectangle {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5628,275 +5958,6 @@ class Rectangle {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     

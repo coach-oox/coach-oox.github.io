@@ -1,6 +1,96 @@
 [
   
   {
+    "title": "객체를 순회하는 방법",
+    "url": "/posts/2022-01-19-object/",
+    "categories": "",
+    "tags": "",
+    "date": "2022-01-19 11:53:18 +0800",
+    
+
+
+
+
+
+    "snippet": "객체를 순회하는 방법다음과 같은 객체를 가정할 때, 내부 배열을 각각 순회하고자 하는 경우.const obj = {  a: [1, 2, 3],  b: [4, 5, 6],  c: [7, 8, 9],};먼저 객체의 키 값만 뽑아내기 위해서는 Object.keys()를 사용한다. 이때 결과 값은 키 값 (string)을 배열로 나타낸 것인데, 이를 사용해서 obj[key] 형태로 각각의 프로퍼티에 접근할 수 있게 된다. 이를 코드로 요약하자면 다음과 같다.Object.keys(obj); // [&#39;a&#39;, &#39;b&#..."
+  },
+  
+  {
+    "title": "React.memo",
+    "url": "/posts/2022-01-19-react-memo/",
+    "categories": "",
+    "tags": "",
+    "date": "2022-01-19 11:52:48 +0800",
+    
+
+
+
+
+
+    "snippet": "불필요한 Re-Render를 방지하고, 성능을 최적화 하기 위해 사용한다."
+  },
+  
+  {
+    "title": "react-beautiful-dnd",
+    "url": "/posts/2022-01-19-react-beautiful-dnd/",
+    "categories": "",
+    "tags": "",
+    "date": "2022-01-19 11:52:14 +0800",
+    
+
+
+
+
+
+    "snippet": "react-beautiful-dnd는 React에서 Drag &amp;amp; Drop UI를 보다 쉽게 만들 수 있게 도와주는 라이브러로, 비슷한 라이브러리인 react-dnd나 react-draggable에 비해 비교적 단순한 UI 제작에 적합한 친구다. 인기도는 NPM Trends를 기준으로 react-dnd와 비슷한 수준이며, 개인적으로 자유도는 react-dnd가 높고, 단순한 UI에 모던한 느낌 (애니메이션 기본 적용)을 주고 싶다면 react-beautiful-dnd가 훨씬 난이도는 낮은 것 같다. 만들고자하는 U..."
+  },
+  
+  {
+    "title": "Apexcharts",
+    "url": "/posts/2022-01-19-apexchart/",
+    "categories": "",
+    "tags": "",
+    "date": "2022-01-19 11:51:27 +0800",
+    
+
+
+
+
+
+    "snippet": "Apexcharts.js  Apexcharts  React Charts 문서  다양한 옵션을 통해 커스터마이징 할 수 있다. 예를들어 theme 옵션을 지정하면 모드 (다크 or 라이트)나 팔레트를 지정할 수 있고,"
+  },
+  
+  {
+    "title": "React Hook Form",
+    "url": "/posts/2022-01-19-react-hook-form/",
+    "categories": "react",
+    "tags": "react, react-hook-form, form, hook",
+    "date": "2022-01-19 11:51:17 +0800",
+    
+
+
+
+
+
+    "snippet": "React Hook Form은 React에서 form을 보다 쉽게 다루기 위한 라이브러리이다. form을 핸들링 하기 위해 작성해야 하는 코드 중에는 일반적으로 중복되는 노가다가 많은데, React Hook Form을 사용한다면 이러한 단점을 보완할 수 있다.React Hook Form와 비슷한 라이브러리로는 Formik이라는 친구도 있다. NPM Trends를 기준으로 보자면 거의 비슷한 수준의 인지도를 가지고 있는데, 어느 것을 써도 비슷한 효과를 얻을 수 있으나, 내 경우 React Hook Form이 더 젊고, 업데이트..."
+  },
+  
+  {
+    "title": "초보 개발자를 위한 VSCode 단축키 기초 활용 TIP 3가지",
+    "url": "/posts/2022-01-19-developer-vscode-shortcut-tips/",
+    "categories": "development",
+    "tags": "development, vscode",
+    "date": "2022-01-19 11:44:24 +0800",
+    
+
+
+
+
+
+    "snippet": "복잡한 API 데이터 타입을 지정하는 방법  받아오려는 데이터를 콘솔에 찍어 봄  마우스 오른쪽 클릭 → Store object as global variable  콘솔에서 Object.keys(temp1).join()하면 객체의 모든 키 값 가져올 수 있음  해당 키를 앞뒤 따옴표 없이 복사  쉼표 하나 선택 후, cmd + d 단축키 사용해서 모든 쉼표 선택해 지우고 엔터  모든 키 앞에 커서가 깜빡이는 상태에서 cmd + → 단축키로 끝으로 이동한 다음, :와 ; 작성  콜론과 세미콜론 사이에 커서가 깜빡이는 상태로 놔둠..."
+  },
+  
+  {
     "title": "VSCode 다크 테마 간단 비교",
     "url": "/posts/2022-01-12-vscode-extensions-themes/",
     "categories": "development",
@@ -13,6 +103,21 @@
 
 
     "snippet": "가끔 편집기 테마가 질릴 때면 이것 저것 설치하고 지우기를 반복하지만, 시간이 지나면 자꾸 까먹고선 또 깔고 지우는 내 자신을 위해 쓰는 심심풀이 글. 참고로 나는 모든 디바이스를 다크 모드로 놓고 쓰고, 그렇지 않을 때도 (다크 모드라는게 없었을 때도) 무조건 편집기 테마는 어두운 테마를 고집하는 사람이기 때문에 라이트 테마 평가는 제외했다.GitHub Theme - Dark Dimmed (7 /10)  Name: GitHub Theme  Publisher: GitHub  VS Marketplace LinkGitHub 테마들..."
+  },
+  
+  {
+    "title": "react-router-dom 버전 6 이상에서 중첩된 라우팅 사용하는 방법",
+    "url": "/posts/2022-01-11-react-router-dom-v6-nested-routes/",
+    "categories": "react",
+    "tags": "react, react-router-dom, router",
+    "date": "2022-01-11 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "/* (하위 전체 경로 선택)을 사용하는 방법먼저 다음과 같이 라우터에서 부모 경로에 /* 부분을 추가해, 해당 라우트가 하위 라우트를 모두 포함하도록 만든다.function Router() {  return (    &amp;lt;BrowserRouter&amp;gt;      &amp;lt;Routes&amp;gt;        &amp;lt;Route path=&quot;/&quot; element={&amp;lt;Users /&amp;gt;} /&amp;gt;        &amp;lt;Route path=&quot;/..."
   },
   
   {
@@ -31,6 +136,36 @@
   },
   
   {
+    "title": "React Router 주요 Hooks API 정리",
+    "url": "/posts/2022-01-09-react-router-v6-hooks/",
+    "categories": "react",
+    "tags": "react, react-router, react-router-dom, react-router-native",
+    "date": "2022-01-09 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "React Router에서 제공하는 Hooks API에 대한 요약 정리. 참고로 React Router는 react-router, react-router-dom, react-router-native 3개의 다른 패키지로 배포되고 있다.useParams  useParamsuseParams()는 현재 URL을 통해 파라미터를 가져올 때 사용하는 Hook이다.import { Routes, Route} from &#39;react-router-dom&#39;;function App() {  return (    &amp;lt;Rout..."
+  },
+  
+  {
+    "title": "React 타입스크립트 사용시 제네릭 지원 안하는 경우 대처법",
+    "url": "/posts/2021-12-29-typescript-tip-react-router-v6-generic/",
+    "categories": "react",
+    "tags": "react, typescript",
+    "date": "2021-12-29 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "실습할 때 흔히 사용하게 되는 useParams()와 같은 Hook들이 React Router 버전 업 (5.xx → 6.xx) 이후 제네릭을 지원하지 않아서, 최근 React + Typescript TIL 멘토링 그룹에서 가장 많이 올라오는 질문이다. 계속 React 공부를 하다보면 단순히 React Router만의 문제가 아닐 수 있어서 속성으로 작성해보는 글.우선 기존과 같은 방식 (버전 업 이전)의 일반적인 상황에서, useParams()에 제네릭으로 타입을 지정하려고 다음과 같은 interface를 작성했다고 가정해보..."
+  },
+  
+  {
     "title": "React-Query 입문자를 위한 기본 사용법",
     "url": "/posts/2021-12-19-react-query/",
     "categories": "react",
@@ -43,6 +178,36 @@
 
 
     "snippet": "React-Query 영업 글.React-Query는 React에서 서버 사이드 상태를 편리하게 Fetching, Caching, Synchronizing, Updating 할 수 있도록 도와주는 라이브러리이다.기본 사용법React-Query가 좋은 이유 첫 번째는 단연코 사용하기 쉽다는 것이다.const queryClient = new QueryClient();function App() {  return (    &amp;lt;QueryClientProvider client={queryClient}&amp;gt;      &..."
+  },
+  
+  {
+    "title": "타입스크립트에서 styled-components 사용하기 (Theme, Props)",
+    "url": "/posts/2021-11-30-styled-components-typescript-theme-props/",
+    "categories": "react, css-in-js",
+    "tags": "react, css-in-js, styled-components",
+    "date": "2021-11-30 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Props 타입 지정타입스크립트를 사용할 때 styled-components 컴포넌트에서 사용하는 Props를 체크하기 위해서는 다음과 같이 Props에 대한 interface를 작성한 뒤, styled.element&amp;lt;interface&amp;gt; 형식으로 Props 타입을 지정한다.interface IContainerProps {  bgColor: string;}const Container = styled.div&amp;lt;IContainerProps&amp;gt;`  background-color: ${(p..."
+  },
+  
+  {
+    "title": "styled-components 기본 사용법 요약 정리",
+    "url": "/posts/2021-11-29-styled-components-usage/",
+    "categories": "react, css-in-js",
+    "tags": "react, css-in-js, styled-components",
+    "date": "2021-11-29 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "멘토링 하면서 느낀점 푸념 한 줄 : 제발… styled-components 먼저 배우고 (잠깐이라도 보고) emotion 써주세요… 물론 그냥도 잘하는 친구들도 많지만, 가끔 잘못 이해하고 있는 (도대체 여태 어떻게 써온건지, 상상의 나래로 이해해서 틀렸지만 굴러가는 신기한 케이스들이 있음) 친구들 바로 잡아주려면 거의 처음부터 다시 해야 합니다… CSS 좀 하라고 그러면 ‘엥? 전 개발자 될건데요? 전 디자인 개뿔 시른대요?’ 하지 마시고 제발 CSS 배워주세요…어쨌든 그래서 적어보는 styled-components 입문자..."
   },
   
   {
@@ -73,6 +238,36 @@
 
 
     "snippet": "React Hook Form은 React에서 form을 보다 쉽게 다루기 위한 라이브러리이다. form을 핸들링 하기 위해 작성해야 하는 코드 중에는 일반적으로 중복되는 노가다가 많은데, React Hook Form을 사용한다면 이러한 단점을 보완할 수 있다.React Hook Form와 비슷한 라이브러리로는 Formik이라는 친구도 있다. NPM Trends를 기준으로 보자면 거의 비슷한 수준의 인지도를 가지고 있는데, 어느 것을 써도 비슷한 효과를 얻을 수 있으나, 내 경우 React Hook Form이 더 젊고, 업데이트..."
+  },
+  
+  {
+    "title": "VSCode better-comments 설정 파일 공유",
+    "url": "/posts/2021-10-29-vscode-better-comments-setting/",
+    "categories": "development",
+    "tags": "development",
+    "date": "2021-10-29 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "누가 공유해달래서 올리는 better-comments 설정. 사용법은 주석으로 달아 두었다. (settings.json 파일에 그대로 붙여 넣으면 됨!) 근데 사용하는 테마에 따라서 컬러는 교체 해야 할 듯 하다.{  &quot;better-comments.multilineComments&quot;: true,  &quot;better-comments.tags&quot;: [    {      // warn: warning      &quot;tag&quot;: &quot;warn&quot;,      &quot;color&q..."
+  },
+  
+  {
+    "title": "Recoil 기본 사용법 요약 정리",
+    "url": "/posts/2021-10-15-recoil-usage/",
+    "categories": "react",
+    "tags": "react, recoil",
+    "date": "2021-10-15 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "(오늘의 영업 대상) Recoil은 페이스북이 개발하고 관리하는 React 전용 상태 관리 라이브러리이다. 뭐 React의 아버지가 React 전용 상태 관리 라이브러리를 만들어 배포하고 관리하고 있으니 백그라운드는 든든한 편이고, 무엇보다도 배우고 사용하기가 매우 쉽다는 장점을 가지고 있다.인기도는 NPM Trends 결과를 기준으로 보자면 Zustand와 비슷한 수준. 아무래도 사용자 수로 따지자면 Redux, MobX에 비해 모자란건 (?) 사실이지만, 사용법이 매우 간단하고 직관적이라서 자주 애용하는 친구다.기본 사용법..."
   },
   
   {
@@ -118,6 +313,21 @@
 
 
     "snippet": "2021년 상반기 출간된 책 ≪HTML5 독학백서≫와 ≪CSS3 독학백서≫의 무료 강의인 HTML5 &amp;amp; CSS3 기초 문법 올인원 강의의 제작이 완료되어 소식 알립니다. 해당 강의는 전 범위 무료로 공개됩니다. (하단 링크 중 하나를 선택하셔서 들으시면 됩니다.) 감사합니다.  유튜브 개발자 이도해  인프런 개발자 이도해"
+  },
+  
+  {
+    "title": "Draft",
+    "url": "/posts/2021-07-30-draft/",
+    "categories": "",
+    "tags": "",
+    "date": "2021-07-30 15:24:19 +0800",
+    
+
+
+
+
+
+    "snippet": ""
   },
   
   {

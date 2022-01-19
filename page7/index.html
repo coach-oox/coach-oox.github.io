@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-19-typescript-types/">타입스크립트 기초 토막 정리 #1 타입 지정</a>
+      <a href="/posts/2021-03-03-heroku-port/">Heroku code=H10 desc='App crashed' 에러 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -363,18 +363,11 @@
 
 
 
-        파라미터 타입 지정
-
-function greeting(name: string, age: number, gender: string) {
-  console.log(`${name}: ${age} years, ${gender}.`);
-}
-
-greeting("Jack", "24", "male");
-
-export {};
+        const PORT = process.env.PORT || 4000;
+app.listen(PORT, listenServer);
 
 
-타입스크립트에서는 파라미터의 타입을 위...
+Heroku에서는 필요에 따라 자동으로 포트 넘버를 (유동적으로) 설정하기 때문에 환경 변수 설정이 필요하다. process.env.PORT는 Heroku에서만 동작하며, (오로지 Heroku를 위한) Heroku를 사용하...
       </p>
     </div>
 
@@ -397,8 +390,8 @@ export {};
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Dec 19, 2020, 12:00 AM +0800"
-  >Dec 19, 2020<i class="unloaded">2020-12-19T00:00:00+08:00</i>
+    title="Wed, Mar  3, 2021, 12:00 AM +0800"
+  >Mar  3, 2021<i class="unloaded">2021-03-03T00:00:00+08:00</i>
 </span>
 
 
@@ -423,7 +416,7 @@ export {};
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="214 words">1 min</span>
+  title="106 words">1 min</span>
 
 
         <!-- page views -->
@@ -440,7 +433,7 @@ export {};
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-18-typescript-setting-up/">타입스크립트를 사용하기 위한 기본 세팅 방법</a>
+      <a href="/posts/2021-03-02-heroku-mongodb/">Heroku MongoDB 환경 변수 등록하기</a>
     </h1>
 
     <div class="post-content">
@@ -451,19 +444,18 @@ export {};
 
 
 
-        설치
-
-npm install -g typescript
+        선행 조건
 
 
-먼저 typescript를 Global로 설치한다. VS Code를 사용한다면, EsLint 확장을 설치한다. (TsLint 확장은 지원이 중단 되었기 때문에 더이상 사용되지 않는다.)
+  Heroku 가입
+  Heroku 앱 생성
+  MongoDB Atlas 가입
+  Organization, Project, Cluster 생성
 
-설정
 
-{
-  "compilerOptions": {
-    "module": "commonjs",
-    "...
+MongoDB
+
+mongodb+srv://leetube:&lt;password&gt;@cluster0.xr2xb.mongodb.net/myFirstDatabase?retryWrites=tru...
       </p>
     </div>
 
@@ -486,8 +478,8 @@ npm install -g typescript
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Dec 18, 2020, 12:00 AM +0800"
-  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
+    title="Tue, Mar  2, 2021, 12:00 AM +0800"
+  >Mar  2, 2021<i class="unloaded">2021-03-02T00:00:00+08:00</i>
 </span>
 
 
@@ -512,7 +504,7 @@ npm install -g typescript
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="348 words">1 min</span>
+  title="153 words">1 min</span>
 
 
         <!-- page views -->
@@ -529,7 +521,7 @@ npm install -g typescript
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-18-webpack-steps-deploy/">Babel-CLI · Webpack을 사용해 Frontend · Backend 빌드하기</a>
+      <a href="/posts/2021-03-01-heroku-cli/">Heroku 기본 사용법 (Heroku CLI)</a>
     </h1>
 
     <div class="post-content">
@@ -540,14 +532,19 @@ npm install -g typescript
 
 
 
-        Backend
+        Heroku CLI 설치
 
-babel-cli를 사용해 빌드하기
-
-npm install @babel/core @babel/cli -D
+brew tap heroku/brew &amp;&amp; brew install heroku
 
 
-nodemon을 사용해서 babel-node를 실행. babel-node는 서비스는 되는 곳이 아니라 개발 환경에서 사용한다. babel-node는 퍼포먼스 문제가 (속도가 느림) 있는데, 따라서 매번 babel-node를 사용...
+Heroku CLI - Download and install
+
+heroku login
+
+
+정상적으로 설치되었거나, 이미 Heroku CLI가 설치되어 있는 경우 위와 같이 heroku login 명령어가 정상적으로 동작한다.
+
+새...
       </p>
     </div>
 
@@ -570,8 +567,8 @@ nodemon을 사용해서 babel-node를 실행. babel-node는 서비스는 되는 
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Dec 18, 2020, 12:00 AM +0800"
-  >Dec 18, 2020<i class="unloaded">2020-12-18T00:00:00+08:00</i>
+    title="Mon, Mar  1, 2021, 12:00 AM +0800"
+  >Mar  1, 2021<i class="unloaded">2021-03-01T00:00:00+08:00</i>
 </span>
 
 
@@ -596,7 +593,7 @@ nodemon을 사용해서 babel-node를 실행. babel-node는 서비스는 되는 
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="435 words">2 min</span>
+  title="270 words">1 min</span>
 
 
         <!-- page views -->
@@ -613,7 +610,7 @@ nodemon을 사용해서 babel-node를 실행. babel-node는 서비스는 되는 
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-11-sessions-cookies/">Cookie · Session 기술의 이해</a>
+      <a href="/posts/2021-02-12-aws-s3-usage/">Express AWS S3를 사용한 파일 업로드 예제</a>
     </h1>
 
     <div class="post-content">
@@ -624,10 +621,17 @@ nodemon을 사용해서 babel-node를 실행. babel-node는 서비스는 되는 
 
 
 
-        Cookie와 Session을 사용하는 이유
+        Bucket 생성
 
-HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특징을 가지고 있다. 이 특징으로 인해 사용자가 요청할 때 마다 연결과 해제의 과정을 거치기 때문에 연결 상태를 유지하지 않고, 연결을 해지한 후에 상태 정보도 저장하지 않아 서버의 자원을 절약할 수 있다.
-...
+AWS S3 Bucket 생성.
+
+IAM User 생성
+
+AWS_ID = 123123;
+AWS_SECRET = 123123;
+
+
+IAM -&gt; User -&gt; 새로운 유저 생성. 액세스 키, 비밀 키 복사 후 .env 파일에 (사실 개발 환경에서는 로컬에 저장하면 되고, Heroku에서만 AWS로 저장하면 되기 때문에 .en...
       </p>
     </div>
 
@@ -650,8 +654,8 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Dec 11, 2020, 12:00 AM +0800"
-  >Dec 11, 2020<i class="unloaded">2020-12-11T00:00:00+08:00</i>
+    title="Fri, Feb 12, 2021, 12:00 AM +0800"
+  >Feb 12, 2021<i class="unloaded">2021-02-12T00:00:00+08:00</i>
 </span>
 
 
@@ -676,7 +680,7 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1105 words">6 min</span>
+  title="507 words">2 min</span>
 
 
         <!-- page views -->
@@ -693,7 +697,7 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-07-github-login/">Node GitHub 소셜 로그인 구현하기</a>
+      <a href="/posts/2021-02-04-commit-convention/">내가 사용하는 Commit · PR 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -704,16 +708,18 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
 
 
-        작업 흐름
+        Commit 규칙
+
+$ git commit -m "Prefix: Message (#issue)"
 
 
-  Authorizing OAuth Apps
 
-
-
-  Users are redirected to request their GitHub identity
-  Users are redirected back to your site by GitHub
-  Your app accesses the API with the user’s access tok...
+  Prefix: Message 형식으로 작성한다.
+  접두사는 모두 소문자로 작성한다.
+  접두사와 콜론 (:)은 띄어쓰지 않는다.
+  콜론과 메시지는 한 칸 띄어쓴다.
+  관련된 이슈 번호는 맨 뒤에 괄호 (())안에 작성한다.
+  메시지와 이슈 ...
       </p>
     </div>
 
@@ -736,8 +742,8 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Dec  7, 2020, 12:00 AM +0800"
-  >Dec  7, 2020<i class="unloaded">2020-12-07T00:00:00+08:00</i>
+    title="Thu, Feb  4, 2021, 12:00 AM +0800"
+  >Feb  4, 2021<i class="unloaded">2021-02-04T00:00:00+08:00</i>
 </span>
 
 
@@ -762,7 +768,7 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1587 words">8 min</span>
+  title="590 words">3 min</span>
 
 
         <!-- page views -->
@@ -779,7 +785,7 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-06-password-bcrypt/">Node Bcrypt를 사용해 사용자 패스워드 해싱하기</a>
+      <a href="/posts/2021-02-03-branch-strategy/">내가 사용하는 Git 브랜치 전략 (Branch Strategy)</a>
     </h1>
 
     <div class="post-content">
@@ -790,19 +796,13 @@ HTTP Protocol은 비연결성 (Connectionless)과 비상태성 (Stateless) 특�
 
 
 
-        npm install bcrypt
+        전략
 
+브랜치 전략은 Git Flow, GitHub Flow 등이 있고, 선택적으로 사용하면 된다. 내 경우 혼자 일한지 오래되었기 때문에 나름의 규칙을 만들어놓고 지켜가며 일하는데, 이 브랜치 전략 역시 규칙 중 하나에 해당한다. (아마도 어쩌다보니 2개가 섞여서 내 입맛에 맞게 된듯)
 
-사용자 암호를 안전하게 저장하기 위해서 해싱한 (암호화 한) 다음 저장해야 함. 해싱 해주는 라이브러리가 bcrypt.
+main
 
-암호화
-
-hashedPassword = await bcrypt.hash(this.password, 5);
-
-
-암호와 해시가 일치하는지 확인하기
-
-export async function postL...
+배포 가능한 상태만을 병합하는 브랜치. 혼자 개발할...
       </p>
     </div>
 
@@ -825,8 +825,8 @@ export async function postL...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Dec  6, 2020, 12:00 AM +0800"
-  >Dec  6, 2020<i class="unloaded">2020-12-06T00:00:00+08:00</i>
+    title="Wed, Feb  3, 2021, 12:00 AM +0800"
+  >Feb  3, 2021<i class="unloaded">2021-02-03T00:00:00+08:00</i>
 </span>
 
 
@@ -851,7 +851,7 @@ export async function postL...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="278 words">1 min</span>
+  title="679 words">3 min</span>
 
 
         <!-- page views -->
@@ -868,7 +868,7 @@ export async function postL...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-05-nodemon-ignore/">nodemon.json 파일 작성법 (프론트엔드 파일 예외 처리)</a>
+      <a href="/posts/2021-02-02-issue-label/">내가 사용하는 GitHub Issue 관리를 위한 Label 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -879,12 +879,23 @@ export async function postL...
 
 
 
-        // package.json
-"scripts": {
-    // "dev": "nodemon --exec babel-node src/init.js"
-    // 그냥 노드몬을 실행하도록 변경 -&gt; nodemon.json 파일에 작성한 대로 실행됨
-    "dev": "nodemon",
-    "assets": "webpack --config we...
+        GitHub에서 이슈를 (또는 PR)을 작성할 때 기본적으로 제공되는 레이블은 다음과 같다.
+
+
+  
+    
+      Label
+      Description
+    
+  
+  
+    
+      bug
+      Something isn’t working
+    
+    
+      documentation
+      Improvements ...
       </p>
     </div>
 
@@ -907,8 +918,8 @@ export async function postL...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Dec  5, 2020, 12:00 AM +0800"
-  >Dec  5, 2020<i class="unloaded">2020-12-05T00:00:00+08:00</i>
+    title="Tue, Feb  2, 2021, 12:00 AM +0800"
+  >Feb  2, 2021<i class="unloaded">2021-02-02T00:00:00+08:00</i>
 </span>
 
 
@@ -933,7 +944,7 @@ export async function postL...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="135 words">1 min</span>
+  title="386 words">2 min</span>
 
 
         <!-- page views -->
@@ -950,7 +961,7 @@ export async function postL...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-04-node-multer/">Node Multer를 사용해서 백엔드로 파일 전송하기</a>
+      <a href="/posts/2021-02-01-clean-code/">오랜만에 리마인드 해보는 클린 코드를 위한 기본 규칙</a>
     </h1>
 
     <div class="post-content">
@@ -961,14 +972,19 @@ export async function postL...
 
 
 
-        클라이언트측에서 전송하는 데이터
-
-사용자 (클라이언트)가 앱 (서버)에 전송하는 정보는 크게 텍스트와 파일로 구분할 수 있다. 텍스트는 request.body를 통해 전달되며, express.urlencoded({ extended: true }를 사용해 파싱한다.
-
-npm install multer
+        Clean Code
 
 
-하지만 Express는 사용자가 업로드한 파일을 ...
+  주석을 최소화 할 수 있는 코드
+  코드 작성자가 아닌 사람도 금방 배울 수 있는 코드
+  나중에 다시 읽을 때 ‘읽기 위한 공부’를 위해서 Additianal Cost를 지불하지 않아도 되는 코드
+  미래의 내가 똑같은 코드를 작성해도 (코드의 내용은 달라질 수 있지만) 일정한 포맷을 유지하는 코드
+
+
+Naming
+
+
+  ...
       </p>
     </div>
 
@@ -991,8 +1007,8 @@ npm install multer
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Dec  4, 2020, 12:00 AM +0800"
-  >Dec  4, 2020<i class="unloaded">2020-12-04T00:00:00+08:00</i>
+    title="Mon, Feb  1, 2021, 12:00 AM +0800"
+  >Feb  1, 2021<i class="unloaded">2021-02-01T00:00:00+08:00</i>
 </span>
 
 
@@ -1017,7 +1033,7 @@ npm install multer
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="756 words">4 min</span>
+  title="311 words">1 min</span>
 
 
         <!-- page views -->
@@ -1034,7 +1050,7 @@ npm install multer
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-03-node-morgan/">Node Morgan (HTTP Request Logger Middleware)</a>
+      <a href="/posts/2021-01-27-book-publish-html5-for-beginners/">[출판 소식] HTML5 독학백서</a>
     </h1>
 
     <div class="post-content">
@@ -1045,15 +1061,13 @@ npm install multer
 
 
 
-        Node용 HTTP 요청에 대한 로거 미들웨어.
+        
 
-npm install morgan
-
-
-import morgan from "morgan";
-app.use(morgan("dev"));
+제가 쓴 책 ≪HTML5 독학백서≫이 출판되어 소식 알립니다. 교보문고, 알라딘, 예스24, 밀리의서재, 구글플레이 등 다양한 유통사를 통해 구입하실 수 있으며, 현재는 eBook만 출간되어 판매 중 입니다. 많은 관심 부탁드립니다. 감사합니다.
 
 
+  HTML &amp; CSS 무료 강의 바로가기
+  CSS Flex &amp; Grid 강의 바로...
       </p>
     </div>
 
@@ -1076,8 +1090,8 @@ app.use(morgan("dev"));
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Dec  3, 2020, 12:00 AM +0800"
-  >Dec  3, 2020<i class="unloaded">2020-12-03T00:00:00+08:00</i>
+    title="Wed, Jan 27, 2021, 12:00 AM +0800"
+  >Jan 27, 2021<i class="unloaded">2021-01-27T00:00:00+08:00</i>
 </span>
 
 
@@ -1102,7 +1116,7 @@ app.use(morgan("dev"));
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="26 words">1 min</span>
+  title="118 words">1 min</span>
 
 
         <!-- page views -->
@@ -1119,7 +1133,7 @@ app.use(morgan("dev"));
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-12-02-babel-nodemon/">Node Babel + Nodemon 적용 방법</a>
+      <a href="/posts/2021-01-23-hosting-services/">2021 프론트엔드 · 백엔드 호스팅 서비스와 CDN 서비스 정리</a>
     </h1>
 
     <div class="post-content">
@@ -1130,18 +1144,24 @@ app.use(morgan("dev"));
 
 
 
-        Babel
-
-Next-Gen 자바스크립트를 보편적인 (브라우저에서 안정적으로 실행할 수 있는) 자바스크립트로 변환하는 역할.
-
-{
-  "presets": ["@babel/preset-env"]
-}
+        Front-End
 
 
-babel.config.json 파일을 생성한다.
-
-npm install @babel/core @babel/register @babel/preset-en...
+  
+    
+      Service
+      Description
+    
+  
+  
+    
+      GitHub Pages
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $4
+    
+    
+      Glitch
+      공개 저장소 호스팅 무료비공개 저장소에서의 호스팅은 유료 월 $8
+ ...
       </p>
     </div>
 
@@ -1164,8 +1184,8 @@ npm install @babel/core @babel/register @babel/preset-en...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Dec  2, 2020, 12:00 AM +0800"
-  >Dec  2, 2020<i class="unloaded">2020-12-02T00:00:00+08:00</i>
+    title="Sat, Jan 23, 2021, 12:00 AM +0800"
+  >Jan 23, 2021<i class="unloaded">2021-01-23T00:00:00+08:00</i>
 </span>
 
 
@@ -1190,7 +1210,7 @@ npm install @babel/core @babel/register @babel/preset-en...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="128 words">1 min</span>
+  title="343 words">1 min</span>
 
 
         <!-- page views -->
@@ -1570,9 +1590,24 @@ npm install @babel/core @babel/register @babel/preset-en...
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page22/">22</a>
+        <a class="page-link btn-box-shadow" href="/page23/">23</a>
       </li>
     
 
@@ -1581,7 +1616,7 @@ npm install @babel/core @babel/register @babel/preset-en...
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>7</span>
-    <span class="text-muted">/ 22</span>
+    <span class="text-muted">/ 23</span>
   </li>
 
   <!-- right arrow -->
@@ -1639,6 +1674,11 @@ npm install @babel/core @babel/register @babel/preset-en...
         
         
         
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
       
         
@@ -1650,11 +1690,6 @@ npm install @babel/core @babel/register @babel/preset-en...
         
         
         <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
 
       </ul>
@@ -2780,6 +2815,300 @@ npm install @babel/core @babel/register @babel/preset-en...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2799,275 +3128,6 @@ npm install @babel/core @babel/register @babel/preset-en...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5592,6 +5652,300 @@ npm install @babel/core @babel/register @babel/preset-en...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5611,275 +5965,6 @@ npm install @babel/core @babel/register @babel/preset-en...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     

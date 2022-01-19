@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-06-usage-mongo-terminal/">MongoDB CLI 특정 데이터베이스 · 컬렉션 데이터 삭제하는 방법</a>
+      <a href="/posts/2020-08-15-mongoose-static/">Mongoose Static 메소드 생성 및 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -363,12 +363,7 @@
 
 
 
-        $ mongo # CLI 실행
-$ show dbs # 데이터베이스 목록 확인
-$ use project # 사용할 데이터베이스 선택
-$ show collections # 데이터베이스 내부에 존재하는 컬렉션 확인
-$ db.users.find() # 컬렉션 내부 데이터들 확인
-$ db.users.remove({}) # project &gt; users 내 ...
+        Static이란 Model.create(), Model.save()와 같이 접근하여 사용할 수 있는 사용자 정의 함수를 말한다. (참고 : Methods and Statics) 모델의 객체 인스턴스가 살아있을 때만 호출 할 수 있는 Method와는 달리, 객체를 생성하지 않아도 바로 컬렉션에 있는 데이터에 접근할 수 있기 때문에 데이터 조회와 관련된 ...
       </p>
     </div>
 
@@ -391,8 +386,8 @@ $ db.users.remove({}) # project &gt; users 내 ...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Aug  6, 2020, 12:00 AM +0800"
-  >Aug  6, 2020<i class="unloaded">2020-08-06T00:00:00+08:00</i>
+    title="Sat, Aug 15, 2020, 12:00 AM +0800"
+  >Aug 15, 2020<i class="unloaded">2020-08-15T00:00:00+08:00</i>
 </span>
 
 
@@ -417,7 +412,7 @@ $ db.users.remove({}) # project &gt; users 내 ...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="90 words">1 min</span>
+  title="172 words">1 min</span>
 
 
         <!-- page views -->
@@ -434,7 +429,7 @@ $ db.users.remove({}) # project &gt; users 내 ...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-05-mongodb-1-n-relations/">MongoDB 모델 간의 관계 설정과 1:N 관계 표현</a>
+      <a href="/posts/2020-08-15-oh-my-zsh-settup/">Oh-My-Zsh 사용자 이름 삭제 + 현재 디렉토리만 표시하기</a>
     </h1>
 
     <div class="post-content">
@@ -445,14 +440,19 @@ $ db.users.remove({}) # project &gt; users 내 ...
 
 
 
-        관계 설정
+        현재 디렉토리만 표시하기
 
-MongoDB는 NoSQL 데이터베이스로 모델끼리의 관계를 직접 설정할 수 없다. 따라서 어떠한 관계를 표현하기 위해서 서로 다른 도큐멘트들이 서로를 참조할 수 있게끔 설정한다.
+~/.oh-my-zsh/themes 디렉토리에서 사용하는 테마 파일을 연다.
 
-const postSchema = new mongoose.Schema({
-  /* ... 생략 ... */
-  owner: {
-    type: mongoose...
+cd ~/.oh-my-zsh/themes
+vim agnoster.zsh-theme
+
+
+다음과 같은 부분을 찾는다.
+
+# Dir: current working directory
+prompt_dir() {
+  prompt_segment blue $CU...
       </p>
     </div>
 
@@ -475,8 +475,8 @@ const postSchema = new mongoose.Schema({
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Aug  5, 2020, 12:00 AM +0800"
-  >Aug  5, 2020<i class="unloaded">2020-08-05T00:00:00+08:00</i>
+    title="Sat, Aug 15, 2020, 12:00 AM +0800"
+  >Aug 15, 2020<i class="unloaded">2020-08-15T00:00:00+08:00</i>
 </span>
 
 
@@ -501,7 +501,7 @@ const postSchema = new mongoose.Schema({
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="547 words">3 min</span>
+  title="120 words">1 min</span>
 
 
         <!-- page views -->
@@ -518,7 +518,7 @@ const postSchema = new mongoose.Schema({
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-04-mongodb-usage-regexp/">MongoDB 정규식 표현을 사용하는 방법</a>
+      <a href="/posts/2020-08-14-react-typescript-define-tuple/">타입스크립트 객체 배열의 타입 (React but target allows only 1 에러 해결 방법)</a>
     </h1>
 
     <div class="post-content">
@@ -529,14 +529,13 @@ const postSchema = new mongoose.Schema({
 
 
 
-        export async function search(request, response) {
-  const { keyword } = request.query;
-  let posts = [];
+        멘티들이 가장 많이하는 질문 중에 하나.
+오늘도 같은 질문을 받아서 정리해본다. 🐥
 
-  if (keyword) {
-    posts = await Post.find({
-      title: {
-        // $regex: `.*${keywo...
+Source has X element(s) but target allows only 1.
+
+
+앞쪽 메시지는 다를 수 있지만 위와 거의 흡사한 에러 메시지가 확인되는 경우. 이 에러는 하나의 엘리먼트에 해당하는 타입만을 지정해놓고, 다수의 엘리먼트를 넣으려고 했기 때문...
       </p>
     </div>
 
@@ -559,8 +558,8 @@ const postSchema = new mongoose.Schema({
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Aug  4, 2020, 12:00 AM +0800"
-  >Aug  4, 2020<i class="unloaded">2020-08-04T00:00:00+08:00</i>
+    title="Fri, Aug 14, 2020, 12:00 AM +0800"
+  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
 </span>
 
 
@@ -585,7 +584,7 @@ const postSchema = new mongoose.Schema({
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="156 words">1 min</span>
+  title="283 words">1 min</span>
 
 
         <!-- page views -->
@@ -602,7 +601,7 @@ const postSchema = new mongoose.Schema({
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-03-mongodb-error-e1100-duplicate-key-error/">MongoDB E11000 duplicate key 에러 해결 방법</a>
+      <a href="/posts/2020-08-14-mongoose-understand-async/">Mongoose 콜백 함수의 이해</a>
     </h1>
 
     <div class="post-content">
@@ -613,12 +612,15 @@ const postSchema = new mongoose.Schema({
 
 
 
-        증상
+        import Post from "../models/Post";
 
-UnhandledPromiseRejectionWarning: MongoError: E11000 duplicate key error collection: project.users index: usernname_1 dup key: { usernname: null }
+export function home(request, response) {
+  Post.find({}, (error, posts) =&gt; {
+    console.log("error: ", error);
+    console.log("posts: ", posts);
+  });
 
-
-Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
+  r...
       </p>
     </div>
 
@@ -641,8 +643,8 @@ Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug  3, 2020, 12:00 AM +0800"
-  >Aug  3, 2020<i class="unloaded">2020-08-03T00:00:00+08:00</i>
+    title="Fri, Aug 14, 2020, 12:00 AM +0800"
+  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
 </span>
 
 
@@ -667,7 +669,7 @@ Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="124 words">1 min</span>
+  title="420 words">2 min</span>
 
 
         <!-- page views -->
@@ -684,7 +686,7 @@ Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-02-mongodb-logical-operators/">MongoDB 논리 연산자 사용법</a>
+      <a href="/posts/2020-08-14-random-id-uuid/">Node 랜덤한 아이디 값 생성을 위한 UUID 라이브러리 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -695,14 +697,17 @@ Model.create() 또는 Model.save()로 새로운 데이터를 저장하...
 
 
 
-        
-  Logical Operators
+        uuid는 네트워크 상에서 고유성이 보장되는 아이디 값을 만들기 위한 표준 규약 UUID를 CommonJS, Node, 브라우저 환경 등에서 사용할 수 있는 라이브러리이다.
+
+npm install uuid
 
 
-export async function postJoin(request, response) {
-  const pageTitle = "Create Account";
-  const { name, username, email, password, confirmPassword, location } =
-    request...
+타입스크립트로 사용하려면 @types/uuid도 설치해준다.
+
+npm install @types/uuid
+
+
+다음과 같이 v4 모듈을 impor...
       </p>
     </div>
 
@@ -725,8 +730,8 @@ export async function postJoin(request, response) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Aug  2, 2020, 12:00 AM +0800"
-  >Aug  2, 2020<i class="unloaded">2020-08-02T00:00:00+08:00</i>
+    title="Fri, Aug 14, 2020, 12:00 AM +0800"
+  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
 </span>
 
 
@@ -751,7 +756,7 @@ export async function postJoin(request, response) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="371 words">2 min</span>
+  title="131 words">1 min</span>
 
 
         <!-- page views -->
@@ -768,7 +773,7 @@ export async function postJoin(request, response) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-01-mongodb-install/">로컬에 MongoDB 설치하기 (MongoDB Community · MongoD)</a>
+      <a href="/posts/2020-08-13-what-is-tdd/">테스트 주도 개발 (TDD)이란?</a>
     </h1>
 
     <div class="post-content">
@@ -779,14 +784,9 @@ export async function postJoin(request, response) {
 
 
 
-        $ brew tap mongodb/brew
-$ brew install mongodb-community@4.4
+        테스트 주도 개발 (Test Driven Development, TDD)이란, 개발시 작은 단위로 테스트 코드를 먼저 작성하고, 해당 테스트를 통과하는 코드를 추가하는 과정을 반복해서 프로그램을 개발하는 소프트웨어 방법론을 말한다.
 
-
-로컬에 Homebrew 사용해서 설치. (참고 : MongoDB Installation)
-
-$ brew services start mongodb-community@4.4
-$ brew services stop mongodb-community@...
+학습의 단계를 넘어, 실무 프로젝트에서 TDD를 적용하는 경우, 아무래도 테스트 코드를 작성하고 → 테스트하고 → 통과...
       </p>
     </div>
 
@@ -809,8 +809,8 @@ $ brew services stop mongodb-community@...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Aug  1, 2020, 12:00 AM +0800"
-  >Aug  1, 2020<i class="unloaded">2020-08-01T00:00:00+08:00</i>
+    title="Thu, Aug 13, 2020, 12:00 AM +0800"
+  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
 </span>
 
 
@@ -835,7 +835,7 @@ $ brew services stop mongodb-community@...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="69 words">1 min</span>
+  title="337 words">1 min</span>
 
 
         <!-- page views -->
@@ -852,7 +852,7 @@ $ brew services stop mongodb-community@...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-07-13-pug-variables/">Express 컨트롤러에서 전달한 변수 Pug 파일에서 사용하기</a>
+      <a href="/posts/2020-08-13-react-typescript-usereducer-ts2769-error/">React useReducer 사용시 발생하는 TS2769 에러 해결 방법</a>
     </h1>
 
     <div class="post-content">
@@ -863,18 +863,11 @@ $ brew services stop mongodb-community@...
 
 
 
-        doctype html
-html(lang="ko")
-    head
-        title #{title} | Site
-    body
-        block content
-        include ./footer.pug
+        에러 메시지
 
+No overload matches this call.
 
-function home(request, response) {
-  const title = "Hello World!";
-...
+Overload 1 of 5, '(reducer: ReducerWithoutAction&lt;any&gt;, initializerArg: any, initializer?: undefined): [any, DispatchWithoutAction]', gave the following...
       </p>
     </div>
 
@@ -897,8 +890,8 @@ function home(request, response) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Jul 13, 2020, 12:00 AM +0800"
-  >Jul 13, 2020<i class="unloaded">2020-07-13T00:00:00+08:00</i>
+    title="Thu, Aug 13, 2020, 12:00 AM +0800"
+  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
 </span>
 
 
@@ -923,7 +916,7 @@ function home(request, response) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="143 words">1 min</span>
+  title="204 words">1 min</span>
 
 
         <!-- page views -->
@@ -940,7 +933,7 @@ function home(request, response) {
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-07-12-pug-html-return/">Express Pug 기본 사용법 + Failed to lookup view 에러 해결 방법</a>
+      <a href="/posts/2020-08-13-mongoose-update-data/">Mongoose 기존의 데이터를 가져와서 업데이트하기</a>
     </h1>
 
     <div class="post-content">
@@ -951,16 +944,13 @@ function home(request, response) {
 
 
 
-        Express에서 특정 경로에 HTML 리턴
+        export async function postEdit(request, response) {
+  const { id } = request.params;
+  const post = await Post.exists({ _id: id });
+  const { title, description } = request.body;
 
-function home(request, response) {
-  return response.send("&lt;h1&gt;Home&lt;/h1&gt;");
-}
-
-
-컨트롤러 부분의 response에 실어서 보냄. 하지만 이렇게 보내는 방식으로는 장문의 HTML을 전부 작성하기 어렵고, 복잡함.
-
-Pug 사...
+  if (!post) {
+  ...
       </p>
     </div>
 
@@ -983,8 +973,8 @@ Pug 사...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Jul 12, 2020, 12:00 AM +0800"
-  >Jul 12, 2020<i class="unloaded">2020-07-12T00:00:00+08:00</i>
+    title="Thu, Aug 13, 2020, 12:00 AM +0800"
+  >Aug 13, 2020<i class="unloaded">2020-08-13T00:00:00+08:00</i>
 </span>
 
 
@@ -1009,7 +999,7 @@ Pug 사...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="359 words">1 min</span>
+  title="260 words">1 min</span>
 
 
         <!-- page views -->
@@ -1026,7 +1016,7 @@ Pug 사...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-07-11-pug-api-view/">Pug Dataset을 사용해서 백엔드와 데이터 공유하기</a>
+      <a href="/posts/2020-08-12-create-model-save/">Mongoose 클라이언트가 전달한 정보를 데이터베이스에 저장하기</a>
     </h1>
 
     <div class="post-content">
@@ -1037,11 +1027,19 @@ Pug 사...
 
 
 
-        백엔드와 Pug는 서로 데이터를 공유할 수 있다. 하지만 프론트엔드 쪽에서 사용하는 자바스크립트에서는 이러한 정보에 접근할 수가 없는데, 이때 가장 간편하게 정보를 공유하는 방법은 HTML의 data-set을 사용하는 방법이다. (이외 방법 : localStorage 등)
+        요약
 
-처리를 담당할 라우터
 
-import express from "express";...
+  클라이언트가 서버측으로 어떤 정보를 전달 (POST)
+  서버는 해당 정보를 Mongoose 모델로 작성
+  작성된 모델을 데이터베이스에 추가
+
+
+클라이언트
+
+block content
+    form(method="POST")
+        input(name="title", placeholder="Title", type="text", r...
       </p>
     </div>
 
@@ -1064,8 +1062,8 @@ import express from "express";...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Jul 11, 2020, 12:00 AM +0800"
-  >Jul 11, 2020<i class="unloaded">2020-07-11T00:00:00+08:00</i>
+    title="Wed, Aug 12, 2020, 12:00 AM +0800"
+  >Aug 12, 2020<i class="unloaded">2020-08-12T00:00:00+08:00</i>
 </span>
 
 
@@ -1090,7 +1088,7 @@ import express from "express";...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="241 words">1 min</span>
+  title="237 words">1 min</span>
 
 
         <!-- page views -->
@@ -1107,7 +1105,7 @@ import express from "express";...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-07-10-pug-make-url-backend/">Pug 긴 URL 줄이기 (Redirection)</a>
+      <a href="/posts/2020-08-11-react-context-api-hooks/">React Context API와 Hooks 기초 이해</a>
     </h1>
 
     <div class="post-content">
@@ -1118,12 +1116,11 @@ import express from "express";...
 
 
 
-        긴 URL의 문제점
+        Context란?
 
-a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsafsadf&amp;allow_signup=false&amp;scope=read:user user:email") GitHub
+기본적으로 리액트에서는 props를 사용해서 부모 컴포넌트에서 자식 컴포넌트로 데이터를 공유할 수 있다. 이때 컴포넌트의 개수가 많고 구성이 복잡할 수록, 아래와 같이 여러 개의 컴포넌트에서 자식 컴포넌트로 props를 복잡하게 전달해야 하고, 실질적으로 그것을 사용하기 위해서보다 전달만을 위해 다루는 일이 많아지게 된다.
 
-
-위 코드는 GitHub 로그인 기능 구현을 위해 필요한 URL...
+메인 ...
       </p>
     </div>
 
@@ -1146,8 +1143,8 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Jul 10, 2020, 12:00 AM +0800"
-  >Jul 10, 2020<i class="unloaded">2020-07-10T00:00:00+08:00</i>
+    title="Tue, Aug 11, 2020, 12:00 AM +0800"
+  >Aug 11, 2020<i class="unloaded">2020-08-11T00:00:00+08:00</i>
 </span>
 
 
@@ -1172,7 +1169,7 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="341 words">1 min</span>
+  title="871 words">4 min</span>
 
 
         <!-- page views -->
@@ -1552,9 +1549,24 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page22/">22</a>
+        <a class="page-link btn-box-shadow" href="/page23/">23</a>
       </li>
     
 
@@ -1563,7 +1575,7 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>12</span>
-    <span class="text-muted">/ 22</span>
+    <span class="text-muted">/ 23</span>
   </li>
 
   <!-- right arrow -->
@@ -1621,6 +1633,11 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
         
         
         
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
       
         
@@ -1632,11 +1649,6 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
         
         
         <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
 
       </ul>
@@ -2762,6 +2774,300 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2781,275 +3087,6 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5574,6 +5611,300 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5593,275 +5924,6 @@ a(href="https://github.com/login/oauth/authorize?client_id=aasdffsafasdfasfsafsa
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     

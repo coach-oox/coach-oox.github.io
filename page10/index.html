@@ -352,7 +352,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-10-express-parsing-body/">Express 클라이언트가 보낸 Body 정보 파싱하는 방법</a>
+      <a href="/posts/2020-10-01-express-middleware/">Express 미들웨어 (Middleware) 사용법</a>
     </h1>
 
     <div class="post-content">
@@ -363,11 +363,17 @@
 
 
 
-        클라이언트 측에서 POST 또는 PUT 메소드로 요청할 때 Body를 포함하여 보낼 수 있는데, 이 Body 정보를 서버 측에서 받아 사용할 수 있는 (해석할 수 있는) 형태로 변형해야 사용 할 수 있기 때문에 파싱하는 과정이 필요하다.
+        전체 경로에 적용되는 미들웨어
 
-Express 내장 함수 사용
+// middlewares
+app.use(logger);
+app.use(express.urlencoded({ extended: true }));
+app.use(localMiddlewares);
 
-export function postEdit(request, response) {...
+// routers
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+...
       </p>
     </div>
 
@@ -390,8 +396,8 @@ export function postEdit(request, response) {...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Sep 10, 2020, 12:00 AM +0800"
-  >Sep 10, 2020<i class="unloaded">2020-09-10T00:00:00+08:00</i>
+    title="Thu, Oct  1, 2020, 12:00 AM +0800"
+  >Oct  1, 2020<i class="unloaded">2020-10-01T00:00:00+08:00</i>
 </span>
 
 
@@ -416,7 +422,7 @@ export function postEdit(request, response) {...
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="230 words">1 min</span>
+  title="108 words">1 min</span>
 
 
         <!-- page views -->
@@ -433,7 +439,7 @@ export function postEdit(request, response) {...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-09-express-basic-methods/">Express 기본 사용법과 주요 메소드 정리</a>
+      <a href="/posts/2020-09-22-express-request-body-text-json/">클라이언트에서 Express 서버로 텍스트 · JSON 데이터 전송하기</a>
     </h1>
 
     <div class="post-content">
@@ -444,20 +450,15 @@ export function postEdit(request, response) {...
 
 
 
-        Express란?
+        Request.body 만들어 서버로 보내기
 
-Node.js를 위한 가벼운 Back-End (or Server-Side) Framework.
-
-
-  웹 어플리케이션을 만들기 쉬워진다.
-  가볍고 빠르며, 무료이다.
-  Request와 Response를 통제할 수 있다.
+fetch(`/api/posts/${id}/comment`, {
+  method: "POST",
+  body: { text },
+});
 
 
-기본 사용법
-
-
-  Express는 CommonJS를 사용하기 때문에 ES6+ 문법을 사용하기 위해서는 B...
+서버 측으로 POST 요청을 보낼 때, 반드시 form을 통해서 Sumbit 하지 않아도, 위와 같이 fetch를 사용해 POST 요청을 보낼 수 있으며, body 프...
       </p>
     </div>
 
@@ -480,8 +481,8 @@ Node.js를 위한 가벼운 Back-End (or Server-Side) Framework.
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Sep  9, 2020, 12:00 AM +0800"
-  >Sep  9, 2020<i class="unloaded">2020-09-09T00:00:00+08:00</i>
+    title="Tue, Sep 22, 2020, 12:00 AM +0800"
+  >Sep 22, 2020<i class="unloaded">2020-09-22T00:00:00+08:00</i>
 </span>
 
 
@@ -506,7 +507,7 @@ Node.js를 위한 가벼운 Back-End (or Server-Side) Framework.
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="896 words">4 min</span>
+  title="319 words">1 min</span>
 
 
         <!-- page views -->
@@ -523,7 +524,7 @@ Node.js를 위한 가벼운 Back-End (or Server-Side) Framework.
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-07-regexp-startswith-endwith/">특정 단어로 시작하거나 끝나는 문자열을 검사하는 정규식 표현</a>
+      <a href="/posts/2020-09-21-express-response-status-json/">Express 클라이언트에 상태 코드와 함께 객체 전달하기</a>
     </h1>
 
     <div class="post-content">
@@ -534,21 +535,20 @@ Node.js를 위한 가벼운 Back-End (or Server-Side) Framework.
 
 
 
-        앵커 (Anchor)
+        Backend
 
-캐럿 기호인 다음 두 기호를 앵커 (Anchor)라고 한다. 이 두 개의 앵커를 사용해서 문자열이 특정 단어로 시작하거나, 끝나는지 여부를 검사하는 정규식 표현을 만들 수 있다.
-
-
-  ^ : 텍스트의 시작
-  $ : 텍스트의 끝
+app.use(express.json());
 
 
-특정 단어로 시작하는 문자열
-
-const string = "Hello World!";
+return response.status(201).json({ title: something, name: somethings });
 
 
-/^H...
+json() 메소드를 사용해서 객체를 전달한다.
+
+Frontend
+
+if (response.status === 201) {
+  const { title,...
       </p>
     </div>
 
@@ -571,8 +571,8 @@ const string = "Hello World!";
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Sep  7, 2020, 12:00 AM +0800"
-  >Sep  7, 2020<i class="unloaded">2020-09-07T00:00:00+08:00</i>
+    title="Mon, Sep 21, 2020, 12:00 AM +0800"
+  >Sep 21, 2020<i class="unloaded">2020-09-21T00:00:00+08:00</i>
 </span>
 
 
@@ -597,7 +597,7 @@ const string = "Hello World!";
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="280 words">1 min</span>
+  title="52 words">1 min</span>
 
 
         <!-- page views -->
@@ -614,7 +614,7 @@ const string = "Hello World!";
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-17-pagination/">Mongoose 페이징 (Paginate) 방법</a>
+      <a href="/posts/2020-09-20-express-route-url-string-pattern/">Express 문자열 패턴과 정규식 표현을 사용한 Route 경로 표현</a>
     </h1>
 
     <div class="post-content">
@@ -625,13 +625,17 @@ const string = "Hello World!";
 
 
 
-        전체 데이터 개수
+        라우트 경로를 문자열을 기반으로 하는 경우, 문자열 패턴 또는 정규식 문자를 사용해 조합할 수 있다. (- (하이픈)과 . (점)은 그냥 문자 그대로 해석됨)
 
-const posts = await Post.find({}).populate("owner");
-const totalCount = posts.length;
+app.get("/", home);
+app.get("/about", about);
 
 
-라인 1과 같이 데이터베이스 검색 결과를 가져올 때, 결과를 담은 posts는 배열이 된다. (예외 처리 필요) 따라서 전체 게시글의 개수를 posts.length로 구할 수 ...
+위 라우트 경로는 정확히 입력된 대로 /, /about를 의미한다.
+
+? (물음표)
+
+app.get("/a...
       </p>
     </div>
 
@@ -654,8 +658,8 @@ const totalCount = posts.length;
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug 17, 2020, 12:00 AM +0800"
-  >Aug 17, 2020<i class="unloaded">2020-08-17T00:00:00+08:00</i>
+    title="Sun, Sep 20, 2020, 12:00 AM +0800"
+  >Sep 20, 2020<i class="unloaded">2020-09-20T00:00:00+08:00</i>
 </span>
 
 
@@ -680,7 +684,7 @@ const totalCount = posts.length;
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="464 words">2 min</span>
+  title="414 words">2 min</span>
 
 
         <!-- page views -->
@@ -697,7 +701,7 @@ const totalCount = posts.length;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-08-17-ssr-csr-react-next/">SPA · MPA · PWA · CSR · SSR에 대한 이해</a>
+      <a href="/posts/2020-09-19-express-send-status-codes/">Express 클라이언트에 상태 코드 (Status Code) 전송하기</a>
     </h1>
 
     <div class="post-content">
@@ -708,433 +712,15 @@ const totalCount = posts.length;
 
 
 
-        SPA vs. MPA
-
-SPA는 Single Page Application, MPA는 Multiple Page Application의 약자로, 애플리케이션이 몇 개의 페이지로 구성되었는지로 구분하는 용어이다. 이 둘의 주요 특징은 다음과 같다.
-
-SPA 개요
-
-SPA는 한 개의 페이지로 구성된 애플리케이션을 의미하며, 애플리케이션을 구동하는데 필요한 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Aug 17, 2020, 12:00 AM +0800"
-  >Aug 17, 2020<i class="unloaded">2020-08-17T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="899 words">4 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-16-mongoose-usage-middleware/">Mongoose 기본 제공 미들웨어 사용법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Mongoose는 4가지 종류의 미들웨어를 제공한다. (참고 : Mongoose Middleware)
-
-
-  document middleware
-  model middleware
-  aggregate middleware
-  query middleware
-
-
-미들웨어는 스키마를 구현하고 모델을 내보내는 파일에서 정의하고, 사용되기 전에 Hooking 된...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Aug 16, 2020, 12:00 AM +0800"
-  >Aug 16, 2020<i class="unloaded">2020-08-16T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="564 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-15-mongoose-static/">Mongoose Static 메소드 생성 및 사용법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Static이란 Model.create(), Model.save()와 같이 접근하여 사용할 수 있는 사용자 정의 함수를 말한다. (참고 : Methods and Statics) 모델의 객체 인스턴스가 살아있을 때만 호출 할 수 있는 Method와는 달리, 객체를 생성하지 않아도 바로 컬렉션에 있는 데이터에 접근할 수 있기 때문에 데이터 조회와 관련된 ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Aug 15, 2020, 12:00 AM +0800"
-  >Aug 15, 2020<i class="unloaded">2020-08-15T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="172 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-15-oh-my-zsh-settup/">Oh-My-Zsh 사용자 이름 삭제 + 현재 디렉토리만 표시하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        현재 디렉토리만 표시하기
-
-~/.oh-my-zsh/themes 디렉토리에서 사용하는 테마 파일을 연다.
-
-cd ~/.oh-my-zsh/themes
-vim agnoster.zsh-theme
-
-
-다음과 같은 부분을 찾는다.
-
-# Dir: current working directory
-prompt_dir() {
-  prompt_segment blue $CU...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Aug 15, 2020, 12:00 AM +0800"
-  >Aug 15, 2020<i class="unloaded">2020-08-15T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="120 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-14-react-typescript-define-tuple/">타입스크립트 객체 배열의 타입 (React but target allows only 1 에러 해결 방법)</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        멘티들이 가장 많이하는 질문 중에 하나.
-오늘도 같은 질문을 받아서 정리해본다. 🐥
-
-Source has X element(s) but target allows only 1.
-
-
-앞쪽 메시지는 다를 수 있지만 위와 거의 흡사한 에러 메시지가 확인되는 경우. 이 에러는 하나의 엘리먼트에 해당하는 타입만을 지정해놓고, 다수의 엘리먼트를 넣으려고 했기 때문...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="283 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-14-mongoose-understand-async/">Mongoose 콜백 함수의 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        import Post from "../models/Post";
-
-export function home(request, response) {
-  Post.find({}, (error, posts) =&gt; {
-    console.log("error: ", error);
-    console.log("posts: ", posts);
+        if (password !== confirmPassword) {
+  return response.status(400).render("createAccount", {
+    pageTitle,
+    errorMessage: "Password confirmation does not match.",
   });
+}
 
-  r...
+
+서버에서 클라이언트 측에 respons...
       </p>
     </div>
 
@@ -1157,8 +743,8 @@ export function home(request, response) {
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
+    title="Sat, Sep 19, 2020, 12:00 AM +0800"
+  >Sep 19, 2020<i class="unloaded">2020-09-19T00:00:00+08:00</i>
 </span>
 
 
@@ -1183,7 +769,437 @@ export function home(request, response) {
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="420 words">2 min</span>
+  title="248 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-18-express-routing/">Express 라우팅 (Routing) 방법 총정리</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        app.get("/", (request, response) =&gt; response.send("Hello I'm Home!"));
+
+
+GET 요청에 대한 라우트를 생성할 때는 get() 메소드를, POST 요청에 대한 라우트를 생성할 때는 post() 메소드를 사용하며, 첫 번째 인자는 라우트 경로를, 두 번째 인자는 미들웨어 (생략 가능) 또는 해...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Sep 18, 2020, 12:00 AM +0800"
+  >Sep 18, 2020<i class="unloaded">2020-09-18T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="422 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-17-express-url-params/">Express URL에 변수 사용하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        http://abc.com/user/1
+http://abc.com/user/2
+
+
+위와 같이 변수를 사용해야 할 때.
+
+/user/:id
+
+
+해당 부분을 콜론 + 변수명으로 표현한다.
+
+app.get("/user/:id", (request, response) =&gt; {
+  console.log(request.params.id);
+});
+
+
+해당 파...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Sep 17, 2020, 12:00 AM +0800"
+  >Sep 17, 2020<i class="unloaded">2020-09-17T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="88 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-16-express-session-login-logout/">Express 세션을 사용한 로그인 기능 구현</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        로그인 처리 예시
+
+
+  로그인 = 사용자를 인가하는 것을 의미한다.
+  인가됨을 어떻게 유지할 것인가? = 세션을 사용한다.
+
+
+export async function postLogin(request, response) {
+  // ... 생략 ...
+  // 데이터베이스에 해당 사용자가 있고, 패스워드가 일치할 경우 로그인 처리
+  // 세션에 인...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Sep 16, 2020, 12:00 AM +0800"
+  >Sep 16, 2020<i class="unloaded">2020-09-16T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="255 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-15-express-update-session/">Express 클라이언트의 세션 정보를 업데이트하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        세션의 정보를 업데이트하는 것이 필요한 이유를 이해하기 위해서, 다음과 같은 상황을 가정해보자.
+
+
+  로그인 정보가 세션에 저장되어있다. 세션에 정보를 저장하는 시점은 사용자가 로그인에 성공한 시점이다.
+  이때 사용자는 정보 변경 페이지에서 로그인 정보를 수정하고자 한다. 이때 데이터베이스에 저장된 사용자의 정보는 세션에 저장된 로그인 정보 (_i...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Sep 15, 2020, 12:00 AM +0800"
+  >Sep 15, 2020<i class="unloaded">2020-09-15T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="733 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-14-express-request-session/">Express 세션에 정보를 추가하고 사용하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        선행 조건
+
+Express 세션 관리를 위한 Express-Session 사용법
+
+세션에 정보 추가하는 방법
+
+// add information to session
+request.session.loggedIn = true;
+request.session.user = user;
+}
+
+
+request.session.key = value 형식으로 세션에 정보...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 14, 2020, 12:00 AM +0800"
+  >Sep 14, 2020<i class="unloaded">2020-09-14T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="162 words">1 min</span>
 
 
         <!-- page views -->
@@ -1563,9 +1579,24 @@ export function home(request, response) {
     
 
     
+      <!-- hide number -->
+      
+    
+
+  
+
+    
+    
+    
+    
+    
+
+    
+
+    
       <!-- show number -->
       <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page22/">22</a>
+        <a class="page-link btn-box-shadow" href="/page23/">23</a>
       </li>
     
 
@@ -1574,7 +1605,7 @@ export function home(request, response) {
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>10</span>
-    <span class="text-muted">/ 22</span>
+    <span class="text-muted">/ 23</span>
   </li>
 
   <!-- right arrow -->
@@ -1632,6 +1663,11 @@ export function home(request, response) {
         
         
         
+        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+      
+        
+        
+        
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
       
         
@@ -1643,11 +1679,6 @@ export function home(request, response) {
         
         
         <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-03-20-vh-vw-vmin-vmax/">CSS 뷰포트 사이즈 단위 vh · vw · vmin · vmax 정리</a></li>
       
 
       </ul>
@@ -2773,6 +2804,300 @@ export function home(request, response) {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2792,275 +3117,6 @@ export function home(request, response) {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5585,6 +5641,300 @@ export function home(request, response) {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5604,275 +5954,6 @@ export function home(request, response) {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
