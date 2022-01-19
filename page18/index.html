@@ -352,265 +352,6 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-05-10-javascript-url-search-params/">자바스크립트 URLSearchParams() 사용법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        URL의 쿼리 파라미터들을 읽거나 수정할 때 사용되는 메소드.
-
-const URL = "http://127.0.0.1/search/?keyword=검색어";
-
-const search = location.search;
-console.log(search); // ?keyword=검색어
-
-// URLSearchParams를 사용해 객체로 변환
-const p...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, May 10, 2020, 12:00 AM +0800"
-  >May 10, 2020<i class="unloaded">2020-05-10T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="187 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-09-group-socket/">Socket.io 소켓 관련 함수를 하나의 파일로 관리하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        // src/frontend/login.js
-function login(nickname) {
-  // 서버에 연결되는 시점 =&gt; 소켓이 생성되는 시점
-  const socket = io("/");
-  socket.emit(window.events.setNickname, { nickname });
-  initSocket(socket);
-}
-
-
-//...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, May  9, 2020, 12:00 AM +0800"
-  >May  9, 2020<i class="unloaded">2020-05-09T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="298 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-09-javascript-make-limiting-random-number/">자바스크립트 제한적 범위의 난수 만들기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        random() 메소드는 0 이상 1 미만의 구간에서 부동소숫점 의사난수를 생성한다. 이는 다음과 같이 활용할 수 있다.
-
-0 ~ 지정한 값 사이의 난수 생성
-
-function getRandom(max) {
-  return Math.random() * max;
-}
-
-
-두 값 사이의 난수 생성
-
-function getRandomArbitrary(min,...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, May  9, 2020, 12:00 AM +0800"
-  >May  9, 2020<i class="unloaded">2020-05-09T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="224 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
       <a href="/posts/2020-05-08-javascript-destructuring-object-advenced/">자바스크립트 객체의 구조 분해 (Destructuring) 활용법</a>
     </h1>
 
@@ -1227,6 +968,262 @@ const newUser = delElement(user);
 
 
 
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-04-socket-io-share-object/">Socket.io 이벤트와 객체를 하나의 파일로 관리 · 공유하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        이벤트를 하나의 객체로 관리하기
+
+// src/events.js
+const events = {
+  enterUser: "enterUser",
+  logoutUser: "logoutUser",
+};
+
+export default events;
+
+
+Socket.io의 이벤트를 한 번에 관리하기 위해서 위 코드 예제와 같이 events.js 파일을 만들고, ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, May  4, 2020, 12:00 AM +0800"
+  >May  4, 2020<i class="unloaded">2020-05-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="438 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-04-javascript-anchor-fake-click/">자바스크립트 링크 클릭 발생 시키기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        const a = document.createElement("a");
+a.href = url;
+a.download = "image.jpg";
+document.body.appendChild(a);
+a.click();
+
+
+어떤 링크로 연결해서 파일을 다운로드 할 수 있게끔 하기 위해서, 해당 URL을 가리키는 a 태그를 만들고, click() 함수를 사용...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, May  4, 2020, 12:00 AM +0800"
+  >May  4, 2020<i class="unloaded">2020-05-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="79 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-05-03-javascript-right-click/">자바스크립트 마우스 오른쪽 클릭 (Context Menu) 이벤트 처리</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        function blockRightClick(event) {
+  event.preventDefault();
+}
+
+cavas.addEventListener("contextmenu", blockRightClick);
+
+
+마우스 우클릭시 나오는 창을 Context Menu라고 부르며, 이벤트 처리를 통해 마우스 우클릭을 방지하거나 임의의 이벤트를 지정할 수...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, May  3, 2020, 12:00 AM +0800"
+  >May  3, 2020<i class="unloaded">2020-05-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="66 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
 </div> <!-- #post-list -->
 
 
@@ -1671,7 +1668,17 @@ const newUser = delElement(user);
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
       
         
         
@@ -1682,16 +1689,6 @@ const newUser = delElement(user);
         
         
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
       
 
       </ul>

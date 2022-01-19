@@ -352,255 +352,6 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-04-25-javascript-array-find-findIndex/">자바스크립트 Array.prototype.find() · findIndex()</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        find()
-
-const arr = ["a", "b", "c"];
-arr.find((char) =&gt; char === "a"); // "a"
-arr.find((char) =&gt; char === "d"); // undefined
-
-
-indexOf()와 비슷하지만 인자로 함수를 받는 메소드. 값이 존재하지 않을 때 undefined를 출력한다.
-
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Apr 25, 2020, 12:00 AM +0800"
-  >Apr 25, 2020<i class="unloaded">2020-04-25T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="107 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-24-javascript-array-from/">자바스크립트 Array.prototype.from()</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Array.from() 메소드를 사용하면 유사 배열 객체나 반복 가능한 객체를 얕은 복사해서 새로운 배열 객체를 만든다.
-
-const arr = [1, 2, 3, 4, 5];
-const newArr = Array.from(arr).map((number) =&gt; {
-  return (number += 1);
-}); // newArr = [2, 3, ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Apr 24, 2020, 12:00 AM +0800"
-  >Apr 24, 2020<i class="unloaded">2020-04-24T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="73 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-04-23-javascript-array-filter/">자바스크립트 Array.prototype.filter()</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        filter() 메소드는 인자로 주어진 함수의 조건을 통과하는 요소를 모아서 새로운 배열로 리턴한다.
-
-const numbers = [2, 4325, 123, 4, 635, 66, 7756, 31, 7];
-const biggerThan1000 = numbers.filter((number) =&gt; number &gt; 1000);
-// biggerT...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Thu, Apr 23, 2020, 12:00 AM +0800"
-  >Apr 23, 2020<i class="unloaded">2020-04-23T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="113 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
       <a href="/posts/2020-04-22-javascript-array-fill/">자바스크립트 Array.prototype.fill()</a>
     </h1>
 
@@ -1166,6 +917,261 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
 
 
 
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-04-19-es6-syntax-15-spread/">모던 자바스크립트와 ES6 #5 Spread Syntax</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Spread Syntax (...)는 점 뒤에 오는 대상을 개별 요소로 분리한다. 이때 대상은 Iterable 해야 한다.
+
+const arr = [1, 2, 3];
+console.log(...arr, 4, 5);
+
+
+이를 응용해 배열을 파라미터로 함수에 전달하고자 할 때, 모든 요소를 분리해서 순차적으로 전달할 수 있다.
+
+function sum(a...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, Apr 19, 2020, 12:00 AM +0800"
+  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="266 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-04-19-es6-syntax-14-default-rest-parameter/">모던 자바스크립트와 ES6 #4 Default · Rest Parameter</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Default Parameter Value
+
+자바스크립트에서는 함수를 호출할 때 요구되는 파라미터의 개수가 부족한 경우에도 에러가 발생하지 않는다. 예를 들어 다음의 경우를 가정해보자.
+
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum(10));
+
+
+sum() 함수는 2개의 아규먼트를 사용하게끔 정의...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, Apr 19, 2020, 12:00 AM +0800"
+  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="853 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-04-19-es6-syntax-13-arrow-function/">모던 자바스크립트와 ES6 #3 Arrow Function</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Arrow Function (이하 화살표 함수)는 ES6에서 도입된, function 키워드를 사용하지 않아도 =&gt; 화살표를 사용함으로써 보다 간단하게 함수를 선언할 수 있는 문법이다. 화살표 함수의 사용법은 매우 간단하지만, 다음과 같은 몇 가지 규칙이 있다.
+
+// 1. 아규먼트가 없을 경우 () 괄호 생략 불가
+() =&gt; {};
+
+//...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, Apr 19, 2020, 12:00 AM +0800"
+  >Apr 19, 2020<i class="unloaded">2020-04-19T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1207 words">6 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
 </div> <!-- #post-list -->
 
 
@@ -1610,7 +1616,17 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
       
         
         
@@ -1621,16 +1637,6 @@ ES6에서는 Props 값으로 변수를 사용할 때, Property 이름을 생략�
         
         
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
       
 
       </ul>

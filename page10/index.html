@@ -352,268 +352,6 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2020-09-22-express-request-body-text-json/">클라이언트에서 Express 서버로 텍스트 · JSON 데이터 전송하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Request.body 만들어 서버로 보내기
-
-fetch(`/api/posts/${id}/comment`, {
-  method: "POST",
-  body: { text },
-});
-
-
-서버 측으로 POST 요청을 보낼 때, 반드시 form을 통해서 Sumbit 하지 않아도, 위와 같이 fetch를 사용해 POST 요청을 보낼 수 있으며, body 프...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Sep 22, 2020, 12:00 AM +0800"
-  >Sep 22, 2020<i class="unloaded">2020-09-22T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="319 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-21-express-response-status-json/">Express 클라이언트에 상태 코드와 함께 객체 전달하기</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Backend
-
-app.use(express.json());
-
-
-return response.status(201).json({ title: something, name: somethings });
-
-
-json() 메소드를 사용해서 객체를 전달한다.
-
-Frontend
-
-if (response.status === 201) {
-  const { title,...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Sep 21, 2020, 12:00 AM +0800"
-  >Sep 21, 2020<i class="unloaded">2020-09-21T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="52 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-20-express-route-url-string-pattern/">Express 문자열 패턴과 정규식 표현을 사용한 Route 경로 표현</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        라우트 경로를 문자열을 기반으로 하는 경우, 문자열 패턴 또는 정규식 문자를 사용해 조합할 수 있다. (- (하이픈)과 . (점)은 그냥 문자 그대로 해석됨)
-
-app.get("/", home);
-app.get("/about", about);
-
-
-위 라우트 경로는 정확히 입력된 대로 /, /about를 의미한다.
-
-? (물음표)
-
-app.get("/a...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Sep 20, 2020, 12:00 AM +0800"
-  >Sep 20, 2020<i class="unloaded">2020-09-20T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="414 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
       <a href="/posts/2020-09-19-express-send-status-codes/">Express 클라이언트에 상태 코드 (Status Code) 전송하기</a>
     </h1>
 
@@ -1215,6 +953,264 @@ app.use(
 
 
 
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-12-express-flash/">Express-Flash를 사용해 플래시 메시지 띄우기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install express-flash
+
+
+휘발성 메시지 (플래시 메시지)를 관리할 수 있는 미들웨어.
+
+
+  Flash is an extension of connect-flash with the ability to define a flash message and render it without redirecting the request.
+
+
+...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Sep 12, 2020, 12:00 AM +0800"
+  >Sep 12, 2020<i class="unloaded">2020-09-12T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="165 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-11-express-params-body-query/">Express Request 객체의 이해 및 사용법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        request 객체는 HTTP Request로, parameters, body, query string, HTTP header 등의 Property를 가진다. (Node의 request 객체보다 향상된 버전)
+
+
+  request.params
+  request.body
+  request.query
+
+
+request.params
+
+function pos...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Sep 11, 2020, 12:00 AM +0800"
+  >Sep 11, 2020<i class="unloaded">2020-09-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="334 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2020-09-11-express-dotenv/">Node DotEnv를 사용해서 환경 변수 사용하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install dotenv
+
+
+Express 환경에서 API 주소, API KEY, DB URL 등의 환경 변수를 process.env.변수명으로 접근해 사용하기 위해서 dotenv 라이브러리를 사용한다. (참고 : Node.js - process.env)
+
+사용법 예시
+
+COOKIE_SECRET=adsfasdfasdfasdf
+MONGODB_U...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Sep 11, 2020, 12:00 AM +0800"
+  >Sep 11, 2020<i class="unloaded">2020-09-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="284 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
 </div> <!-- #post-list -->
 
 
@@ -1659,7 +1655,17 @@ app.use(
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
       
         
         
@@ -1670,16 +1676,6 @@ app.use(
         
         
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
       
 
       </ul>

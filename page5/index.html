@@ -352,268 +352,6 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-06-02-node-js-reudx/">Node Redux 기본 사용법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        기본 사용법
-
-리덕스는 데이터 (state 값, 애플리케이션에서 변하는 값)를 한 곳에서 관리하기 위해 사용한다.
-
-npm install redux
-
-
-createStore()
-
-데이터를 관리하기 위한 저장소는 보통 Store라 부르며, createStore() 함수를 사용해 생성한다. 이렇게 생성된 store는 dispatch(), subscribe...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jun  2, 2021, 12:00 AM +0800"
-  >Jun  2, 2021<i class="unloaded">2021-06-02T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="608 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-06-01-react-redux-context-hooks/">React Context API + Hooks와 Redux 사용법 비교</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Context API + Hooks
-
-Context API는 상태 값을 공유하기 위해 사용하고, Hooks는 함수형 컴포넌트에서 상태 값을 사용하기 위해 사용한다. 이 두 가지 기능을 사용해서 상태를 관리하는 간단한 카운터 예제는 다음과 같다.
-
-store 생성
-
-import React, { createContext } from "react";
-
-co...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jun  1, 2021, 12:00 AM +0800"
-  >Jun  1, 2021<i class="unloaded">2021-06-01T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="614 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-05-24-typescript-type-guard/">타입스크립트 세 가지 타입 가드 방법</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        typeof를 사용한 타입 가드
-
-function printMessage(message: string | number) {
-  if (typeof message === "string") {
-    console.log(message.length);
-  }
-
-  /* ... */
-}
-
-
-in을 사용한 타입 가드
-
-interface A {
-  name: ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, May 24, 2021, 12:00 AM +0800"
-  >May 24, 2021<i class="unloaded">2021-05-24T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="184 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
       <a href="/posts/2021-05-23-typescript-type-assertion/">타입스크립트 타입 단언의 이해</a>
     </h1>
 
@@ -1203,6 +941,262 @@ ESLint의 설정 오류나 .eslintrc 파일 작성에 문제가 있을 수도 �
 
 
 
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-05-03-tsconfig-options/">tsconfig.json 설정 파일 작성 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        TSConfig Reference
+
+files
+
+프로그램에 포함할 파일의 허용 목록 (Allowlist)을 정의하며, 파일을 찾을 수 없을 경우 에러가 발생한다. 일반적으로 포함할 파일의 개수가 적을 때 사용된다.
+
+{
+  "files": ["home.ts", "about.ts", "contact.ts"]
+}
+
+
+include
+
+프로그램에 포함할 파일...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, May  3, 2021, 12:00 AM +0800"
+  >May  3, 2021<i class="unloaded">2021-05-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="838 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-05-02-react-hooks-rules-of-hooks-error/">React ESLint react-hooks/rules-of-hooks 에러 해결 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        ESLint에서 react-hooks (airbnb-hooks 등)를 사용할 때 발생할 수 있는 에러로, 자바스크립트의 일반 함수에서 Hook을 호출하지 말라는 에러이다. 이 에러를 해결하기 위해서는 다음 두 가지 방식으로 Hook을 호출해야 한다.
+
+
+  React 함수형 컴포넌트에서 호출
+  Custom Hook에서 호출
+
+
+.eslintrc 파일...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sun, May  2, 2021, 12:00 AM +0800"
+  >May  2, 2021<i class="unloaded">2021-05-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="213 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-05-01-eslint-no-case-declarations/">ESLint no-case-declarations 에러 해결 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        ESLint (no-case-declarations)
+
+Disallow lexical declarations in case/default clauses (no-case-declarations)
+
+
+위와 같은 no-case-declarations 에러는 다음과 같이 case문 내에서 변수나 상수 또는 함수 등이 제한된 스코프가 없이 선언되는 것을 허용하...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, May  1, 2021, 12:00 AM +0800"
+  >May  1, 2021<i class="unloaded">2021-05-01T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="196 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
 </div> <!-- #post-list -->
 
 
@@ -1647,7 +1641,17 @@ ESLint의 설정 오류나 .eslintrc 파일 작성에 문제가 있을 수도 �
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
       
         
         
@@ -1658,16 +1662,6 @@ ESLint의 설정 오류나 .eslintrc 파일 작성에 문제가 있을 수도 �
         
         
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
       
 
       </ul>

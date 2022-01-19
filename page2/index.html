@@ -352,166 +352,6 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/2021-11-16-react-beautiful-dnd/">react-beautiful-dnd 기본 사용법 총정리</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        react-beautiful-dnd는 React에서 Drag &amp; Drop UI를 보다 쉽게 만들 수 있게 도와주는 라이브러로, 비슷한 라이브러리인 react-dnd나 react-draggable에 비해 비교적 단순한 UI 제작에 적합한 친구다.
-
-인기도는 NPM Trends를 기준으로 react-dnd와 비슷한 수준이며, 개인적으로 자유도는 r...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Nov 16, 2021, 12:00 AM +0800"
-  >Nov 16, 2021<i class="unloaded">2021-11-16T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1529 words">8 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        본문은 React Hook From 사용법 #1 기초 활용과 이어지는 글이다.
-
-에러 메시지 추가
-
-formState.errors 객체를 통해 살펴보면, 에러가 발생할 때 해당 객체에 message라는 항목이 있는 것을 확인할 수 있는데, 이를 옵션을 추가하는 방식으로 간단하게 지정할 수 있다. 예를들어 required 필드는 true 또는 false...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Nov  8, 2021, 12:00 AM +0800"
-  >Nov  8, 2021<i class="unloaded">2021-11-08T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="947 words">5 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
       <a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a>
     </h1>
 
@@ -1158,6 +998,167 @@ React.memo()를 사용하면 불필요한 Re-Render를 막아준다고 해서 �
 
 
 
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-07-03-react-update-datas-send-props-child-to-parent/">React 부모 컴포넌트 값을 자식 컴포넌트에서 업데이트 해야 하는 경우</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        
+  부모 컴포넌트는 서버를 통해 최신 데이터베이스 정보를 패치 받는다.
+  해당 정보는 useState()를 사용해 부모 컴포넌트에서 관리한다. (정보가 업데이트되면 다시 그려질 수 있도록)
+  부모 컴포넌트는 해당 정보를 각각 하나씩 표현하기 위해 반복적으로 자식 컴포넌트를 생성하고, 자식 컴포넌트로 해당 정보를 보낸다.
+  이때 또 다른 자식 컴...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Jul  3, 2021, 12:00 AM +0800"
+  >Jul  3, 2021<i class="unloaded">2021-07-03T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="759 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/2021-07-02-mongoose-populate-after-create-and-save/">Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        newComment.populate("owner");
+
+
+이런 모습의 구문을 질문으로 받는 경우, 열에 아홉은 populate()가 (일반적으로 find() 등을 실행할 때 뒤에 붙이는 경우와는 달리) 실행되지 않았기 때문에 발생하는 문제이다. 근데 최근 이와 관련된 수업을 원격으로 진행하는데, 어떤 사람은 된다 그러고 어떤 사람은 안된다 그래서 굉장...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jul  2, 2021, 12:00 AM +0800"
+  >Jul  2, 2021<i class="unloaded">2021-07-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="332 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
 </div> <!-- #post-list -->
 
 
@@ -1595,7 +1596,17 @@ React.memo()를 사용하면 불필요한 Re-Render를 막아준다고 해서 �
         
         
         
-        <li><a href="/posts/2021-07-30-draft/">Draft</a></li>
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
       
         
         
@@ -1606,16 +1617,6 @@ React.memo()를 사용하면 불필요한 Re-Render를 막아준다고 해서 �
         
         
         <li><a href="/posts/2021-04-01-what-is-webpack/">Webpack이란?</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2021-04-02-webpack-config/">Webpack 기본 사용법</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/2020-06-12-what-is-hook/">React Hook이란?</a></li>
       
 
       </ul>
