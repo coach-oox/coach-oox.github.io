@@ -352,6 +352,92 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-06-04-styled-components-createGlobalStyle/">React Styled-Component 글로벌 공통 스타일 지정하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install styled-reset
+
+
+reset 파일 적용을 위해서 styled-reset를 설치한다.
+
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+
+const globalStyle = createGlobalStyle`
+   ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jun  4, 2020, 12:00 AM +0800"
+  >Jun  4, 2020<i class="unloaded">2020-06-04T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="187 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-06-03-react-container-presenter-pattern/">React Container - Presenter 패턴</a>
     </h1>
 
@@ -1123,90 +1209,6 @@ function* gen() {
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-05-14-javascript-iterator/">자바스크립트 이터레이터 (Iterator)의 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Iterator는 반복을 위해 설계된 특별한 인터페이스를 가진 객체로, 객체 내부에 next() 라는 메소드가 존재하고, 이 메소드를 사용해 반복적으로 value와 done 프로퍼티를 가진 객체를 반환한다.
-
-Iterable한 개체 특징
-
-
-  구조 해체 할당 가능
-  펼쳐 쓸 수 있음 (Spread Syntax)
-  Array.from() 사용 가능...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Thu, May 14, 2020, 12:00 AM +0800"
-  >May 14, 2020<i class="unloaded">2020-05-14T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="626 words">3 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1651,17 +1653,17 @@ Iterable한 개체 특징
         
         
         
-        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
-      
-        
-        
-        
         <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
       
         
         

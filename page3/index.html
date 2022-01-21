@@ -352,6 +352,86 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2021-07-02-mongoose-populate-after-create-and-save/">Mongoose 새로운 문서를 생성 및 저장한 다음에 Populate 하는 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        newComment.populate("owner");
+
+
+이런 모습의 구문을 질문으로 받는 경우, 열에 아홉은 populate()가 (일반적으로 find() 등을 실행할 때 뒤에 붙이는 경우와는 달리) 실행되지 않았기 때문에 발생하는 문제이다. 근데 최근 이와 관련된 수업을 원격으로 진행하는데, 어떤 사람은 된다 그러고 어떤 사람은 안된다 그래서 굉장...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Jul  2, 2021, 12:00 AM +0800"
+  >Jul  2, 2021<i class="unloaded">2021-07-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="332 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2021-07-01-cra-absolute-route-craco-alias-webpack/">React 절대 경로 (또는 별칭) 사용하는 2가지 방법 (CRACO, WebPack)</a>
     </h1>
 
@@ -1094,89 +1174,6 @@ yarn add https://github.com/Looskie/react-flash-message.git
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2021-06-12-express-way-auth-user/">Session 인증 방식과 JWT 인증 방식의 비교</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        
-  참고 : Cookie · Session 기술의 이해
-
-
-Session 인증 방식
-
-HTTP 웹 서버는 Stateless 프로토콜을 사용하기 때문에, 사용자의 인가 사실을 유지할 수 없고, 매번 다른 페이지로 이동하거나 새로고침을 할 때 다시 인가 됨을 증명해야만 한다. 이때 사용할 수 있는 방법 중 하나가 이 Session (이하 세션) 기반 인...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Jun 12, 2021, 12:00 AM +0800"
-  >Jun 12, 2021<i class="unloaded">2021-06-12T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1196 words">6 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1616,17 +1613,17 @@ HTTP 웹 서버는 Stateless 프로토콜을 사용하기 때문에, 사용자�
         
         
         
-        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
-      
-        
-        
-        
         <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
       
         
         

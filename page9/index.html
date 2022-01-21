@@ -352,6 +352,94 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-12-02-babel-nodemon/">Node Babel + Nodemon 적용 방법</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Babel
+
+Next-Gen 자바스크립트를 보편적인 (브라우저에서 안정적으로 실행할 수 있는) 자바스크립트로 변환하는 역할.
+
+{
+  "presets": ["@babel/preset-env"]
+}
+
+
+babel.config.json 파일을 생성한다.
+
+npm install @babel/core @babel/register @babel/preset-en...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Dec  2, 2020, 12:00 AM +0800"
+  >Dec  2, 2020<i class="unloaded">2020-12-02T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="128 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-12-01-book-publish-digital-nomad/">[출판 소식] 디지털 노마드를 꿈꾸는 당신이 알아야 하는 모든 것</a>
     </h1>
 
@@ -1107,93 +1195,6 @@ if (response.status === 201) {
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-09-20-express-route-url-string-pattern/">Express 문자열 패턴과 정규식 표현을 사용한 Route 경로 표현</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        라우트 경로를 문자열을 기반으로 하는 경우, 문자열 패턴 또는 정규식 문자를 사용해 조합할 수 있다. (- (하이픈)과 . (점)은 그냥 문자 그대로 해석됨)
-
-app.get("/", home);
-app.get("/about", about);
-
-
-위 라우트 경로는 정확히 입력된 대로 /, /about를 의미한다.
-
-? (물음표)
-
-app.get("/a...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Sep 20, 2020, 12:00 AM +0800"
-  >Sep 20, 2020<i class="unloaded">2020-09-20T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="414 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1638,17 +1639,17 @@ app.get("/a...
         
         
         
-        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
-      
-        
-        
-        
         <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
       
         
         

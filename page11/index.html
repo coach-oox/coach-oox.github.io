@@ -352,6 +352,91 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/2020-09-11-express-dotenv/">Node DotEnv를 사용해서 환경 변수 사용하기</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        npm install dotenv
+
+
+Express 환경에서 API 주소, API KEY, DB URL 등의 환경 변수를 process.env.변수명으로 접근해 사용하기 위해서 dotenv 라이브러리를 사용한다. (참고 : Node.js - process.env)
+
+사용법 예시
+
+COOKIE_SECRET=adsfasdfasdfasdf
+MONGODB_U...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Fri, Sep 11, 2020, 12:00 AM +0800"
+  >Sep 11, 2020<i class="unloaded">2020-09-11T00:00:00+08:00</i>
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="284 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/2020-09-10-express-parsing-body/">Express 클라이언트가 보낸 Body 정보 파싱하는 방법</a>
     </h1>
 
@@ -1113,91 +1198,6 @@ Source has X element(s) but target allows only 1.
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/2020-08-14-mongoose-understand-async/">Mongoose 콜백 함수의 이해</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        import Post from "../models/Post";
-
-export function home(request, response) {
-  Post.find({}, (error, posts) =&gt; {
-    console.log("error: ", error);
-    console.log("posts: ", posts);
-  });
-
-  r...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Fri, Aug 14, 2020, 12:00 AM +0800"
-  >Aug 14, 2020<i class="unloaded">2020-08-14T00:00:00+08:00</i>
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="420 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1642,17 +1642,17 @@ export function home(request, response) {
         
         
         
-        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
-      
-        
-        
-        
         <li><a href="/posts/2022-01-09-react-router-v6-hooks/">React Router 주요 Hooks API 정리</a></li>
       
         
         
         
         <li><a href="/posts/2021-11-07-react-hook-form-usage-1/">React Hook From 사용법 #1 기초 활용</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/2021-11-08-react-hook-form-usage-2/">React Hook From 사용법 #2 에러 핸들링 응용</a></li>
       
         
         
