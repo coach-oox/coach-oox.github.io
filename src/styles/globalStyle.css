@@ -21,3 +21,7 @@ body {
   font-size: 16px;
   line-height: 180%;
 }
+
+a {
+  text-decoration: underline;
+}
